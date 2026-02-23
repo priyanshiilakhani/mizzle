@@ -1,0 +1,31 @@
+<section>
+    <div class="container">
+        <div class="text-center md:mb-10 mb-6">
+            <h2 class="lg:text-[45px] md:text-4xl text-3xl">Our leadership</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-6 lg:w-4xl lg:mx-auto">
+            @for (item of teamMembersData; track $index) {
+            <div class="p-6 text-center">
+                <div class="mb-4">
+                    <img [src]="item.avatar" class="md:size-32 size-20.5 rounded-full mx-auto" />
+                </div>
+                <h6>
+                    <a [routerLink]="[]" class="text-xl font-bold hover:text-primary transition-all mb-1">{{ item.firstName }} {{ item.lastName }}</a>
+                </h6>
+                <p>{{ item.role }}</p>
+                <ul class="flex items-center justify-center gap-3 mt-4">
+                    @for (data of item.socialLinks; track $index) {
+                    <li class="size-8 rounded bg-default-100 hover:bg-default-200 flex justify-center items-center transition-all">
+                        <a [routerLink]="data.url || []">
+                            <lucide-icon name="{{data.icon}}" class="size-3.5"></lucide-icon>
+                        </a>
+                    </li>
+                    }
+                </ul>
+            </div>
+            }
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,20 @@
+ <section class="lg:py-28 md:py-20 py-16">
+        <div class="container">
+            <div class="grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <div>
+                    <h2 class="lg:text-[45px] md:text-4xl text-3xl font-bold">Our Approach to SEO Success</h2>
+                </div>
+
+                 @for (item of approachStepsData; track $index) {
+
+                <!-- Item -->
+                <div class="border border-default-200 p-6 rounded-md h-full">
+                    <h6 class="text-primary mb-6 font-bold text-xl">{{item.stepNumber}}.</h6>
+                    <h5 class="md:text-2xl text-xl font-bold mb-2">{{ item.title }}</h5>
+                    <p>{{ item.description }}</p>
+                </div>
+            }
+              
+            </div>
+        </div>
+    </section>

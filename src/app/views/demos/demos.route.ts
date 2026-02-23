@@ -2,6 +2,7 @@ import { Routes } from '@angular/router'
 import { CreativeAgency } from './creative-agency/creative-agency'
 import { Default } from './default/default'
 import { DigitalAgency } from './digital-agency/digital-agency'
+import { SeoAgency } from './seo-agency/seo-agency'
 
 export const DEMO_ROUTE: Routes = [
   {
@@ -24,11 +25,11 @@ export const DEMO_ROUTE: Routes = [
   //   component: DesignAgency,
   //   data: { title: 'Design Agency' },
   // },
-  // {
-  //   path: 'agency/seo',
-  //   component: SEOAgency,
-  //   data: { title: 'SEO Agency' },
-  // },
+  {
+    path: 'agency/seo',
+    component: SeoAgency,
+    data: { title: 'SEO Agency' },
+  },
   // {
   //   path: 'product-landing',
   //   component: LandingProduct,

@@ -1,0 +1,66 @@
+<section class="lg:pt-28 md:pt-20 pt-16 bg-default-100">
+    <div class="container lg:pb-28 md:pb-20 pb-16">
+        <div class="text-center lg:mb-14 mb-10">
+            <h2 class="lg:text-[45px] md:text-4xl text-3xl mb-2">Case studies</h2>
+            <p class="lg:w-3xl lg:mx-auto">Discover a selection of our most recent client projects, showcasing our expertise, creativity, and commitment to delivering outstanding results.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+            @for (item of caseStudiesData; track $index) {
+            <div class="group relative overflow-hidden rounded-lg shadow-lg bg-body-bg">
+                <div class="relative overflow-hidden">
+                    <img [src]="item.image" alt="portfolio-img" class="w-full h-auto transform transition-transform duration-500 group-hover:scale-105" />
+
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <img [src]="item.company.image" alt="client logo" class="h-10 z-10" />
+                    </div>
+                </div>
+
+                <div class="p-5">
+                    <h6 class="text-xl font-bold mb-2">{{ item.title }}</h6>
+                    <p class="mb-4">{{ item.description }}</p>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        @for (tag of item.tags; track $index) {
+                        <span class="px-3 py-1 border border-default-200 rounded text-xs text-default-800 font-normal bg-default-100">{{ tag }}</span>
+                        }
+                    </div>
+
+                    <a [routerLink]="item.url" class="inline-flex items-center gap-1.5 group-hover:text-primary-hover text-default-800 hover:text-primary hover:underline font-normal">
+                        View case study
+                        <lucide-icon name="arrow-right" class="size-4 transform duration-500 group-hover:translate-x-1"></lucide-icon>
+                    </a>
+                </div>
+            </div>
+            }
+
+        </div>
+
+        <div class="flex justify-center mt-14">
+            <a routerLink="/portfolio/list.html" class="inline-block text-nowrap bg-dark text-white font-medium px-6 py-3 rounded-md shadow hover:bg-dark/85 transition-all duration-300">Explore all case studies</a>
+        </div>
+    </div>
+
+    <div class="bg-primary flex flex-wrap items-center justify-center gap-2 py-6.5">
+        <ul class="flex md:justify-center justify-start -space-x-3">
+            <li>
+                <img src="/images/avatar/06.jpg" alt="avatar" class="size-10 rounded-full" />
+            </li>
+
+            <li>
+                <img src="/images/avatar/05.jpg" alt="avatar" class="size-10 rounded-full" />
+            </li>
+
+            <li>
+                <div class="size-10 rounded-full bg-dark flex items-center justify-center">
+                    <lucide-icon name="phone" class="size-4.5 text-white"></lucide-icon>
+                </div>
+            </li>
+        </ul>
+
+        <p class="text-white text-center">
+            Maximize Productivity by Simplifying Solution Search
+        <a [routerLink]="[]" class="underline font-bold">Got a project in mind?</a>
+        </p>
+    </div>
+</section>
