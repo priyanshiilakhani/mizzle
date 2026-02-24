@@ -1,0 +1,90 @@
+<section>
+  <div class="container">
+    <div class="text-center relative">
+      <swiper-container
+        class="swiper"
+        navigation="true"
+        navigation-next-el="#next-news"
+        navigation-prev-el="#prev-news"
+        autoplay-delay="5000"
+        autoplay-disable-on-interaction="false"
+        [autoplay]="{
+          pauseOnMouseEnter: true,
+        }"
+      >
+        @for (item of testimonialData; track $index) {
+          <swiper-slide class="p-6 flex flex-col items-center">
+            <div class="mb-6">
+              <img
+                class="md:size-32 size-21 rounded-full object-cover mx-auto"
+                [src]="item.user.image"
+                [alt]="item.user.name"
+              />
+            </div>
+
+            <p
+              class="text-default-800 md:text-3xl text-2xl mb-6 max-w-4xl mx-auto font-medium lg:leading-10"
+            >
+              {{ item.comment }}
+            </p>
+
+            <ul class="flex justify-center mb-6 gap-1">
+              @for (star of [1, 2, 3, 4]; track $index) {
+                <li>
+                  <lucide-icon name="star" class="size-5 fill-primary text-primary">
+                  </lucide-icon>
+                </li>
+              }
+              <li>
+                <lucide-icon
+                  name="star-half"
+                  class="size-5 fill-primary text-primary">
+                </lucide-icon>
+              </li>
+            </ul>
+
+            <div class="flex items-center gap-2 flex-wrap justify-center text-default-700">
+              <h5 class="text-2xl font-bold">{{ item.user.name }}</h5>
+              <div class="border-e border-default-300 h-4"></div>
+              <p>{{ item.user.role }}</p>
+            </div>
+          </swiper-slide>
+        }
+      </swiper-container>
+
+      <div class="flex justify-between items-center">
+        <a
+          [routerLink]="[]"
+          class="absolute top-1/2 md:start-0 start-5 z-10 -translate-y-1/2 -translate-x-1/2 size-12 flex items-center justify-center rounded-full bg-default-50 hover:bg-default-200 border border-default-200 transition-all duration-300"
+          id="prev-news"
+        >
+          <lucide-icon name="arrow-left" class="text-default-800 size-5"></lucide-icon>
+        </a>
+
+        <a
+          [routerLink]="[]"
+          class="absolute top-1/2 lg:end-0 md:-end-10 -end-7 z-10 -translate-y-1/2 -translate-x-1/2 size-12 flex items-center justify-center rounded-full bg-default-50 hover:bg-default-200 border border-default-200 transition-all duration-300"
+          id="next-news"
+        >
+          <lucide-icon name="arrow-right" class="text-default-800 size-5"></lucide-icon>
+        </a>
+      </div>
+    </div>
+
+    <div class="lg:py-28 md:py-20 py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+        @for( item of statData; track $index ){
+         <div>
+          <h6 class="text-xl font-bold">{{ item.title }}</h6>
+          <hr class="border-primary opacity-30 my-6" />
+          <h5 class="lg:text-[58px] md:text-[45px] text-[34px] mb-2 font-bold" >
+            <span [countUp]="item.value"> </span>
+            <span class="text-primary"> {{ item.suffix }}</span>
+          </h5>
+          <p>{{ item.description }}</p>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

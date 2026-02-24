@@ -1,0 +1,61 @@
+<section>
+  <div class="grid lg:grid-cols-2 grid-cols-1 h-screen">
+    <div class="bg-dark flex justidy-center items-center lg:order-1 order-2">
+      <div class="lg:p-28 py-14 px-10">
+        <div
+          class="text-white lg:text-[88px] md:text-6xl text-[45px] lg:mb-10 mb-6 lg:block md:flex md:items-center gap-4 md:leading-32"
+        >
+          <h1 class="text-white">Designing the</h1>
+          <span class="relative z-10 inline-block font-bold">
+            Future
+            <span
+              class="absolute lg:bottom-6 md:bottom-10 bottom-4 start-0 w-full md:h-4 h-2 bg-primary -z-10"
+            ></span>
+          </span>
+        </div>
+        <p class="text-xl lg:mb-14 mb-10 text-zinc-300">
+          We specialize in crafting top-tier digital solutions and materials that speak volumes with
+          clarity and precision.
+        </p>
+        <a
+          [routerLink]="[]"
+          class="py-3.5 px-6 bg-primary hover:bg-primary-hover text-white rounded-md font-medium transition-all duration-300"
+          >Explore our portfolio</a
+        >
+      </div>
+    </div>
+
+    <div class="lg:order-2 order-1">
+      <swiper-container
+        class="swiper h-full"
+        effect="fade"
+        speed="1500"
+        autoplay-delay="3000"
+        autoplay-disable-on-interaction="false"
+        pagination="true"
+        pagination-el=".swiper-pagination"
+        pagination-clickable="true"
+      >
+        
+          <swiper-slide>
+            <div
+              class="h-full py-36 bg-center bg-cover scale-img bg-[url('/images/bg/07.jpg')]"
+            ></div>
+          </swiper-slide>
+
+          <swiper-slide>
+            <div
+              class="h-full py-36 bg-center bg-cover scale-img bg-[url('/images/bg/02.jpg')]"
+            ></div>
+          </swiper-slide>
+
+          <swiper-slide>
+            <div
+              class="h-full py-36 bg-center bg-cover scale-img bg-[url('/images/bg/13.jpg')]"
+            ></div>
+          </swiper-slide>
+      
+      </swiper-container>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,39 @@
+<section class="lg:py-28 md:py-20 py-16">
+  <div class="container">
+    <div class="md:flex md:justify-between items-center md:mb-10 mb-8 md:text-start text-center">
+      <h2 class="lg:text-[45px] md:text-4xl text-3xl md:mb-0 mb-4">Our creative showcase</h2>
+      <a
+        routerLink="/portfolio/list"
+        class="inline-block bg-dark text-white font-medium px-7 py-3 rounded-md shadow hover:bg-dark/85 transition-all duration-300"
+        >View all projects</a
+      >
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      @for (item of projectData; track $index) {
+        <div class="relative overflow-hidden rounded-lg group">
+          <img
+            [src]="item.image"
+            [alt]="item.title"
+            class="size-full object-cover transform scale-100 group-hover:scale-102 transition-transform duration-500 filter group-hover:blur-xs"
+          />
+
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 flex items-end justify-center transition-opacity duration-500 p-5"
+          >
+            <div class="text-center mb-4">
+              <h5 class="text-white mb-2 text-2xl font-semibold">{{item.title}}</h5>
+              <a
+                [routerLink]="item.link"
+                class="inline-flex items-center gap-1.5 bg-white text-black text-sm px-3 py-1.5 rounded hover:bg-default-200 transition-all"
+              >
+                View detail
+                <lucide-icon name="arrow-right" class="size-4"></lucide-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

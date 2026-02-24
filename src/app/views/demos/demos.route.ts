@@ -3,7 +3,8 @@ import { CreativeAgency } from './creative-agency/creative-agency'
 import { Default } from './default/default'
 import { DigitalAgency } from './digital-agency/digital-agency'
 import { SeoAgency } from './seo-agency/seo-agency'
-import { LandingProduct } from './landing-product/landing-product'
+import { DesignAgency } from './design-agency/design-agency';
+import { LandingProduct } from './landing-product/landing-product';
 
 export const DEMO_ROUTE: Routes = [
   {
@@ -21,11 +22,11 @@ export const DEMO_ROUTE: Routes = [
     component: DigitalAgency,
     data: { title: 'Digital Agency' },
   },
-  // {
-  //   path: 'agency/design',
-  //   component: DesignAgency,
-  //   data: { title: 'Design Agency' },
-  // },
+  {
+    path: 'agency/design',
+    component: DesignAgency,
+    data: { title: 'Design Agency' },
+  },
   {
     path: 'agency/seo',
     component: SeoAgency,

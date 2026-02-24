@@ -1,0 +1,41 @@
+<section class="lg:py-30 md:py-20 py-16 bg-dark">
+  <div class="container">
+    <div class="mb-16">
+      <h2 class="lg:text-[45px] md:text-4xl text-3xl font-semibold mb-6 text-white">
+        Our Comprehensive Services
+      </h2>
+      <p class="text-white/60 md:w-2xl">
+        Our team of experts specializes in delivering tailored services designed to propel your
+        organization forward in today's fast-paced digital landscape.
+      </p>
+    </div>
+
+    <div class="space-y-0 divide-y divide-white/14">
+      @for (item of servicesData; track $index) {
+        <div
+          class="grid grid-cols-1 md:grid-cols-12 gap-4 py-10 items-center border-t border-white/14 group"
+        >
+          <div class="md:col-span-2 flex justify-start">
+            <img [src]="item.image" class="size-15" alt="service icon" />
+          </div>
+
+          <div class="md:col-span-3">
+            <h5 class="lg:text-2xl text-xl font-semibold">
+              <a
+                [routerLink]="[]"
+                class="text-white group-hover:text-primary transition-all duration-300"
+                >{{ item.title }}</a
+              >
+            </h5>
+          </div>
+
+          <div class="md:col-span-7 lg:w-full md:w-xs md:ms-auto">
+            <p class="text-white/60">
+              {{ item.description }}
+            </p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

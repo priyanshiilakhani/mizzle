@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-awards',
+  selector: 'design-agency-awards',
   imports: [],
   templateUrl: './awards.html',
   styles: ``,
 })
-export class Awards {
-
-}
+export class Awards {}
