@@ -1,0 +1,115 @@
+<section class="lg:pb-28 md:pb-20 pb-16">
+  <div class="container">
+    <div class="max-w-xl mx-auto text-center mb-8">
+      <h2 class="lg:text-[45px] md:text-4xl text-3xl font-bold">Latest articles & blogs</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 items-start md:gap-10 gap-6">
+      <div class="lg:col-span-5">
+        <article class="bg-transparent group">
+          <img src="/images/blog/4by3/08.jpg" alt="Blog-img" class="rounded-md w-full" />
+          <div class="mt-4">
+            <h5 class="md:text-2xl text-xl font-bold text-default-800 mb-2">
+              <a routerLink="/blog/single/v2" class="group-hover:text-primary transition"
+                >Sleek and Responsive - Designing with TailwindCSS and Mizzle</a
+              >
+            </h5>
+
+            <div class="flex items-center justify-between mt-3 text-default-600">
+              <p>By Carolyn Ortiz</p>
+              <a [routerLink]="[]" class="inline-flex items-center gap-1 text-primary">
+                Read more
+                <lucide-icon name="arrow-right" class="size-4"></lucide-icon>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Right Blogs -->
+      <div class="lg:col-span-7 space-y-8 mt-10">
+        <article class="border-b border-default-200 pb-8">
+          <div class="flex items-center group">
+            <div class="flex-1">
+              <h6 class="text-xl font-bold text-default-800">
+                <a routerLink="/blog/single/v1" class="group-hover:text-primary transition"
+                  >TailwindCSS Made Easy - Customizing Your HTML theme Like a Pro</a
+                >
+              </h6>
+
+              <ul class="flex flex-wrap gap-4 text-sm text-default-600 mt-2">
+                <li>By Jacqueline Miller</li>
+                <li class="flex items-center gap-1">
+                  <lucide-icon name="calendar" class="size-4"></lucide-icon>
+                  April 08, 2023
+                </li>
+              </ul>
+            </div>
+
+            <a
+              [routerLink]="[]"
+              class="ms-4 size-10 rounded-full bg-dark text-white flex items-center justify-center transition"
+            >
+              <lucide-icon name="arrow-right" class="size-4"></lucide-icon>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog item -->
+        <article class="border-b border-default-200 pb-8">
+          <div class="flex items-center group">
+            <div class="flex-1">
+              <h6 class="text-xl font-bold text-default-800">
+                <a routerLink="/blog/single/v1" class="group-hover:text-primary transition"
+                  >Effortless Web Design with Mizzle - Unlock Your Creative Potential</a
+                >
+              </h6>
+
+              <ul class="flex flex-wrap gap-4 text-sm text-default-600 mt-2">
+                <li>By Allen Smith</li>
+                <li class="flex items-center gap-1">
+                  <lucide-icon name="calendar" class="size-4"></lucide-icon>
+                  April 13, 2023
+                </li>
+              </ul>
+            </div>
+
+            <!-- Button -->
+            <a
+              [routerLink]="[]"
+              class="ms-4 size-10 rounded-full bg-dark text-white flex items-center justify-center transition"
+            >
+              <lucide-icon name="arrow-right" class="size-4"></lucide-icon>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog item -->
+        <article class="pt-6">
+          <div class="flex items-center group">
+            <div class="flex-1">
+              <h6 class="text-xl font-bold text-default-800">
+                <a routerLink="/blog/single/v1" class="group-hover:text-primary transition"
+                  >Mastering HTML Website Templates - Unleash Your Creativity with TailwindCSS</a
+                >
+              </h6>
+              <ul class="flex flex-wrap gap-4 text-sm text-default-600 mt-2">
+                <li>By Jacqueline Miller</li>
+                <li class="flex items-center gap-1">
+                  <lucide-icon name="calendar" class="size-4"></lucide-icon>
+                  April 15, 2023
+                </li>
+              </ul>
+            </div>
+            <a
+              [routerLink]="[]"
+              class="ms-4 size-10 rounded-full bg-dark text-white flex items-center justify-center transition"
+            >
+              <lucide-icon name="arrow-right" class="size-4"></lucide-icon>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

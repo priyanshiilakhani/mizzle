@@ -3,9 +3,10 @@ import { CreativeAgency } from './creative-agency/creative-agency'
 import { Default } from './default/default'
 import { DigitalAgency } from './digital-agency/digital-agency'
 import { SeoAgency } from './seo-agency/seo-agency'
-import { LandingProduct } from './landing-product/landing-product'
-import { DesignAgency } from './design-agency/design-agency'
-import { MobileShowCase } from './mobile-show-case/mobile-show-case'
+import { LandingProduct } from './landing-product/landing-product';
+import { DesignAgency } from './design-agency/design-agency';
+import { MobileShowCase } from './mobile-show-case/mobile-show-case';
+import { Saas } from './saas/saas';
 
 export const DEMO_ROUTE: Routes = [
   {
@@ -43,9 +44,14 @@ export const DEMO_ROUTE: Routes = [
     component: MobileShowCase,
     data: { title: 'Mobile Showcase' },
   },
+  {
+    path: 'saas',
+    component: Saas,
+    data: { title: 'SaaS v.1' },
+  },
   // {
   //   path: 'finance-consulting',
   //   component: FinanceConsulting,
   //   data: { title: 'Finance Consulting' },
   // },
-]
+];
