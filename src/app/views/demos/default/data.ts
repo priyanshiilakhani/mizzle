@@ -1,5 +1,3 @@
-import { credits } from '@/app/common/constants';
-
 const client1Img = '/images/client/01.svg';
 const client2Img = '/images/client/02.svg';
 const client3Img = '/images/client/03.svg';
@@ -72,76 +70,40 @@ export const services: ServiceType[] = [
   },
 ];
 
-export type User = {
-  id?: string;
-  avatar?: string;
-  email?: string;
-  username?: string;
-  password?: string;
-  firstName?: string;
-  lastName?: string;
-  role?: string;
-  token?: string;
-};
-
-export const userData: User[] = [
-  {
-    id: '1',
-    avatar: avatar3,
-    firstName: 'Nix',
-    lastName: 'Maxwell',
-  },
-  {
-    id: '2',
-    avatar: avatar1,
-    firstName: 'Dennis',
-    lastName: 'Barrett',
-  },
-  {
-    id: '3',
-    avatar: avatar2,
-    firstName: 'Nix',
-    lastName: 'Maxwell',
-  },
-  {
-    id: '4',
-    avatar: avatar5,
-    firstName: 'Carolyn',
-    lastName: 'Ortiz',
-  },
-];
-
 export type TestimonialType = {
-  userId?: User['id'];
-  user?: User;
-  title?: string;
-  comment: string;
   rating: number;
-};
+  message: string;
+  avatar: string;
+  name: string;
+}
 
 export const testimonials: TestimonialType[] = [
   {
-    user: userData[0],
-    comment:
-      "The best Bootstrap theme we've ever used - it's easy to customize and comes with all the features we need.",
     rating: 4.5,
+    message:
+      'Mizzle is the perfect theme for businesses that want to create a stylish and functional website.',
+    avatar: avatar3,
+    name: 'Nix Maxwell',
   },
   {
-    user: userData[1],
-    comment:
-      "The best Bootstrap theme we've ever used - it's easy to customize and comes with all the features we need.",
     rating: 4.5,
-  },
-
-  {
-    user: userData[2],
-    comment:
-      credits.name + ' helped us create a stunning website that reflects our brand perfectly.',
-    rating: 4.5,
+    message:
+      "The best Template we've ever used - it's easy to customize and comes with all the features we need.",
+    avatar: avatar1,
+    name: 'Dennis Barrett',
   },
   {
-    user: userData[3],
-    comment: 'I highly recommend Mizzle to anyone looking for a high-quality Bootstrap theme.',
     rating: 4.5,
+    message:
+      'StackBros helped us create a stunning website that reflects our brand perfectly.',
+    avatar: avatar2,
+    name: 'Nix Maxwell',
+  },
+  {
+    rating: 4.5,
+    message:
+      'I highly recommend Mizzle to anyone looking for a high-quality Template.',
+    avatar: avatar5,
+    name: 'Carolyn Ortiz',
   },
 ];

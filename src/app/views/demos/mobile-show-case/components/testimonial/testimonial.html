@@ -1,0 +1,39 @@
+<section>
+    <div class="container">
+        <div class="max-w-2xl mx-auto text-center lg:mb-10 mb-6">
+            <h2 class="lg:text-[45px] md:text-4xl text-3xl font-bold">What people say about us</h2>
+        </div>
+
+        <div class="columns-1 md:columns-2 lg:columns-3 gap-6 [column-fill:balance]">
+            @for (item of testimonials; track $index) {
+            <div class="break-inside-avoid border border-default-200 rounded-md p-5 mb-6">
+                <p class="mb-3">{{item.message}}</p>
+                <div class="flex items-center gap-0.5 mb-4">
+                    @for (star of getFullStars(item.rating); track $index) {
+                    <lucide-icon name="star" class="fill-warning text-warning size-4">
+                    </lucide-icon>
+                    }
+
+                    <!-- Half Star -->
+                    @if (hasHalfStar(item.rating)) {
+                    <lucide-icon name="star-half" class="fill-warning text-warning size-4">
+                    </lucide-icon>
+                    }
+
+                    <!-- Empty Stars -->
+                    @for (star of getEmptyStars(item.rating); track $index) {
+                    <lucide-icon name="star" class="text-warning size-4">
+                    </lucide-icon>
+                    }
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <img class="size-8 rounded-full" [src]="item.avatar" alt="avatar" />
+                    <p class="text-default-800 font-bold text-sm">{{item.name}}</p>
+                </div>
+            </div>
+            }
+
+        </div>
+    </div>
+</section>

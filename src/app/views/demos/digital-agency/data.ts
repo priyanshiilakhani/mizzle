@@ -10,8 +10,6 @@ const project2 = '/images/portfolio/list/03.jpg';
 
 const avatar2 = '/images/avatar/02.jpg';
 const avatar4 = '/images/avatar/04.jpg';
-const avatar5 = '/images/avatar/05.jpg';
-const avatar6 = '/images/avatar/06.jpg';
 const avatar9 = '/images/avatar/09.jpg';
 
 const blogImg3 = '/images/blog/4by3/03.jpg';
@@ -112,54 +110,34 @@ export const statData: StatisticType[] = [
   },
 ];
 
-export type TestimonialType = {
-  title: string;
-  comment: string;
+export type testimonialType = {
+  id: string;
   rating: number;
-  user: {
-    firstName: string;
-    lastName: string;
-    role: string;
-    avatar: string;
-  };
+  title: string;
+  message: string;
 };
 
-export const testimonials: TestimonialType[] = [
+export const testimonials: testimonialType[] = [
   {
-    title: "Transformed My Agency's Results",
-    comment:
+    id: 'testi-one',
+    rating: 4.5,
+    title: '"Transformed My Agency\'s Results"',
+    message:
       'As an employer, the platform exceeded my expectations. We swiftly found top-tier talent for our company, thanks to the user-friendly interface and the ability to connect with candidates that perfectly fit our requirements.',
-    rating: 5,
-    user: {
-      firstName: 'Louis',
-      lastName: 'Ferguson',
-      role: 'Web Developer',
-      avatar: avatar4,
-    },
   },
   {
-    title: "Transformed My Agency's Results",
-    comment:
-      'As an employer, the platform exceeded my expectations. We swiftly found top-tier talent for our company, thanks to the user-friendly interface and the ability to connect with candidates that perfectly fit our requirements.',
+    id: 'testi-two',
     rating: 4.5,
-    user: {
-      firstName: 'Emma',
-      lastName: 'Watson',
-      role: 'Co-Founder',
-      avatar: avatar5,
-    },
+    title: '"Transformed My Agency\'s Results"',
+    message:
+      'As an employer, the platform exceeded my expectations. We swiftly found top-tier talent for our company, thanks to the user-friendly interface and the ability to connect with candidates that perfectly fit our requirements.',
   },
   {
-    title: "Transformed My Agency's Results",
-    comment:
-      'As an employer, the platform exceeded my expectations. We swiftly found top-tier talent for our company, thanks to the user-friendly interface and the ability to connect with candidates that perfectly fit our requirements.',
+    id: 'testi-three',
     rating: 4.5,
-    user: {
-      firstName: 'Samuel',
-      lastName: 'Bishop',
-      role: 'Product designer',
-      avatar: avatar6,
-    },
+     title: '"Transformed My Agency\'s Results"',
+     message:
+      'As an employer, the platform exceeded my expectations. We swiftly found top-tier talent for our company, thanks to the user-friendly interface and the ability to connect with candidates that perfectly fit our requirements.',
   },
 ];
 

@@ -1,0 +1,59 @@
+<section class="lg:py-28 md:py-20 py-16">
+    <div class="container">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+            <div class="lg:col-span-1 md:col-span-2 lg:mb-0 mb-6">
+                <div class="lg:text-start text-center">
+                    <h2 class="lg:text-[45px] md:text-4xl text-3xl font-bold mb-6">Pick the best plan that suits you</h2>
+                    <p class="mb-6">Two before narrow not relied how except moment myself Dejection assurance mrs led certainly.</p>
+
+                    <div class="mb-4 flex lg:justify-start justify-center items-center gap-x-3">
+                        <label for="toggle-count-switch" class="font-bold text-default-800">Monthly</label>
+                        <label for="toggle-count-switch" class="relative inline-block w-11 h-6 cursor-pointer">
+                            <input type="checkbox" id="toggle-count-switch" class="peer sr-only" />
+                            <span class="absolute inset-0 bg-default-200 rounded-full transition-colors duration-200 ease-in-out peer-checked:bg-primary peer-disabled:opacity-50 peer-disabled:pointer-events-none"></span>
+                            <span class="absolute top-1/2 start-0.5 -translate-y-1/2 size-5 bg-body-bg rounded-full shadow-xs transition-all duration-200 ease-in-out peer-checked:translate-x-full"></span>
+                        </label>
+                        <label for="toggle-count-switch" class="font-bold text-default-800">Annual</label>
+                    </div>
+                    <img src="/images/elements/pricing.svg" class="mx-auto w-50" alt="pricing-vector" />
+                </div>
+            </div>
+            @for (plan of pricingPlans; track $index) {
+            <div [class]="
+    $index === 0
+      ? 'md:border-e border-default-200 pe-10 ms-10 md:mb-0 mb-10'
+      : 'md:ms-16'
+  ">
+                <div class="lg:text-start text-center">
+                    <span class="px-2 py-1 bg-primary text-white text-xs font-medium rounded"> {{ plan.badge }}</span>
+                    <h6 class="flex items-center lg:justify-start justify-center lg:text-[58px] md:text-[45px] text-4xl my-6">
+                        <span class="lg:text-[58px] md:text-[45px] text-4xl font-bold text-default-800">$</span>
+                        <p [attr.data-hs-toggle-count]="
+                            '{ 
+                                &quot;target&quot;: &quot;#toggle-count-switch&quot;, 
+                                &quot;min&quot;: ' + plan.monthlyPrice + ', 
+                                &quot;max&quot;: ' + plan.yearlyPrice + ' 
+                            }'
+                            " class="text-default-800 font-bold lg:text-[58px] md:text-[45px] text-4xl"> {{ plan.monthlyPrice }}
+                        </p>
+                    </h6>
+
+                    <h6 class="text-xl mb-3">Quick look at all the features</h6>
+
+                    <ul class="space-y-3 mb-6">
+                        @for (feature of plan.features; track $index) {
+                        <li class="flex items-center lg:justify-start justify-center gap-1.5 text-default-800">
+                            <lucide-icon name="check" class="text-primary size-4"></lucide-icon>
+                            <span>{{ feature }}</span>
+                        </li>
+                        }
+                    </ul>
+                    <a [routerLink]="[]" class="transition-all font-medium bg-dark hover:bg-dark/85 text-white py-2.5 rounded px-6">Start a free 7-day trial</a>
+                </div>
+            </div>
+            }
+
+
+        </div>
+    </div>
+</section>

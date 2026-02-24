@@ -31,53 +31,23 @@
             <div class="md:col-span-2">
                 <div class="lg:w-3xl ms-auto">
                     <div>
-                        <div id="testi-one" role="presentation" aria-labelledby="testi-one-tab">
+                        @for (item of testimonials; track $index) {
+                        <div [id]="item.id" role="presentation" [class.hidden]="$index !== 0">
                             <div class="size-14 rounded-full flex justify-center bg-dark items-center mb-6">
                                 <lucide-icon name="quote" class="size-4 text-white fill-white"></lucide-icon>
                             </div>
 
                             <div class="flex items-center gap-1 ms-1 mb-6">
+                                @for (star of [1,2,3,4]; track $index) {
                                 <lucide-icon name="star" class="fill-warning text-warning size-5"></lucide-icon>
-                                <lucide-icon name="star" class="fill-warning text-warning size-5"></lucide-icon>
-                                <lucide-icon name="star" class="fill-warning text-warning size-5"></lucide-icon>
-                                <lucide-icon name="star" class="fill-warning text-warning size-5"></lucide-icon>
+                                }
                                 <lucide-icon name="star-half" class="fill-warning text-warning size-5"></lucide-icon>
+
                             </div>
-                            <h6 class="text-xl font-bold mb-2">"Transformed My Agency's Results"</h6>
-                            <p class="mb-6">As an employer, the platform exceeded my expectations. We swiftly found top-tier talent for our company, thanks to the user-friendly interface and the ability to connect with candidates that perfectly fit our requirements.</p>
+                            <h6 class="text-xl font-bold mb-2">{{item.title}}</h6>
+                            <p class="mb-6">{{item.message}}</p>
                         </div>
-
-                        <div id="testi-two" class="hidden" role="presentation" aria-labelledby="testi-two-tab">
-                            <div class="size-14 rounded-full flex justify-center bg-dark items-center mb-6">
-                                <lucide-icon name="quote" class="size-4 text-white fill-white"></lucide-icon>
-                            </div>
-
-                            <div class="flex items-center gap-1 ms-1 mb-6">
-                                <lucide-icon name="star" class="fill-warning text-warning size-5"></lucide-icon>
-                                <lucide-icon name="star" class="fill-warning text-warning size-5"></lucide-icon>
-                                <lucide-icon name="star" class="fill-warning text-warning size-5"></lucide-icon>
-                                <lucide-icon name="star" class="fill-warning text-warning size-5"></lucide-icon>
-                                <lucide-icon name="star-half" class="fill-warning text-warning size-5"></lucide-icon>
-                            </div>
-                            <h6 class="text-xl font-bold mb-2">"Transformed My Agency's Results"</h6>
-                            <p class="mb-6">As an employer, the platform exceeded my expectations. We swiftly found top-tier talent for our company, thanks to the user-friendly interface and the ability to connect with candidates that perfectly fit our requirements.</p>
-                        </div>
-
-                        <div id="testi-three" class="hidden" role="presentation" aria-labelledby="testi-three-tab">
-                            <div class="size-14 rounded-full flex justify-center bg-dark items-center mb-6">
-                                <lucide-icon name="quote" class="size-4 text-white fill-white"></lucide-icon>
-                            </div>
-
-                            <div class="flex items-center gap-1 ms-1 mb-6">
-                                <lucide-icon name="star" class="fill-warning text-warning size-5"></lucide-icon>
-                                <lucide-icon name="star" class="fill-warning text-warning size-5"></lucide-icon>
-                                <lucide-icon name="star" class="fill-warning text-warning size-5"></lucide-icon>
-                                <lucide-icon name="star" class="fill-warning text-warning size-5"></lucide-icon>
-                                <lucide-icon name="star-half" class="fill-warning text-warning size-5"></lucide-icon>
-                            </div>
-                            <h6 class="text-xl font-bold mb-2">"Transformed My Agency's Results"</h6>
-                            <p class="mb-6">As an employer, the platform exceeded my expectations. We swiftly found top-tier talent for our company, thanks to the user-friendly interface and the ability to connect with candidates that perfectly fit our requirements.</p>
-                        </div>
+                        }
                     </div>
 
                     <div>

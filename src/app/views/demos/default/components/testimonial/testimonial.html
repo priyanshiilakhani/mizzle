@@ -8,7 +8,7 @@
                 <h2 class="lg:text-[45px] md:text-4xl text-3xl font-bold mb-6">See how we've helped our clients succeed</h2>
                 <h6 class="text-lg font-bold mb-6">More than 1500+ agencies using Mizzle</h6>
                 <div class="swiper">
-                    <swiper-container class="swiper-wrapper mb-14" [spaceBetween]="30" loop="true" autoplay="true" pagination="true" pagination-el=".swiper-pagination" pagination-clickable="true" [breakpoints]="{ '576': { slidesPerView: 2 } }"> @for (item of testimonialSwiperData; track $index) {
+                    <swiper-container class="swiper-wrapper mb-14" spaceBetween ="30" loop="true" autoplay="true" pagination="true" pagination-el=".swiper-pagination" pagination-clickable="true" breakpoints = "{ '576': { slidesPerView: 2 } }"> @for (item of testimonialSwiperData; track $index) {
                         <swiper-slide>
                             <div class="bg-transparent h-full">
                                 <ul class="flex mb-2 space-x-1">
@@ -21,12 +21,12 @@
                                         <lucide-icon name="star-half" class="fill-warning text-warning size-4.5"></lucide-icon>
                                     </li>
                                 </ul>
-                                <p class="text-default-800 font-normal">{{ item.comment }}</p>
+                                <p class="text-default-800 font-normal">{{ item.message }}</p>
                                 <div class="flex items-center gap-2 mt-4">
                                     <div>
-                                        <img [src]="item.user?.avatar" alt="avatar" class="size-10 rounded object-cover" />
+                                        <img [src]="item.avatar" alt="avatar" class="size-10 rounded object-cover" />
                                     </div>
-                                    <p class="mb-0 text-default-600">By {{ item.user?.firstName }} {{ item.user?.lastName }}</p>
+                                    <p class="mb-0 text-default-600">By {{item.name}}</p>
                                 </div>
                             </div>
                         </swiper-slide>
