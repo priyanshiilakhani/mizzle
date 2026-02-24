@@ -1,0 +1,50 @@
+<section class="lg:py-28 md:py-20 py-16">
+    <div class="container">
+        <div class="grid lg:grid-cols-12 grid-cols-1 gap-x-8 gap-y-6">
+            <div class="lg:col-span-5">
+                <div class="bg-dark md:p-10 p-5 rounded-md">
+                    <span>
+                        <lucide-icon name="quote" class="fill-primary md:size-12 size-8 text-primary"></lucide-icon>
+                    </span>
+
+                    <p class="my-6 md:text-2xl text-xl text-white">The sound quality is impressive for earbuds of this size. The audio is clear, with balanced mids and highs. The bass isn't overpowering, but it's adequate for most music genres.</p>
+                    <div class="flex items-center gap-1">
+                        <lucide-icon name="star" class="size-5 text-white fill-white"></lucide-icon>
+                        <lucide-icon name="star" class="size-5 text-white fill-white"></lucide-icon>
+                        <lucide-icon name="star" class="size-5 text-white fill-white"></lucide-icon>
+                        <lucide-icon name="star" class="size-5 text-white fill-white"></lucide-icon>
+                        <lucide-icon name="star" class="size-5 text-white fill-white"></lucide-icon>
+                    </div>
+
+                    <hr class="my-6 border-white/14" />
+
+                    <div class="md:flex items-center gap-2">
+                        <img src="/images/avatar/07.jpg" class="size-12 rounded-full" />
+                        <div>
+                            <h6 class="text-xl text-white font-bold">Dennis Barrett</h6>
+                            <p class="text-sm text-neutral-200">CEO and co-founder, MacoInfo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7">
+                <div class="lg:w-2xl ms-auto">
+                    <h2 class="lg:text-[45px] md:text-4xl text-3xl mb-6">Discover the Future of Sound with AirPods</h2>
+                    <div class="grid md:grid-cols-2 grid-cols-1 gap-8">
+                        @for (item of featuresData; track $index) {
+                        <div>
+                            <div class="size-10.5 rounded bg-primary/10 flex justify-center items-center mb-4">
+                                <lucide-icon [name]="item.icon" class="size-5 text-primary" [class]="item.className"></lucide-icon>
+                            </div>
+                            <h6 class="text-xl font-bold mb-2">{{ item.title }}</h6>
+                            <p> {{ item.description }}</p>
+                        </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

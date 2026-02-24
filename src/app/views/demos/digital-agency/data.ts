@@ -1,37 +1,34 @@
-const serviceImg1 = '/images/services/4by3/01.jpg'
-const serviceImg2 = '/images/services/4by3/02.jpg'
-const serviceImg3 = '/images/services/4by3/03.jpg'
-const serviceImg4 = '/images/services/4by3/04.jpg'
-const serviceImg5 = '/images/services/4by3/05.jpg'
-const serviceImg6 = '/images/services/4by3/06.jpg'
+const serviceImg1 = '/images/services/4by3/01.jpg';
+const serviceImg2 = '/images/services/4by3/02.jpg';
+const serviceImg3 = '/images/services/4by3/03.jpg';
+const serviceImg4 = '/images/services/4by3/04.jpg';
+const serviceImg5 = '/images/services/4by3/05.jpg';
+const serviceImg6 = '/images/services/4by3/06.jpg';
 
-const project1 = '/images/portfolio/list/02.jpg'
-const project2 = '/images/portfolio/list/03.jpg'
+const project1 = '/images/portfolio/list/02.jpg';
+const project2 = '/images/portfolio/list/03.jpg';
 
-const avatar2 = '/images/avatar/02.jpg'
-const avatar4 = '/images/avatar/04.jpg'
-const avatar5 = '/images/avatar/05.jpg'
-const avatar6 = '/images/avatar/06.jpg'
-const avatar9 = '/images/avatar/09.jpg'
+const avatar2 = '/images/avatar/02.jpg';
+const avatar4 = '/images/avatar/04.jpg';
+const avatar5 = '/images/avatar/05.jpg';
+const avatar6 = '/images/avatar/06.jpg';
+const avatar9 = '/images/avatar/09.jpg';
 
-const blogImg3 = '/images/blog/4by3/03.jpg'
-const blogImg7 = '/images/blog/4by3/07.jpg'
-const blogImg8 = '/images/blog/4by3/08.jpg'
-
+const blogImg3 = '/images/blog/4by3/03.jpg';
+const blogImg7 = '/images/blog/4by3/07.jpg';
+const blogImg8 = '/images/blog/4by3/08.jpg';
 
 export type ServiceType = {
-  icon?: string
-  image?: string
-  title: string
-  description?: string
-  url: string
-}
+  image?: string;
+  title: string;
+  description?: string;
+  url: string;
+};
 
 export const services: ServiceType[] = [
   {
     title: 'Custom Software Development',
-    description:
-      'We prioritize user experience, scalability, and security to ensure your...',
+    description: 'We prioritize user experience, scalability, and security to ensure your...',
     image: serviceImg1,
     url: '/services/single',
   },
@@ -43,22 +40,19 @@ export const services: ServiceType[] = [
   },
   {
     title: 'Digital Marketing Strategies',
-    description:
-      'Reach your target drive results with our comprehensive digital marketing.',
+    description: 'Reach your target drive results with our comprehensive digital marketing.',
     image: serviceImg3,
     url: '/services/single',
   },
   {
     title: 'Cybersecurity Solutions',
-    description:
-      'Protect your business from cyber threats with our cybersecurity solutions.',
+    description: 'Protect your business from cyber threats with our cybersecurity solutions.',
     image: serviceImg4,
     url: '/services/single',
   },
   {
     title: 'IT Consulting and Support',
-    description:
-      'Leverage our expertise to optimize your IT infrastructure and operations.',
+    description: 'Leverage our expertise to optimize your IT infrastructure and operations.',
     image: serviceImg5,
     url: '/services/single',
   },
@@ -68,42 +62,14 @@ export const services: ServiceType[] = [
     image: serviceImg6,
     url: '/services/single',
   },
-]
-
-export type User = {
-  id?: string
-  avatar?: string
-  email?: string
-  username?: string
-  password?: string
-  firstName?: string
-  lastName?: string
-  role?: string
-  token?: string
-}
-
-export type DateType = {
-  date?: number
-  month?: string | number
-  year?: number
-  hour?: number
-  minute?: number
-}
+];
 
 export type ProjectType = {
-  image: string
-  name: string
-  description?: string
-  category?: string
-  tags?: string[]
-  url: string
-  createdBy?: {
-    user?: User
-    team?: User[]
-  }
-  createdAt?: DateType
-  status?: 'published' | 'private'
-}
+  image: string;
+  name: string;
+  category?: string;
+  url: string;
+};
 
 export const projects: ProjectType[] = [
   {
@@ -118,14 +84,14 @@ export const projects: ProjectType[] = [
     image: project2,
     url: '/portfolio/case-studies/v2',
   },
-]
+];
 
 export type StatisticType = {
-  title: string
-  stat: number
-  prefix?: string
-  suffix?: string
-}
+  title: string;
+  stat: number;
+  prefix?: string;
+  suffix?: string;
+};
 
 export const statData: StatisticType[] = [
   {
@@ -144,15 +110,19 @@ export const statData: StatisticType[] = [
     stat: 350,
     suffix: '+',
   },
-]
+];
 
 export type TestimonialType = {
-  userId?: User['id']
-  user: User
-  title?: string
-  comment: string
-  rating?: number
-}
+  title: string;
+  comment: string;
+  rating: number;
+  user: {
+    firstName: string;
+    lastName: string;
+    role: string;
+    avatar: string;
+  };
+};
 
 export const testimonials: TestimonialType[] = [
   {
@@ -191,19 +161,24 @@ export const testimonials: TestimonialType[] = [
       avatar: avatar6,
     },
   },
-]
-
+];
 
 export type BlogType = {
-  image?: string
-  title: string
-  description?: string
-  category?: string
-  tags?: string[]
-  url: string
-  publishedBy?: User
-  publishedAt?: DateType
-}
+  title: string;
+  category: string;
+  publishedAt: {
+    date: number;
+    month: string;
+    year: number;
+  };
+  publishedBy: {
+    avatar: string;
+    firstName: string;
+    lastName: string;
+  };
+  image: string;
+  url: string;
+};
 
 export const blogs: BlogType[] = [
   {
@@ -223,8 +198,7 @@ export const blogs: BlogType[] = [
     url: '/blog/single/v2',
   },
   {
-    title:
-      'Mastering HTML Website Templates - Unleash Your Creativity with Bootstrap',
+    title: 'Mastering HTML Website Templates - Unleash Your Creativity with Bootstrap',
     category: 'Research',
     publishedAt: {
       date: 12,
@@ -255,4 +229,4 @@ export const blogs: BlogType[] = [
     image: blogImg7,
     url: '/blog/single/v2',
   },
-]
+];

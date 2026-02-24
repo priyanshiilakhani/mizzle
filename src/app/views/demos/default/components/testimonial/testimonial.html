@@ -8,8 +8,8 @@
                 <h2 class="lg:text-[45px] md:text-4xl text-3xl font-bold mb-6">See how we've helped our clients succeed</h2>
                 <h6 class="text-lg font-bold mb-6">More than 1500+ agencies using Mizzle</h6>
                 <div class="swiper">
-                    <swiper-container class="swiper-wrapper mb-14" [spaceBetween]="30" loop="true" autoplay="true" [pagination]="{ el: '.swiper-pagination', clickable: true }" [breakpoints]="{ '576': { slidesPerView: 2 } }"> @for (item of testimonialSwiperData; track $index) {
-                        <swiper-slide class="swiper-slide">
+                    <swiper-container class="swiper-wrapper mb-14" [spaceBetween]="30" loop="true" autoplay="true" pagination="true" pagination-el=".swiper-pagination" pagination-clickable="true" [breakpoints]="{ '576': { slidesPerView: 2 } }"> @for (item of testimonialSwiperData; track $index) {
+                        <swiper-slide>
                             <div class="bg-transparent h-full">
                                 <ul class="flex mb-2 space-x-1">
                                     @for (star of [1,2,3,4]; track $index) {
@@ -32,7 +32,7 @@
                         </swiper-slide>
                         }
                     </swiper-container>
-                    <div class="swiper-pagination flex justify-start"></div>
+                    <div class="swiper-pagination swiper-pagination-primary position-relative flex justify-start"></div>
                 </div>
             </div>
 

@@ -31,31 +31,24 @@
     </div>
   </div>
 
-  <div class="lg:ms-80 px-4">
-    <div class="swiper">
-      <swiper-container
-        class="swiper-wrapper"
-        [spaceBetween]="50"
-        [loop]="false"
-        [navigation]="navigation"
-        [autoplay]="true"
-        [breakpoints]="{
-          '576': { slidesPerView: 1 },
-          '768': { slidesPerView: 3 },
-          '992': { slidesPerView: 3 },
-          '1200': { slidesPerView: 4 },
-        }"
-      >
-        @for (item of servicesData; track $index) {
-          <swiper-slide class="swiper-slide">
-            <div class="bg-body-bg rounded-lg overflow-hidden shadow group">
-              <div class="overflow-hidden">
-                <img
-                  [src]="item.image"
-                  alt="service image"
-                  class="w-full h-auto transform transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
+    <div class="lg:ms-80 px-4">
+        <div class="swiper">
+            <swiper-container class="swiper-wrapper" space-between="50"
+            loop="false" navigation="true"
+            navigation-next-el="#swiper-button-next-team"
+            navigation-prev-el="#swiper-button-prev-team"
+            autoplay ="true" breakpoints='{
+                "576": { "slidesPerView": 1 },
+                "768": { "slidesPerView": 3 },
+                "992": { "slidesPerView": 3 },
+                "1200": { "slidesPerView": 4 }
+            }'>
+                @for (item of servicesData; track $index) {
+                <swiper-slide class="swiper-slide">
+                    <div class="bg-body-bg rounded-lg overflow-hidden shadow group">
+                        <div class="overflow-hidden">
+                            <img [src]="item.image" alt="service image" class="w-full h-auto transform transition-transform duration-500 group-hover:scale-105" />
+                        </div>
 
               <div class="p-6">
                 <h6 class="text-xl font-bold mb-2">

@@ -8,7 +8,7 @@ File: Style CSS File
 
 /* Swiper CSS */
 @import "swiper/swiper-bundle.css";
-/* @import "glightbox/dist/css/glightbox.min.css"; */
+@import "glightbox/dist/css/glightbox.min.css";
 
 /* TailwindCSS */
 @import "tailwindcss";

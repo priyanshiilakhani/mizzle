@@ -1,7 +1,7 @@
 <section class="py-0">
     <div class="swiper overflow-hidden relative">
-        <swiper-container class="swiper-wrapper" effect="fade" loop="true" speed="1000" autoplay-delay="3000" autoplay-disable-on-interaction="false" [pagination]="{ el: '.swiper-pagination', clickable: true }" >
-            <swiper-slide class="swiper-slide w-full min-h-screen bg-[url('/images/bg/10.jpg')] bg-center bg-cover bg-no-repeat">
+        <swiper-container class="swiper-wrapper" effect="fade" loop="true" speed="1000" autoplay-delay="3000" autoplay-disable-on-interaction="false" pagination="true" pagination-el='#hero-pagination' pagination-clickable="true">
+            <swiper-slide class="w-full min-h-screen bg-[url('/images/bg/10.jpg')] bg-center bg-cover bg-no-repeat">
                 <div class="relative size-full">
                     <div class="absolute inset-0 bg-linear-to-b from-black/40 to-black/40 min-h-screen"></div>
                     <div class="relative z-10 flex items-center justify-center h-full lg:py-20 py-13 px-4">
@@ -47,6 +47,6 @@
                 </div>
             </swiper-slide>
         </swiper-container>
-        <div class="swiper-pagination"></div>
+        <div id="hero-pagination" class="swiper-pagination swiper-pagination-line position-absolute bottom-0 mb-3"></div>
     </div>
 </section>

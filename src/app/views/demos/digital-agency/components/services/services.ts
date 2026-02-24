@@ -12,8 +12,4 @@ import { LucideAngularModule } from "lucide-angular";
 })
 export class Services {
   servicesData = services
-  navigation = {
-  nextEl: '#swiper-button-next-team',
-  prevEl: '#swiper-button-prev-team'
-};
 }

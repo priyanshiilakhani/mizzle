@@ -1,0 +1,56 @@
+<section class="lg:py-28 md:py-20 py-16">
+    <div class="container">
+        <div class="grid md:grid-cols-3 grid-cols-1 md:gap-0 gap-y-6 items-start">
+            <div class="md:col-span-1 md:text-start text-center">
+                <h2 class="lg:text-[45px] md:text-4xl text-3xl mb-6 lg:w-sm">The perfect Airpods that suit you</h2>
+
+                <div class="flex items-center md:justify-start justify-center gap-4">
+                    <a [routerLink]="[]" class="size-10 bg-dark justify-center flex items-center rounded-full" id="swiper-button-prev">
+                        <lucide-icon name="move-left" class="size-5 text-white/70"></lucide-icon>
+                    </a>
+
+                    <a [routerLink]="[]" class="size-10 bg-dark justify-center flex items-center rounded-full" id="swiper-button-next">
+                        <lucide-icon name="move-right" class="size-5 text-white/70"></lucide-icon>
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:col-span-2">
+                <div class="swiper">
+                    <swiper-container class="swiper-wrapper py-4" 
+                    space-between="50" 
+                    loop="false" 
+                    navigation="true" 
+                    navigation-next-el="#swiper-button-next" 
+                    navigation-prev-el="#swiper-button-prev" 
+                    autoplay="true" 
+                    breakpoints='{
+                            "576": {"slidesPerView": 2}, 
+                            "768": {"slidesPerView": 2}, 
+                            "992": {"slidesPerView": 3}
+                    }'>
+                        @for (product of products; track $index) {
+                        <swiper-slide class="text-center">
+                            <img [src]="product.image" class="lg:w-46 md:w-30 w-44 mx-auto" alt="product-img" />
+                            <div class="mt-4">
+                                <h6 class="text-xl font-bold mb-4 hover:text-primary transition-all">
+                                    <a [routerLink]="[]">{{ product.name }}</a>
+                                </h6>
+
+                                <div class="mb-6" [class]="product.oldPrice ? 'flex items-center justify-center gap-1' : 'text-center'">
+                                    <h6 class="text-xl font-normal">{{currency}}{{ product.price }}</h6>
+                                    @if (product.oldPrice) {
+                                    <span>{{currency}}{{ product.oldPrice }}</span>
+                                    }
+                                </div>
+
+                                <a [routerLink]="[]" class="px-3.5 py-2 bg-primary text-white text-sm font-medium rounded hover:bg-primary-hover transition-all">Buy now</a>
+                            </div>
+                        </swiper-slide>
+                        }
+                    </swiper-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

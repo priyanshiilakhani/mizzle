@@ -1,0 +1,26 @@
+<section>
+    <div class="container">
+        <div class="grid md:grid-cols-2 grid-cols-1">
+            <div class="md:rounded-s-md rounded-t-md bg-default-100 lg:p-16 md:p-10 p-6">
+                <h2 class="lg:text-[45px] md:text-4xl text-3xl mb-6">With special audio that places sound all around you</h2>
+                <p class="mb-6">Why end might ask civil again spoil. Dinner she our horses depend remember at children by reserved to vicinity.</p>
+                <ul class="space-y-2 mb-6">
+                    @for (item of features; track $index) {
+                    <li class="flex gap-2 text-default-800" [class]="item.alignStart ?'lg:items-center items-start':'items-center'">
+                        <div>
+                            <lucide-icon name="badge-check" class="size-5.5 fill-primary text-default-100" [class]="item.alignStart?'lg:mt-0 mt-1':''"></lucide-icon>
+                        </div>
+                        {{item.text}}
+                    </li>
+                    }
+
+                </ul>
+                <a [routerLink]="[]" class="inline-block bg-dark text-white font-medium px-4 py-2 rounded-md shadow hover:bg-dark/85 transition-all duration-300">Click here for more detail</a>
+            </div>
+
+            <div>
+                <img src="/images/about/08.jpg" class="md:rounded-e-md rounded-b-md h-full object-cover" />
+            </div>
+        </div>
+    </div>
+</section>
