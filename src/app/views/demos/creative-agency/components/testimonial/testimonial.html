@@ -7,14 +7,15 @@
           class="fill-default-800 text-default-800 md:size-16 size-10"
         ></lucide-icon>
       </span>
-
-      <swiper-container
-        class="swiper overflow-hidden"
-        [autoplay]="{ delay: 3000, disableOnInteraction: false }"
-        [pagination]="{ clickable: true }"
-        pagination="true"
-      >
-        
+      <div class="swiper overflow-hidden">
+        <swiper-container
+          class="swiper-wrapper pb-10"
+          autoplay-delay="3000"
+          autoplay-disable-on-interaction="false"
+          pagination="true"
+          pagination-el=".swiper-pagination-line"
+          pagination-clickable="true"
+        >
           @for (item of testimonials; track $index) {
             <swiper-slide>
               <p class="text-2xl text-white">
@@ -31,13 +32,13 @@
                     <p class="text-sm text-white">Ceo and manager of Blogzine</p>
                   </div>
                 </div>
-                <img [src]="item.user.company?.image" class="h-10" alt="Client logo" />
+                <img [src]="item.user.company.image" class="h-10" alt="Client logo" />
               </div>
             </swiper-slide>
           }
-        
+        </swiper-container>
         <div class="swiper-pagination swiper-pagination-line absolute bottom-0 mt-6"></div>
-      </swiper-container>
+      </div>
     </div>
   </div>
 </section>

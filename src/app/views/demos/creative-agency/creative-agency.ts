@@ -15,6 +15,4 @@ import { Footer } from "@app/components/footer/footer";
   styles: ``,
 })
   
-export class CreativeAgency {
-
-}
+export class CreativeAgency {}

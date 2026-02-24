@@ -8,4 +8,5 @@ import { LucideAngularModule } from "lucide-angular";
   templateUrl: './about.html',
   styles: ``,
 })
+  
 export class About {}

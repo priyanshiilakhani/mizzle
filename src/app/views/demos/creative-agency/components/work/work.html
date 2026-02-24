@@ -17,8 +17,8 @@
               class="masonry-filters gap-y-2 flex flex-wrap md:flex-col justify-start lg:mb-10 md:mb-8 mb-6 lg:whitespace-nowrap lg:overflow-x-hidden"
             >
               <li>
-                <a
-                  class="active py-2 px-3 flex text-default-800 rounded font-semibold hover:text-white hover:bg-primary [.active]:bg-primary [.active]:text-white transition-all"
+                <a 
+                  class="active cursor-pointer py-2 px-3 flex text-default-800 rounded font-semibold hover:text-white hover:bg-primary [.active]:bg-primary [.active]:text-white transition-all"
                   (click)="filterItems('*')"
                   [ngClass]="{ active: activeFilter === '*' }"
                   >All work</a
@@ -27,7 +27,7 @@
 
               <li>
                 <a
-                  class="py-2 px-3 flex text-default-800 rounded font-semibold hover:text-white hover:bg-primary [.active]:bg-primary [.active]:text-white transition-all"
+                  class="cursor-pointer py-2 px-3 flex text-default-800 rounded font-semibold hover:text-white hover:bg-primary [.active]:bg-primary [.active]:text-white transition-all"
                   (click)="filterItems('.marketing')"
                   [ngClass]="{ active: activeFilter === '.marketing' }"
                   >Digital Marketing</a
@@ -36,7 +36,7 @@
 
               <li>
                 <a
-                  class="py-2 px-3 flex text-default-800 rounded font-semibold hover:text-white hover:bg-primary [.active]:bg-primary [.active]:text-white transition-all"
+                  class="cursor-pointer py-2 px-3 flex text-default-800 rounded font-semibold hover:text-white hover:bg-primary [.active]:bg-primary [.active]:text-white transition-all"
                   (click)="filterItems('.design')"
                   [ngClass]="{ active: activeFilter === '.design' }"
                   >Web design</a
@@ -45,7 +45,7 @@
 
               <li>
                 <a
-                  class="py-2 px-3 flex text-default-800 rounded font-semibold hover:text-white hover:bg-primary [.active]:bg-primary [.active]:text-white transition-all"
+                  class="cursor-pointer py-2 px-3 flex text-default-800 rounded font-semibold hover:text-white hover:bg-primary [.active]:bg-primary [.active]:text-white transition-all"
                   (click)="filterItems('.business')"
                   [ngClass]="{ active: activeFilter === '.business' }"
                   >Business development</a
@@ -54,7 +54,7 @@
 
               <li>
                 <a
-                  class="py-2 px-3 flex text-default-800 rounded font-semibold hover:text-white hover:bg-primary [.active]:bg-primary [.active]:text-white transition-all"
+                  class="cursor-pointer py-2 px-3 flex text-default-800 rounded font-semibold hover:text-white hover:bg-primary [.active]:bg-primary [.active]:text-white transition-all"
                   (click)="filterItems('.brand')"
                   [ngClass]="{ active: activeFilter === '.brand' }"
                   >Brand design</a
@@ -63,7 +63,7 @@
 
               <li>
                 <a
-                  class="py-2 px-3 flex text-default-800 rounded font-semibold hover:text-white hover:bg-primary [.active]:bg-primary [.active]:text-white transition-all"
+                  class="cursor-pointer py-2 px-3 flex text-default-800 rounded font-semibold hover:text-white hover:bg-primary [.active]:bg-primary [.active]:text-white transition-all"
                   (click)="filterItems('.ui')"
                   [ngClass]="{ active: activeFilter === '.ui' }"
                   >UI/UX design</a
@@ -73,7 +73,7 @@
 
             <a
               routerLink="/portfolio/showcase"
-              class="bg-default-100 hover:bg-default-200 transition-all font-medium dark:bg-dark dark:hover:bg-dark/80 text-default-900 py-2.5 rounded flex justify-center items-center gap-1 px-6"
+              class="cursor-pointer bg-default-100 hover:bg-default-200 transition-all font-medium dark:bg-dark dark:hover:bg-dark/80 text-default-900 py-2.5 rounded flex justify-center items-center gap-1 px-6"
             >
               View all projects
               <lucide-icon name="arrow-right" class="size-4"></lucide-icon>
@@ -92,9 +92,8 @@
                   >
                     <div class="group-hover:-translate-y-3 transition-all duration-500">
                       <h6 class="text-white font-semibold">
-                        <a routerLink="{{ item.url }}" class="text-xl text-white font-bold">{{
-                          item.name
-                        }}</a>
+                        <a [routerLink]="item.url" class="text-xl text-white font-bold">
+                          {{ item.name }}</a>
                       </h6>
                       <small class="text-white">{{ item.category }}</small>
                     </div>

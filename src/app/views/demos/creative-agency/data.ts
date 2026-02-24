@@ -1,78 +1,38 @@
+import { credits } from '@/app/common/constants';
+
 const client1 = '/images/client/01.svg';
 const client2 = '/images/client/02.svg';
 const client3 = '/images/client/03.svg';
 const client4 = '/images/client/04.svg';
+const client6 = '/images/client/06.svg';
+
 const portfolioImg1 = '/images/portfolio/masonry/01.jpg';
 const portfolioImg2 = '/images/portfolio/masonry/02.jpg';
 const portfolioImg3 = '/images/portfolio/masonry/03.jpg';
 const portfolioImg4 = '/images/portfolio/masonry/04.jpg';
 const portfolioImg5 = '/images/portfolio/masonry/05.jpg';
 const portfolioImg6 = '/images/portfolio/masonry/06.jpg';
-const avatar5 = 'assets/images/avatar/05.jpg';
-const avatar7 = 'assets/images/avatar/07.jpg';
-const client6 = 'assets/images/client/06.svg';
 
-const blogImg1 = 'assets/images/blog/4by3/01.jpg';
-const blogImg2 = 'assets/images/blog/4by3/02.jpg';
-const blogImg3 = 'assets/images/blog/4by3/03.jpg';
-const blogImg4 = 'assets/images/blog/4by3/04.jpg';
-const blogImg5 = 'assets/images/blog/4by3/05.jpg';
+const avatar5 = '/images/avatar/05.jpg';
+const avatar7 = '/images/avatar/07.jpg';
 
-export type ClientType = {
-  icon?: string;
-  image?: string;
-  name?: string;
-  url?: string;
-};
+const blogImg1 = '/images/blog/4by3/01.jpg';
+const blogImg2 = '/images/blog/4by3/02.jpg';
+const blogImg3 = '/images/blog/4by3/03.jpg';
+const blogImg4 = '/images/blog/4by3/04.jpg';
+const blogImg5 = '/images/blog/4by3/05.jpg';
 
-export const clientsData: ClientType[] = [
-  {
-    image: client1,
-  },
-  {
-    image: client2,
-  },
-  {
-    image: client3,
-  },
-  {
-    image: client4,
-  },
-  {
-    image: client3,
-  },
+export const clientsData: string[] = [
+ client1,client2,client3,client4
 ];
 
-export type User = {
-  id?: string;
-  avatar?: string;
-  email?: string;
-  username?: string;
-  password?: string;
-  firstName?: string;
-  lastName?: string;
-  role?: string;
-  token?: string;
-};
-
-export type ProjectType = {
-  image: string;
-  name: string;
-  description?: string;
-  category?: string;
-  tags?: string[];
-  url: string;
-  createdBy?: {
-    user?: User;
-    team?: User[];
-  };
-  createdAt?: string;
-  status?: 'published' | 'private';
-};
-
 export type RecentProjectType = {
+  name: string;
+  category: string;
   categoryClass: string;
-} & ProjectType;
+  image: string;
+  url: string;
+};
 
 export const projects: RecentProjectType[] = [
   {
@@ -97,19 +57,20 @@ export const projects: RecentProjectType[] = [
     url: '/portfolio/case-studies/v1',
   },
   {
-    name: 'Sustainability Initiative',
-    category: 'Business dev',
-    categoryClass: 'design marketing',
-    image: portfolioImg5,
-    url: '/portfolio/case-studies/v1',
-  },
-  {
     name: 'E-commerce Expansion',
     category: 'Digital Marketing',
     categoryClass: 'business design',
     image: portfolioImg6,
     url: '/portfolio/case-studies/v1',
   },
+  {
+    name: 'Sustainability Initiative',
+    category: 'Business dev',
+    categoryClass: 'design marketing',
+    image: portfolioImg5,
+    url: '/portfolio/case-studies/v1',
+  },
+
   {
     name: 'Social Media Engagement',
     category: 'UI/UX design',
@@ -119,25 +80,18 @@ export const projects: RecentProjectType[] = [
   },
 ];
 
-export type CompanyType = {
-  icon?: string;
-  image?: string;
-  name: string;
-  externalLink?: string;
-  url?: string;
-};
-
-type AuthorType = {
-  company?: CompanyType;
-} & User;
-
-
 export type TestimonialType = {
-  userId?: AuthorType['id'];
-  user: AuthorType;
-  title?: string;
   comment: string;
-  rating?: number;
+  user: {
+    avatar: string;
+    company: {
+      name: string;
+      image: string;
+    };
+    role: string;
+    firstName: string;
+    lastName: string;
+  };
 };
 
 export const testimonials: TestimonialType[] = [
@@ -182,5 +136,63 @@ export const testimonials: TestimonialType[] = [
       firstName: 'Dennis',
       lastName: 'Barrett',
     },
+  },
+];
+
+export type BlogType = {
+  title: string;
+  publishedBy: {
+    firstName: string;
+    lastName: string;
+  };
+  image: string;
+  url: string;
+};
+
+export const blogs: BlogType[] = [
+  {
+    title: 'Mastering Responsive Web Design with Bootstrap',
+    publishedBy: {
+      firstName: 'Jacqueline',
+      lastName: 'Miller',
+    },
+    image: blogImg1,
+    url: '/blog/single/v1',
+  },
+  {
+    title: 'Bootstrap Mastery: Designing Stunning Websites',
+    publishedBy: {
+      firstName: 'Dennis',
+      lastName: 'Barrett',
+    },
+    image: blogImg2,
+    url: '/blog/single/v1',
+  },
+  {
+    title: 'Interactive Web Design with Bootstrap and ' + credits.name,
+    publishedBy: {
+      firstName: 'Carolyn',
+      lastName: 'Ortiz',
+    },
+    image: blogImg3,
+    url: '/blog/single/v1',
+  },
+  {
+    title: 'Effortless Web Development with Mizzle',
+    publishedBy: {
+      firstName: 'Carolyn',
+      lastName: 'Ortiz',
+    },
+    image: blogImg4,
+    url: '/blog/single/v1',
+  },
+  {
+    title: 'Sleek and Responsive - Designing with Bootstrap and Mizzle',
+    publishedBy: {
+      firstName: 'Carolyn',
+      lastName: 'Ortiz',
+    },
+    image: blogImg5,
+    url: '/blog/single/v1',
   },
 ];

@@ -83,20 +83,21 @@
 
         <swiper-container
           class="swiper md:mt-6 mt-3"
-          [spaceBetween]="30"
-          [loop]="true"
-          [autoplay]="{ delay: 2000, disableOnInteraction: false }"
+          space-between="30"
+          loop="true"
+          autoplay-delay="2000"
+          autoplay-disable-on-interaction="false"
           [breakpoints]="{
-            '1200': { slidesPerView: 4 },
-            '992': { slidesPerView: 3 },
-            '768': { slidesPerView: 2 },
             '576': { slidesPerView: 3 },
+            '768': { slidesPerView: 2 },
+            '992': { slidesPerView: 3 },
+            '1200': { slidesPerView: 4 },
           }"
         >
           @for (item of clientSwiperData; track $index) {
             <swiper-slide>
               <img
-                [src]="item.image"
+                [src]="item"
                 class="px-3 lg:w-full md:w-36 align-middle"
                 alt="client-img"
               />
@@ -115,9 +116,10 @@
           <div class="flex items-center divide-x divide-default-200 dark:divide-white/20">
             <div class="md:text-end text-start pe-6">
               <div class="flex justify-end">
-                <h4 class="counter lg:text-[34px] md:text-3xl text-2xl font-bold" [countUp]="15">
-                  
-                </h4>
+                <h4
+                  class="counter lg:text-[34px] md:text-3xl text-2xl font-bold"
+                  [countUp]="15"
+                ></h4>
                 <span class="lg:text-[34px] md:text-3xl text-2xl font-bold text-default-800"
                   >k+</span
                 >
@@ -128,7 +130,6 @@
             <div class="md:text-end text-start">
               <div class="flex justify-end">
                 <h4 class="counter lg:text-[34px] md:text-3xl text-2xl font-bold" [countUp]="56">
-                  56
                 </h4>
                 <span class="lg:text-[34px] md:text-3xl text-2xl font-bold text-default-800"
                   >+</span
