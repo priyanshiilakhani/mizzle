@@ -1,0 +1,18 @@
+import { Component } from '@angular/core';
+import { Hero } from "./components/hero/hero";
+import { Steps } from "./components/steps/steps";
+import { Features } from "./components/features/features";
+import { Integration } from "./components/integration/integration";
+import { Pricing } from "./components/pricing/pricing";
+import { Testimonials } from "./components/testimonials/testimonials";
+import { Cta } from "./components/cta/cta";
+
+@Component({
+  selector: 'app-saas-v2',
+  imports: [Hero, Steps, Features, Integration, Pricing, Testimonials, Cta],
+  templateUrl: './saas-v2.html',
+  styles: ``,
+})
+export class SaasV2 {
+
+}
