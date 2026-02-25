@@ -1,0 +1,136 @@
+<section class="lg:pb-28 md:pb-20 pb-16">
+  <div class="container">
+    <div class="grid lg:grid-cols-3 grid-cols-1 gap-6 items-start">
+      <div class="lg:col-span-1 lg:text-start text-center">
+        <h2 class="md:text-4xl text-3xl mb-6 lg:w-sm">Explore Our Insights and Updates</h2>
+        <p class="mb-6">
+          Explore a world of articles covering a variety of topics, from best practices and success
+          stories to tutorials and product updates.
+        </p>
+        <div class="flex items-center lg:justify-start justify-center gap-4">
+          <a
+            [routerLink]="[]"
+            class="size-10 bg-dark justify-center flex items-center rounded-full"
+            id="swiper-button-prev"
+          >
+            <lucide-icon name="move-left" class="size-5 text-white/70"></lucide-icon>
+          </a>
+
+          <a
+            [routerLink]="[]"
+            class="size-10 bg-dark justify-center flex items-center rounded-full"
+            id="swiper-button-next"
+          >
+            <lucide-icon name="move-right" class="size-5 text-white/70"></lucide-icon>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-2">
+        <swiper-container
+          class="swiper"
+          space-between="40"
+          grab-cursor="true"
+          autoplay-delay="3000" autoplay-disable-on-interaction="false"
+          navigation-next-el="#swiper-button-next"
+          navigation-prev-el="#swiper-button-prev"
+          [breakpoints]="{
+            '576': { slidesPerView: 1 },
+            '768': { slidesPerView: 2 },
+            '992': { slidesPerView: 2 },
+          }"
+        >
+            @for (item of blogData; track $index) {
+              @if (item.type === 'blog') {
+                <swiper-slide>
+                  <article class="relative bg-transparent h-full overflow-hidden group">
+                    <div
+                      class="absolute top-3 start-3 bg-dark text-white text-xs font-semibold px-3 py-1 rounded"
+                    >
+                      {{ item.category }}
+                    </div>
+
+                    <img
+                      [src]="item.image"
+                      alt="Blog-img"
+                      class="w-full rounded-md h-auto object-cover"
+                    />
+
+                    <div class="px-2 pt-4">
+                      <h5 class="md:text-2xl text-xl text-default-800 font-bold mb-4">
+                        <a [routerLink]="[]">{{ item.title }}</a>
+                      </h5>
+
+                      <div class="flex justify-between items-center text-default-600">
+                        <span>{{ item.author }}</span>
+                        <a
+                          routerLink="/blog/single/v1"
+                          class="inline-flex items-center gap-1 text-primary group-hover:text-primary-hover after:absolute after:inset-0"
+                        >
+                          Read more
+                          <lucide-icon
+                            name="arrow-right"
+                            class="size-4 group-hover:translate-x-1 transition-all"
+                          ></lucide-icon>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </swiper-slide>
+              }
+
+              @if (item.type === 'ad') {
+                <div class="swiper-slide">
+                  <article
+                    class="relative bg-primary text-white p-4 overflow-hidden h-full rounded-md shadow"
+                  >
+                    <div class="absolute bottom-0 end-0 -mb-5 -me-7 opacity-40">
+                      <img src="/images/elements/pattern.svg" />
+                    </div>
+
+                    <div class="relative z-10">
+                      <div class="flex justify-between items-center mb-16">
+                        <div>
+                          <span
+                            class="absolute start-2 bg-dark text-white text-xs font-semibold px-3 py-1 rounded"
+                            >Advertisements</span
+                          >
+                        </div>
+
+                        <div class="absolute end-2 top-1">
+                          <button type="button" class="text-white text-xs flex items-center gap-1">
+                            <lucide-icon name="info" class="text-whit size-4"></lucide-icon>
+                            Sponsored
+                          </button>
+                        </div>
+                      </div>
+
+                      <h5 class="md:text-2xl text-xl font-bold">
+                        {{ item.title }}
+                      </h5>
+                    </div>
+
+                    <div class="relative flex justify-between items-center md:mt-32 mt-12 z-10">
+                      <div class="flex items-center">
+                        <div
+                          class="relative size-12 rounded-full bg-dark flex items-center justify-center text-white font-bold text-sm me-2"
+                        >
+                          {{ item.initials }}
+                        </div>
+                        <span class="font-semibold">{{ item.company }}</span>
+                      </div>
+                      <a
+                        [routerLink]="[]"
+                        class="text-black bg-white hover:bg-default-200 text-xs font-medium px-3 py-1.5 rounded transition-all"
+                        >Apply now</a
+                      >
+                    </div>
+                  </article>
+                </div>
+              }
+            }
+        </swiper-container>
+      </div>
+    </div>
+  </div>
+</section>
