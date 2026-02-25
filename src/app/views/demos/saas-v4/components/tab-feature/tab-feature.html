@@ -1,0 +1,69 @@
+<section class="lg:py-28 md:py-20 py-16">
+    <div class="container">
+        <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-y-10">
+            <div class="lg:order-1 order-2">
+                <div class="bg-primary/10 rounded-md relative p-10 lg:w-xl md:w-2xl">
+                    <figure class="absolute -top-10 -start-14">
+                        <svg class="fill-default-800" width="156" height="153" viewBox="0 0 156 153" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M153.937 38.1678C152.303 35.6399 149.561 33.6227 146.626 32.9529C139.276 31.2552 133.035 37.7975 129.157 43.1415C120.985 54.4076 115.342 67.3183 107.06 78.5549C99.4078 88.9357 89.0538 99.3797 75.1873 99.1243C62.5646 98.8689 50.1453 91.1987 46.9901 78.6248C45.2071 71.544 45.9289 58.5139 54.2737 55.3744C60.8787 52.8911 63.2498 62.3569 63.6665 66.9424C64.563 76.3867 61.6467 86.3442 56.3832 94.2134C49.0848 105.103 36.332 112.714 23.3184 114.167C17.8192 114.78 11.5268 114.548 6.33786 112.386C5.3118 111.953 3.58298 113.716 4.89351 114.265C20.5108 120.784 40.2932 113.385 51.8984 102.409C59.518 95.2324 64.4305 85.3378 65.7927 75.0022C66.6228 68.6822 66.7565 59.081 61.2469 54.5666C55.8372 50.1184 49.1496 55.7722 46.564 60.6552C41.9945 69.3018 43.202 80.7017 48.783 88.5458C55.9943 98.642 70.335 103.202 82.3011 100.246C95.3511 97.0106 104.656 85.7138 111.837 75.1078C116.46 68.3478 120.522 61.2598 124.624 54.2415C128.35 47.8713 132.192 39.8573 138.92 36.0668C143.526 33.4605 148.927 35.0684 151.771 39.4387C152.405 40.4366 154.571 39.1656 153.937 38.1678Z"></path>
+                            <path d="M15.0507 108.912C11.3762 110.862 7.54807 112.219 3.48774 113.06C2.90203 113.178 1.55006 114.076 2.31119 114.754C5.35532 117.463 8.42384 120.16 11.4689 122.87C12.0315 122.331 12.6044 121.755 13.167 121.216C12.91 121.147 12.6531 121.078 12.3952 121.009C11.4757 120.762 9.63393 122.436 10.8839 122.771C11.1417 122.84 11.3987 122.909 11.6565 122.978C12.3914 123.176 14.2662 122.103 13.3543 121.326C10.3092 118.616 7.24137 115.921 4.19628 113.211C3.80428 113.775 3.41201 114.34 3.01974 114.905C7.49862 113.979 11.7514 112.441 15.7906 110.313C17.1862 109.545 16.4135 108.194 15.0507 108.912Z"></path>
+                        </svg>
+                    </figure>
+
+                    <div id="feature-01" role="tabpanel" aria-labelledby="feature-01-tab">
+                        <div>
+                            <img src="/images/elements/saas-decoration/10.png" class="my-8" alt="decoration" />
+                        </div>
+                    </div>
+
+                    <div id="feature-02" class="hidden" role="tabpanel" aria-labelledby="feature-02-tab">
+                        <div>
+                            <img src="/images/elements/saas-decoration/12.png" class="my-8" alt="decoration" />
+                        </div>
+                    </div>
+
+                    <div id="feature-03" class="hidden" role="tabpanel" aria-labelledby="feature-03-tab">
+                        <div>
+                            <img src="/images/elements/saas-decoration/11.png" class="my-8" alt="decoration" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:order-2 order-1">
+                <h2 class="lg:text-[45px] md:text-4xl text-3xl mb-6">Transform your business with our powerful solutions</h2>
+                <p class="mb-6">Comfort reached gay perhaps chamber his six detract besides add. Moonlight newspaper up its enjoyment.</p>
+
+                <div>
+                    <nav class="flex flex-col space-y-4" aria-label="Tabs" role="tablist" aria-orientation="vertical">
+                        @for (item of features; track $index; let i = $index) {
+                        <button type="button" class="hs-tab-active:border-s-3 hs-tab-active:border-primary hs-tab-active:bg-default-100 md:p-6 p-4 flex items-center gap-x-4 rounded-xs" [class.active]="i === 0" [id]="item.id + '-tab'" [attr.aria-selected]="i === 0 ? 'true' : 'false'" [attr.data-hs-tab]="'#' + item.id" [attr.aria-controls]="item.id" role="tab">
+                            <div>
+                                <div class="size-14 rounded-md bg-body-bg border border-default-200 flex items-center justify-center text-xl text-default-700 font-semibold">
+                                    <lucide-icon [name]="item.icon" class="size-5"></lucide-icon>
+                                </div>
+                            </div>
+
+                            <div class="text-start">
+                                <h6 class="text-xl mb-2 font-bold"> {{ item.title }}</h6>
+                                <p class="font-medium">  {{ item.description }}</p>
+                            </div>
+                        </button>
+                        }
+                    </nav>
+                </div>
+
+                <p class="flex items-center gap-1.5 mt-4">
+                    <span class="flex items-center gap-1">
+                        <lucide-icon name="info" class="size-5 fill-default-800 text-default-50"></lucide-icon>
+                        Contact our team for more information
+                    </span>
+
+                    <a routerLink="/contact/v1" class="group text-primary hover:text-primary-hover flex items-center gap-1 underline">
+                        Let's chat <lucide-icon name="arrow-right" class="size-4 group-hover:translate-x-1 transition-all"></lucide-icon>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

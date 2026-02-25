@@ -1,0 +1,87 @@
+<section class="lg:py-28 md:py-20 py-16">
+    <div class="container">
+        <div class="text-center mb-10">
+            <h2 class="lg:text-[45px] md:text-4xl text-3xl mb-6">Our customer's experience</h2>
+            <p class="md:w-2xl mx-auto">The chatbot can be personalized to match the brand voice and tone, making it feel like an extension of the company's customer support team.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 grid-cols-2 lg:w-5xl md:gap-0 gap-y-4 mx-auto">
+            @for(item of counters; track $index){
+            <div class="text-center">
+                <div class="lg:text-[45px] md:text-4xl text-3xl flex items-center justify-center font-bold">
+                    <h2 class="counter" [countUp]="item.value"></h2>
+                    <span class="text-primary -mt-1">{{ item.suffix }}</span>
+                </div>
+                <p class="lg:text-nowrap">{{ item.label }}</p>
+            </div>
+            }
+        </div>
+
+        <div class="grid lg:grid-cols-12 grid-cols-1 gap-10 mt-14">
+            <div class="lg:col-span-5 lg:order-1 order-2">
+                <div class="bg-dark md:p-10 p-6 rounded-md relative">
+                    <div class="lg:mb-32 mb-12">
+                        <span class="py-1 px-2 text-sm bg-primary text-white rounded inline-flex items-center gap-1 mb-4">
+                            <lucide-icon name="badge-check" class="text-white size-4.5"></lucide-icon>
+                            Weekly news
+                        </span>
+                        <h4 class="md:text-3xl text-2xl font-bold text-white">Subscribe to our mailing list and stay to date</h4>
+                    </div>
+
+                    <div>
+                        <form class="flex items-center mb-2">
+                            <input type="email" placeholder="Enter your email" class="w-full px-4 py-3 text-base rounded bg-dark! border border-white/14 me-3 placeholder:text-white/50 focus:border-white/14! text-white" />
+                            <button type="button" class="flex items-center justify-center bg-body-bg border border-default-300 rounded-md size-12 hover:bg-default-200 transition-all">
+                                <lucide-icon name="send" class="size-4 text-black"></lucide-icon>
+                            </button>
+                        </form>
+                        <span class="text-white">✌️ We promise not to spam!</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 lg:order-2 order-1">
+                <div class="overflow-hidden">
+                    <div class="swiper overflow-hidden">
+                        <swiper-container class="swiper-wrapper pb-6" loop="false" autoplay="true" pagination="true" pagination-el=".swiper-pagination" pagination-type="fraction" navigation-next-el="#swiper-button-next" navigation-prev-el="#swiper-button-prev">
+                            @for(item of testimonials;track $index){
+                            <swiper-slide>
+                                <div class="border border-default-200 rounded-md p-4">
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                        <div>
+                                            <img [src]="item.image" alt="testimonial img" class="w-full rounded-md object-cover" />
+                                        </div>
+                                        <div class="md:col-span-2 flex flex-col h-full p-2">
+                                            <img [src]="item.clientLogo" alt="client img" class="w-30 mb-4" />
+                                            <span class="mb-3 text-default-800">{{item.message}}</span>
+                                            <div class="mt-auto">
+                                                <ul class="flex space-x-1 mb-1">
+                                                     @for (star of [1, 2, 3, 4]; track $index) {
+                                                    <li><lucide-icon name="star" class="fill-warning text-warning size-3.5"></lucide-icon></li>
+                                                     }
+                                                    <li><lucide-icon name="star-half" class="fill-warning text-warning size-3.5"></lucide-icon></li>
+                                                </ul>
+                                                <p class="font-semibold text-default-900">{{item.name}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </swiper-slide>
+                            }
+                        </swiper-container>
+
+                        <div class="flex items-center justify-start gap-4">
+                            <a [routerLink]="[]" class="size-12 bg-dark justify-center flex items-center rounded-full" id="swiper-button-prev">
+                                <lucide-icon name="move-left" class="size-5 text-white/70"></lucide-icon>
+                            </a>
+
+                            <a [routerLink]="[]" class="size-12 bg-dark justify-center flex items-center rounded-full" id="swiper-button-next">
+                                <lucide-icon name="move-right" class="size-5 text-white/70"></lucide-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

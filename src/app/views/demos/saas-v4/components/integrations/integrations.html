@@ -1,0 +1,31 @@
+<section>
+    <div class="container">
+        <div class="lg:flex justify-between items-center lg:mb-10 mb-6">
+            <h2 class="lg:text-[45px] md:text-4xl text-3xl font-bold lg:w-xl">Integrates with your workflow</h2>
+            <div class="border border-white/14 bg-dark rounded-md px-10 py-4 text-center lg:mt-0 mt-6 inline-block">
+                <span class="text-white">Explore our</span>
+                <a routerLink="/contact/v2" class="ms-2 text-primary hover:text-primary-hover transition-all inline-flex items-center">
+                    Integration library
+                    <lucide-icon name="chevron-right" class="size-4 ms-1"></lucide-icon>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-10 gap-6">
+            @for (item of integrations; track $index) {
+            <div class="relative group border border-default-200 rounded-md p-6 hover:shadow-xl hover:border-primary hover:-translate-y-1 transition-all">
+                <a [routerLink]="item.url" class="absolute inset-0 z-0"></a>
+                <div class="flex items-center gap-3 mb-4">
+                    <img [src]="item.image" class="h-10" alt="Integrations-icon" />
+                    <h6 class="text-xl font-bold">{{ item.name }}</h6>
+                </div>
+                <p class="mb-4">{{ item.description }}</p>
+                <div class="flex items-center gap-1 mt-14 text-default-800 group-hover:text-primary transition-all">
+                    View integration
+                    <lucide-icon name="arrow-right" class="size-4 group-hover:translate-x-1 transition-all"></lucide-icon>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

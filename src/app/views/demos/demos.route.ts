@@ -9,6 +9,7 @@ import { MobileShowCase } from './mobile-show-case/mobile-show-case'
 import { Saas } from './saas/saas';
 import { SaasV2 } from './saas-v2/saas-v2'
 import { SaasV3 } from './saas-v3/saas-v3'
+import { SaasV4 } from './saas-v4/saas-v4'
 import { SaasV5 } from './saas-v5/saas-v5'
 
 export const DEMO_ROUTE: Routes = [
@@ -61,6 +62,11 @@ export const DEMO_ROUTE: Routes = [
     path: 'saas/v3',
     component: SaasV3,
     data: { title: 'SaaS v.3' },
+  },
+  {
+    path: 'saas/v4',
+    component: SaasV4,
+    data: { title: 'SaaS v.2' },
   },
   {
     path: 'saas/v5',
