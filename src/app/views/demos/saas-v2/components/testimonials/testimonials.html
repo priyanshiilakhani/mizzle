@@ -1,1 +1,51 @@
-<p>testimonials works!</p>
+<section class="lg:py-28 md:py-20 py-16">
+    <div class="container">
+        <div class="grid lg:grid-cols-2 grid-cols-1 items-center lg:w-11/12 me-auto">
+            <div class="order-2 lg:order-1 mt-5 lg:mt-0 md:px-4">
+                <div class="swiper swiper-fade mt-4 lg:pe-16!">
+                    <swiper-container class="swiper-wrapper items-center" effect="fade" loop="true" grabCursor="true" autoplay="true" [autoplay]="{ delay: 3000 }">
+                        @for (item of testimonials; track $index) {
+                        <swiper-slide class="relative">
+                            <img [src]="item.image" class="rounded-md lg:w-lg" alt="review-img" />
+                            <div class="absolute lg:-end-10 md:end-4 end-8 bottom-10 bg-body-bg shadow-xl rounded lg:p-10 p-5 lg:w-md md:w-xl w-70 z-20">
+                                <h6 class="text-xl font-bold mb-2">{{ item.title }}</h6>
+                                <p class="mb-4">{{ item.description }}</p>
+                                <ul class="flex gap-1 items-center mb-2">
+                                    @for (star of [1,2,3,4]; track $index) {
+                                    <li><lucide-icon name="star" class="fill-primary text-primary size-4"></lucide-icon></li>
+                                    }
+                                    <li><lucide-icon name="star-half" class="fill-primary text-primary size-4"></lucide-icon></li>
+                                </ul>
+                                <span class="font-bold text-default-900">{{ item.name }}</span>
+                                <p class="text-sm">{{ item.role }}</p>
+                            </div>
+                        </swiper-slide>
+                        }
+                    </swiper-container>
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2 ms-auto">
+                <span class="text-primary font-semibold uppercase">Testimonials</span>
+                <h2 class="my-4 lg:text-[45px] md:text-4xl text-3xl font-bold">Don't take our word for it. See what our client says.</h2>
+                <p class="mb-6">Hear what our satisfied clients have to say about their experiences with our platform. Discover how we've helped agencies like yours achieve remarkable results.</p>
+                <!-- Buttons -->
+                <div class="flex items-center gap-1">
+                    <a [routerLink]="[]" class="transition-all font-medium bg-dark hover:bg-dark/85 text-white py-3 rounded px-6 text-nowrap">Get Started</a>
+
+                    <a [routerLink]="[]" class="group transition-all text-nowrap font-normal bg-transparent hover:text-primary flex items-center gap-1 text-default-800 py-3 px-6">
+                        Browse features
+                        <lucide-icon name="arrow-right" class="size-4 group-hover:translate-x-1.5 transition-all"></lucide-icon>
+                    </a>
+                </div>
+
+                <hr class="my-14 border-default-200" />
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center">
+                    @for(item of clientimage;track $index){
+                    <div><img [src]="item" class="grayscale hover:grayscale-0 transition-all duration-300 px-2 w-42" alt="client-img" /></div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

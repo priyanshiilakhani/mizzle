@@ -1,1 +1,134 @@
-<p>pricing works!</p>
+<section class="relative bg-dark lg:py-28 md:py-20 py-16">
+    <!-- SVG decoration -->
+    <figure class="absolute -top-36 -start-38">
+        <svg class="opacity-20" width="424" height="405" viewBox="0 0 424 405" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="212" cy="202.5" rx="212" ry="202.5" fill="url(#paint0_linear_153_3831)"></ellipse>
+            <defs>
+                <linearGradient id="paint0_linear_153_3831" x1="212" y1="0" x2="212" y2="405" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.0569271" stop-color="#D9D9D9" stop-opacity="0"></stop>
+                    <stop offset="0.998202" stop-color="#D9D9D9" stop-opacity="0.5"></stop>
+                </linearGradient>
+            </defs>
+        </svg>
+    </figure>
+
+    <div class="container relative">
+        <div class="grid gap-8 lg:gap-12 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+            <div class="lg:col-span-1 md:col-span-2">
+                <span class="text-primary font-bold uppercase tracking-wide">Pricing</span>
+                <h2 class="text-3xl md:text-4xl lg:text-[45px] font-bold mt-4 mb-6 text-white">Budget-friendly pricing solutions</h2>
+
+                <p class="text-white/60 mb-10">Our pricing model is designed with your agency in mind. Discover our transparent rates and flexible options tailored to fit your unique needs.</p>
+
+                <div class="mb-4 flex justify-start items-center gap-x-3">
+                    <label for="toggle-count-switch" class="font-bold text-white">Monthly</label>
+                    <label for="toggle-count-switch" class="relative inline-block w-16 h-8 cursor-pointer">
+                        <input type="checkbox" id="toggle-count-switch" class="peer sr-only" />
+                        <span class="absolute inset-0 bg-default-100 rounded-full transition-colors duration-200 ease-in-out peer-checked:bg-primary peer-disabled:opacity-50 peer-disabled:pointer-events-none"></span>
+                        <span class="absolute top-1/2 start-1.5 -translate-y-1/2 size-5 bg-neutral-500 rounded-full shadow-xs transition-all duration-200 ease-in-out peer-checked:start-10 peer-checked:bg-white"></span>
+                    </label>
+                    <label for="toggle-count-switch" class="font-bold text-white">Annual</label>
+                </div>
+            </div>
+
+            <!-- Pricing box 1 -->
+            <div>
+                <div class="relative bg-default-100 rounded-md shadow md:p-10 p-6 dark">
+                    <figure class="absolute -top-18 -start-20 hidden md:block">
+                        <svg class="fill-white" width="86" height="105" viewBox="0 0 86 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50.9805 4.63769C51.6165 4.24345 56.4262 10.3524 61.7246 18.1163C67.0564 25.8003 72.7966 35.1061 75.9634 40.6314C82.2158 51.6489 85.8889 61.2748 84.5362 62.0301C83.1029 62.7522 77.2708 54.3462 71.0415 43.3853C67.8986 37.9165 62.7042 28.3199 58.293 20.1246C53.8819 11.9293 50.2874 5.05535 50.9805 4.63769Z" />
+                            <path d="M64.0889 66.7297C63.5001 67.2372 60.6142 65.1098 57.1179 62.637C53.6451 60.2207 49.5285 57.539 47.2336 56.0303C42.5967 52.8997 39.0022 49.8707 39.6599 48.4069C40.2841 47.0231 45.3294 47.9307 50.3923 51.2838C52.9286 52.892 56.9393 56.2802 59.8742 59.6469C62.809 63.0137 64.6779 66.2223 64.0889 66.7297Z" />
+                            <path d="M55.1316 86.0595C55.1297 86.856 48.7063 87.4433 40.9853 87.6368C33.2643 87.8295 24.2555 87.492 19.0669 87.0413C8.68981 86.139 0.434871 83.7683 0.656712 82.218C0.878555 80.6685 9.34356 80.5005 19.5833 81.393C24.7149 81.867 33.5706 82.7978 41.1895 83.6415C48.832 84.5408 55.1571 85.32 55.1316 86.0595Z" />
+                        </svg>
+                    </figure>
+
+                    <h5 class="font-semibold md:text-2xl text-xl mb-2 text-white">Customization</h5>
+                    <p class="text-sm text-white/60 mb-14">Our essential plan is self-service solution for businesses to handle website messaging and personalization</p>
+
+                    <p class="text-white font-medium mb-1">How many customers do you have?</p>
+                    <form class="mb-4">
+                        <input type="text" placeholder="000" class="w-full bg-transparent! border-x-0 border-t-0 border-b border-white/15! text-white/60 px-0 focus:outline-none py-2" />
+                    </form>
+
+                    <h6 class="flex items-center justify-start lg:text-[45px] text-4xl my-6">
+                        <span class="lg:text-[45px] text-4xl font-bold text-white">$</span>
+                        <p data-hs-toggle-count='{
+                                      "target": "#toggle-count-switch",
+                                      "min": 25,
+                                      "max": 20
+                                    }' class="text-white font-bold lg:text-[45px] text-4xl">
+                            25
+                        </p>
+                    </h6>
+
+                    <a [routerLink]="[]" class="group inline-flex items-center justify-center gap-1 w-full bg-primary text-white rounded px-4 py-2 font-medium hover:bg-primary-hover transition">
+                        Get started
+                        <lucide-icon name="arrow-right" class="size-4 transition-all group-hover:translate-x-1.5"></lucide-icon>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Pricing box 2 -->
+            <div>
+                <div class="relative bg-neutral-900 rounded-md shadow md:p-10 p-6">
+                    <h5 class="md:text-2xl text-xl font-bold mb-2 text-white">Boss mode</h5>
+                    <p class="text-sm text-white/60 mb-0">In no impression, assistance contrasted Manners she wishing justice.</p>
+                    <hr class="my-6 border-white/14" />
+                    <p class="text-white font-medium mb-2">Quick look at all the features</p>
+                    <ul class="space-y-3 mb-6 text-white/60">
+                        <li class="flex items-center justify-start gap-1.5">
+                            <div>
+                                <lucide-icon name="badge-check" class="text-neutral-900 fill-primary size-4"></lucide-icon>
+                            </div>
+                            <span>Unlimited monthly visitors</span>
+                        </li>
+
+                        <li class="flex items-center justify-start gap-1.5">
+                            <div>
+                                <lucide-icon name="badge-check" class="text-neutral-900 fill-primary size-4"></lucide-icon>
+                            </div>
+                            <span>Dedicated SEO strategists</span>
+                        </li>
+
+                        <li class="flex items-center justify-start gap-1.5">
+                            <div>
+                                <lucide-icon name="badge-check" class="text-neutral-900 fill-primary size-4"></lucide-icon>
+                            </div>
+                            <span>Google Docs style editors</span>
+                        </li>
+
+                        <li class="flex items-center justify-start gap-1.5">
+                            <div>
+                                <lucide-icon name="badge-check" class="text-neutral-900 fill-primary size-4"></lucide-icon>
+                            </div>
+                            <span>Basic chat and email support</span>
+                        </li>
+
+                        <li class="flex items-center justify-start gap-1.5">
+                            <div>
+                                <lucide-icon name="badge-check" class="text-neutral-900 fill-primary size-4"></lucide-icon>
+                            </div>
+                            <span>AI powered product recommendation engine</span>
+                        </li>
+                    </ul>
+
+                    <h6 class="flex items-center justify-start lg:text-[45px] text-4xl my-6">
+                        <span class="lg:text-[45px] text-4xl font-bold text-white">$</span>
+                        <p data-hs-toggle-count='{
+                                      "target": "#toggle-count-switch",
+                                      "min": 299,
+                                      "max": 250
+                                    }' class="text-white font-bold lg:text-[45px] text-4xl">
+                            299
+                        </p>
+                    </h6>
+
+                    <a [routerLink]="[]" class="group inline-flex items-center justify-center gap-1 w-full bg-primary text-white rounded px-4 py-2 font-medium hover:bg-primary-hover transition">
+                        Get started
+                        <lucide-icon name="arrow-right" class="size-4 transition-all group-hover:translate-x-1.5"></lucide-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
