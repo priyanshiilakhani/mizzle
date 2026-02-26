@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LucideAngularModule } from "lucide-angular";
-import { workData } from '../../data';
+import { workData, WorkType } from '../../data';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'about-work',
@@ -11,5 +12,12 @@ import { workData } from '../../data';
 })
   
 export class Work {
-  workData = workData;
+  workData: (WorkType & { safeIcon: SafeHtml })[] = [];
+
+  constructor(private sanitizer: DomSanitizer) {
+    this.workData = workData.map((item) => ({
+      ...item,
+      safeIcon: this.sanitizer.bypassSecurityTrustHtml(item.icon),
+    }));
+  }
 }
