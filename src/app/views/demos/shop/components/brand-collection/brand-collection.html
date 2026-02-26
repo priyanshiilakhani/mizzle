@@ -1,0 +1,28 @@
+  <section class="lg:pb-28 md:pb-20 pb-16">
+        <div class="container">
+            <div class="grid lg:grid-cols-12 items-center gap-10">
+                <div class="lg:col-span-5">
+                    <h2 class="mb-6 lg:text-[45px] md:text-4xl text-3xl font-bold">
+                        Their Impressive Product
+                        <br class="lg:block hidden" />
+                        Collections
+                    </h2>
+
+                    <a class="flex items-center gap-2 hover:text-primary transition-all group" [routerLink]="[]">
+                        Explore all brands
+                        <lucide-icon name="arrow-right" class="size-4 group-hover:translate-x-1 transition-all"></lucide-icon>
+                    </a>
+                </div>
+
+                <div class="lg:col-span-7 lg:ms-auto">
+                    <div class="grid md:grid-cols-4 grid-cols-2 md:gap-14 gap-6.5">
+                        @for(item of brands;track $index){
+                        <div>
+                            <a [routerLink]="[]"><img [src]="item" class="grayscale hover:grayscale-0 transition-all" alt="client-img" /></a>
+                        </div>
+                    }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

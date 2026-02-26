@@ -1,0 +1,82 @@
+<section class="relative bg-cover bg-center bg-no-repeat bg-[url('/images/shop/bg/04.jpg')]">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="container relative z-10 px-4 py-16 lg:py-24">
+        <div class="grid lg:grid-cols-12 grid-cols-1 lg:gap-15 gap-12 items-center">
+            <!-- Left Section -->
+            <div class="col-span-1 lg:col-span-5">
+                <span class="text-primary lg:text-7xl md:text-5xl text-4xl font-semibold">20% off</span>
+                <h3 class="text-white md:text-4xl text-3xl font-semibold my-6">Enhance your style with our latest collections</h3>
+                <p class="text-white mb-4">Discover the perfect fusion of modern trends and timeless classics, meticulously curated to complement your unique taste.</p>
+
+                <!-- Slider Arrow Buttons -->
+                <div class="flex gap-4 mt-8">
+                    <button class="flex items-center justify-center size-10 border border-white text-white rounded-full hover:bg-body-bg hover:text-black transition" id="swiper-button-prev">
+                        <lucide-icon name="move-left" class="size-4.5"></lucide-icon>
+                    </button>
+
+                    <button class="flex items-center justify-center size-10 border border-white text-white rounded-full hover:bg-body-bg hover:text-black transition" id="swiper-button-next">
+                        <lucide-icon name="move-right" class="size-4.5"></lucide-icon>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="col-span-1 lg:col-span-7">
+                <!-- Swiper Slider -->
+                <div class="swiper">
+                    <swiper-container grab-cursor="true" space-between="30" speed="1000" navigation="true" navigation-next-el="#swiper-button-next" navigation-prev-el="#swiper-button-prev" autoplay-delay="5000" autoplay-disable-on-interaction="true" autoplay-pause-on-mouse-enter="true" [breakpoints]="{
+            '576': { slidesPerView: 1 },
+            '768': { slidesPerView: 2 },
+            '992': { slidesPerView: 3 },
+            '1200': { slidesPerView: 2 },
+          }">
+                        @for (product of productData; track $index) {
+                        <swiper-slide>
+                            <div class="border border-default-200 rounded-lg overflow-hidden bg-body-bg h-full group">
+                                <!-- Wishlist + Rating -->
+                                <div class="absolute w-full flex items-start justify-between p-4 z-20">
+                                    <span class="bg-dark text-white text-xs px-2 py-1 rounded">⭐ {{ product.rating }}</span>
+                                    <button class="bg-body-bg rounded-full size-10 border border-default-200 hover:bg-default-200 flex justify-center items-center transition-all">
+                                        @if(product.isFavorite){
+                                        <lucide-icon name="heart" class="fill-danger text-danger size-4.5"></lucide-icon>
+                                        }@else{
+                                         <lucide-icon name="heart" class="text-default-900 stroke-1 size-4.5"></lucide-icon>
+                                        }
+                                    </button>
+                                </div>
+
+                                <!-- Image -->
+                                <div class="p-5 pt-6">
+                                    <img [src]="product.image" class="mx-auto" />
+                                </div>
+
+                                <!-- Body -->
+                                <div class="px-5">
+                                    <h6 class="font-semibold group-hover:text-primary transition-colors text-xl">{{ product.title }}
+                                    </h6>
+                                    <p class="text-default-600">{{ product.category }}</p>
+                                </div>
+
+                                <!-- Footer -->
+                                <div class="px-5 py-5 flex justify-between items-center">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-primary font-bold">${{ product.price }}</span> @if (product.oldPrice) {
+                                        <del class="text-default-600">
+                                            ${{ product.oldPrice }}
+                                        </del>
+                                        }
+                                    </div>
+                                    <button class="bg-dark text-white px-4 py-2 rounded">Buy now</button>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                        }
+
+                    </swiper-container>
+                </div>
+                <!-- Swiper End -->
+            </div>
+        </div>
+    </div>
+</section>

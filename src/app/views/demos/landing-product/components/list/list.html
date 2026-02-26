@@ -38,9 +38,9 @@
                                 </h6>
 
                                 <div class="mb-6" [class]="product.oldPrice ? 'flex items-center justify-center gap-1' : 'text-center'">
-                                    <h6 class="text-xl font-normal">{{currency}}{{ product.price }}</h6>
+                                    <h6 class="text-xl font-normal">${{ product.price }}</h6>
                                     @if (product.oldPrice) {
-                                    <span>{{currency}}{{ product.oldPrice }}</span>
+                                    <span>${{ product.oldPrice }}</span>
                                     }
                                 </div>
 
@@ -49,7 +49,7 @@
                         </swiper-slide>
                         }
                     </swiper-container>
-                </div>
+                </div>t
             </div>
         </div>
     </div>

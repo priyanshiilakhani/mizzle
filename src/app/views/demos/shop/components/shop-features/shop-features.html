@@ -1,0 +1,17 @@
+<section class="lg:py-28 md:py-20 py-16">
+    <div class="container">
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 md:gap-16 gap-6">
+            @for (item of features; track $index) {
+            <div>
+                <div class="size-14 rounded-full flex items-center justify-center mb-6" [class]="item.className">
+                    <lucide-icon [name]="item.icon" [class]="
+                item.iconClassName 
+              "></lucide-icon>
+                </div>
+                <h6 class="mb-4 text-xl">{{ item.title }}</h6>
+                <p>{{ item.description }}</p>
+            </div>
+            }
+        </div>
+    </div>
+</section>

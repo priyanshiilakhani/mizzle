@@ -3,7 +3,6 @@ import { RouterLink } from "@angular/router";
 import { LucideAngularModule } from "lucide-angular";
 import { products } from '../../data';
 import { register } from 'swiper/element/bundle';
-import { currency } from '@common/constants';
 register()
 
 @Component({
@@ -15,5 +14,4 @@ register()
 })
 export class List {
 products = products
-currency=currency
 }

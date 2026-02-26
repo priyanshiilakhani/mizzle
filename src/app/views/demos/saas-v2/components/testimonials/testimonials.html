@@ -3,7 +3,7 @@
         <div class="grid lg:grid-cols-2 grid-cols-1 items-center lg:w-11/12 me-auto">
             <div class="order-2 lg:order-1 mt-5 lg:mt-0 md:px-4">
                 <div class="swiper swiper-fade mt-4 lg:pe-16!">
-                    <swiper-container class="swiper-wrapper items-center" effect="fade" loop="true" grabCursor="true" autoplay="true" [autoplay]="{ delay: 3000 }">
+                    <swiper-container class="items-center" effect="fade" loop="true" grab-cursor="true" autoplay="true" [autoplay]="{ delay: 3000 }">
                         @for (item of testimonials; track $index) {
                         <swiper-slide class="relative">
                             <img [src]="item.image" class="rounded-md lg:w-lg" alt="review-img" />

@@ -12,6 +12,7 @@ import { SaasV3 } from './saas-v3/saas-v3'
 import { SaasV4 } from './saas-v4/saas-v4'
 import { SaasV5 } from './saas-v5/saas-v5'
 import { FinanceConsulting } from './finance-consulting/finance-consulting'
+import { Shop } from './shop/shop'
 
 export const DEMO_ROUTE: Routes = [
   {
@@ -78,5 +79,10 @@ export const DEMO_ROUTE: Routes = [
     path: 'finance-consulting',
     component: FinanceConsulting,
     data: { title: 'Finance Consulting' },
+  },
+  {
+    path:'index/shop',
+    component: Shop,
+    data: { title: 'index shop' },
   },
 ];
