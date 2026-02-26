@@ -11,6 +11,7 @@ import { SaasV2 } from './saas-v2/saas-v2'
 import { SaasV3 } from './saas-v3/saas-v3'
 import { SaasV4 } from './saas-v4/saas-v4'
 import { SaasV5 } from './saas-v5/saas-v5'
+import { FinanceConsulting } from './finance-consulting/finance-consulting'
 
 export const DEMO_ROUTE: Routes = [
   {
@@ -73,9 +74,9 @@ export const DEMO_ROUTE: Routes = [
     component: SaasV5,
     data: { title: 'SaaS v.5' },
   },
-  // {
-  //   path: 'finance-consulting',
-  //   component: FinanceConsulting,
-  //   data: { title: 'Finance Consulting' },
-  // },
+  {
+    path: 'finance-consulting',
+    component: FinanceConsulting,
+    data: { title: 'Finance Consulting' },
+  },
 ];

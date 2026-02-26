@@ -1,0 +1,89 @@
+<section>
+  <div class="container">
+    <div class="md:flex justify-between items-center md:mb-14 mb-6">
+      <div class="md:mb-0 mb-2">
+        <h2 class="lg:text-[45px] md:text-4xl text-3xl font-bold lg:w-xl md:w-xs">
+          Tailored solutions for your financial needs
+        </h2>
+      </div>
+
+      <div class="lg:w-sm md:w-xs md:ms-auto">
+        <p class="mb-4">
+          We offer a comprehensive range of financial services designed to address your specific
+          goals and aspirations.
+        </p>
+        <div class="flex items-center justify-start gap-4">
+          <a
+            [routerLink]="[]"
+            class="size-10 bg-dark justify-center flex items-center rounded-full"
+            id="swiper-button-prev-team"
+          >
+            <lucide-icon name="move-left" class="size-5 text-white/70"></lucide-icon>
+          </a>
+
+          <a
+            [routerLink]="[]"
+            class="size-10 bg-dark justify-center flex items-center rounded-full"
+            id="swiper-button-next-team"
+          >
+            <lucide-icon name="move-right" class="size-5 text-white/70"></lucide-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <swiper-container
+      class="swiper"
+      space-between="40"
+      loop="false"
+      autoplay-delay="3000" autoplay-disable-on-interaction="false"
+      navigation-next-el="#swiper-button-next-team"
+      navigation-prev-el="#swiper-button-prev-team"
+      [breakpoints]="{
+        '768': { slidesPerView: 2 },
+        '992': { slidesPerView: 2 },
+        '1200': { slidesPerView: 3 },
+      }"
+    >
+      @for (item of servicesData; track $index) {
+        <swiper-slide>
+          <div
+            class="border border-default-200 rounded-md p-6 bg-body-bg transition-all duration-300 group"
+          >
+            <div class="mb-6">
+              <figure class="text-primary" [innerHTML]="item.safeIcon"></figure>
+            </div>
+
+            <div class="mb-10">
+              <h5 class="text-2xl font-bold mb-4 text-default-800">
+                {{ item.title }}
+              </h5>
+
+              <ul class="space-y-2">
+                @for (feature of item.features; track $index) {
+                  <li class="flex items-center gap-2">
+                    <lucide-icon name="badge-check" class="size-4"></lucide-icon>
+                    {{ feature }}
+                  </li>
+                }
+              </ul>
+            </div>
+
+            <div>
+              <a
+                [routerLink]="item.link"
+                class="inline-flex items-center gap-1 text-primary group-hover:text-primary-hover"
+              >
+                Know more
+                <lucide-icon
+                  name="arrow-right"
+                  class="size-4 group-hover:translate-x-1 transition-all"
+                ></lucide-icon>
+              </a>
+            </div>
+          </div>
+        </swiper-slide>
+      }
+    </swiper-container>
+  </div>
+</section>

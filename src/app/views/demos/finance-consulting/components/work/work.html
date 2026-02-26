@@ -1,0 +1,40 @@
+ <section>
+        <div class="container">
+            <div class="relative bg-default-50 rounded-md p-6 md:p-14 overflow-hidden">
+                <figure class="absolute top-80 -end-110 -translate-x-1/2 -translate-y-1/2 text-primary opacity-20">
+                    <svg width="510" height="500" viewBox="0 0 510 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M309.5 317.5C309.5 377.619 259.646 426.375 198.125 426.375C136.604 426.375 86.75 377.619 86.75 317.5C86.75 257.381 136.604 208.625 198.125 208.625C259.646 208.625 309.5 257.381 309.5 317.5Z" stroke="currentColor" />
+                        <path d="M380.125 300C380.125 391.185 304.389 465.125 210.938 465.125C117.486 465.125 41.75 391.185 41.75 300C41.75 208.815 117.486 134.875 210.938 134.875C304.389 134.875 380.125 208.815 380.125 300Z" stroke="currentColor" />
+                        <path d="M508.875 250C508.875 387.786 395.08 499.5 254.688 499.5C114.295 499.5 0.5 387.786 0.5 250C0.5 112.214 114.295 0.5 254.688 0.5C395.08 0.5 508.875 112.214 508.875 250Z" stroke="currentColor" />
+                    </svg>
+                </figure>
+
+                <div class="relative grid lg:grid-cols-2 gap-10 items-center">
+                    <div class="order-2 lg:order-1 grid md:grid-cols-2 gap-6 lg:gap-14">
+
+                        @for( item of workData; track $index ){
+                         <div>
+                            <div class="size-14 flex items-center justify-center border border-default-200 rounded-full bg-body-bg text-default-800 mb-4">
+                                <lucide-icon [name]="item.icon" class="size-6 text-default-800"></lucide-icon>
+                            </div>
+                            <h6 class="font-bold mb-2 text-xl">{{item.title}}</h6>
+                            <p>{{item.description}}</p>
+                        </div>
+                        }
+                    </div>
+
+                    <div class="order-1 lg:order-2 lg:ms-auto md:w-md lg:mb-0 mb-8">
+                        <div class="flex flex-col h-full">
+                            <h2 class="lg:text-[45px] md:text-4xl text-3xl font-bold mb-4">Choose us for your financial journey</h2>
+                            <div class="lg:mt-44">
+                                <a href="https://www.youtube.com/embed/tXHviS-4ygo" class="inline-flex items-center gap-2.5 font-semibold bg-primary text-white px-6 py-2.5 rounded-md hover:bg-primary-hover transition" appGlightbox data-gallery="course-video">
+                                    <lucide-icon name="play" class="size-4 fill-white text-white"></lucide-icon>
+                                    Watch demo video
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

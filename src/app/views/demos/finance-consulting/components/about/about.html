@@ -1,0 +1,39 @@
+<section class="lg:py-28 md:py-20 py-14">
+        <div class="container">
+            <div class="grid lg:grid-cols-2 grid-cols-1 items-center gap-10">
+                <div class="relative">
+                    <img src="/images/about/19.jpg" alt="About Image" class="rounded-md lg:w-lg w-xl" />
+
+                    <div class="absolute top-6 start-6 p-2 bg-body-bg rounded-full shadow flex items-center gap-3">
+                        <div class="size-12 rounded-full overflow-hidden shrink-0">
+                            <img src="/images/avatar/08.jpg" alt="avatar" class="size-full object-cover" />
+                        </div>
+                        <div>
+                            <h6 class="text-xl font-bold">Dennis Barrett</h6>
+                            <p class="text-sm">Ceo and manager of Blogzine</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:max-w-xl">
+                    <h2 class="lg:text-[45px] md:text-4xl text-3xl font-bold mb-6">Empowering financial futures together</h2>
+                    <p class="mb-6">With a commitment to integrity, expertise, and personalized service, we strive to build lasting relationships based on trust and mutual success.</p>
+                    <a routerLink="/about/v1" class="bg-dark text-white font-medium px-4 py-2.5 rounded-md hover:bg-dark/85 transition-all">Know more about us</a>
+
+                    <hr class="lg:my-14 my-10 border-default-200" />
+
+                    <div class="flex flex-wrap gap-6 lg:gap-12">
+                        @for( item of aboutData; track $index ){
+                          <div>
+                            <h3 class="md:text-4xl text-3xl font-bold">
+                                {{item.value}}
+                                <span class="text-primary">{{item.suffix}}</span>
+                            </h3>
+                            <p>{{item.title}}</p>
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

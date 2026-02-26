@@ -1,0 +1,55 @@
+<section class="lg:py-28 md:py-20 py-16">
+  <div class="container text-center">
+    <span class="lg:text-[58px] md:text-[45px] text-4xl font-semibold text-primary"
+      >$3,058,886</span
+    >
+    <h4 class="my-6 text-3xl font-semibold">Witness your business flourish and sparkle</h4>
+    <p class="max-w-2xl mx-auto mb-6">
+      With our expert guidance and support, you can watch your business bloom and glow, achieving
+      new heights of success and radiating prosperity.
+    </p>
+
+    <a
+      [routerLink]="[]"
+      class="group inline-flex items-center gap-2 px-6 py-3 text-white bg-dark font-semibold rounded-md hover:bg-dark/85 transition"
+    >
+      Calculate growth
+      <lucide-icon
+        name="arrow-right"
+        class="size-4 group-hover:translate-x-1 transition-all"
+      ></lucide-icon>
+    </a>
+
+    <div class="relative my-14 lg:max-w-2xl mx-auto">
+      <hr class="border-default-300" />
+      <p
+        class="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 bg-body-bg px-4 font-semibold text-default-800"
+      >
+        Our Investors
+      </p>
+    </div>
+
+    <swiper-container
+      class="swiper lg:w-4xl md:w-2xl"
+      space-between="20"
+      loop="true"
+      autoplay-delay="2500"
+      autoplay-disable-on-interaction="false"
+      [breakpoints]="{
+        '576': { slidesPerView: 4 },
+        '992': { slidesPerView: 4 },
+        '1200': { slidesPerView: 5 },
+      }"
+    >
+        @for (item of clientData; track $index) {
+          <swiper-slide class="flex justify-center">
+            <img
+              [src]="item"
+              alt="client 1"
+              class="grayscale hover:grayscale-0 transition-all h-10 px-4"
+            />
+          </swiper-slide>
+        }
+    </swiper-container>
+  </div>
+</section>
