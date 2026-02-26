@@ -1,0 +1,15 @@
+<section class="lg:py-28 md:py-20 py-16">
+  <div class="container">
+    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
+      @for (item of countData; track $index) {
+        <div class="bg-default-100 border border-default-200 rounded-md text-center p-6">
+          <div class="flex justify-center items-start">
+            <h4 class="counter text-default-900 mb-0 text-3xl" [countUp]="item.value"></h4>
+            <span class="ms-1 text-primary text-3xl">{{ item.suffix }}</span>
+          </div>
+          <p class="text-center text-default-800">{{ item.title }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

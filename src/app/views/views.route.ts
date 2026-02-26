@@ -6,11 +6,11 @@ export const VIEW_ROUTES: Route[] = [
     loadChildren: () =>
       import('./demos/demos.route').then((mod) => mod.DEMO_ROUTE),
   },
-  // {
-  //   path: 'about',
-  //   loadChildren: () =>
-  //     import('./pages/about/about.route').then((mod) => mod.ABOUT_ROUTES),
-  // },
+  {
+    path: 'about',
+    loadChildren: () =>
+      import('./pages/about/about.route').then((mod) => mod.ABOUT_ROUTES),
+  },
   // {
   //   path: 'services',
   //   loadChildren: () =>

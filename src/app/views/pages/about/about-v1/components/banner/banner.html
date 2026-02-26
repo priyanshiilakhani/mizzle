@@ -1,0 +1,21 @@
+ <section class="bg-dark lg:pt-28 lg:pb-44 pb-34 md:py-20 py-16">
+        <div class="container">
+            <div class="grid lg:grid-cols-3 gap-10 mt-6">
+                <div class="lg:col-span-2">
+                    <h1 class="lg:text-[58px] md:text-[45px] text-4xl text-white">Modern & creative agency specialized in Business</h1>
+                    <p class="mt-6 text-default-400">Supposing so be resolving breakfast am or perfectly. It drew a hill from me. Valley by oh twenty direct me so. Departure defective arranging rapturous did believe him all had supported.</p>
+                </div>
+
+                <div class="lg:col-span-1 lg:ms-auto lg:pb-0 md:pb-20 pb-12">
+                    <ul class="flex flex-col justify-start gap-y-1.5 text-white">
+                        @for( item of bannerData; track $index ){
+                           <li class="flex items-center gap-2">
+                            <lucide-icon name="badge-check" class="size-4 text-primary"></lucide-icon>
+                            {{item}}
+                        </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
