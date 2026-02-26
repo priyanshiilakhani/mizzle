@@ -1,0 +1,68 @@
+<section class="py-20 lg:py-28">
+    <div class="container">
+        <div class="lg:w-3/4 mx-auto">
+            <!-- Image -->
+            <img src="/images/bg/02.jpg" class="rounded w-full" alt="contact-bg" />
+
+            <!-- Contact form START -->
+            <div class="w-11/12 lg:w-3/4 mx-auto md:-mt-28 -mt-10 z-15 relative bg-body-bg shadow-xl rounded-md md:p-14 p-6">
+                <!-- Card header -->
+                <div class="border-b border-default-200 pb-10">
+                    <!-- Breadcrumb -->
+                    <nav aria-label="breadcrumb" class="flex justify-start mb-6">
+                        <ol class="flex items-center space-x-2 text-default-600 text-[13px]">
+                            <li>
+                                <a [routerLink]="[]" class="hover:text-primary transition-all">Home</a>
+                            </li>
+                            <span class="text-default-400">•</span>
+                            <li class="text-primary">Contact us</li>
+                        </ol>
+                    </nav>
+
+                    <!-- Title -->
+                    <h1 class="lg:text-4xl md:text-3xl text-2xl mb-4">Let's level up your brand, together</h1>
+                    <p class="mb-0 text-default-700">
+                        You can reach us anytime via
+                        <a [routerLink]="[]" class="text-primary hover:text-primary-hover">example@gmail.com</a>
+                    </p>
+                </div>
+
+                <!-- Card body & form -->
+                <form class="pt-10">
+                    <!-- Name -->
+                    <div class="relative mb-4">
+                        <input type="text" id="name" required class="peer w-full border border-default-200 rounded px-3 py-3 bg-transparent outline-none focus:shadow-lg" />
+                        <label for="name" class="absolute start-3 top-3 text-default-600 transition-all peer-focus:-top-2 peer-focus:bg-body-bg peer-focus:px-1 peer-focus:text-xs peer-valid:-top-2 peer-valid:bg-body-bg peer-valid:px-1 peer-valid:text-xs">Your name</label>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="relative mb-4">
+                        <input type="email" id="email" required class="peer w-full border border-default-200 rounded px-3 py-3 bg-transparent outline-none focus:shadow-lg" />
+                        <label for="email" class="absolute start-3 top-3 text-default-600 transition-all peer-focus:-top-2 peer-focus:bg-body-bg peer-focus:px-1 peer-focus:text-xs peer-valid:-top-2 peer-valid:bg-body-bg peer-valid:px-1 peer-valid:text-xs">
+                            Email address
+                        </label>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="relative mb-4">
+                        <input type="text" id="phone" required class="peer w-full border border-default-200 rounded px-3 py-3 bg-transparent outline-none focus:shadow-lg" />
+                        <label for="phone" class="absolute start-3 top-3 text-default-600 transition-all peer-focus:-top-2 peer-focus:bg-body-bg peer-focus:px-1 peer-focus:text-xs peer-valid:-top-2 peer-valid:bg-body-bg peer-valid:px-1 peer-valid:text-xs">
+                            Phone number
+                        </label>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="relative mb-4">
+                        <textarea id="message" required class="peer w-full h-25 border border-default-200 rounded px-3 py-3 bg-transparent not-even:outline-none focus:shadow-lg"></textarea>
+                        <label for="message" class="absolute start-3 top-3 text-default-600 transition-all peer-focus:-top-2 peer-focus:bg-body-bg peer-focus:px-1 peer-focus:text-xs peer-valid:-top-2 peer-valid:bg-body-bg peer-valid:px-1 peer-valid:text-xs">
+                            Message
+                        </label>
+                    </div>
+
+                    <!-- Button -->
+                    <button class="bg-primary text-white py-3 px-6 rounded-md hover:bg-primary-hover transition">Send a message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

@@ -30,11 +30,11 @@ export const VIEW_ROUTES: Route[] = [
   //   loadChildren: () =>
   //     import('./pages/career/career.route').then((mod) => mod.CAREER_ROUTES),
   // },
-  // {
-  //   path: 'contact',
-  //   loadChildren: () =>
-  //     import('./pages/contact/contact.route').then((mod) => mod.CONTACT_ROUTES),
-  // },
+  {
+    path: 'contact',
+    loadChildren: () =>
+      import('./pages/contact/contact.route').then((mod) => mod.CONTACT_ROUTES),
+  },
   // {
   //   path: 'saas',
   //   loadChildren: () =>

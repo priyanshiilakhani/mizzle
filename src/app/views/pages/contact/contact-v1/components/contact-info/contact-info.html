@@ -1,0 +1,59 @@
+<section>
+    <div class="container">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Address info -->
+            <div class="bg-default-100 border border-default-300 rounded-md p-5 md:p-10">
+                <!-- Icon -->
+                <div class="mb-6">
+                    <lucide-icon name="map-pin" class="size-6 text-primary"></lucide-icon>
+                </div>
+
+                <!-- Title -->
+                <h6 class="mb-6 text-xl">Office Address</h6>
+
+                <!-- Office Item -->
+                <div class="flex items-center gap-2 mb-2">
+                    <div class="size-6 rounded-full overflow-hidden">
+                        <img src="/images/flags/us.svg" class="size-full object-cover" alt="flag" />
+                    </div>
+                    <span class="font-semibold text-default-800">US office:</span>
+                </div>
+                <address class="text-default-600 not-italic">1421 Coburn Hollow Road Metamora, Near Center Point, IL 61548.</address>
+            </div>
+
+            <!-- Email info -->
+            <div class="bg-default-100 border border-default-300 rounded-md p-5 md:p-10">
+                <!-- Icon -->
+                <div class="mb-6">
+                    <lucide-icon name="mail" class="size-6 text-primary"></lucide-icon>
+                </div>
+
+                <!-- Title -->
+                <h6 class="mb-6 text-xl">Email us</h6>
+
+                <p class="text-default-600 mb-4">We're on top of things and aim to respond to all inquiries within 24 hours.</p>
+
+                <a [routerLink]="[]" class="text-default-700 hover:text-primary underline transition-all">example@gmail.com</a>
+            </div>
+
+            <!-- Contact info -->
+            <div class="bg-default-100 border border-default-300 rounded-md p-5 md:p-10">
+                <!-- Icon -->
+                <div class="mb-6">
+                    <lucide-icon name="phone" class="size-6 text-primary"></lucide-icon>
+                </div>
+
+                <!-- Title -->
+                <h6 class="mb-6 text-xl">Call us</h6>
+
+                <p class="text-default-600 mb-4">Let's work together towards a common goal - get in touch!</p>
+
+                <a [routerLink]="[]" class="text-default-700 hover:text-primary underline transition-all">(251) 854-6308</a>
+            </div>
+        </div>
+        <!-- Grid END -->
+    </div>
+
+    <!-- Map -->
+    <iframe class="w-full h-50 lg:h-100 grayscale-60 block mt-28 -mb-1.25" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425878428698!3d40.74076684379132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1sen!2sin!4v1586000412513!5m2!1sen!2sin" aria-hidden="false" tabindex="0"></iframe>
+</section>

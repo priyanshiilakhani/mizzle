@@ -11,5 +11,12 @@ register()
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class FeaturedCategory {
+  // servicesData: (ServiceType & { safeIcon: SafeHtml })[] = [];
 
+  // constructor(private sanitizer: DomSanitizer) {
+  //   this.servicesData = servicesData.map((item) => ({
+  //     ...item,
+  //     safeIcon: this.sanitizer.bypassSecurityTrustHtml(item.icon),
+  //   }));
+  // }
 }
