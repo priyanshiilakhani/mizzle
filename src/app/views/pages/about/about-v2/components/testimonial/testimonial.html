@@ -1,1 +1,92 @@
-<p>testimonial works!</p>
+<section class="bg-dark text-white lg:py-28 md:py-20 py-16">
+  <div class="container">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+      <!-- Left Section -->
+      <div class="lg:col-span-1">
+        <h3 class="mb-6 md:text-4xl text-2xl text-white font-bold">
+          Why our customers love Mizzle
+        </h3>
+        <p class="text-xl mb-2 text-white/70">
+          3000+ Users rated us
+          <span class="text-warning font-bold">4.85</span>
+          out of 5.
+        </p>
+
+        <!-- Avatar Group -->
+        <ul class="flex -space-x-3 mb-6">
+          @for (item of avatarData; track $index) {
+            <li><img [src]="item" class="size-10 rounded-full" /></li>
+          }
+        </ul>
+
+        <!-- Slider Arrows -->
+        <div class="flex gap-4 mt-10">
+          <button
+            class="size-10 flex items-center justify-center rounded-full border border-white hover:bg-body-bg hover:text-black transition"
+            id="swiper-button-prev"
+          >
+            <lucide-icon name="move-left" class="size-4.5"></lucide-icon>
+          </button>
+
+          <button
+            class="size-10 flex items-center justify-center rounded-full border border-white hover:bg-body-bg hover:text-black transition"
+            id="swiper-button-next"
+          >
+            <lucide-icon name="move-right" class="size-4.5"></lucide-icon>
+          </button>
+        </div>
+      </div>
+
+      <div class="lg:col-span-2">
+        <swiper-container
+          class="swiper"
+          space-between="30"
+          grab-cursor="true"
+          navigation-next-el="#swiper-button-next"
+          navigation-prev-el="#swiper-button-prev"
+          [breakpoints]="{
+            '576': { slidesPerView: 1 },
+            '768': { slidesPerView: 2 },
+            '992': { slidesPerView: 2 },
+          }"
+        >
+          @for (item of testimonialData; track $index) {
+            <swiper-slide>
+              <div class="bg-zinc-800 md:p-10 p-6 rounded-md shadow">
+                <div
+                  class="text-primary bg-primary/10 size-13 flex items-center justify-center rounded"
+                >
+                  <lucide-icon [name]="item.icon" class="fill-primary size-6"></lucide-icon>
+                </div>
+
+                <p class="text-xl my-4 text-white/70">{{ item.description }}</p>
+
+                <ul class="flex items-center gap-1 mb-6 text-warning">
+                  @for (star of getFullStars(item.rating); track $index) {
+                    <li>
+                      <lucide-icon name="star" class="fill-warning size-4"></lucide-icon>
+                    </li>
+                  }
+
+                  @if (hasHalfStar(item.rating)) {
+                    <li>
+                      <lucide-icon name="star-half" class="fill-warning size-4"></lucide-icon>
+                    </li>
+                  }
+                </ul>
+
+                <div class="flex items-center">
+                  <img [src]="item.image" class="size-12 rounded-full" />
+                  <div class="ms-4">
+                    <h6 class="font-semibold text-xl text-white">{{ item.title }}</h6>
+                    <p class="text-sm text-white/70">{{ item.role }}</p>
+                  </div>
+                </div>
+              </div>
+            </swiper-slide>
+          }
+        </swiper-container>
+      </div>
+    </div>
+  </div>
+</section>
