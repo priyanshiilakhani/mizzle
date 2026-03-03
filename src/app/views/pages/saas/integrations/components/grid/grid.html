@@ -1,0 +1,47 @@
+<section class="lg:py-28 md:py-20 py-16">
+    <div class="container">
+        <div class="lg:flex justify-between items-center lg:mb-10 mb-6">
+            <h4 class="md:text-3xl text-2xl lg:mb-0 mb-4">Explore integration</h4>
+            <nav class="flex flex-wrap items-center gap-x-2" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                <button type="button" class="hs-tab-active:bg-default-100 border border-transparent hs-tab-active:border-default-200 hs-tab-active:text-default-700 rounded py-2 px-4 active" id="basic-tabs-item-1" aria-selected="true" data-hs-tab="#basic-tabs-1" aria-controls="basic-tabs-1" role="tab">
+                    All
+                </button>
+
+                <button type="button" class="hs-tab-active:bg-default-100 border border-transparent hs-tab-active:border-default-200 hs-tab-active:text-default-700 rounded py-2 px-4" id="basic-tabs-item-2" aria-selected="false" data-hs-tab="#basic-tabs-2" aria-controls="basic-tabs-2" role="tab">
+                    Assets
+                </button>
+
+                <button type="button" class="hs-tab-active:bg-default-100 border border-transparent hs-tab-active:border-default-200 hs-tab-active:text-default-700 rounded py-2 px-4" id="basic-tabs-item-3" aria-selected="false" data-hs-tab="#basic-tabs-3" aria-controls="basic-tabs-3" role="tab">
+                    Domain
+                </button>
+
+                <button type="button" class="hs-tab-active:bg-default-100 border border-transparent hs-tab-active:border-default-200 hs-tab-active:text-default-700 rounded py-2 px-4" id="basic-tabs-item-2" aria-selected="false" data-hs-tab="#basic-tabs-2" aria-controls="basic-tabs-2" role="tab">
+                    Ecommerce
+                </button>
+
+                <button type="button" class="hs-tab-active:bg-default-100 border border-transparent hs-tab-active:border-default-200 hs-tab-active:text-default-700 rounded py-2 px-4" id="basic-tabs-item-3" aria-selected="false" data-hs-tab="#basic-tabs-3" aria-controls="basic-tabs-3" role="tab">
+                    Social
+                </button>
+            </nav>
+        </div>
+
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 md:gap-10 gap-6">
+            @for (item of integrationsData; track $index) {
+            <div class="p-6 border border-default-200 rounded-md group hover:border-primary hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+                <div class="flex items-center gap-4 mb-4">
+                    <img [src]="item.image" class="h-10" alt="Integrations-icon" />
+                    <h6 class="text-xl">{{item.name}}</h6>
+                </div>
+
+                <p class="mb-4">{{item.description}}</p>
+                <div class="mt-14">
+                    <a [routerLink]="item.link" class="flex items-center gap-2 text-default-800 group-hover:text-primary transition-all">
+                        View integration
+                        <lucide-icon name="move-right" class="size-4 group-hover:translate-x-1 transition-all duration-300"></lucide-icon>
+                    </a>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>
