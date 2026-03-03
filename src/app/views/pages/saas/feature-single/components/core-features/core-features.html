@@ -1,0 +1,25 @@
+<section class="lg:pt-44 md:pt-20 pt-16">
+    <div class="container">
+        <div class="md:mb-16 mb-6 text-center">
+            <span class="bg-primary/10 text-primary uppercase rounded px-4 py-2 text-sm">Core feature</span>
+            <h2 class="lg:text-[45px] md:text-4xl text-3xl mt-4">The heart of our solution</h2>
+        </div>
+
+        <div class="lg:w-10/12 mx-auto">
+            <div class="space-y-14">
+                @for (item of featuresData; track $index) {
+                <div class="grid md:grid-cols-2 grid-cols-1 items-center md:gap-19 gap-y-6">
+                    <div class="bg-default-100/5 rounded p-6"  [class]="item.reverse ? 'md:order-2 order-1' : ''">
+                        <img [src]="item.image" />
+                    </div>
+
+                    <div>
+                        <h3 class="lg:text-4xl md:text-3xl text-2xl mb-6">{{item.title}}</h3>
+                        <p>{{item.description}}</p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
