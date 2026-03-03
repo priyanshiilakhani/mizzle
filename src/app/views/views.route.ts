@@ -35,11 +35,11 @@ export const VIEW_ROUTES: Route[] = [
     loadChildren: () =>
       import('./pages/contact/contact.route').then((mod) => mod.CONTACT_ROUTES),
   },
-  // {
-  //   path: 'saas',
-  //   loadChildren: () =>
-  //     import('./pages/saas/saas.route').then((mod) => mod.SAAS_ROUTES),
-  // },
+  {
+    path: 'saas',
+    loadChildren: () =>
+      import('./pages/saas/saas.route').then((mod) => mod.SAAS_ROUTES),
+  },
   // {
   //   path: 'help',
   //   loadChildren: () =>

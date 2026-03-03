@@ -1,0 +1,19 @@
+<section class="lg:pb-28 md:pb-20 pb-16">
+    <div class="container">
+        <div class="lg:w-3xl mx-auto text-center lg:mb-10 mb-6">
+            <h2 class="mb-6 lg:text-[45px] md:text-4xl text-3xl font-bold">Understanding of your website's impact</h2>
+            <p class="mb-6">There is nothing that can stop you from achieving what you want, except yourself. If you devote yourself to it you will achieve your goal.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 justify-center">
+            @for(item of impactFeatureData;track $index){
+            <div class="text-center">
+                <figure class="text-primary mb-4 inline-block" [innerHTML]="item.safeIcon">
+                </figure>
+                <h5 class="mb-4 md:text-2xl text-xl font-bold">{{item.title}}</h5>
+                <p>{{item.description}}</p>
+            </div>
+            }
+        </div>
+    </div>
+</section>
