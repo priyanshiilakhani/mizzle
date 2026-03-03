@@ -1,0 +1,63 @@
+<section>
+  <div class="container">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Title & Arrows -->
+      <div class="col-span-1">
+        <h2 class="lg:text-[45px] md:text-4xl text-3xl font-bold mb-2">Meet Our Dedicated Team</h2>
+
+        <!-- Slider arrows -->
+        <div class="flex gap-3 md:mt-10">
+          <button
+            class="bg-dark text-white size-10 rounded-full flex justify-center items-center"
+            id="swiper-button-prev-team"
+          >
+            <lucide-icon name="move-left" class="size-4"></lucide-icon>
+          </button>
+
+          <button
+            class="bg-dark text-white size-10 rounded-full flex justify-center items-center"
+            id="swiper-button-next-team"
+          >
+            <lucide-icon name="move-right" class="size-4"></lucide-icon>
+          </button>
+        </div>
+      </div>
+
+      <!-- Slider -->
+      <div class="md:col-span-2">
+        <swiper-container
+          class="swiper mt-4"
+          space-between="40"
+          navigation-next-el="#swiper-button-next-team"
+          navigation-prev-el="#swiper-button-prev-team"
+          [breakpoints]="{
+            '576': { slidesPerView: 2 },
+            '992': { slidesPerView: 3 },
+          }"
+        >  
+            @for (item of teamData; track $index) {
+              <swiper-slide>
+                <div class="bg-transparent overflow-hidden">
+                  <div class="rounded-xl overflow-hidden">
+                    <img
+                      [src]="item.image"
+                      class="w-full transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+
+                  <div class="text-center mt-3">
+                    <h6 class="font-bold text-xl">
+                      <a [routerLink]="[]" class="hover:text-primary transition-all">{{
+                        item.name
+                      }}</a>
+                    </h6>
+                    <small class="text-sm font-semibold text-default-600">{{ item.role }}</small>
+                  </div>
+                </div>
+              </swiper-slide>
+            }
+        </swiper-container>
+      </div>
+    </div>
+  </div>
+</section>
