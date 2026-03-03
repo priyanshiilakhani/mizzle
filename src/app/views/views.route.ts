@@ -40,6 +40,11 @@ export const VIEW_ROUTES: Route[] = [
     loadChildren: () =>
       import('./pages/saas/saas.route').then((mod) => mod.SAAS_ROUTES),
   },
+  {
+    path: 'shop',
+    loadChildren: () =>
+      import('./pages/shop/shop.route').then((mod) => mod.SHOP_ROUTES),
+  },
   // {
   //   path: 'help',
   //   loadChildren: () =>

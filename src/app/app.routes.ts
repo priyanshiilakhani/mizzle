@@ -13,13 +13,6 @@ export const routes: Routes = [
       import('./views/views.route').then((mod) => mod.VIEW_ROUTES),
   },
 //   {
-//     path: 'shop',
-//     component: ShopLayout,
-
-//     loadChildren: () =>
-//       import('./views/pages/shop/shop.route').then((mod) => mod.SHOP_ROUTES),
-//   },
-//   {
 //     path: 'blog',
 //     component: BlogLayout,
 //     loadChildren: () =>

@@ -1,0 +1,742 @@
+<!-- Main Title START -->
+<section class="lg:pt-32 pt-20 md:pb-16 pb-6">
+    <div class="container">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="flex items-center space-x-2 text-[13px] text-default-600">
+                <li>
+                    <a [routerLink]="[]" class="hover:text-primary transition-all">Home</a>
+                </li>
+
+                <!-- Dot separator -->
+                <li class="flex items-center">
+                    <span class="mx-1 text-default-400">•</span>
+                    <a [routerLink]="[]" class="hover:text-primary transition-all">Shop</a>
+                </li>
+
+                <li class="flex items-center">
+                    <span class="mx-1 text-default-400">•</span>
+                    <span class="text-primary font-medium">All product</span>
+                </li>
+            </ol>
+        </nav>
+
+        <!-- Title -->
+        <h1 class="lg:text-4xl text-3xl mt-4">Search items</h1>
+    </div>
+</section>
+
+<!-- Product content START -->
+<section class="lg:pb-28 md:pb-20 pb-16">
+    <div class="container">
+        <div class="grid lg:grid-cols-4 gap-4 items-start">
+            <div class="lg:col-span-1">
+                <div id="offcanvasSidebar" class="hs-overlay [--auto-close:lg] lg:static lg:block! lg:translate-x-0 lg:end-auto lg:bottom-0 lg:w-full w-xs hs-overlay-open:translate-x-0 translate-x-full transition-all duration-300 transform h-full fixed top-0 end-0 bottom-0 z-60 bg-body-bg" role="dialog" tabindex="-1" aria-label="Sidebar">
+                    <div class="py-4 px-7.5 flex justify-between items-center bg-default-50 lg:hidden">
+                        <a class="font-bold text-xl text-default-800">Advance Filter</a>
+                        <div class="lg:hidden -me-2">
+                            <!-- Close Button -->
+                            <button type="button" class="text-default-600" data-hs-overlay="#offcanvasSidebar">
+                                <lucide-icon name="x" class="size-5.5"></lucide-icon>
+                            </button>
+                            <!-- End Close Button -->
+                        </div>
+                    </div>
+
+                    <div class="hs-accordion-group lg:p-0 p-4 overflow-y-auto h-full">
+                        <div class="hs-accordion border border-default-200 rounded-md p-3.5 mb-5" id="accordionExampleone">
+                            <button class="hs-accordion-toggle flex items-center justify-between gap-x-3 w-full font-semibold text-start text-default-800 text-xl" aria-expanded="false" aria-controls="collapseOne">
+                                Availability
+                                <lucide-icon name="chevron-down" class="size-4.5 hs-accordion-active:hidden block"></lucide-icon>
+                                <lucide-icon name="chevron-up" class="size-4.5 hs-accordion-active:block hidden"></lucide-icon>
+                            </button>
+
+                            <div id="collapseOne" class="hs-accordion-content w-full hidden overflow-hidden transition-[height] duration-300 mt-4" role="region" aria-labelledby="accordionExampleone">
+                                <form class="space-y-2">
+                                    <!-- All -->
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="radio" name="flexRadioDefault" checked class="size-4 border-0 checked:bg-primary! bg-default-200! focus:ring-primary" />
+                                        <span class="text-default-600">All</span>
+                                    </label>
+
+                                    <!-- New Arrival -->
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="radio" name="flexRadioDefault" class="size-4 border-0 checked:bg-primary! bg-default-200! focus:ring-primary" />
+                                        <span class="text-default-600">New Arrival</span>
+                                    </label>
+
+                                    <!-- On Stock Only -->
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="radio" name="flexRadioDefault" class="size-4 border-0 checked:bg-primary! bg-default-200! focus:ring-primary" />
+                                        <span class="text-default-600">On Stock Only</span>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="hs-accordion active border border-default-200 rounded-md p-3.5 mb-5" id="accordionExampletwo">
+                            <button class="hs-accordion-toggle flex items-center justify-between gap-x-3 w-full font-semibold text-start text-default-800 text-xl" aria-expanded="true" aria-controls="collapseTwo">
+                                Categories
+                                <lucide-icon name="chevron-down" class="size-4.5 hs-accordion-active:hidden block"></lucide-icon>
+                                <lucide-icon name="chevron-up" class="size-4.5 hs-accordion-active:block hidden"></lucide-icon>
+                            </button>
+
+                            <div id="collapseTwo" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 mt-4" role="region" aria-labelledby="accordionExampletwo">
+                                <form class="space-y-3">
+                                    <!-- Item -->
+                                    <label class="flex items-center justify-between cursor-pointer">
+                                        <div class="flex items-center gap-2">
+                                            <input id="category1" type="checkbox" class="size-4 border-0 checked:bg-primary! bg-default-200! rounded focus:ring-primary" />
+                                            <span class="text-default-800">Fashion</span>
+                                        </div>
+                                        <span class="text-sm text-default-600">(215)</span>
+                                    </label>
+
+                                    <!-- Item -->
+                                    <label class="flex items-center justify-between cursor-pointer">
+                                        <div class="flex items-center gap-2">
+                                            <input id="category2" type="checkbox" class="size-4 border-0 checked:bg-primary! bg-default-200! rounded focus:ring-primary" />
+                                            <span class="text-default-800">Electronics</span>
+                                        </div>
+                                        <span class="text-sm text-default-600">(142)</span>
+                                    </label>
+
+                                    <!-- Item -->
+                                    <label class="flex items-center justify-between cursor-pointer">
+                                        <div class="flex items-center gap-2">
+                                            <input id="category3" type="checkbox" class="size-4 border-0 checked:bg-primary! bg-default-200! rounded focus:ring-primary" />
+                                            <span class="text-default-800">Games</span>
+                                        </div>
+                                        <span class="text-sm text-default-600">(25)</span>
+                                    </label>
+
+                                    <!-- Item -->
+                                    <label class="flex items-center justify-between cursor-pointer">
+                                        <div class="flex items-center gap-2">
+                                            <input id="category4" type="checkbox" class="size-4 border-0 checked:bg-primary! bg-default-200! rounded focus:ring-primary" />
+                                            <span class="text-default-800">Books</span>
+                                        </div>
+                                        <span class="text-sm text-default-600">(81)</span>
+                                    </label>
+
+                                    <!-- Item -->
+                                    <label class="flex items-center justify-between cursor-pointer">
+                                        <div class="flex items-center gap-2">
+                                            <input id="category5" type="checkbox" class="size-4 border-0 checked:bg-primary! bg-default-200! rounded focus:ring-primary" />
+                                            <span class="text-default-800">Mobile</span>
+                                        </div>
+                                        <span class="text-sm text-default-600">(354)</span>
+                                    </label>
+
+                                    <!-- Item -->
+                                    <label class="flex items-center justify-between cursor-pointer">
+                                        <div class="flex items-center gap-2">
+                                            <input id="category6" type="checkbox" class="size-4 border-0 checked:bg-primary! bg-default-200! rounded focus:ring-primary" />
+                                            <span class="text-default-800">Bags</span>
+                                        </div>
+                                        <span class="text-sm text-default-600">(41)</span>
+                                    </label>
+
+                                    <!-- Item -->
+                                    <label class="flex items-center justify-between cursor-pointer">
+                                        <div class="flex items-center gap-2">
+                                            <input id="category7" type="checkbox" class="size-4 border-0 checked:bg-primary! bg-default-200! rounded focus:ring-primary" />
+                                            <span class="text-default-800">Beauty products</span>
+                                        </div>
+                                        <span class="text-sm text-default-600">(35)</span>
+                                    </label>
+
+                                    <!-- Item -->
+                                    <label class="flex items-center justify-between cursor-pointer">
+                                        <div class="flex items-center gap-2">
+                                            <input id="category8" type="checkbox" class="size-4 border-0 checked:bg-primary! bg-default-200! rounded focus:ring-primary" />
+                                            <span class="text-default-800">Grocery</span>
+                                        </div>
+                                        <span class="text-sm text-default-600">(41)</span>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="hs-accordion border border-default-200 rounded-md p-3.5 mb-5" id="accordionExamplethree">
+                            <button class="hs-accordion-toggle flex items-center justify-between gap-x-3 w-full font-semibold text-start text-default-800 text-xl" aria-expanded="false" aria-controls="collapseThree">
+                                Price
+                                <lucide-icon name="chevron-down" class="size-4.5 hs-accordion-active:hidden block"></lucide-icon>
+                                <lucide-icon name="chevron-up" class="size-4.5 hs-accordion-active:block hidden"></lucide-icon>
+                            </button>
+
+                            <div id="collapseThree" class="hs-accordion-content w-full hidden overflow-hidden transition-[height] duration-300 mt-4" role="region" aria-labelledby="accordionExamplethree">
+                                <form class="space-y-3">
+                                    <!-- Item -->
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input id="price1" type="checkbox" class="size-4 border-0 checked:bg-primary! bg-default-200! rounded focus:ring-primary" />
+                                        <span class="text-default-800">$0 to $200</span>
+                                    </label>
+
+                                    <!-- Item -->
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input id="price2" type="checkbox" class="size-4 border-0 checked:bg-primary! bg-default-200! rounded focus:ring-primary" />
+                                        <span class="text-default-800">$200 to $500</span>
+                                    </label>
+
+                                    <!-- Item -->
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input id="price3" type="checkbox" class="size-4 border-0 checked:bg-primary! bg-default-200! rounded focus:ring-primary" />
+                                        <span class="text-default-800">$500 to $1500</span>
+                                    </label>
+
+                                    <!-- Item -->
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input id="price4" type="checkbox" class="size-4 border-0 checked:bg-primary! bg-default-200! rounded focus:ring-primary" />
+                                        <span class="text-default-800">$1500 to more</span>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="hs-accordion border border-default-200 rounded-md p-3.5 mb-5" id="accordionExamplefour">
+                            <button class="hs-accordion-toggle flex items-center justify-between gap-x-3 w-full font-semibold text-start text-default-800 text-xl" aria-expanded="false" aria-controls="collapsefour">
+                                Color
+                                <lucide-icon name="chevron-down" class="size-4.5 hs-accordion-active:hidden block"></lucide-icon>
+                                <lucide-icon name="chevron-up" class="size-4.5 hs-accordion-active:block hidden"></lucide-icon>
+                            </button>
+
+                            <div id="collapsefour" class="hs-accordion-content w-full hidden overflow-hidden transition-[height] duration-300 mt-4" role="region" aria-labelledby="accordionExamplefour">
+                                <form class="space-x-3 flex items-center py-1 ps-1">
+                                    <!-- Color 1 -->
+                                    <label class="relative cursor-pointer">
+                                        <input type="radio" name="Radio-color" class="peer hidden" />
+                                        <span class="size-5 rounded-full block ring-4 ring-transparent peer-checked:ring-black/8 peer-checked:shadow-md bg-[#9a0a0a]"></span>
+                                    </label>
+
+                                    <!-- Color 2 -->
+                                    <label class="relative cursor-pointer">
+                                        <input type="radio" name="Radio-color" class="peer hidden" />
+                                        <span class="size-5 rounded-full block ring-4 ring-transparent peer-checked:ring-black/8 peer-checked:shadow-md bg-[#32c7f5]"></span>
+                                    </label>
+
+                                    <!-- Color 3 -->
+                                    <label class="relative cursor-pointer">
+                                        <input type="radio" name="Radio-color" class="peer hidden" />
+                                        <span class="size-5 rounded-full block ring-4 ring-transparent peer-checked:ring-black/8 peer-checked:shadow-md bg-warning"></span>
+                                    </label>
+
+                                    <!-- Color 4 -->
+                                    <label class="relative cursor-pointer">
+                                        <input type="radio" name="Radio-color" class="peer hidden" />
+                                        <span class="size-5 rounded-full block ring-4 ring-transparent peer-checked:ring-black/8 peer-checked:shadow-md bg-[#333369]"></span>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="hs-accordion border border-default-200 rounded-md p-3.5 mb-9" id="accordionExamplefive">
+                            <button class="hs-accordion-toggle flex items-center justify-between gap-x-3 w-full font-semibold text-start text-default-800 text-xl" aria-expanded="false" aria-controls="collapsefive">
+                                Rating star
+                                <lucide-icon name="chevron-down" class="size-4.5 hs-accordion-active:hidden block"></lucide-icon>
+                                <lucide-icon name="chevron-up" class="size-4.5 hs-accordion-active:block hidden"></lucide-icon>
+                            </button>
+
+                            <div id="collapsefive" class="hs-accordion-content w-full hidden overflow-hidden transition-[height] duration-300 mt-4" role="region" aria-labelledby="accordionExamplefive">
+                                <form>
+                                    <ul class="flex flex-wrap items-center gap-3">
+                                        <!-- Item -->
+                                        <li>
+                                            <label class="cursor-pointer">
+                                                <input type="checkbox" id="rating1" class="peer hidden" />
+                                                <span class="px-3 py-1.5 text-sm bg-default-100 rounded flex items-center gap-1 peer-checked:bg-primary/10 border border-transparent peer-checked:border-primary peer-checked:text-primary fill-default-600">
+                                                    1
+                                                    <iconify-icon icon="tabler:star-filled"></iconify-icon>
+                                                </span>
+                                            </label>
+                                        </li>
+
+                                        <!-- Item -->
+                                        <li>
+                                            <label class="cursor-pointer">
+                                                <input type="checkbox" id="rating2" class="peer hidden" />
+                                                <span class="px-3 py-1.5 text-sm bg-default-100 rounded flex items-center gap-1 peer-checked:bg-primary/10 border border-transparent peer-checked:border-primary peer-checked:text-primary fill-default-600">
+                                                    2
+                                                    <iconify-icon icon="tabler:star-filled"></iconify-icon>
+                                                </span>
+                                            </label>
+                                        </li>
+
+                                        <!-- Item -->
+                                        <li>
+                                            <label class="cursor-pointer">
+                                                <input type="checkbox" id="rating3" class="peer hidden" />
+                                                <span class="px-3 py-1.5 text-sm bg-default-100 rounded flex items-center gap-1 peer-checked:bg-primary/10 border border-transparent peer-checked:border-primary peer-checked:text-primary fill-default-600">
+                                                    3
+                                                    <iconify-icon icon="tabler:star-filled"></iconify-icon>
+                                                </span>
+                                            </label>
+                                        </li>
+
+                                        <!-- Item -->
+                                        <li>
+                                            <label class="cursor-pointer">
+                                                <input type="checkbox" id="rating4" class="peer hidden" />
+                                                <span class="px-3 py-1.5 text-sm bg-default-100 rounded flex items-center gap-1 peer-checked:bg-primary/10 border border-transparent peer-checked:border-primary peer-checked:text-primary fill-default-600">
+                                                    4
+                                                    <iconify-icon icon="tabler:star-filled"></iconify-icon>
+                                                </span>
+                                            </label>
+                                        </li>
+
+                                        <!-- Item -->
+                                        <li>
+                                            <label class="cursor-pointer">
+                                                <input type="checkbox" id="rating5" class="peer hidden" />
+                                                <span class="px-3 py-1.5 text-sm bg-default-100 rounded flex items-center gap-1 peer-checked:bg-primary/10 border border-transparent peer-checked:border-primary peer-checked:text-primary fill-default-600">
+                                                    5
+                                                    <iconify-icon icon="tabler:star-filled"></iconify-icon>
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <button class="text-default-600 hover:text-primary transition-all">Clear all</button>
+                            <div class="px-4 py-2 rounded text-white bg-primary hover:bg-primary-hover transition-all">Filter Result</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Sidebar -->
+            </div>
+
+            <div class="lg:col-span-3 lg:ps-14">
+                <form class="flex md:flex-nowrap flex-wrap lg:justify-between items-center gap-3 mb-6">
+                    <div class="rounded relative">
+                        <input class="w-full py-2 ps-4 md:pe-10 pe-19 border-default-200 bg-default-100 rounded" type="search" placeholder="Search products by name or keyword..." aria-label="Search" />
+                        <lucide-icon name="search" class="absolute inset-y-0 end-3 top-1/2 -translate-y-1/2 text-default-400 size-4"></lucide-icon>
+                    </div>
+
+                    <select class="md:w-auto w-full py-2 ps-4 pe-9 rounded bg-transparent border-default-200 text-default-700" aria-label="Default select example">
+                        <option selected="">Sort by</option>
+                        <option value="1">Name</option>
+                        <option value="2">Low to High Price</option>
+                        <option value="3">Heigh to Low Price</option>
+                    </select>
+
+                    <div class="lg:hidden flex items-center gap-2 text-start">
+                        <button type="button" class="flex items-center gap-2 py-2 md:px-4 px-29.5 bg-dark hover:bg-dark-hover text-white rounded font-medium w-full" aria-haspopup="dialog" aria-expanded="false" aria-controls="offcanvasSidebar" aria-label="Toggle navigation" data-hs-overlay="#offcanvasSidebar">
+                            <lucide-icon name="sliders-horizontal" class="size-4"></lucide-icon>
+                            Show filter
+                        </button>
+                    </div>
+                </form>
+
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+                    <div class="relative bg-transparent border border-default-200 rounded-md overflow-hidden h-full group">
+                        <!-- Overlay -->
+                        <div class="absolute inset-x-0 top-0 flex items-start p-4 z-10">
+                            <span class="bg-dark text-white text-xs px-2 py-1 rounded">Featured</span>
+                            <button class="ms-auto bg-body-bg border border-default-200 rounded-full size-10 hover:bg-default-200 flex justify-center items-center transition-all">
+                                <lucide-icon name="heart" class="size-4.5"></lucide-icon>
+                            </button>
+                        </div>
+
+                        <!-- Image -->
+                        <div class="bg-default-100 rounded p-5 m-2">
+                            <img src="/images/shop/02.png" class="w-full object-contain" />
+                        </div>
+
+                        <!-- Body -->
+                        <div class="pt-5 px-5">
+                            <h6 class="text-xl font-bold mb-2">
+                                <a href="shop-single.html" class="group-hover:text-primary transition-all duration-300 after:absolute after:inset-0">Classic round neck t-shirt</a>
+                            </h6>
+
+                            <!-- Rating -->
+                            <ul class="flex items-center space-x-1 text-warning mb-4">
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star-half" class="size-4 fill-warning"></lucide-icon></li>
+                            </ul>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="pb-5 px-5 flex justify-between items-center">
+                            <p class="font-semibold text-primary">$103.00</p>
+                            <button class="bg-dark hover:bg-dark-hover text-white py-3 px-4 rounded z-15 transition-all">
+                                <lucide-icon name="shopping-cart" class="size-4"></lucide-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-transparent border border-default-200 rounded-md overflow-hidden h-full group">
+                        <!-- Overlay -->
+                        <div class="absolute inset-x-0 top-0 flex items-start p-4 z-15">
+                            <span class="bg-danger text-white text-xs px-2 py-1 rounded">20% off</span>
+                            <button class="ms-auto bg-body-bg border border-default-200 rounded-full size-10 hover:bg-default-200 flex justify-center items-center transition-all">
+                                <lucide-icon name="heart" class="fill-danger text-danger size-4.5"></lucide-icon>
+                            </button>
+                        </div>
+
+                        <!-- Image -->
+                        <div class="bg-default-100 rounded p-5 m-2">
+                            <img src="/images/shop/08.png" class="w-full object-contain" />
+                        </div>
+
+                        <!-- Body -->
+                        <div class="pt-5 px-5">
+                            <h6 class="text-xl font-bold mb-2">
+                                <a href="shop-single.html" class="group-hover:text-primary transition-all duration-300 after:absolute after:inset-0">Man's training shoes</a>
+                            </h6>
+
+                            <!-- Rating -->
+                            <ul class="flex items-center space-x-1 text-warning mb-4">
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star-half" class="size-4 fill-warning"></lucide-icon></li>
+                            </ul>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="pb-5 px-5 flex justify-between items-center">
+                            <div class="flex items-center gap-1">
+                                <p class="font-semibold text-primary">$180.00</p>
+                                <del class="text-default-600 text-sm">$130.00</del>
+                            </div>
+
+                            <button class="bg-dark hover:bg-dark-hover text-white py-3 px-4 rounded z-15 transition-all">
+                                <lucide-icon name="shopping-cart" class="size-4"></lucide-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-transparent border border-default-200 rounded-md overflow-hidden h-full group">
+                        <!-- Overlay -->
+                        <div class="absolute inset-x-0 top-0 p-4 z-15">
+                            <button class="ms-auto bg-body-bg border border-default-200 rounded-full size-10 hover:bg-default-200 flex justify-center items-center transition-all">
+                                <lucide-icon name="heart" class="size-4.5"></lucide-icon>
+                            </button>
+                        </div>
+
+                        <!-- Image -->
+                        <div class="bg-default-100 rounded p-5 m-2">
+                            <img src="/images/shop/01.png" class="w-full object-contain" />
+                        </div>
+
+                        <!-- Body -->
+                        <div class="pt-5 px-5">
+                            <h6 class="text-xl font-bold mb-2">
+                                <a href="shop-single.html" class="group-hover:text-primary transition-all duration-300 after:absolute after:inset-0">Premium stainless steel water bottle</a>
+                            </h6>
+
+                            <!-- Rating -->
+                            <ul class="flex items-center space-x-1 text-warning mb-4">
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star-half" class="size-4 fill-warning"></lucide-icon></li>
+                            </ul>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="pb-5 px-5 flex justify-between items-center">
+                            <p class="font-semibold text-primary">$40.00</p>
+                            <button class="bg-dark hover:bg-dark-hover text-white py-3 px-4 rounded z-15 transition-all">
+                                <lucide-icon name="shopping-cart" class="size-4"></lucide-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-3">
+                        <div class="h-full p-6 md:p-14 bg-cover bg-left bg-no-repeat rounded-md bg-[url('/images/shop/bg/05.jpg')]">
+                            <div class="lg:grid lg:grid-cols-12 flex flex-col lg:items-center lg:justify-between justify-start">
+                                <!-- Text -->
+                                <div class="lg:col-span-7 mb-4 lg:mb-0">
+                                    <h4 class="text-white md:text-3xl text-2xl font-bold">Checkout the newest smart watch product</h4>
+                                </div>
+
+                                <!-- Button -->
+                                <div class="lg:col-span-5 lg:text-end text-start">
+                                    <a [routerLink]="[]" class="inline-block bg-body-bg text-default-800 px-4 py-2 rounded-md font-medium hover:bg-default-200 transition-all">Shop now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-transparent border border-default-200 rounded-md overflow-hidden h-full group">
+                        <!-- Overlay -->
+                        <div class="absolute inset-x-0 top-0 flex items-start p-4 z-15">
+                            <span class="bg-danger text-white text-xs px-2 py-1 rounded">30% off</span>
+                            <button class="ms-auto bg-body-bg border border-default-200 rounded-full size-10 hover:bg-default-200 flex justify-center items-center transition-all">
+                                <lucide-icon name="heart" class="size-4.5"></lucide-icon>
+                            </button>
+                        </div>
+
+                        <!-- Image -->
+                        <div class="bg-default-100 rounded p-5 m-2">
+                            <img src="/images/shop/04.png" class="w-full object-contain" />
+                        </div>
+
+                        <!-- Body -->
+                        <div class="pt-5 px-5">
+                            <h6 class="text-xl font-bold mb-2">
+                                <a href="shop-single.html" class="group-hover:text-primary transition-all duration-300 after:absolute after:inset-0">High performance headphones with Noise cancellation</a>
+                            </h6>
+
+                            <!-- Rating -->
+                            <ul class="flex items-center space-x-1 text-warning mb-4">
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star-half" class="size-4 fill-warning"></lucide-icon></li>
+                            </ul>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="pb-5 px-5 flex justify-between items-center">
+                            <div class="flex items-center gap-1">
+                                <p class="font-semibold text-primary">$150.00</p>
+                                <del class="text-default-600 text-sm">$180.00</del>
+                            </div>
+
+                            <button class="bg-dark hover:bg-dark-hover text-white py-3 px-4 rounded z-15 transition-all">
+                                <lucide-icon name="shopping-cart" class="size-4"></lucide-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-transparent border border-default-200 rounded-md overflow-hidden h-full group">
+                        <!-- Overlay -->
+                        <div class="absolute inset-x-0 top-0 flex items-start p-4 z-15">
+                            <button class="ms-auto bg-body-bg border border-default-200 rounded-full size-10 hover:bg-default-200 flex justify-center items-center transition-all">
+                                <lucide-icon name="heart" class="size-4.5"></lucide-icon>
+                            </button>
+                        </div>
+
+                        <!-- Image -->
+                        <div class="bg-default-100 rounded p-5 m-2">
+                            <img src="/images/shop/08.png" class="w-full object-contain" />
+                        </div>
+
+                        <!-- Body -->
+                        <div class="pt-5 px-5">
+                            <h6 class="text-xl font-bold mb-2">
+                                <a href="shop-single.html" class="group-hover:text-primary transition-all duration-300 after:absolute after:inset-0">The ultimate smartphone for modern lifestyles</a>
+                            </h6>
+
+                            <!-- Rating -->
+                            <ul class="flex items-center space-x-1 text-warning mb-4">
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star-half" class="size-4 fill-warning"></lucide-icon></li>
+                            </ul>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="pb-5 px-5 flex justify-between items-center">
+                            <div class="flex items-center gap-1">
+                                <p class="font-semibold text-primary">$215.00</p>
+                            </div>
+
+                            <button class="bg-dark hover:bg-dark-hover text-white py-3 px-4 rounded z-15 transition-all">
+                                <lucide-icon name="shopping-cart" class="size-4"></lucide-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-transparent border border-default-200 rounded-md overflow-hidden h-full group">
+                        <!-- Overlay -->
+                        <div class="absolute inset-x-0 top-0 p-4 z-15">
+                            <button class="ms-auto bg-body-bg border border-default-200 rounded-full size-10 hover:bg-default-200 flex justify-center items-center transition-all">
+                                <lucide-icon name="heart" class="size-4.5"></lucide-icon>
+                            </button>
+                        </div>
+
+                        <!-- Image -->
+                        <div class="bg-default-100 rounded p-5 m-2">
+                            <img src="/images/shop/06.png" class="w-full object-contain" />
+                        </div>
+
+                        <!-- Body -->
+                        <div class="pt-5 px-5">
+                            <h6 class="text-xl font-bold mb-2">
+                                <a href="shop-single.html" class="group-hover:text-primary transition-all duration-300 after:absolute after:inset-0">Vintage inspired bluetooth radio speaker</a>
+                            </h6>
+
+                            <!-- Rating -->
+                            <ul class="flex items-center space-x-1 text-warning mb-4">
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star-half" class="size-4 fill-warning"></lucide-icon></li>
+                            </ul>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="pb-5 px-5 flex justify-between items-center">
+                            <p class="font-semibold text-primary">$142.00</p>
+                            <button class="bg-dark hover:bg-dark-hover text-white py-3 px-4 rounded z-15 transition-all">
+                                <lucide-icon name="shopping-cart" class="size-4"></lucide-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-transparent border border-default-200 rounded-md overflow-hidden h-full group">
+                        <!-- Overlay -->
+                        <div class="absolute inset-x-0 top-0 flex items-start p-4 z-15">
+                            <button class="ms-auto bg-body-bg border border-default-200 rounded-full size-10 hover:bg-default-200 flex justify-center items-center transition-all">
+                                <lucide-icon name="heart" class="size-4.5"></lucide-icon>
+                            </button>
+                        </div>
+
+                        <!-- Image -->
+                        <div class="bg-default-100 rounded p-5 m-2">
+                            <img src="/images/shop/09.png" class="w-full object-contain" />
+                        </div>
+
+                        <!-- Body -->
+                        <div class="pt-5 px-5">
+                            <h6 class="text-xl font-bold mb-2">
+                                <a href="shop-single.html" class="group-hover:text-primary transition-all duration-300 after:absolute after:inset-0">Woman's training shoes</a>
+                            </h6>
+
+                            <!-- Rating -->
+                            <ul class="flex items-center space-x-1 text-warning mb-4">
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star-half" class="size-4 fill-warning"></lucide-icon></li>
+                            </ul>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="pb-5 px-5 flex justify-between items-center">
+                            <p class="font-semibold text-primary">$215.00</p>
+                            <button class="bg-dark hover:bg-dark-hover text-white py-3 px-4 rounded z-15 transition-all">
+                                <lucide-icon name="shopping-cart" class="size-4"></lucide-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-transparent border border-default-200 rounded-md overflow-hidden h-full group">
+                        <!-- Overlay -->
+                        <div class="absolute inset-x-0 top-0 flex items-start p-4 z-15">
+                            <button class="ms-auto bg-body-bg border border-default-200 rounded-full size-10 hover:bg-default-200 flex justify-center items-center transition-all">
+                                <lucide-icon name="heart" class="size-4.5 fill-danger text-danger"></lucide-icon>
+                            </button>
+                        </div>
+
+                        <!-- Image -->
+                        <div class="bg-default-100 rounded p-5 m-2">
+                            <img src="/images/shop/03.png" class="w-full object-contain" />
+                        </div>
+
+                        <!-- Body -->
+                        <div class="pt-5 px-5">
+                            <h6 class="text-xl font-bold mb-2">
+                                <a href="shop-single.html" class="group-hover:text-primary transition-all duration-300 after:absolute after:inset-0">Premium cotton baseball cap</a>
+                            </h6>
+
+                            <!-- Rating -->
+                            <ul class="flex items-center space-x-1 text-warning mb-4">
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star-half" class="size-4 fill-warning"></lucide-icon></li>
+                            </ul>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="pb-5 px-5 flex justify-between items-center">
+                            <div class="flex items-center gap-1">
+                                <p class="font-semibold text-primary">$98.00</p>
+                            </div>
+
+                            <button class="bg-dark hover:bg-dark-hover text-white py-3 px-4 rounded z-15 transition-all">
+                                <lucide-icon name="shopping-cart" class="size-4"></lucide-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-transparent border border-default-200 rounded-md overflow-hidden h-full group">
+                        <!-- Overlay -->
+                        <div class="absolute inset-x-0 top-0 p-4 z-15">
+                            <button class="ms-auto bg-body-bg border border-default-200 rounded-full size-10 hover:bg-default-200 flex justify-center items-center transition-all">
+                                <lucide-icon name="heart" class="size-4.5"></lucide-icon>
+                            </button>
+                        </div>
+
+                        <!-- Image -->
+                        <div class="bg-default-100 rounded p-5 m-2">
+                            <img src="/images/shop/07.png" class="w-full object-contain" />
+                        </div>
+
+                        <!-- Body -->
+                        <div class="pt-5 px-5">
+                            <h6 class="text-xl font-bold mb-2">
+                                <a href="shop-single.html" class="group-hover:text-primary transition-all duration-300 after:absolute after:inset-0">Air Max Pulse Roam</a>
+                            </h6>
+
+                            <!-- Rating -->
+                            <ul class="flex items-center space-x-1 text-warning mb-4">
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star-half" class="size-4 fill-warning"></lucide-icon></li>
+                            </ul>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="pb-5 px-5 flex justify-between items-center">
+                            <p class="font-semibold text-primary">$142.00</p>
+                            <button class="bg-dark hover:bg-dark-hover text-white py-3 px-4 rounded z-15 transition-all">
+                                <lucide-icon name="shopping-cart" class="size-4"></lucide-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="flex items-center justify-end mt-10 space-x-2">
+                    <!-- Prev (Disabled) -->
+                    <li>
+                        <span class="px-4 py-3 text-sm bg-default-100 text-default-400 rounded" disabled>Prev</span>
+                    </li>
+
+                    <!-- Active Page -->
+                    <li>
+                        <a [routerLink]="[]" class="px-4 py-3 text-sm bg-primary text-white rounded">1</a>
+                    </li>
+
+                    <!-- Page -->
+                    <li>
+                        <a [routerLink]="[]" class="px-4 py-3 text-sm bg-default-100 hover:bg-primary hover:text-white text-default-600 transition-all rounded">2</a>
+                    </li>
+
+                    <li>
+                        <span class="px-4 py-3 text-sm bg-default-100 hover:bg-primary hover:text-white text-default-600 transition-all rounded">..</span>
+                    </li>
+
+                    <li>
+                        <a [routerLink]="[]" class="px-4 py-3 text-sm bg-default-100 hover:bg-primary hover:text-white text-default-600 transition-all rounded">22</a>
+                    </li>
+
+                    <!-- Next -->
+                    <li>
+                        <a [routerLink]="[]" class="px-4 py-3 text-sm bg-default-100 hover:bg-primary hover:text-white text-default-600 transition-all rounded">Next</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
