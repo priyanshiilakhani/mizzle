@@ -4,7 +4,7 @@
             <div class="order-2 lg:order-1 mt-5 lg:mt-0 md:px-4">
                 <div class="swiper swiper-fade mt-4 lg:pe-16!">
                     <swiper-container class="items-center" effect="fade" loop="true" grab-cursor="true" autoplay="true" [autoplay]="{ delay: 3000 }">
-                        @for (item of testimonials; track $index) {
+                        @for (item of testimonialData; track $index) {
                         <swiper-slide class="relative">
                             <img [src]="item.image" class="rounded-md lg:w-lg" alt="review-img" />
                             <div class="absolute lg:-end-10 md:end-4 end-8 bottom-10 bg-body-bg shadow-xl rounded lg:p-10 p-5 lg:w-md md:w-xl w-70 z-20">

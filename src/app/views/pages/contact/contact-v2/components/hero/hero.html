@@ -14,7 +14,7 @@
                     <h6 class="mb-3 md:mb-0 font-semibold text-xl">Follow us on:</h6>
 
                     <ul class="flex flex-wrap gap-3">
-                        @for(item of socialLinks;track $index){
+                        @for(item of socialLinkData;track $index){
                         <li>
                             <a [routerLink]="[]" class="size-10 flex items-center justify-center bg-default-100 hover:bg-default-200 transition-all rounded-full" [class]="item.className">
                                 <lucide-icon [name]="item.icon" class="{{item.iconClassName}} size-4"></lucide-icon>
@@ -31,7 +31,7 @@
                                    '576': { slidesPerView: 3 },
                                    '768': { slidesPerView: 4 },
                                 }">
-                            @for(item of client;track $index){
+                            @for(item of clientsData;track $index){
                             <swiper-slide>
                                 <img [src]="item" alt="client-img" />
                             </swiper-slide>

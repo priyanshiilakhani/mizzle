@@ -5,7 +5,7 @@
                 <h2 class="lg:text-[45px] md:text-4xl text-3xl mb-6">With special audio that places sound all around you</h2>
                 <p class="mb-6">Why end might ask civil again spoil. Dinner she our horses depend remember at children by reserved to vicinity.</p>
                 <ul class="space-y-2 mb-6">
-                    @for (item of features; track $index) {
+                    @for (item of featureData; track $index) {
                     <li class="flex gap-2 text-default-800" [class]="item.alignStart ?'lg:items-center items-start':'items-center'">
                         <div>
                             <lucide-icon name="badge-check" class="size-5.5 fill-primary text-default-100" [class]="item.alignStart?'lg:mt-0 mt-1':''"></lucide-icon>

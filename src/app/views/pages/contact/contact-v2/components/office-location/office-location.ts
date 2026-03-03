@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { locations } from '../../data';
+import { locationData } from '../../data';
 import { LucideAngularModule } from "lucide-angular";
 
 @Component({
@@ -10,5 +10,5 @@ import { LucideAngularModule } from "lucide-angular";
   styles: ``,
 })
 export class OfficeLocation {
-  locations = locations;
+  locationData = locationData;
 }

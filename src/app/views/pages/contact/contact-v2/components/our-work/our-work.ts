@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
-import { templateItems } from '../../data';
+import { templateItemData } from '../../data';
 
 @Component({
   selector: 'contact-v2-our-work',
@@ -10,5 +10,5 @@ import { templateItems } from '../../data';
   styles: ``,
 })
 export class OurWork {
-  templateItems = templateItems;
+  templateItemData = templateItemData;
 }

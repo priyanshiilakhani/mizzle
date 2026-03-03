@@ -2,7 +2,7 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { LucideAngularModule } from "lucide-angular";
 import { RouterLink } from "@angular/router";
 import { register } from 'swiper/element/bundle';
-import { blogs } from '../../data';
+import { blogData } from '../../data';
 
 register();
 
@@ -15,5 +15,5 @@ register();
 })
   
 export class Blog {
-  blogsData = blogs;
+  blogsData = blogData;
 }

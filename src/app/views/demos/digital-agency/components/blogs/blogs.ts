@@ -1,6 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { register } from 'swiper/element';
-import { blogs } from '../../data';
+import { blogData } from '../../data';
 import { RouterLink } from "@angular/router";
 import { LucideAngularModule } from "lucide-angular";
 register()
@@ -13,5 +13,5 @@ register()
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class Blogs {
-  blogsData = blogs
+  blogData = blogData
 }

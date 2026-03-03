@@ -8,13 +8,13 @@ const avatar8 = '/images/avatar/08.jpg';
 const avatar10 = '/images/avatar/10.jpg';
 const avatar11 = '/images/avatar/11.jpg';
 
-export type statType = {
+export type StatType = {
   value: number;
   suffix: string;
   label: string;
 };
 
-export const stats: statType[] = [
+export const statData: StatType[] = [
   {
     value: 15,
     suffix: 'M+',
@@ -45,7 +45,7 @@ export type PricingPlanType = {
   buttonText: string;
 };
 
-export const pricingPlans: PricingPlanType[] = [
+export const pricingPlansData: PricingPlanType[] = [
   {
     badge: 'Boss mode',
     monthlyPrice: 59,
@@ -76,14 +76,14 @@ export const pricingPlans: PricingPlanType[] = [
   },
 ];
 
-export type testimonialsType = {
+export type TestimonialsType = {
   avatar: string;
   name: string;
   message: string;
   rating: number;
 };
 
-export const testimonials: testimonialsType[] = [
+export const testimonialData: TestimonialsType[] = [
   {
     avatar: avatar1,
     name: 'Billy Vasquez',

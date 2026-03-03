@@ -1,5 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { counters, testimonials } from '../../data';
+import { counterData, testimonialData } from '../../data';
 import { CountUpDirective } from 'ngx-countup';
 import { LucideAngularModule } from 'lucide-angular';
 import { register } from 'swiper/element/bundle';
@@ -14,6 +14,6 @@ register();
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class Testimonials {
-  counters = counters;
-  testimonials = testimonials;
+  counterData = counterData;
+  testimonialData = testimonialData;
 }

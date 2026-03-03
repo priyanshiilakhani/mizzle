@@ -1,7 +1,7 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
 import { register } from 'swiper/element/bundle';
-import { clientimage, testimonials } from '../../data';
+import { clientimage, testimonialData } from '../../data';
 import { RouterLink } from '@angular/router';
 register();
 @Component({
@@ -13,5 +13,5 @@ register();
 })
 export class Testimonials {
   clientimage = clientimage;
-  testimonials = testimonials;
+  testimonialData = testimonialData;
 }

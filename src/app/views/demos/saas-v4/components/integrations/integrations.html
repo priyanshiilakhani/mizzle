@@ -12,7 +12,7 @@
         </div>
 
         <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-10 gap-6">
-            @for (item of integrations; track $index) {
+            @for (item of integrationData; track $index) {
             <div class="relative group border border-default-200 rounded-md p-6 hover:shadow-xl hover:border-primary hover:-translate-y-1 transition-all">
                 <a [routerLink]="item.url" class="absolute inset-0 z-0"></a>
                 <div class="flex items-center gap-3 mb-4">

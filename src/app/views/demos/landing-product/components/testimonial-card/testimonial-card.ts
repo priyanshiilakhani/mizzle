@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { LucideAngularModule } from "lucide-angular";
-import { featuresData } from '../../data';
+import { LucideAngularModule } from 'lucide-angular';
+import { featureCardData } from '../../data';
 
 @Component({
   selector: 'landing-product-testimonial-card',
@@ -9,5 +9,5 @@ import { featuresData } from '../../data';
   styles: ``,
 })
 export class TestimonialCard {
-featuresData=featuresData
+  featureCardData = featureCardData;
 }

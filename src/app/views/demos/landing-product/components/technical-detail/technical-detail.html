@@ -7,7 +7,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-10 gap-y-7 items-center">
             <div class="lg:space-y-20 space-y-7 lg:order-1 order-2">
-                @for (item of technicalLeft; track $index) {
+                @for (item of technicalLeftData; track $index) {
                 <div class="flex lg:justify-end items-start gap-4 {{ item.extraClass || '' }}">
 
                     <div class="order-2 lg:order-1 text-start lg:text-end">
@@ -72,7 +72,7 @@
 
             <div class="lg:space-y-20 space-y-7 order-3">
 
-                @for (item of technicalRight; track $index) {
+                @for (item of technicalRightData; track $index) {
                 <div class="flex items-start gap-4 {{ item.extraClass || '' }}">
 
                     <div>

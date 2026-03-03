@@ -13,15 +13,15 @@ const webflow = '/images/elements/webflow.svg';
 const tailwindcss = '/images/elements/tailwindcss.svg';
 const github = '/images/elements/github.svg';
 
-export const client: string[] = [client5, client1, client2, client3, client4, client6, client7];
+export const clientsData: string[] = [client5, client1, client2, client3, client4, client6, client7];
 
-export type socialLinkType = {
+export type SocialLinkType = {
   icon: string;
   className?: string;
   iconClassName: string;
 };
 
-export const socialLinks: socialLinkType[] = [
+export const socialLinkData: SocialLinkType[] = [
   {
     icon: 'facebook',
     className: 'text-blue-700',
@@ -45,7 +45,7 @@ export const socialLinks: socialLinkType[] = [
   },
 ];
 
-export type templateItemType = {
+export type TemplateItemType = {
   title: string;
   description: string;
   image: string;
@@ -53,7 +53,7 @@ export type templateItemType = {
   ariaLabel: string;
 };
 
-export const templateItems: templateItemType[] = [
+export const templateItemData: TemplateItemType[] = [
   {
     title: 'Webflow templates',
     description: 'The combination of my passion for design',
@@ -84,7 +84,7 @@ export type LocationType = {
   phone: string;
 };
 
-export const locations: LocationType[] = [
+export const locationData: LocationType[] = [
   {
     country: 'United States',
     image: usFlag,

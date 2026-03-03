@@ -45,7 +45,7 @@ export type StepType = {
   image: string;
 };
 
-export const steps: StepType[] = [
+export const stepData: StepType[] = [
   {
     number: '01',
     title: 'Create your account and start your work',
@@ -76,7 +76,7 @@ export type FeatureType = {
   active?: boolean;
 };
 
-export const features: FeatureType[] = [
+export const featureData: FeatureType[] = [
   {
     id: 'feature-01',
     icon: 'share-2',
@@ -105,7 +105,7 @@ export type IntegrationType = {
   url: string;
 };
 
-export const integrations: IntegrationType[] = [
+export const integrationData: IntegrationType[] = [
   {
     name: 'Github',
     image: github,
@@ -169,7 +169,7 @@ export type CounterType = {
   label: string;
 };
 
-export const counters: CounterType[] = [
+export const counterData: CounterType[] = [
   {
     value: 150,
     suffix: '+',
@@ -195,7 +195,7 @@ export type TestimonialType = {
   name: string;
 };
 
-export const testimonials: TestimonialType[] = [
+export const testimonialData: TestimonialType[] = [
   {
     image: team1,
     clientLogo: client4,
@@ -234,7 +234,7 @@ export type BlogType = {
   url: string;
 };
 
-export const blogs: BlogType[] = [
+export const blogData: BlogType[] = [
   {
     image: blog3,
     title: 'Sleek and Responsive - Designing with TailwindCSS and Mizzle',

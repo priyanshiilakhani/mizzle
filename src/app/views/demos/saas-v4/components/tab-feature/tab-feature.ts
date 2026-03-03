@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
-import { features } from '../../data';
+import { featureData } from '../../data';
 
 @Component({
   selector: 'saas-v4-tab-feature',
@@ -9,5 +9,5 @@ import { features } from '../../data';
   styles: ``,
 })
 export class TabFeature {
-  features = features;
+  featureData = featureData;
 }

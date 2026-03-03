@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { caseStudies } from '../../data';
+import { caseStudiesData } from '../../data';
 import { RouterLink } from "@angular/router";
 import { LucideAngularModule } from "lucide-angular";
 
@@ -10,5 +10,5 @@ import { LucideAngularModule } from "lucide-angular";
   styles: ``,
 })
 export class CaseStudies {
-caseStudiesData = caseStudies
+caseStudiesData = caseStudiesData
 }

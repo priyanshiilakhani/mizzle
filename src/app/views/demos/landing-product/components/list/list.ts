@@ -1,7 +1,7 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterLink } from "@angular/router";
 import { LucideAngularModule } from "lucide-angular";
-import { products } from '../../data';
+import { productData } from '../../data';
 import { register } from 'swiper/element/bundle';
 register()
 
@@ -13,5 +13,5 @@ register()
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class List {
-products = products
+productData = productData
 }

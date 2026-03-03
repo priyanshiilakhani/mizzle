@@ -11,7 +11,7 @@ export type TechnicalType = {
   extraClass?: string;
 }
 
-export const technicalLeft: TechnicalType[] = [
+export const technicalLeftData: TechnicalType[] = [
   {
     title: 'Audio Specification',
     description:
@@ -36,7 +36,7 @@ export const technicalLeft: TechnicalType[] = [
   },
 ];
 
-export const technicalRight: TechnicalType[] = [
+export const technicalRightData: TechnicalType[] = [
   {
     title: 'Included In Box',
     description:
@@ -58,13 +58,12 @@ export const technicalRight: TechnicalType[] = [
   },
 ];
 
-
 export type FeatureType = {
   text: string;
   alignStart?: boolean; // for lg:items-center items-start case
 }
   
-export const features: FeatureType[] = [
+export const featureData: FeatureType[] = [
   {
     text: 'Press once to play, pause or answer a phone call',
     alignStart: true
@@ -91,7 +90,7 @@ export type ProductType = {
   oldPrice?: number;
 }
 
-export const products: ProductType[] = [
+export const productData: ProductType[] = [
   {
     image: product3,
     name: 'Airpods Drop 2',
@@ -121,14 +120,14 @@ export const products: ProductType[] = [
   }
 ];
 
-export type FeatureCard = {
+export type FeatureCardType = {
   icon: string;
   title: string;
   description: string;
   className? : string;
 }
 
-export const featuresData: FeatureCard[] = [
+export const featureCardData: FeatureCardType[] = [
   {
     icon: 'flame',
     title: 'Seamless Connectivity',

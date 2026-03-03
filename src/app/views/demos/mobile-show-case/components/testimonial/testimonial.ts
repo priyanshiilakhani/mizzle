@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { testimonials } from '../../data';
+import { testimonialData } from '../../data';
 import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
@@ -9,7 +9,7 @@ import { LucideAngularModule } from 'lucide-angular';
   styles: ``,
 })
 export class Testimonial {
-  testimonials = testimonials;
+  testimonialData = testimonialData;
   getFullStars(rating: number): number[] {
     return Array(Math.floor(rating)).fill(0);
   }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { RouterLink } from "@angular/router";
-import { stats } from '../../data';
-import { CountUpDirective } from "ngx-countup";
+import { RouterLink } from '@angular/router';
+import { statData } from '../../data';
+import { CountUpDirective } from 'ngx-countup';
 
 @Component({
   selector: 'mobile-show-case-about',
@@ -10,5 +10,5 @@ import { CountUpDirective } from "ngx-countup";
   styles: ``,
 })
 export class About {
-stats=stats
+  statData = statData;
 }

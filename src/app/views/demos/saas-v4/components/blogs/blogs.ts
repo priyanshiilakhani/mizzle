@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
-import { blogs } from '../../data';
+import { blogData } from '../../data';
 
 @Component({
   selector: 'saas-v4-blogs',
@@ -10,5 +10,5 @@ import { blogs } from '../../data';
   styles: ``,
 })
 export class Blogs {
-  blogs = blogs;
+  blogData = blogData;
 }

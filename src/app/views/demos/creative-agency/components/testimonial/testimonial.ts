@@ -1,6 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { LucideAngularModule } from "lucide-angular";
-import { testimonials } from '../../data';
+import { testimonialData } from '../../data';
 
 @Component({
   selector: 'creative-agency-testimonial',
@@ -11,5 +11,5 @@ import { testimonials } from '../../data';
 })
   
 export class Testimonial {
-  testimonials = testimonials;
+  testimonialData = testimonialData;
 }

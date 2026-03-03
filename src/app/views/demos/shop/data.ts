@@ -19,7 +19,7 @@ const client6 = '/images/client/06.svg';
 const client7 = '/images/client/07.svg';
 const client8 = '/images/client/08.svg';
 
-export type productType = {
+export type ProductType = {
   title: string;
   image: string;
   price: string;
@@ -29,7 +29,7 @@ export type productType = {
   oldPrice?: string;
 };
 
-export const products: productType[] = [
+export const productData: ProductType[] = [
   {
     title: 'Classic round neck t-shirt',
     image: shop2,
@@ -73,7 +73,7 @@ export const products: productType[] = [
   },
 ];
 
-export type featuresType = {
+export type FeaturesType = {
   icon: string;
   title: string;
   description: string;
@@ -81,7 +81,7 @@ export type featuresType = {
   iconClassName: string;
 };
 
-export const features: featuresType[] = [
+export const featureData: FeaturesType[] = [
   {
     icon: 'zap',
     title: 'Fast and reliable delivery',
@@ -115,7 +115,7 @@ export const features: featuresType[] = [
   },
 ];
 
-export type ProductType = {
+export type TestimonialType = {
   image: string;
   rating: number;
   title: string;
@@ -125,7 +125,7 @@ export type ProductType = {
   isFavorite?: boolean;
 };
 
-export const productData: ProductType[] = [
+export const testimonialData: TestimonialType[] = [
   {
     image: shop8,
     rating: 4.5,

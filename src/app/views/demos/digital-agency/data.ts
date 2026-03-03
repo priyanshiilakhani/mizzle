@@ -23,7 +23,7 @@ export type ServiceType = {
   url: string;
 };
 
-export const services: ServiceType[] = [
+export const serviceData: ServiceType[] = [
   {
     title: 'Custom Software Development',
     description: 'We prioritize user experience, scalability, and security to ensure your...',
@@ -69,7 +69,7 @@ export type ProjectType = {
   url: string;
 };
 
-export const projects: ProjectType[] = [
+export const projectData: ProjectType[] = [
   {
     name: 'Website optimization for techWave',
     category: 'Graphic design',
@@ -110,14 +110,14 @@ export const statData: StatisticType[] = [
   },
 ];
 
-export type testimonialType = {
+export type TestimonialType = {
   id: string;
   rating: number;
   title: string;
   message: string;
 };
 
-export const testimonials: testimonialType[] = [
+export const testimonialData: TestimonialType[] = [
   {
     id: 'testi-one',
     rating: 4.5,
@@ -158,7 +158,7 @@ export type BlogType = {
   url: string;
 };
 
-export const blogs: BlogType[] = [
+export const blogData: BlogType[] = [
   {
     title: 'Sleek and Responsive - Designing with Bootstrap and Mizzle',
     category: 'Technology',

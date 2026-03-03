@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { LucideAngularModule } from "lucide-angular";
 import { RouterLink } from "@angular/router";
-import { features } from '../../data';
+import { featureData } from '../../data';
 
 @Component({
   selector: 'landing-product-feature',
@@ -10,5 +10,5 @@ import { features } from '../../data';
   styles: ``,
 })
 export class Feature {
-features = features
+featureData = featureData
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
-import { technicalLeft, technicalRight } from '../../data';
+import { technicalLeftData, technicalRightData } from '../../data';
 
 @Component({
   selector: 'landing-product-technical-detail',
@@ -9,6 +9,6 @@ import { technicalLeft, technicalRight } from '../../data';
   styles: ``,
 })
 export class TechnicalDetail {
-  technicalLeft = technicalLeft;
-  technicalRight = technicalRight;
+  technicalLeftData = technicalLeftData;
+  technicalRightData = technicalRightData;
 }

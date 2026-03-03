@@ -18,7 +18,7 @@ export type TestimonialType = {
   comment: string;
 };
 
-export const testimonials: TestimonialType[] = [
+export const testimonialData: TestimonialType[] = [
   {
     user: {
       firstName: 'Jacqueline',
@@ -59,7 +59,7 @@ export type CaseStudyType = {
   url: string;
 };
 
-export const caseStudies: CaseStudyType[] = [
+export const caseStudiesData: CaseStudyType[] = [
   {
     company: {
       image: client2,
@@ -99,7 +99,7 @@ export type StepType = {
   description: string;
 };
 
-export const approachSteps: StepType[] = [
+export const approachStepData: StepType[] = [
   {
     stepNumber: '01',
     title: 'Business understanding',
@@ -140,7 +140,7 @@ export type MemberType = {
   socialLinks: { icon: string; url?: string }[];
 };
 
-export const teamMembers: MemberType[] = [
+export const teamMemberData: MemberType[] = [
   {
     firstName: 'Samuel',
     lastName: 'Bishop',

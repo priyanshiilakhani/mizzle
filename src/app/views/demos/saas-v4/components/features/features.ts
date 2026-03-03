@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { steps } from '../../data';
+import { stepData } from '../../data';
 
 @Component({
   selector: 'saas-v4-features',
@@ -8,5 +8,5 @@ import { steps } from '../../data';
   styles: ``,
 })
 export class Features {
-  steps = steps;
+  stepData = stepData;
 }

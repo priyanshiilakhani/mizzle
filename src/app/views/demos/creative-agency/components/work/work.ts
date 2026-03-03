@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { projects } from '../../data';
+import { projectData } from '../../data';
 import { CommonModule } from '@angular/common';
 import { LucideAngularModule } from "lucide-angular";
 import { IsotopeDirective } from '@core/directive/isotope-directive';
@@ -13,7 +13,7 @@ import { IsotopeDirective } from '@core/directive/isotope-directive';
 })
   
 export class Work {
-  projectsData = projects;
+  projectsData = projectData;
   activeFilter: string = '*';
   @ViewChild(IsotopeDirective) isotopeDirective!: IsotopeDirective;
 

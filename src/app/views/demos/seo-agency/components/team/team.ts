@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { RouterLink } from "@angular/router";
-import { teamMembers } from '../../data';
-import { LucideAngularModule } from "lucide-angular";
+import { RouterLink } from '@angular/router';
+import { teamMemberData } from '../../data';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'seo-team',
@@ -10,5 +10,5 @@ import { LucideAngularModule } from "lucide-angular";
   styles: ``,
 })
 export class Team {
- teamMembersData = teamMembers
+  teamMemberData = teamMemberData;
 }

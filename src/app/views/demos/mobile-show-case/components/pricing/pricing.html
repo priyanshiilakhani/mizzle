@@ -18,7 +18,7 @@
                     <img src="/images/elements/pricing.svg" class="mx-auto w-50" alt="pricing-vector" />
                 </div>
             </div>
-            @for (plan of pricingPlans; track $index) {
+            @for (plan of pricingPlansData; track $index) {
             <div [class]="
     $index === 0
       ? 'md:border-e border-default-200 pe-10 ms-10 md:mb-0 mb-10'

@@ -29,7 +29,7 @@
                             "768": {"slidesPerView": 2}, 
                             "992": {"slidesPerView": 3}
                     }'>
-                        @for (product of products; track $index) {
+                        @for (product of productData; track $index) {
                         <swiper-slide class="text-center">
                             <img [src]="product.image" class="lg:w-46 md:w-30 w-44 mx-auto" alt="product-img" />
                             <div class="mt-4">

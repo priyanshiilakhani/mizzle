@@ -31,7 +31,7 @@
             <div class="md:col-span-2">
                 <div class="lg:w-3xl ms-auto">
                     <div>
-                        @for (item of testimonials; track $index) {
+                        @for (item of testimonialData; track $index) {
                         <div [id]="item.id" role="presentation" [class.hidden]="$index !== 0">
                             <div class="size-14 rounded-full flex justify-center bg-dark items-center mb-6">
                                 <lucide-icon name="quote" class="size-4 text-white fill-white"></lucide-icon>

@@ -6,7 +6,7 @@
             </div>
 
             <div class="grid lg:grid-cols-2 grid-cols-1 gap-10">
-                 @for (item of projectsData; track $index) {
+                 @for (item of projectData; track $index) {
                 <div class="bg-default-100 p-3 md:p-6 rounded-md overflow-hidden group">
                     <div class="overflow-hidden rounded-md">
                         <img [src]="item.image" alt="portfolio-img" class="w-full h-auto transform transition-transform duration-500 group-hover:scale-105" />

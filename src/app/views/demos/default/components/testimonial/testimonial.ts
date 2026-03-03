@@ -1,6 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { register } from 'swiper/element/bundle';
-import { testimonials } from '../../data';
+import { testimonialData } from '../../data';
 import { LucideAngularModule } from 'lucide-angular';
 register();
 @Component({
@@ -11,5 +11,5 @@ register();
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class Testimonial {
-  testimonialSwiperData = testimonials;
+  testimonialData = testimonialData;
 }

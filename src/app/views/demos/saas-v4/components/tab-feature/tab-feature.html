@@ -36,7 +36,7 @@
 
                 <div>
                     <nav class="flex flex-col space-y-4" aria-label="Tabs" role="tablist" aria-orientation="vertical">
-                        @for (item of features; track $index; let i = $index) {
+                        @for (item of featureData; track $index; let i = $index) {
                         <button type="button" class="hs-tab-active:border-s-3 hs-tab-active:border-primary hs-tab-active:bg-default-100 md:p-6 p-4 flex items-center gap-x-4 rounded-xs" [class.active]="i === 0" [id]="item.id + '-tab'" [attr.aria-selected]="i === 0 ? 'true' : 'false'" [attr.data-hs-tab]="'#' + item.id" [attr.aria-controls]="item.id" role="tab">
                             <div>
                                 <div class="size-14 rounded-md bg-body-bg border border-default-200 flex items-center justify-center text-xl text-default-700 font-semibold">

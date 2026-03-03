@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
-import { pricingPlans } from '../../data';
+import { pricingPlansData } from '../../data';
 
 @Component({
   selector: 'mobile-show-case-pricing',
@@ -10,6 +10,6 @@ import { pricingPlans } from '../../data';
   styles: ``,
 })
 export class Pricing {
-  pricingPlans = pricingPlans;
+  pricingPlansData = pricingPlansData;
 
 }

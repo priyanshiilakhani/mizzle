@@ -51,7 +51,7 @@
                     <p class="lg:mb-10 mb-6">Take the guesswork out of diagnosing your plants with Mizzle. Our app uses advanced technology to quickly and accurately diagnose any plant problem, so you can get back to enjoying your garden.</p>
 
                     <div class="flex flex-wrap gap-6 lg:mb-10 mb-8">
-                         @for (item of stats; track $index) {
+                         @for (item of statData; track $index) {
                         <div>
                             <div class="flex items-center text-default-800">
                                 <h5 class="md:text-2xl text-xl font-bold counter" [countUp]="item.value"  [countUpOptions]="{ separator: '' }"></h5>

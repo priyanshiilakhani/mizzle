@@ -1,5 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { services } from '../../data';
+import { serviceData } from '../../data';
 import { RouterLink } from '@angular/router';
 import { LucideAngularModule } from "lucide-angular";
 
@@ -11,5 +11,5 @@ import { LucideAngularModule } from "lucide-angular";
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class Services {
-  servicesData = services;
+  serviceData = serviceData;
 }

@@ -36,7 +36,7 @@ export const integrations: string[] = [
 
 export const clientimage: string[] = [client1, client2, client3, client4, client5, client7];
 
-export type Testimonial = {
+export type TestimonialType = {
   image: string;
   title: string;
   description: string;
@@ -45,7 +45,7 @@ export type Testimonial = {
   role: string;
 }
 
-export const testimonials: Testimonial[] = [
+export const testimonialData: TestimonialType[] = [
   {
     image: team3,
     title: '"Mizzle is essential tool for me and my team"',

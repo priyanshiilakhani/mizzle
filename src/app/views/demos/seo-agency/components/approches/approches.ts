@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { approachSteps } from '../../data';
+import { approachStepData } from '../../data';
 
 @Component({
   selector: 'seo-approches',
@@ -8,5 +8,5 @@ import { approachSteps } from '../../data';
   styles: ``,
 })
 export class Approches {
- approachStepsData = approachSteps
+ approachStepData = approachStepData
 }

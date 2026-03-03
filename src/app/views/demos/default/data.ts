@@ -27,7 +27,7 @@ export type ServiceType = {
   icon: string;
 };
 
-export const services: ServiceType[] = [
+export const serviceData: ServiceType[] = [
   {
     title: 'Digital Marketing',
     description: 'Growing brands online through digital channels.',
@@ -77,7 +77,7 @@ export type TestimonialType = {
   name: string;
 }
 
-export const testimonials: TestimonialType[] = [
+export const testimonialData: TestimonialType[] = [
   {
     rating: 4.5,
     message:

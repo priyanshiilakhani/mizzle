@@ -34,7 +34,7 @@ export type RecentProjectType = {
   url: string;
 };
 
-export const projects: RecentProjectType[] = [
+export const projectData: RecentProjectType[] = [
   {
     name: 'Dynamic Workflows Website',
     category: 'UI/UX design',
@@ -94,7 +94,7 @@ export type TestimonialType = {
   };
 };
 
-export const testimonials: TestimonialType[] = [
+export const testimonialData: TestimonialType[] = [
   {
     comment:
       'Your assistance has been incredibly helpful. I appreciate the prompt and insightful responses, which have made my task much easier. Thank you for the great support',
@@ -149,7 +149,7 @@ export type BlogType = {
   url: string;
 };
 
-export const blogs: BlogType[] = [
+export const blogData: BlogType[] = [
   {
     title: 'Mastering Responsive Web Design with Bootstrap',
     publishedBy: {

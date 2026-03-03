@@ -6,7 +6,7 @@
         </div>
 
         <div class="grid lg:grid-cols-3 grid-cols-2 lg:w-5xl md:gap-0 gap-y-4 mx-auto">
-            @for(item of counters; track $index){
+            @for(item of counterData; track $index){
             <div class="text-center">
                 <div class="lg:text-[45px] md:text-4xl text-3xl flex items-center justify-center font-bold">
                     <h2 class="counter" [countUp]="item.value"></h2>
@@ -44,7 +44,7 @@
                 <div class="overflow-hidden">
                     <div class="swiper overflow-hidden">
                         <swiper-container class="pb-6" loop="false" autoplay="true" pagination="true" pagination-el=".swiper-pagination" pagination-type="fraction" navigation-next-el="#swiper-button-next" navigation-prev-el="#swiper-button-prev">
-                            @for(item of testimonials;track $index){
+                            @for(item of testimonialData;track $index){
                             <swiper-slide>
                                 <div class="border border-default-200 rounded-md p-4">
                                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">

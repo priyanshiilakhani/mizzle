@@ -32,7 +32,7 @@
                 <div class="lg:w-2xl ms-auto">
                     <h2 class="lg:text-[45px] md:text-4xl text-3xl mb-6">Discover the Future of Sound with AirPods</h2>
                     <div class="grid md:grid-cols-2 grid-cols-1 gap-8">
-                        @for (item of featuresData; track $index) {
+                        @for (item of featureCardData; track $index) {
                         <div>
                             <div class="size-10.5 rounded bg-primary/10 flex justify-center items-center mb-4">
                                 <lucide-icon [name]="item.icon" class="size-5 text-primary" [class]="item.className"></lucide-icon>

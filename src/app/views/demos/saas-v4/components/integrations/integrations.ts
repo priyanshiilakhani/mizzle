@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
 import { RouterLink } from '@angular/router';
-import { integrations } from '../../data';
+import { integrationData } from '../../data';
 
 @Component({
   selector: 'saas-v4-integrations',
@@ -10,5 +10,5 @@ import { integrations } from '../../data';
   styles: ``,
 })
 export class Integrations {
-  integrations = integrations;
+  integrationData = integrationData;
 }
