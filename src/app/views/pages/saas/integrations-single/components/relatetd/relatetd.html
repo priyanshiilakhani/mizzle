@@ -1,0 +1,27 @@
+<section class="lg:py-28 md:py-20 py-16">
+    <div class="container">
+        <div class="text-center">
+            <h3 class="lg:text-4xl md:text-3xl text-2xl mb-10">Related integration</h3>
+        </div>
+
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+            @for(item of integrationData;track $index){
+            <div class="relative p-6 border border-default-200 rounded-md group hover:border-primary hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+                <a [routerLink]="item.link" class="absolute inset-0 z-0"></a>
+                <div class="flex items-center gap-4 mb-4">
+                    <img [src]="item.image" class="h-10" alt="Integrations-icon" />
+                    <h6 class="text-xl">{{item.name}}</h6>
+                </div>
+
+                <p class="mb-4">{{item.description}}</p>
+                <div class="mt-14">
+                    <div class="flex items-center gap-2 text-default-800 group-hover:text-primary transition-all">
+                        View integration
+                        <lucide-icon name="move-right" class="size-4 group-hover:translate-x-1 transition-all duration-300"></lucide-icon>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>
