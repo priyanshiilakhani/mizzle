@@ -1,1 +1,55 @@
-<p>faqs works!</p>
+<section class="lg:pb-28 md:pb-20 pb-16">
+  <div class="container">
+    <div class="grid md:grid-cols-12 gap-7.5">
+      <div class="md:col-span-5">
+        <h2 class="lg:text-[45px] md:text-4xl text-3xl">
+          You have questions we have answers
+        </h2>
+      </div>
+
+      <div class="md:col-span-7">
+        <div class="hs-accordion-group">
+
+          @for (item of faqData; track item.id) {
+
+            <div class="hs-accordion mb-4"
+                 [class.active]="item.isActive"
+                 [id]="'heading-' + item.id">
+
+              <button
+                class="hs-accordion-toggle inline-flex justify-between items-center gap-x-3 w-full rounded font-semibold text-start bg-default-100 text-default-800 py-4 ps-5 pe-8"
+                aria-expanded="false"
+                [attr.aria-controls]="'collapse-' + item.id">
+
+                {{ item.question }}
+
+                <lucide-icon name="plus"
+                  class="hs-accordion-active:hidden block size-4 text-default-800">
+                </lucide-icon>
+
+                <lucide-icon name="minus"
+                  class="hs-accordion-active:block hidden size-4 text-default-800">
+                </lucide-icon>
+
+              </button>
+
+              <div
+                [id]="'collapse-' + item.id"
+                class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300"
+                [class.hidden]="!item.isActive"
+                role="region"
+                [attr.aria-labelledby]="'heading-' + item.id">
+
+                <div class="mt-4.5 px-4">
+                  <p class="text-default-700">
+                    {{ item.answer }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

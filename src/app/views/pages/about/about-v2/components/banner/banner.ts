@@ -8,4 +8,5 @@ import { GlightboxDirective } from "@core/directive/glightbox.directive";
   templateUrl: './banner.html',
   styles: ``,
 })
+  
 export class Banner {}
