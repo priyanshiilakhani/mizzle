@@ -1,1 +1,211 @@
-<p>filter-sidebar works!</p>
+<div class="py-4 px-7.5 flex justify-between items-center bg-default-50 lg:hidden">
+    <a class="font-bold text-xl text-default-800">Advance Filter</a>
+    <div class="lg:hidden -me-2">
+        <!-- Close Button -->
+        <button type="button" class="text-default-600" data-hs-overlay="#offcanvasSidebar">
+            <lucide-icon name="x" class="size-5.5"></lucide-icon>
+        </button>
+        <!-- End Close Button -->
+    </div>
+</div>
+
+<div class="hs-accordion-group lg:p-0 p-4 overflow-y-auto h-full">
+    <div class="hs-accordion border border-default-200 rounded-md p-3.5 mb-5" id="accordionExampleone">
+        <button class="hs-accordion-toggle flex items-center justify-between gap-x-3 w-full font-semibold text-start text-default-800 text-xl" aria-expanded="false" aria-controls="collapseOne">
+            Availability
+            <lucide-icon name="chevron-down" class="size-4.5 hs-accordion-active:hidden block"></lucide-icon>
+            <lucide-icon name="chevron-up" class="size-4.5 hs-accordion-active:block hidden"></lucide-icon>
+        </button>
+
+        <div id="collapseOne" class="hs-accordion-content w-full hidden overflow-hidden transition-[height] duration-300 mt-4" role="region" aria-labelledby="accordionExampleone">
+            <form class="space-y-2">
+                <!-- All -->
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="flexRadioDefault" checked class="size-4 border-0 checked:bg-primary! bg-default-200! focus:ring-primary" />
+                    <span class="text-default-600">All</span>
+                </label>
+
+                <!-- New Arrival -->
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="flexRadioDefault" class="size-4 border-0 checked:bg-primary! bg-default-200! focus:ring-primary" />
+                    <span class="text-default-600">New Arrival</span>
+                </label>
+
+                <!-- On Stock Only -->
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="flexRadioDefault" class="size-4 border-0 checked:bg-primary! bg-default-200! focus:ring-primary" />
+                    <span class="text-default-600">On Stock Only</span>
+                </label>
+            </form>
+        </div>
+    </div>
+
+    <div class="hs-accordion active border border-default-200 rounded-md p-3.5 mb-5" id="accordionExampletwo">
+        <button class="hs-accordion-toggle flex items-center justify-between gap-x-3 w-full font-semibold text-start text-default-800 text-xl" aria-expanded="true" aria-controls="collapseTwo">
+            Categories
+            <lucide-icon name="chevron-down" class="size-4.5 hs-accordion-active:hidden block"></lucide-icon>
+            <lucide-icon name="chevron-up" class="size-4.5 hs-accordion-active:block hidden"></lucide-icon>
+        </button>
+
+        <div id="collapseTwo" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 mt-4" role="region" aria-labelledby="accordionExampletwo">
+            <form class="space-y-3">
+                <!-- Item -->
+                @for(item of categoryData;track $index){
+                <label class="flex items-center justify-between cursor-pointer">
+                    <div class="flex items-center gap-2">
+                        <input [id]="item.id" type="checkbox" class="size-4 border-0 checked:bg-primary! bg-default-200! rounded focus:ring-primary" />
+                        <span class="text-default-800">{{item.name}}</span>
+                    </div>
+                    <span class="text-sm text-default-600">({{item.count}})</span>
+                </label>
+                }
+            </form>
+        </div>
+    </div>
+
+    <div class="hs-accordion border border-default-200 rounded-md p-3.5 mb-5" id="accordionExamplethree">
+        <button class="hs-accordion-toggle flex items-center justify-between gap-x-3 w-full font-semibold text-start text-default-800 text-xl" aria-expanded="false" aria-controls="collapseThree">
+            Price
+            <lucide-icon name="chevron-down" class="size-4.5 hs-accordion-active:hidden block"></lucide-icon>
+            <lucide-icon name="chevron-up" class="size-4.5 hs-accordion-active:block hidden"></lucide-icon>
+        </button>
+
+        <div id="collapseThree" class="hs-accordion-content w-full hidden overflow-hidden transition-[height] duration-300 mt-4" role="region" aria-labelledby="accordionExamplethree">
+            <form class="space-y-3">
+                <!-- Item -->
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input id="price1" type="checkbox" class="size-4 border-0 checked:bg-primary! bg-default-200! rounded focus:ring-primary" />
+                    <span class="text-default-800">$0 to $200</span>
+                </label>
+
+                <!-- Item -->
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input id="price2" type="checkbox" class="size-4 border-0 checked:bg-primary! bg-default-200! rounded focus:ring-primary" />
+                    <span class="text-default-800">$200 to $500</span>
+                </label>
+
+                <!-- Item -->
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input id="price3" type="checkbox" class="size-4 border-0 checked:bg-primary! bg-default-200! rounded focus:ring-primary" />
+                    <span class="text-default-800">$500 to $1500</span>
+                </label>
+
+                <!-- Item -->
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input id="price4" type="checkbox" class="size-4 border-0 checked:bg-primary! bg-default-200! rounded focus:ring-primary" />
+                    <span class="text-default-800">$1500 to more</span>
+                </label>
+            </form>
+        </div>
+    </div>
+
+    <div class="hs-accordion border border-default-200 rounded-md p-3.5 mb-5" id="accordionExamplefour">
+        <button class="hs-accordion-toggle flex items-center justify-between gap-x-3 w-full font-semibold text-start text-default-800 text-xl" aria-expanded="false" aria-controls="collapsefour">
+            Color
+            <lucide-icon name="chevron-down" class="size-4.5 hs-accordion-active:hidden block"></lucide-icon>
+            <lucide-icon name="chevron-up" class="size-4.5 hs-accordion-active:block hidden"></lucide-icon>
+        </button>
+
+        <div id="collapsefour" class="hs-accordion-content w-full hidden overflow-hidden transition-[height] duration-300 mt-4" role="region" aria-labelledby="accordionExamplefour">
+            <form class="space-x-3 flex items-center py-1 ps-1">
+                <!-- Color 1 -->
+                <label class="relative cursor-pointer">
+                    <input type="radio" name="Radio-color" class="peer hidden" />
+                    <span class="size-5 rounded-full block ring-4 ring-transparent peer-checked:ring-black/8 peer-checked:shadow-md bg-[#9a0a0a]"></span>
+                </label>
+
+                <!-- Color 2 -->
+                <label class="relative cursor-pointer">
+                    <input type="radio" name="Radio-color" class="peer hidden" />
+                    <span class="size-5 rounded-full block ring-4 ring-transparent peer-checked:ring-black/8 peer-checked:shadow-md bg-[#32c7f5]"></span>
+                </label>
+
+                <!-- Color 3 -->
+                <label class="relative cursor-pointer">
+                    <input type="radio" name="Radio-color" class="peer hidden" />
+                    <span class="size-5 rounded-full block ring-4 ring-transparent peer-checked:ring-black/8 peer-checked:shadow-md bg-warning"></span>
+                </label>
+
+                <!-- Color 4 -->
+                <label class="relative cursor-pointer">
+                    <input type="radio" name="Radio-color" class="peer hidden" />
+                    <span class="size-5 rounded-full block ring-4 ring-transparent peer-checked:ring-black/8 peer-checked:shadow-md bg-[#333369]"></span>
+                </label>
+            </form>
+        </div>
+    </div>
+
+    <div class="hs-accordion border border-default-200 rounded-md p-3.5 mb-9" id="accordionExamplefive">
+        <button class="hs-accordion-toggle flex items-center justify-between gap-x-3 w-full font-semibold text-start text-default-800 text-xl" aria-expanded="false" aria-controls="collapsefive">
+            Rating star
+            <lucide-icon name="chevron-down" class="size-4.5 hs-accordion-active:hidden block"></lucide-icon>
+            <lucide-icon name="chevron-up" class="size-4.5 hs-accordion-active:block hidden"></lucide-icon>
+        </button>
+
+        <div id="collapsefive" class="hs-accordion-content w-full hidden overflow-hidden transition-[height] duration-300 mt-4" role="region" aria-labelledby="accordionExamplefive">
+            <form>
+                <ul class="flex flex-wrap items-center gap-3">
+                    <!-- Item -->
+                    <li>
+                        <label class="cursor-pointer">
+                            <input type="checkbox" id="rating1" class="peer hidden" />
+                            <span class="px-3 py-1.5 text-sm bg-default-100 rounded flex items-center gap-1 peer-checked:bg-primary/10 border border-transparent peer-checked:border-primary peer-checked:text-primary fill-default-600">
+                                1
+                                <iconify-icon icon="tabler:star-filled"></iconify-icon>
+                            </span>
+                        </label>
+                    </li>
+
+                    <!-- Item -->
+                    <li>
+                        <label class="cursor-pointer">
+                            <input type="checkbox" id="rating2" class="peer hidden" />
+                            <span class="px-3 py-1.5 text-sm bg-default-100 rounded flex items-center gap-1 peer-checked:bg-primary/10 border border-transparent peer-checked:border-primary peer-checked:text-primary fill-default-600">
+                                2
+                                <iconify-icon icon="tabler:star-filled"></iconify-icon>
+                            </span>
+                        </label>
+                    </li>
+
+                    <!-- Item -->
+                    <li>
+                        <label class="cursor-pointer">
+                            <input type="checkbox" id="rating3" class="peer hidden" />
+                            <span class="px-3 py-1.5 text-sm bg-default-100 rounded flex items-center gap-1 peer-checked:bg-primary/10 border border-transparent peer-checked:border-primary peer-checked:text-primary fill-default-600">
+                                3
+                                <iconify-icon icon="tabler:star-filled"></iconify-icon>
+                            </span>
+                        </label>
+                    </li>
+
+                    <!-- Item -->
+                    <li>
+                        <label class="cursor-pointer">
+                            <input type="checkbox" id="rating4" class="peer hidden" />
+                            <span class="px-3 py-1.5 text-sm bg-default-100 rounded flex items-center gap-1 peer-checked:bg-primary/10 border border-transparent peer-checked:border-primary peer-checked:text-primary fill-default-600">
+                                4
+                                <iconify-icon icon="tabler:star-filled"></iconify-icon>
+                            </span>
+                        </label>
+                    </li>
+
+                    <!-- Item -->
+                    <li>
+                        <label class="cursor-pointer">
+                            <input type="checkbox" id="rating5" class="peer hidden" />
+                            <span class="px-3 py-1.5 text-sm bg-default-100 rounded flex items-center gap-1 peer-checked:bg-primary/10 border border-transparent peer-checked:border-primary peer-checked:text-primary fill-default-600">
+                                5
+                                <iconify-icon icon="tabler:star-filled"></iconify-icon>
+                            </span>
+                        </label>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+
+    <div class="flex items-center justify-between">
+        <button class="text-default-600 hover:text-primary transition-all">Clear all</button>
+        <div class="px-4 py-2 rounded text-white bg-primary hover:bg-primary-hover transition-all">Filter Result</div>
+    </div>
+</div>

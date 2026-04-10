@@ -12,7 +12,7 @@ export const SHOP_ROUTES: Route[] = [
     data: { title: 'Shop Grid' },
   },
   {
-    path: 'single/:id',
+    path: 'single',
     component: Single,
     data: { title: 'Shop Single' },
   },

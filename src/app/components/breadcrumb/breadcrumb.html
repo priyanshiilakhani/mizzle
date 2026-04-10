@@ -1,0 +1,21 @@
+<nav aria-label="breadcrumb">
+    <ol class="flex items-center space-x-2 text-[13px] text-default-600">
+        <li>
+            <a [routerLink]="[]" class="hover:text-primary transition-all">Home</a>
+        </li>
+
+        @if (title) {
+        @for (item of title; track $index) {
+        <li class="flex items-center">
+            <span class="mx-1 text-default-400">•</span>
+            <a [routerLink]="[]" class="hover:text-primary transition-all">{{ item }}</a>
+        </li>
+        }
+        }
+
+        <li class="flex items-center">
+            <span class="mx-1 text-default-400">•</span>
+            <span class="text-primary font-medium"> {{ pageTitle }}</span>
+        </li>
+    </ol>
+</nav>

@@ -1,0 +1,149 @@
+<!-- Rating & review START -->
+<section class="lg:py-28 md:py-20 py-16">
+    <div class="container">
+        <h2 class="md:text-3xl text-2xl mb-10">Rating & review</h2>
+        <div class="grid lg:grid-cols-12">
+            <div class="lg:col-span-5 pe-10 lg:mb-0 mb-10">
+                <div class="border border-default-200 rounded p-6">
+                    <div class="grid md:grid-cols-12 grid-cols-1">
+                        <!-- Total rating -->
+                        <div class="md:col-span-5">
+                            <!-- Info -->
+                            <h2 class="text-[45px]">4.5</h2>
+                            <!-- Star -->
+                            <ul class="flex items-center space-x-1 text-warning mb-2">
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                <li><lucide-icon name="star-half" class="size-4 fill-warning"></lucide-icon></li>
+                            </ul>
+                            <p class="text-default-600 mb-2">Based on 56 Reviews</p>
+                        </div>
+
+                        <!-- Progress bar -->
+                        <div class="md:col-span-7">
+                            <!-- Progress item -->
+                            @for (item of ratingData; track $index) {
+                            <div class="flex items-center gap-3">
+                                <!-- Progress -->
+                                <div class="flex w-full h-1.25 bg-warning/15 rounded-full overflow-hidden" role="progressbar" [attr.aria-valuenow]="item.percent" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="flex flex-col justify-center rounded-full overflow-hidden bg-warning text-xs text-white text-center whitespace-nowrap transition duration-500" [style.width.%]="item.percent"></div>
+                                </div>
+                                <!-- End Progress -->
+                                <span class="text-default-800">{{item.value}}</span>
+                            </div>
+                            }
+                        </div>
+                    </div>
+                    <!-- Row END -->
+                </div>
+
+                <div class="mt-5">
+                    <!-- Title -->
+                    <h5 class="mb-4 text-lg font-semibold">Reviews with images</h5>
+
+                    <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-4 gap-6">
+                        <!-- Image Item -->
+                        @for(item of reviewImageData; track $index){
+                        <div>
+                            <a [href]="item" class="block size-full" appGlightbox>
+                                <div class="relative overflow-hidden rounded-md group">
+                                    <img [src]="item" class="rounded-md w-full" />
+
+                                    <!-- Hover fullscreen icon -->
+                                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                                        <span class="size-10 bg-dark rounded flex justify-center items-center">
+                                            <lucide-icon name="fullscreen" class="size-6 text-white"></lucide-icon>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 lg:ps-4">
+                <div class="flex justify-between items-center">
+                    <h5 class="md:text-2xl text-xl">Sort by</h5>
+                    <select class="py-2 ps-4 pe-9 rounded border border-default-200 text-default-700" aria-label="Default select example">
+                        <option value="1">Most Recent</option>
+                        <option value="2">Most Viewed</option>
+                        <option value="3">Helpful</option>
+                    </select>
+                </div>
+
+                <hr class="border-default-200 my-6" />
+                @for (item of reviewData; track $index; let last = $last) {
+                <div class="flex gap-4">
+                    <!-- Avatar -->
+                    <img class="size-12 rounded-full" [src]="item.image" alt="avatar" />
+
+                    <div class="flex-1">
+                        <!-- Name + Date + Rating -->
+                        <div class="flex flex-col md:flex-row md:items-start justify-between mb-2">
+                            <!-- Name + Date -->
+                            <div>
+                                <h6 class="text-xl font-semibold">{{item.name}}</h6>
+                                <span class="text-sm text-default-600">{{item.date}}</span>
+                            </div>
+
+                            <!-- Rating -->
+                            <ul class="flex items-center space-x-1 text-warning">
+                                @for (star of [1,2,3,4]; track $index) {
+                                <li>
+                                    <lucide-icon name="star" class="fill-warning size-4"></lucide-icon>
+                                </li>
+                                }
+                                <li>
+                                    <lucide-icon name="star-half" class="fill-warning size-4"></lucide-icon>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Review text -->
+                        <p class="text-default-600 mb-4">{{item.description}}</p>
+
+                        <!-- Helpful -->
+                        <div class="flex items-center gap-2 mt-2">
+                            <span>Was it helpful?</span>
+
+                            <div class="flex">
+                                <!-- Yes button -->
+                                <div>
+                                    <input type="radio" name="reviewHelpful" id="btnYes" class="hidden peer" />
+                                    <label for="btnYes" class="border border-default-500 border-e-0 flex items-center gap-1 peer-checked:bg-default-500 peer-checked:text-white text-[13px] py-1.5 px-3 rounded-s">
+                                        <lucide-icon name="thumbs-up" class="size-4"></lucide-icon>
+                                        Yes
+                                    </label>
+                                </div>
+
+                                <!-- No button -->
+                                <div>
+                                    <input type="radio" name="reviewHelpful" id="btnNo" class="hidden peer" />
+                                    <label for="btnNo" class="border border-default-500 flex items-center gap-1 peer-checked:bg-default-500 peer-checked:text-white text-[13px] py-1.5 px-3 rounded-e">
+                                        <lucide-icon name="thumbs-down" class="size-4"></lucide-icon>
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @if(!last){
+                <hr class="border-default-200 my-6" />
+                }
+                }
+
+                <div class="mt-6 text-end">
+                    <a class="py-2 px-4 bg-primary/15 rounded text-primary transition-all hover:bg-primary hover:text-white font-semibold mb-0" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Write a review
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

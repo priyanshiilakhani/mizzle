@@ -1,0 +1,86 @@
+<!-- Similar product START -->
+<section class="lg:pb-28 md:pb-20 pb-16">
+    <div class="container">
+        <div class="flex flex-wrap justify-between items-center mb-10">
+            <div>
+                <h2 class="md:text-3xl text-2xl">Similar products</h2>
+            </div>
+
+            <div>
+                <div class="flex items-center gap-3 w-full z-20">
+                    <button class="bg-dark text-white size-10 rounded-full flex justify-center items-center" id="swiper-button-prev2">
+                        <lucide-icon name="move-left" class="size-4"></lucide-icon>
+                    </button>
+
+                    <button class="bg-dark text-white size-10 rounded-full flex justify-center items-center" id="swiper-button-next2">
+                        <lucide-icon name="move-right" class="size-4"></lucide-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper">
+            <swiper-container class="swiper-wrapper" space-between="30" loop="false" navigation="true" grab-cursor="true" autoplay-delay="5000" autoplay-disable-on-interaction="true" autoplay-pause-on-mouse-enter="true" speed="1000" navigation-next-el="#swiper-button-next2" navigation-prev-el="#swiper-button-prev2" autoplay="true" [breakpoints]='{
+    "576": { "slidesPerView": 1 },
+    "768": { "slidesPerView": 3 },
+    "992": { "slidesPerView": 3 },
+    "1200": { "slidesPerView": 4 }
+  }'>
+                @for (product of productData; track $index) {
+                <div class="swiper-slide">
+                    <div class="relative bg-transparent border border-default-200 rounded-md overflow-hidden h-full group">
+                        @if (product.badge) {
+                        <div class="absolute inset-x-0 top-0 flex items-start p-4 z-20">
+                            <span class="{{ product.badge.color }} text-white text-xs px-2 py-1 rounded">
+                                {{ product.badge.text }}
+                            </span>
+                        </div>
+                        }
+                        <!-- Image -->
+                        <div class="bg-default-100 rounded p-5 m-2">
+                            <img [src]="product.image" class="w-full object-contain" />
+                        </div>
+
+
+                        <!-- Body -->
+                        <div class="pt-5 px-5">
+                            <h6 class="text-xl font-bold mb-2">
+                                <a routerLink="/shop/single" class="group-hover:text-primary transition-all duration-300 after:absolute after:inset-0"> {{ product.title }}</a>
+                            </h6>
+
+                            <!-- Rating -->
+                            <ul class="flex items-center space-x-1 text-warning mb-4">
+                                @for (i of [1,2,3,4]; track $index) {
+                                <li><lucide-icon name="star" class="size-4 fill-warning"></lucide-icon></li>
+                                }
+                                <li><lucide-icon name="star-half" class="size-4 fill-warning"></lucide-icon></li>
+                            </ul>
+                        </div>
+
+                        <div class="pb-5 px-5 flex justify-between items-center">
+
+                            <div class="flex items-center gap-1">
+                                <p class="font-semibold text-primary">
+                                    ${{ product.price.toFixed(2) }}
+                                </p>
+
+                                @if (product.oldPrice) {
+                                <del class="text-default-600 text-sm">
+                                    ${{ product.oldPrice.toFixed(2) }}
+                                </del>
+                                }
+                            </div>
+
+                            <button class="bg-dark hover:bg-dark-hover text-white py-3 px-4 rounded z-20 transition-all">
+                                <lucide-icon name="shopping-cart" class="size-4"></lucide-icon>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+                }
+
+            </swiper-container>
+        </div>
+    </div>
+</section>
