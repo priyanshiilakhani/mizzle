@@ -1,1 +1,28 @@
-<p>feature works!</p>
+<section class="lg:py-28 md:py-20 py-16">
+  <div class="container">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      @for (item of featureData; track $index) {
+        <div
+          class="border border-default-200 p-6 h-full flex flex-row rounded-md hover:shadow-lg hover:-translate-y-1 duration-300 transition-all group"
+        >
+          <figure class="text-primary mb-0" [innerHTML]="item.safeIcon"></figure>
+
+          <div class="flex flex-col ms-6">
+            <h5 class="text-xl font-bold mb-4">{{ item.name }}</h5>
+            <p class="mb-4 text-default-600">{{ item.description }}</p>
+            <a
+              routerLink="/service/single"
+              class="inline-flex items-center gap-2 text-primary group-hover:text-primary-hover duration-300 mt-6"
+            >
+              Know more
+              <lucide-icon
+                name="move-right"
+                class="size-4 group-hover:translate-x-1 transition-all duration-300"
+              ></lucide-icon>
+            </a>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

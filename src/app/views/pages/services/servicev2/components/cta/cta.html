@@ -1,1 +1,44 @@
-<p>cta works!</p>
+ <section>
+        <div class="container">
+            <div class="bg-dark rounded-md relative overflow-hidden md:p-16 p-6">
+                <!-- Left Decoration -->
+                <div class="absolute top-0 start-0 -mt-10 xl:-mt-5 hidden md:block pointer-events-none">
+                    <img src="/images/elements/saas-decoration/05.png" class="rotate-33 h-50" />
+                </div>
+
+                <!-- Right Decoration -->
+                <div class="absolute end-0 bottom-0 hidden lg:block pointer-events-none">
+                    <img src="/images/elements/cta-vector.svg" class="h-50 lg:h-75" />
+                </div>
+
+                <div class="relative lg:w-7/12 mx-auto text-center">
+                    <!-- Title -->
+                    <h3 class="text-white text-2xl md:text-3xl lg:text-4xl font-semibold mb-4">Ready to elevate your business?</h3>
+                    <p class="text-white/80 mb-4">Join the Mizzle revolution today and be part of the millions who've already embraced a brighter future!</p>
+
+                    <!-- CTA Button -->
+                    <a [routerLink]="[]" class="inline-block bg-primary hover:bg-primary-hover text-white text-base transition-all py-2 px-4 rounded-md mb-14">Get started today</a>
+                    <p class="text-white mb-4">Used by the world best companies.</p>
+
+                    <!-- Client Slider START -->
+                    <swiper-container 
+                    class="swiper swiper-wrapper items-center" 
+                    loop="false"
+                    slides-per-view="2"
+                    space-between="30"
+                    breakpoints='{
+                        "576": {"slidesPerView": 2},
+                        "768": {"slidesPerView": 4}
+                    }'>
+                        
+                             @for (item of clientData; track $index) {
+                            <div class="swiper-slide">
+                                <img [src]=item class="px-4" />
+                            </div>
+                          }
+                       
+                    </swiper-container>
+                </div>
+            </div>
+        </div>
+    </section>

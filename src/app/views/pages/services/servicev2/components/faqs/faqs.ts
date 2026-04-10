@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-faqs',
+  selector: 'servicev2-faqs',
   imports: [],
   templateUrl: './faqs.html',
   styles: ``,
 })
-export class Faqs {
-
-}
+export class Faqs {}
