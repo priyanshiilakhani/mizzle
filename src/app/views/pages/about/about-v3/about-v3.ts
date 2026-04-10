@@ -13,6 +13,7 @@ import { Footer } from "@app/components/footer/footer";
   templateUrl: './about-v3.html',
   styles: ``,
 })
+  
 export class AboutV3 {
 
 }

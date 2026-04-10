@@ -121,3 +121,30 @@ export const teamData: TeamType[] = [
     role: 'Content writer',
   },
 ];
+
+export const testimonialData = [
+  {
+    id: 1,
+    rating: 4.5,
+    text: "The best Template we've ever used - it's easy to customize and comes with all the features we need. Resolving breakfast am or perfectly.",
+    name: 'Amanda Reed',
+    role: 'Content writer',
+    image: '/images/avatar/05.jpg',
+  },
+  {
+    id: 2,
+    rating: 4.5,
+    text: 'Mizzle is the perfect theme for businesses that want to create a stylish and functional website.',
+    name: 'Dennis Barrett',
+    role: 'CEO and Manager of Mizzle',
+    image: '/images/avatar/04.jpg',
+  },
+  {
+    id: 3,
+    rating: 4.5,
+    text: 'StackBros helped us create a stunning website that reflects our brand perfectly.',
+    name: 'Samuel Bishop',
+    role: 'Manager of Mizzle',
+    image: '/images/avatar/01.jpg',
+  },
+];
