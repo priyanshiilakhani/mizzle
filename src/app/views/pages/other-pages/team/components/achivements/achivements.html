@@ -1,0 +1,41 @@
+<section class="lg:pb-28 md:pb-20 pb-16">
+    <div class="container">
+        <div class="grid lg:grid-cols-12 grid-cols-1 gap-10">
+            <div class="lg:col-span-5">
+                <h2 class="lg:text-[45px] md:text-4xl text-3xl mb-4">Our Lifetime Achievements</h2>
+                <p class="mb-6">Join our team Creative Agency Specializing in: Video Production, Web Design, Branding,
+                    Brand Strategy.</p>
+                <div
+                    class="text-center inline-flex items-center gap-2 bg-default-100 border border-default-200 rounded text-sm relative px-10 py-4">
+                    <span class="text-default-800">Work with us?</span>
+                    <a class="flex items-center gap-1 text-primary ms-2" routerLink="/contact/v1">
+                        Join our community
+                        <lucide-icon name="chevron-right" class="size-4"></lucide-icon>
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 lg:ms-auto">
+                <div class="grid md:grid-cols-2 grid-cols-1 gap-10">
+                    <div>
+                        <h5 class="md:text-2xl text-xl font-bold mb-2">Awards</h5>
+                        <ul class="divide-y divide-default-200">
+                            @for(item of awardData; track $index){
+                            <li class="py-2 text-default-800">{{item}}</li>
+                            }
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h5 class="md:text-2xl text-xl font-bold mb-2">CSS Design Award</h5>
+                        <ul class="divide-y divide-default-200">
+                            @for(item of designAwardData; track $index){
+                            <li class="py-2 text-default-800">{{item}}</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

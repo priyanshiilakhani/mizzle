@@ -1,0 +1,36 @@
+<section class="lg:pb-28 md:pb-20 pb-16">
+  <div class="container">
+    <div class="lg:w-10/12 mx-auto">
+      <div class="grid md:grid-cols-2 grid-cols-1 gap-4 md:gap-6 lg:gap-14 items-center">
+        <!-- Left Image -->
+        <div>
+          <img src="/images/about/16.jpg" alt="about-img" class="rounded" />
+        </div>
+
+        <!-- Right Content -->
+        <div>
+          <!-- Title -->
+          <h3 class="lg:text-4xl md:text-3xl text-3xl font-bold mb-6">
+            Boost your business efficiency with Mizzle.
+          </h3>
+          <p class="text-default-600">
+            The chatbot can be personalized to match the brand voice and tone, making it feel like
+            an extension of the company's customer support team.
+          </p>
+
+          <!-- Divider -->
+          <hr class="my-10 border-default-200" />
+
+          <!-- Client Logos -->
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 items-center">
+            @for(item of clientData; track $index){
+            <div>
+              <img [src]="item" alt="client-img" />
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

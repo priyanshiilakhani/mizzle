@@ -11,13 +11,13 @@ export const VIEW_ROUTES: Route[] = [
     loadChildren: () =>
       import('./pages/about/about.route').then((mod) => mod.ABOUT_ROUTES),
   },
-  // {
-  //   path: 'services',
-  //   loadChildren: () =>
-  //     import('./pages/services/service.route').then(
-  //       (mod) => mod.SERVICE_ROUTES
-  //     ),
-  // },
+  {
+    path: 'services',
+    loadChildren: () =>
+      import('./pages/services/service.route').then(
+        (mod) => mod.SERVICE_ROUTES
+      ),
+  },
   // {
   //   path: 'customer',
   //   loadChildren: () =>
@@ -50,13 +50,13 @@ export const VIEW_ROUTES: Route[] = [
   //   loadChildren: () =>
   //     import('./pages/help/help.route').then((mod) => mod.HELP_ROUTES),
   // },
-  // {
-  //   path: '',
-  //   loadChildren: () =>
-  //     import('./pages/other-pages/other-page.route').then(
-  //       (mod) => mod.OTHER_PAGE_ROUTES
-  //     ),
-  // },
+  {
+    path: '',
+    loadChildren: () =>
+      import('./pages/other-pages/other-page.route').then(
+        (mod) => mod.OTHER_PAGE_ROUTES
+      ),
+  },
   // {
   //   path: 'portfolio',
   //   loadChildren: () =>

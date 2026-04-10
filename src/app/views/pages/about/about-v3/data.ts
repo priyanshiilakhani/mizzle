@@ -122,7 +122,16 @@ export const teamData: TeamType[] = [
   },
 ];
 
-export const testimonialData = [
+export type TestimonialType = {
+  id: number;
+  rating: number;
+  text: string;
+  name: string;
+  role: string;
+  image: string;
+}
+
+export const testimonialData: TestimonialType[] = [
   {
     id: 1,
     rating: 4.5,

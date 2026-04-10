@@ -1,0 +1,53 @@
+<section class="lg:py-28 md:py-20 py-16">
+  <div class="container">
+    <div class="grid lg:grid-cols-3 grid-cols-1 lg:gap-0 gap-y-10">
+      <div class="lg:col-span-1">
+        <div class="lg:sticky lg:top-24">
+          <h2 class="mb-6 lg:text-[45px] md:text-4xl text-3xl">
+            Giving your business some great ideas
+          </h2>
+          <p class="mb-6">
+            With the support of our result-driven team, you can solve many challenges.
+          </p>
+
+          <div
+            class="text-center inline-flex items-center gap-2 bg-dark rounded text-sm relative px-10 py-4"
+          >
+            <span class="text-white">Work with us?</span>
+
+            <a
+              class="flex items-center gap-1 text-primary hover:text-primary-hover transition-all ms-2"
+              routerLink="/contact/v1"
+            >
+              Contact us now
+              <lucide-icon name="chevron-right" class="size-4"></lucide-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-2 lg:ps-16">
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-10">
+          @for (item of servicesData; track $index) {
+            <div class="p-10 bg-default-100/5 border border-default-200 rounded group">
+              <div class="mb-6">
+                <figure class="text-primary" [innerHTML]="item.safeIcon"></figure>
+              </div>
+
+              <div>
+                <h5 class="mb-4">
+                  <a
+                    routerLink="/service/single"
+                    class="md:text-2xl text-xl group-hover:text-primary transition-all duration-300"
+                    >{{ item.title }}</a
+                  >
+                </h5>
+                <p class="text-base">{{ item.description }}</p>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
