@@ -7,15 +7,15 @@
         @if (title) {
         @for (item of title; track $index) {
         <li class="flex items-center">
-            <span class="mx-1 text-default-400">•</span>
+            <span class="mx-2">•</span>
             <a [routerLink]="[]" class="hover:text-primary transition-all">{{ item }}</a>
         </li>
         }
         }
 
         <li class="flex items-center">
-            <span class="mx-1 text-default-400">•</span>
-            <span class="text-primary font-medium"> {{ pageTitle }}</span>
+            <span class="mx-2">•</span>
+            <span class="text-primary"> {{ pageTitle }}</span>
         </li>
     </ol>
 </nav>

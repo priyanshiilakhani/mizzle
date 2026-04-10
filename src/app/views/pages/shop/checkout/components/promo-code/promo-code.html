@@ -1,0 +1,55 @@
+<div id="editcard" class="hs-overlay hidden size-full fixed bg-black/50 top-0 start-0 z-80 overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="editcard-label">
+    <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all md:max-w-lg md:w-full m-3 md:mx-auto min-h-[calc(100%-56px)] flex items-center">
+        <div class="w-full flex flex-col bg-body-bg border border-default-200 shadow-2xs rounded-md pointer-events-auto">
+            <div class="flex justify-between items-center py-3 px-4 border-b border-default-200">
+                <h3 id="editcard-label" class="md:text-2xl text-xl font-bold text-default-800">Edit card</h3>
+                <button type="button" class="size-8 inline-flex justify-center items-center rounded bg-default-100 text-default-800 hover:bg-default-200" aria-label="Close" data-hs-overlay="#editcard">
+                    <i data-lucide="x" class="size-4"></i>
+                </button>
+            </div>
+
+            <div class="p-6 overflow-y-auto">
+                <div class="grid md:grid-cols-2 grid-cols-1 gap-6">
+                    <div class="md:col-span-2">
+                        <label class="block mb-2 text-default-400">Card Number</label>
+                        <div class="relative">
+                            <input type="text" class="py-2 px-4 border border-default-200 rounded w-full" maxlength="16" value="2456 2588 4589 7895" placeholder="xxxx xxxx xxxx xxxx" />
+                            <img src="/images/elements/visa.svg" class="w-10 absolute top-1/2 end-2 -translate-y-1/2" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block mb-2 text-default-400">Expiration date</label>
+                        <div class="relative flex items-center">
+                            <input type="text" class="py-2 px-4 border border-default-200 rounded-s md:w-26 w-full" maxlength="2" value="08" placeholder="Month" />
+                            <input type="text" class="py-2 px-4 border border-default-200 rounded-e md:w-26 w-full" maxlength="4" value="2024" placeholder="Year" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block mb-2 text-default-400">CVV / CVC</label>
+                        <input type="text" class="py-2 px-4 border border-default-200 rounded w-full" maxlength="3" value="565" placeholder="xxx" />
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <label class="block mb-2 text-default-400">Name on Card</label>
+                        <input type="text" class="py-2 px-4 border border-default-200 rounded w-full" aria-label="name of card holder" value="Jacqueline Miller" placeholder="Name of card holder" />
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" class="size-4 border-0 bg-default-200! rounded checked:bg-primary!" id="exampleCheck1" />
+                            <label class="text-default-600" for="exampleCheck1">Secuarely save card and details</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-end items-center gap-x-2 py-3 px-6 border-t border-default-200">
+                <button type="button" class="py-2 px-4 border border-default-200 hover:bg-default-200 text-default-800 transition-all rounded" data-hs-overlay="#editcard">Close</button>
+
+                <button type="button" class="py-2 px-4 bg-primary text-white hover:bg-primary-hover transition-all rounded">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

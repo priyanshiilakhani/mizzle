@@ -1,0 +1,17 @@
+<section class="lg:py-28 md:py-20 py-16">
+    <div class="container">
+        <div class="md:mb-10 mb-6 text-center">
+            <h2 class="lg:text-[45px] md:text-4xl text-3xl mb-2">Frequently Asked Questions</h2>
+            <p>Perceived end knowledge certainly day sweetness why cordially</p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-10 gap-6">
+            @for(item of faqData;track $index){
+            <div class="border border-default-200 rounded-md p-6">
+                <h6 class="text-xl mb-2">{{item.question}}</h6>
+                <p>{{item.answer}}</p>
+            </div>
+            }
+        </div>
+    </div>
+</section>

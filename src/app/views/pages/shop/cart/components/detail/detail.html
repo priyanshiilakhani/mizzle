@@ -1,0 +1,127 @@
+<section>
+    <div class="container">
+        <div class="grid lg:grid-cols-3">
+            <div class="lg:col-span-2">
+                <form class="space-y-6">
+                    <!-- Header -->
+                    <div class="flex items-center justify-between border-b border-default-200 pb-5">
+                        <h5 class="md:text-2xl text-xl font-bold">3 products</h5>
+                        <button class="text-danger bg-danger/10 hover:bg-danger hover:text-white px-3 py-1.5 rounded text-sm flex items-center gap-1 transition-all">
+                            <lucide-icon name="x" class="size-4"></lucide-icon>
+                            Clear cart
+                        </button>
+                    </div>
+
+                    <!-- Product 1 -->
+                    @for (item of cartItemData; track item.id) {
+                    <div class="grid grid-cols-6 md:gap-6 gap-12 lg:items-center items-start">
+                        <!-- Image -->
+                        <div class="md:col-span-1 col-span-2">
+                            <div class="w-28 md:w-22.5 lg:w-28 bg-default-100 p-2 rounded">
+                                <img [src]="item.image" class="w-full" />
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-5 col-span-4">
+                            <div class="grid md:grid-cols-12 grid-cols-1 items-center gap-4">
+                                <!-- Content -->
+                                <div class="lg:col-span-5 md:col-span-12">
+                                    <h6 class="text-xl font-bold">
+                                        <a [routerLink]="[]" class="hover:text-primary transition-all">{{ item.name }}</a>
+                                    </h6>
+
+                                    <ul class="flex flex-wrap gap-1 text-sm text-default-600 mt-1 list-disc list-inside">
+                                        @for (attr of item.attributes; track $index) {
+                                        <li>{{ attr }}</li>
+                                        }
+                                    </ul>
+                                </div>
+
+                                <!-- Quantity -->
+                                <div class="lg:col-span-2 md:col-span-4">
+                                    <select class="border border-default-300 rounded px-2 py-1.5 text-sm w-full">
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                    </select>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="lg:col-span-3 md:col-span-4 md:text-center text-start">
+                                    <h5 class="font-bold text-2xl"> ${{ item.price.toFixed(2) }}</h5>
+                                </div>
+
+                                <!-- Remove -->
+                                <div class="lg:col-span-2 md:col-span-4">
+                                    <a (click)="removeItem(item.id)" [routerLink]="[]" class="flex items-center md:justify-center justify-start gap-1 text-danger text-sm">
+                                        <lucide-icon name="x" class="size-4"></lucide-icon>
+                                        Remove
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-default-300" />
+                    }
+
+                    <!-- Update Cart Button -->
+                    <div class="text-start">
+                        <a [routerLink]="[]" class="px-4 py-2 border border-default-200 rounded-md text-default-800 bg-default-100 hover:bg-default-200 transition-all">Update cart</a>
+                    </div>
+                </form>
+
+                <div class="mt-10">
+                    <div class="p-5 md:p-14 mt-10 bg-cover bg-left bg-no-repeat rounded-md bg-[url('/images/shop/bg/05.jpg')]">
+                        <div class="md:w-1/2">
+                            <h4 class="text-white md:text-3xl text-2xl font-bold mb-6">Checkout the newest smart watch product</h4>
+                            <a [routerLink]="[]" class="border border-white text-white px-5 py-2 rounded-md hover:bg-body-bg hover:text-black font-medium transition">Shop now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-1 lg:ps-14 lg:mt-0 mt-14">
+                <div class="border border-default-200 rounded-md p-6">
+                    <div class="pb-4">
+                        <h5 class="md:text-2xl text-xl">Promo code</h5>
+                        <form class="flex items-center gap-1 mt-6">
+                            <input type="email" placeholder="Type here.." class="border border-default-200 rounded py-2 px-4 lg:w-60 w-full" />
+                            <button class="py-2 px-4 bg-dark hover:bg-dark-hover text-white rounded">Apply</button>
+                        </form>
+                    </div>
+
+                    <div class="mt-2 pb-4">
+                        <ul class="space-y-2.5">
+                            <li class="flex justify-between items-center">
+                                <span>Subtotal</span>
+                                <span class="font-semibold text-default-800">$473.00</span>
+                            </li>
+
+                            <li class="flex justify-between items-center">
+                                <span>Service Charge</span>
+                                <span class="font-semibold text-default-800">-$50</span>
+                            </li>
+
+                            <li class="flex justify-between items-center">
+                                <span>Tax</span>
+                                <span class="font-semibold text-default-800">$10</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="border-t border-default-200 pt-4 mb-6">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-default-800">Payable Now</span>
+                            <span class="text-xl font-bold text-default-800">$410.00</span>
+                        </div>
+                    </div>
+
+                    <div class="w-full">
+                        <a [routerLink]="[]" class="py-3.5 px-6 bg-primary hover:bg-primary-hover transition-all text-white rounded-md font-medium block text-center">Continue to Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

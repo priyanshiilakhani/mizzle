@@ -1,1 +1,24 @@
-<p>checkout works!</p>
+<section class="lg:pt-30 pt-20 md:pb-16 pb-10">
+    <div class="container">
+        <app-breadcrumb [title]="['All product', 'Cart']" pageTitle="Checkout" />
+        <h1 class="lg:text-4xl md:text-3xl text-2xl mt-4 font-bold">Checkout</h1>
+    </div>
+</section>
+
+<!-- Checkout content START -->
+<section class="lg:pb-28 md:pb-20 pb-16">
+    <div class="container">
+        <div class="grid lg:grid-cols-3 gap-4">
+            <div class="lg:col-span-2">
+                <checkout-personal-info />
+            </div>
+            <div class="lg:col-span-1 lg:ps-14">
+                <checkout-payment-option />
+            </div>
+        </div>
+    </div>
+</section>
+
+<checkout-promo-code />
+
+<checkout-detail />
