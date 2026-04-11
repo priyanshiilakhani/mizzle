@@ -1,1 +1,27 @@
-<p>faqs works!</p>
+<section class="lg:py-28 md:py-20 py-16">
+        <div class="container">
+            <div class="lg:w-7/12 mx-auto">
+                <h2 class="text-center lg:text-[45px] md:text-4xl text-3xl font-bold mb-10">You have questions we have answers</h2>
+
+                <div class="hs-accordion-group">
+                    @for (item of faqData; track item.id) {
+                    <div class="hs-accordion mb-4" id="heading-{{ item.id }}"  [class.active]="item.isActive">
+                        <button class="hs-accordion-toggle inline-flex justify-between items-center gap-x-3 w-full rounded font-semibold text-start bg-default-100 text-default-800 py-4 ps-5 pe-8" aria-expanded="false" aria-controls="collapse-{{ item.id }}">
+                            {{item.question}}
+                            <lucide-icon name="plus" class="hs-accordion-active:hidden block size-4 text-default-800" [class.hidden]="item.isActive"></lucide-icon>
+                            <lucide-icon name="minus" class="hs-accordion-active:block hidden size-4 text-default-800" [class.block]="item.isActive"></lucide-icon>
+                        </button>
+
+                        <div [class.hidden]="!item.isActive" id="collapse-{{ item.id }}" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="heading-{{ item.id }}">
+                            <div class="mt-4.5 px-4">
+                                <p class="text-default-700">
+                                    {{item.answer}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+                </div>
+            </div>
+        </div>
+    </section>
