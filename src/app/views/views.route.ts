@@ -67,4 +67,10 @@ export const VIEW_ROUTES: Route[] = [
   //   loadChildren: () =>
   //     import('./auth/auth.route').then((mod) => mod.AUTH_ROUTES),
   // },
+
+   {
+    path: 'blog',
+    loadChildren: () =>
+      import('./pages/blog/blog.route').then((mod) => mod.BLOG_ROUTES),
+  },
 ]
