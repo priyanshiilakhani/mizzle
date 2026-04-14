@@ -2,7 +2,7 @@
     <div class="flex justify-between items-center py-5 border-b border-default-200">
         <h5 class="md:text-2xl text-xl font-bold">Personal info</h5>
         <a [routerLink]="[]" class="px-3 py-2 bg-default-100 hover:bg-default-200 transition-all text-[13px] text-default-800 rounded border border-default-200 flex items-center gap-1 font-medium">
-            <i data-lucide="plus" class="size-4"></i>
+            <lucide-icon name="plus" class="size-4"></lucide-icon>
             Add new
         </a>
     </div>
@@ -100,115 +100,5 @@
                 </div>
             </div>
         </form>
-    </div>
-</div>
-
-<div class="mt-4">
-    <div class="pb-5 border-b border-default-200">
-        <h5 class="md:text-2xl text-xl">Payment options</h5>
-    </div>
-
-    <div class="py-5">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-            <!-- Option item -->
-            <div>
-                <div class="border border-default-200 rounded p-4">
-                    <div class="flex gap-4 justify-between">
-                        <label for="standard" class="flex items-start gap-4 cursor-pointer">
-                            <img src="/images/elements/visa.svg" class="w-10 mt-1" />
-                            <span>
-                                <span class="block font-semibold text-default-800 mb-1">Visa ending in 1245</span>
-                                <span class="block text-sm text-default-600">Expiry 08/2024</span>
-                            </span>
-                        </label>
-
-                        <input type="radio" name="payOptions" id="standard" class="size-4 border-0 bg-default-200! checked:bg-primary! focus:ring-primary" checked />
-                    </div>
-
-                    <div class="flex justify-end gap-4 mt-3 text-sm">
-                        <a [routerLink]="[]" class="text-default-600 hover:text-primary transition-all">Set as default</a>
-                        <button type="button" class="flex items-center gap-1 text-default-900 disabled:opacity-50 font-semibold hover:text-primary transition-all disabled:pointer-events-none" aria-haspopup="dialog" aria-expanded="false" aria-controls="editcard" data-hs-overlay="#editcard">
-                            <i data-lucide="edit" class="size-4"></i>
-                            Edit
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Option item -->
-            <div>
-                <div class="border border-default-200 rounded p-4">
-                    <div class="flex gap-4 justify-between">
-                        <label for="standard2" class="flex items-start gap-4 cursor-pointer">
-                            <img src="/images/elements/mastercard.svg" class="w-10 mt-1" />
-                            <span>
-                                <span class="block font-semibold text-default-800 mb-1">Mastercard ending in 1245</span>
-                                <span class="block text-sm text-default-600">Expiry 06/2024</span>
-                            </span>
-                        </label>
-
-                        <input type="radio" name="payOptions" id="standard2" class="size-4 border-0 bg-default-200! checked:bg-primary! focus:ring-primary" />
-                    </div>
-
-                    <div class="flex justify-end gap-4 mt-3 text-sm">
-                        <a [routerLink]="[]" class="text-default-600 hover:text-primary transition-all">Set as default</a>
-                        <button type="button" class="flex items-center gap-1 text-default-900 disabled:opacity-50 font-semibold hover:text-primary transition-all disabled:pointer-events-none" aria-haspopup="dialog" aria-expanded="false" aria-controls="editcard2" data-hs-overlay="#editcard2">
-                            <i data-lucide="edit" class="size-4"></i>
-                            Edit
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Option item -->
-            <div>
-                <div class="border border-default-200 rounded p-4">
-                    <div class="flex gap-4 justify-between">
-                        <label for="standard3" class="flex items-start gap-4 cursor-pointer">
-                            <img src="/images/elements/paypal.svg" class="w-10 mt-1" />
-                            <span>
-                                <span class="block font-semibold text-default-800 mb-1">Pay using PayPal</span>
-                                <span class="block text-sm text-default-600">Fast, easy and secure</span>
-                            </span>
-                        </label>
-                        <input type="radio" name="payOptions" id="standard3" class="size-4 border-0 bg-default-200! checked:bg-primary! focus:ring-primary" />
-                    </div>
-
-                    <div class="flex justify-end gap-4 mt-3 text-sm">
-                        <a [routerLink]="[]" class="text-default-600 hover:text-primary transition-all">Set as default</a>
-                        <a [routerLink]="[]" class="flex items-center gap-1 text-default-900 disabled:opacity-50 font-semibold hover:text-primary transition-all">
-                            <i data-lucide="edit" class="size-4"></i>
-                            Edit
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Option item -->
-            <div>
-                <div class="border border-default-200 rounded p-4">
-                    <div class="flex gap-4 justify-between">
-                        <label for="standard4" class="flex items-start gap-4 cursor-pointer">
-                            <span class="w-10 flex items-center justify-center">
-                                <i data-lucide="truck" class="size-7 text-default-600"></i>
-                            </span>
-                            <span>
-                                <span class="block font-semibold text-default-800 mb-1">Cash on delivery</span>
-                                <span class="block text-sm text-default-600">
-                                    You have to pay
-                                    <b>$25</b>
-                                    for delivery.
-                                </span>
-                            </span>
-                        </label>
-                        <input type="radio" name="payOptions" id="standard4" class="size-4 border-0 bg-default-200! checked:bg-primary! focus:ring-primary" />
-                    </div>
-
-                    <div class="text-end mt-3 text-sm">
-                        <a [routerLink]="[]" class="text-default-600 hover:text-primary transition-all">Set as default</a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
