@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import { LucideAngularModule } from "lucide-angular";
+import { benefitsData } from '../../data';
 
 @Component({
   selector: 'service-single-benefits',
-  imports: [],
+  imports: [LucideAngularModule],
   templateUrl: './benefits.html',
   styles: ``,
 })
-export class Benefits {}
+  
+export class Benefits {
+  benefitsData = benefitsData;
+}
