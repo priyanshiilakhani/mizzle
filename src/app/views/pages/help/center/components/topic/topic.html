@@ -1,0 +1,37 @@
+<section class="lg:pb-32 pb-22">
+    <div class="container">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-14 gap-6">
+            @for(item of featureData; track $index){
+            <div class="border border-default-200 p-6 rounded">
+                <div class="size-10.5 bg-primary flex justify-center items-center rounded text-white mb-4">
+                    <lucide-icon [name]="item.icon" class="size-5"></lucide-icon>
+                </div>
+
+                <h6 class="text-xl text-default-800 font-bold mb-4">{{item.title}}</h6>
+
+                <ul class="space-y-1.5">
+                    @for(item of item.articles; track $index){
+                    <li>
+                        <a [routerLink]="item.name"
+                            class="flex items-center gap-1 text-default-600 font-medium hover:text-primary transition-all">
+                            <lucide-icon name="chevron-right" class="size-4">
+                            </lucide-icon>
+                            {{item.name}}
+                        </a>
+                    </li>
+                    }
+                </ul>
+
+                <div class="pt-4">
+                    <a [routerLink]="[]" class="flex items-center gap-1.5 text-primary hover:text-primary-hover group">
+                        View all articles
+                        <lucide-icon name="move-right"
+                            class="size-4 group-hover:translate-x-1 transition-all">
+                        </lucide-icon>
+                    </a>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

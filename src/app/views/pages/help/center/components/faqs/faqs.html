@@ -1,0 +1,54 @@
+<section>
+  <div class="container">
+    <div class="lg:w-4xl mx-auto">
+      <h3 class="lg:text-4xl md:text-3xl text-2xl font-bold mb-6 text-center">
+        Frequently Asked Questions
+      </h3>
+
+      <div class="hs-accordion-group divide-y divide-default-200">
+        @for (faq of faqsData; track faq.id) {
+          <div
+            class="hs-accordion mb-4 pb-5 border-b border-default-200"
+            [class.active]="faq.active"
+            [id]="faq.id"
+          >
+            <button
+              class="hs-accordion-toggle inline-flex justify-between items-center gap-x-3 w-full rounded font-semibold text-start text-default-900"
+              aria-expanded="false"
+              [attr.aria-controls]="'collapse-' + faq.id.split('-')[1]"
+            >
+              {{ faq.question }}
+
+              <div>
+                <lucide-icon
+                  name="plus"
+                  class="hs-accordion-active:hidden block size-4 text-default-800"
+                ></lucide-icon>
+                <lucide-icon
+                  name="minus"
+                  class="hs-accordion-active:block hidden size-4 text-default-800"
+                ></lucide-icon>
+              </div>
+            </button>
+
+            <div
+              [id]="'collapse-' + faq.id.split('-')[1]"
+              class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300"
+              [class.hidden]="!faq.active"
+              role="region"
+              [attr.aria-labelledby]="faq.id"
+            >
+              <div class="mt-2">
+                @for (para of faq.answer; track $index) {
+                  <p class="text-default-600 mb-4">
+                    {{ para }}
+                  </p>
+                }
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

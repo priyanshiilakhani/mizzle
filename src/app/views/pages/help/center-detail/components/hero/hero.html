@@ -1,0 +1,52 @@
+<section class="md:pt-32 pt-28">
+        <div class="container">
+            <div class="lg:w-1/2">
+                <nav aria-label="breadcrumb" class="mb-2">
+                    <ol class="flex items-center space-x-2 text-[13px] text-default-600">
+                        <li>
+                            <a [routerLink]="[]" class="hover:text-primary transition-all">Home</a>
+                        </li>
+
+                        <li class="flex items-center">
+                            <span class="mx-1 text-default-400">•</span>
+                            <span class="hover:text-primary transition-all font-medium">Help center</span>
+                        </li>
+
+                        <li class="flex items-center">
+                            <span class="mx-1 text-default-400">•</span>
+                            <span class="text-primary font-medium">Get started</span>
+                        </li>
+                    </ol>
+                </nav>
+
+                <h1 class="lg:text-[45px] md:text-4xl text-3xl mb-6">How can we help you?</h1>
+
+                <form class="bg-default-100 border border-default-200 rounded p-2 relative">
+                    <div class="flex">
+                        <input type="email" placeholder="Search for answer..." class="grow bg-transparent! border-0 focus:outline-none focus:ring-0 me-1 text-default-700 placeholder-default-400" />
+                        <button type="button" class="bg-dark text-white px-4 py-2 rounded-md hover:bg-dark-hover transition-all">
+                            <lucide-icon name="search" class="size-4 text-white"></lucide-icon>
+                        </button>
+                    </div>
+                </form>
+
+                <ul class="flex flex-wrap items-center text-sm mt-4 mb-0 gap-x-3">
+                    <li>
+                        <span class="text-default-400">Popular search:</span>
+                    </li>
+
+                    <li>
+                        <a [routerLink]="[]" class="text-default-800 underline hover:text-primary transition-all">How can we help?</a>
+                    </li>
+
+                    <li>
+                        <a [routerLink]="[]" class="text-default-800 underline hover:text-primary transition-all">Installation Guide?</a>
+                    </li>
+
+                    <li>
+                        <a [routerLink]="[]" class="text-default-800 underline hover:text-primary transition-all">How to view expired tickets?</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>

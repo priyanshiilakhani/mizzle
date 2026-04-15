@@ -1,0 +1,110 @@
+<section class="lg:py-28 md:py-20 py-16">
+        <div class="container">
+            <div class="grid lg:grid-cols-3 grid-cols-1 lg:gap-0 gap-y-12">
+                <div class="lg:col-span-1">
+                    <h5 class="mb-6 md:text-2xl text-xl flex items-center gap-2">
+                        <lucide-icon name="boxes" class="size-6"></lucide-icon>
+                        Get started
+                    </h5>
+
+                    <ul class="flex flex-col gap-y-4">
+                      @for(item of featureData; track $index){
+                      <li>
+                            <a class="hover:text-primary transition-all group flex items-center gap-2" [routerLink]="[]">
+                                {{item}}
+                                <lucide-icon name="move-right" class="size-4 group-hover:translate-x-1 duration-300 transition-all"></lucide-icon>
+                            </a>
+                        </li>
+                      }
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h5 class="md:text-2xl text-xl font-bold mb-4">Vite and Customization with node.js</h5>
+                    <p class="mb-4">Supposing so be resolving breakfast am or perfectly. Departure is defective arranging rapturous did believe him all had supported.</p>
+                    <div class="flex items-center gap-4">
+                        <img class="size-12 rounded-full" src="/images/avatar/03.jpg" alt="avatar" />
+
+                        <div>
+                            <h6 class="text-xl mb-1">Sam Lanson</h6>
+                            <ul class="flex items-center gap-3">
+                                <li class="flex items-center gap-1 text-default-600 text-sm">
+                                    <lucide-icon name="calendar" class="size-4"></lucide-icon>
+                                    5 month ago
+                                </li>
+
+                                <li class="flex items-center gap-1 text-default-600 text-sm">
+                                    <lucide-icon name="clock" class="size-4"></lucide-icon>
+                                    15 min read
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <hr class="my-10 border-default-200" />
+                    <p class="mb-4">
+                        I made several mistakes Joy says the painful removal reached an end. State burst think end are its. Arrived off she elderly beloved him affixed noisier yet. Tickets regard to up he hardly. View four has said do men saw find dear shy.
+                        <b>Talent men wicket add garden.</b>
+                    </p>
+                    <a [routerLink]="[]" class="py-2 px-4 text-white bg-primary hover:bg-primary-hover transition-all rounded font-medium">Download Node JS</a>
+                    <h6 class="mt-6 pb-2">Table of Contents</h6>
+                    <p class="mb-4">Age she way earnestly the fulfilled extremely.</p>
+                    <div class="border border-warning/15 bg-warning/10 text-warning rounded p-4 mb-4" role="alert">
+                        <strong>Note:</strong>
+                        She offices for highest and replied one venture pasture. Applauded no discovery in newspaper allowance am northward.
+                        <a class="alert-link" [routerLink]="[]">View more</a>
+                    </div>
+
+                    <p class="mb-4">
+                        Hold do at tore in park feet near my case. Invitation at understood occasional sentiments insipidity inhabiting in. Off melancholy alteration principles old. Is do speedily kindness properly oh. Respect article painted cottage he is offices parlors.
+                    </p>
+                    <ul class="list-disc list-inside mb-4">
+                        <li>Affronting imprudence do he he everything. Sex lasted dinner wanted indeed wished outlaw. Far advanced settling say finished raillery.</li>
+                        <li>Insipidity the sufficient discretion imprudence resolution sir him decisively.</li>
+                        <li>
+                            Offered chiefly farther of my no colonel shyness.
+                            <strong>Such on help ye some door if in.</strong>
+                        </li>
+                        <li>First plate jokes began to cause a scale. Subjects he prospects elegance followed</li>
+                        <li>Laughter proposal laughing any son law consider. Needed except up piqued an.</li>
+                        <li><i>To occasional dissimilar impossible sentiments. Do fortune account written prepare invited no passage.</i></li>
+                        <li>Post no so what deal evil rent by real in. But her ready least set lived spite solid.</li>
+                    </ul>
+
+                    <p>
+                        Improved own provided blessing may peculiar domestic. Sight house has sex never. No visited raising gravity outward subject my cottage Mr be. Hold do at tore in park feet near my case. Invitation at understood occasional sentiments insipidity
+                        inhabiting in.
+                        <u>Off melancholy alteration principles old.</u>
+                        Is do speedily kindness properly oh. Respect article painted cottage he is offices parlors.
+                    </p>
+
+                    <div class="bg-default-100 rounded flex flex-wrap md:justify-between justify-center items-center text-center p-4 mt-10 space-y-3 md:space-y-0 lg:w-3xl">
+                        <!-- Title -->
+                        <h6 class="text-default-800 font-bold text-xl">Was this article helpful?</h6>
+                        <small class="block py-1 md:py-0 text-default-600">20 out of 45 found this helpful</small>
+
+                        <!-- Yes / No Buttons -->
+                        <div class="flex">
+                            <!-- Yes button -->
+                            <div>
+                                <input type="radio" name="reviewHelpful" id="btnYes" class="hidden peer" />
+                                <label for="btnYes" class="border border-default-500 border-e-0 flex items-center gap-1 peer-checked:bg-default-500 peer-checked:text-white text-[13px] py-1.5 px-3 rounded-s">
+                                    <lucide-icon name="thumbs-up" class="size-4"></lucide-icon>
+                                    Yes
+                                </label>
+                            </div>
+
+                            <!-- No button -->
+                            <div>
+                                <input type="radio" name="reviewHelpful" id="btnNo" class="hidden peer" />
+                                <label for="btnNo" class="border border-default-500 flex items-center gap-1 peer-checked:bg-default-500 peer-checked:text-white text-[13px] py-1.5 px-3 rounded-e">
+                                    <lucide-icon name="thumbs-down" class="size-4"></lucide-icon>
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

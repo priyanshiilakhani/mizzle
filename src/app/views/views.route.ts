@@ -45,11 +45,11 @@ export const VIEW_ROUTES: Route[] = [
     loadChildren: () =>
       import('./pages/shop/shop.route').then((mod) => mod.SHOP_ROUTES),
   },
-  // {
-  //   path: 'help',
-  //   loadChildren: () =>
-  //     import('./pages/help/help.route').then((mod) => mod.HELP_ROUTES),
-  // },
+  {
+    path: 'help',
+    loadChildren: () =>
+      import('./pages/help/help.route').then((mod) => mod.HELP_ROUTES),
+  },
   {
     path: '',
     loadChildren: () =>
