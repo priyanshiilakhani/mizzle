@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="flex items-center justify-between gap-2 md:mb-14 mb-6">
+        <div class="text-center">
+            <h2 class="md:text-4xl text-2xl font-bold">Related blogs</h2>
+        </div>
+
+        <div class="flex items-center gap-2">
+            <button type="button" class="flex z-10 items-center justify-center size-12 rounded-full border border-default-300 bg-default-50 transition-all duration-300" id="swiper-button-prev">
+                <lucide-icon name="move-left" class="text-lg"></lucide-icon>
+            </button>
+
+            <button type="button" class="flex z-10 items-center justify-center size-12 rounded-full border border-default-300 bg-default-50 transition-all duration-300" id="swiper-button-next">
+                <lucide-icon name="move-right" class="text-lg"></lucide-icon>
+            </button>
+        </div>
+    </div>
+
+    <div class="swiper">
+        <swiper-container class="swiper-wrapper" space-between="30" loop="false" navigation-next-el="#swiper-button-next" navigation-prev-el="#swiper-button-prev" autoplay="true" [breakpoints]='{
+    "576": { "slidesPerView": 1 },
+    "768": { "slidesPerView": 2 },
+    "992": { "slidesPerView": 3 }
+  }'>
+            @for(item of swiperBlogData;track $index){
+            <swiper-slide>
+                <article class="group">
+                    <img [src]="item.image" class="rounded" />
+                    <div class="mt-6">
+                        <h6 class="text-xl mb-2">{{item.title}}</h6>
+                        <div class="flex justify-between items-center">
+                            <p>By {{item.author}}</p>
+                            <a [routerLink]="item.link" class="flex items-center gap-1 text-primary group-hover:text-primary-hover transition-all after:absolute after:inset-0">
+                                <span>Read more</span>
+                                <lucide-icon name="arrow-right" class="size-4 group-hover:ms-1 group-hover:text-primary-hover transition-all"></lucide-icon>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </swiper-slide>
+            }
+        </swiper-container>
+    </div>
+</div>

@@ -1,1 +1,62 @@
-<p>list-sidebar works!</p>
+<!-- Main Banner START -->
+<section class="lg:py-28 py-28 md:pb-18 pb-14">
+    <blog-list-category />
+</section>
+
+<!-- Blog list and sidebar START -->
+<section class="lg:pb-28 pb-20">
+    <div class="container">
+        <div class="grid lg:grid-cols-3 grid-cols-1 lg:gap-16 md:gap-10 gap-6">
+            <div class="lg:col-span-2">
+                <blog-list-our-blogs />
+            </div>
+            <div class="lg:col-span-1">
+                <blog-list-sidebar />
+            </div>
+            <div class="lg:col-span-3 md:mt-0 mt-10">
+                <ul class="flex flex-wrap justify-between items-center gap-y-2">
+                    <li>
+                        <a [routerLink]="[]" class="flex items-center gap-1.5 py-3 px-4 transition-all bg-default-100 hover:bg-primary hover:text-white rounded group">
+                            <lucide-icon name="arrow-big-left" class="size-4 fill-default-800 text-default-800 transition-all group-hover:fill-white group-hover:text-white"></lucide-icon>
+                            Prev
+                        </a>
+                    </li>
+
+                    <li>
+                        <ul class="flex items-center justify-center space-x-2">
+                            <!-- Active Page -->
+                            <li>
+                                <a [routerLink]="[]" class="px-4 py-3 text-sm bg-default-100 hover:bg-primary hover:text-white text-default-600 transition-all rounded">1</a>
+                            </li>
+
+                            <!-- Page -->
+                            <li>
+                                <a [routerLink]="[]" class="px-4 py-3 text-sm bg-primary text-white rounded">2</a>
+                            </li>
+
+                            <li>
+                                <span class="px-4 py-3 text-sm bg-default-100 hover:bg-primary hover:text-white text-default-600 transition-all rounded">..</span>
+                            </li>
+
+                            <li>
+                                <a [routerLink]="[]" class="px-4 py-3 text-sm bg-default-100 hover:bg-primary hover:text-white text-default-600 transition-all rounded">22</a>
+                            </li>
+
+                            <li>
+                                <a [routerLink]="[]" class="px-4 py-3 text-sm bg-default-100 hover:bg-primary hover:text-white text-default-600 transition-all rounded">23</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a [routerLink]="[]" class="flex items-center gap-1.5 py-3 px-4 transition-all bg-default-100 hover:bg-primary hover:text-white rounded group">
+                            Next
+                            <lucide-icon name="arrow-big-right" class="size-4 fill-default-800 text-default-800 transition-all group-hover:fill-white group-hover:text-white"></lucide-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer />

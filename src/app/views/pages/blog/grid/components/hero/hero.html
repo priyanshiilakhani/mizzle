@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="relative w-full swiper">
+        <!-- Slider wrapper -->
+        <swiper-container class="swiper-wrapper" loop="true" autoplay="true" effect="fade"  [fade-effect]="{ crossFade: true }" navigation-next-el="#swiper-button-next" navigation-prev-el="#swiper-button-prev" pagination="true" pagination-el=".swiper-pagination" pagination-clickable="true">
+            @for (item of blogSlideData; track $index) {
+            <swiper-slide>
+                <div class="h-125 rounded-md w-full bg-cover bg-center relative" [style.background-image]="'url(' + item.image + ')'">
+                    <div class="absolute inset-0 bg-dark/50 rounded-md"></div>
+
+                    <div class="relative h-full flex items-center justify-center px-4 text-center">
+                        <div class="lg:max-w-4xl max-w-xl text-white">
+                            <span class="inline-block bg-black/60 px-2 py-1 rounded mb-6 text-xs"> {{ item.category }}</span>
+                            <h1 class="lg:text-[45px] md:text-4xl text-3xl font-bold mb-6 text-white hover:text-primary transition-all"> {{ item.title }}</h1>
+                            <ul class="flex flex-wrap justify-center gap-6.5 text-sm">
+                                <li class="flex items-center gap-1.5">
+                                    <lucide-icon name="user-round" class="size-4"></lucide-icon>
+                                    <span>{{ item.author }}</span>
+                                </li>
+
+                                <li class="flex items-center gap-1.5 list-disc">
+                                    <lucide-icon name="calendar" class="size-4"></lucide-icon>
+                                    <span>{{ item.date }}</span>
+                                </li>
+
+                                <li class="flex items-center gap-1.5 list-disc">
+                                    <lucide-icon name="clock" class="size-4"></lucide-icon>
+                                    <span>{{ item.readTime }}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </swiper-slide>
+            }
+        </swiper-container>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination swiper-pagination-primary  bottom-4!"></div>
+
+        <!-- Navigation -->
+        <div class="absolute inset-y-1/2 w-full flex justify-between px-4">
+            <button class="size-10 bg-dark flex justify-center items-center z-20 rounded-full text-white" id="swiper-button-prev">
+                <lucide-icon name="move-left" class="size-4"></lucide-icon>
+            </button>
+
+            <button class="size-10 bg-dark flex justify-center items-center z-20 rounded-full text-white" id="swiper-button-next">
+                <lucide-icon name="move-right" class="size-4"></lucide-icon>
+            </button>
+        </div>
+    </div>
+</div>

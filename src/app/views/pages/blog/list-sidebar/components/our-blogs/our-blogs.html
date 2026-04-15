@@ -1,0 +1,28 @@
+<h4 class="mb-6 md:text-3xl text-2xl font-bold">Our Blog</h4>
+
+@for(item of blogListData;track $index){
+<article class="border border-default-200 p-4 mb-6 rounded-md hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 group">
+    <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-7.5">
+        <!-- Image -->
+        <div class="col-span-1">
+            <img [src]="item.image" alt="blog-img" class="size-full object-cover rounded-md" />
+        </div>
+
+        <!-- Content -->
+        <div class="md:col-span-2">
+            <div class="inline-block bg-dark text-white text-xs font-medium px-3 py-1 rounded mb-3">{{item.category}}</div>
+
+            <h5 class="md:text-2xl text-xl">{{item.title}}</h5>
+            <div class="md:flex flex-wrap md:justify-between items-center md:mt-16 mt-4">
+                <p class="mb-2 text-default-800 font-semibold">By {{item.author}}</p>
+                <div>
+                    <a [routerLink]="item.link" class="inline-flex items-center gap-1 text-primary group-hover:text-primary-hover after:absolute after:inset-0">
+                        Read more
+                        <lucide-icon name="arrow-right" class="size-4 group-hover:translate-x-1 transition-all"></lucide-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+}
