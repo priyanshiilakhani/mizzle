@@ -1,0 +1,23 @@
+ <section class="lg:py-28 py-20">
+        <div class="container">
+            <div class="grid lg:grid-cols-4 grid-cols-2 items-center gap-6">
+
+                @for(item of counterData; track $index){
+                 <div class="flex items-center gap-4">
+                    <div class="size-14 bg-dark rounded flex justify-center items-center">
+                        <lucide-icon [name]="item.icon" class="size-6 text-white"></lucide-icon>
+                    </div>
+
+                    <div>
+                        <div class="flex items-center">
+                            <h4 class="counter text-default-900 mb-0 text-3xl" [countUp]="item.value"></h4>
+                            <span class="ms-1 text-primary text-3xl">{{ item.suffix }}</span>
+                        </div>
+                        <p>{{ item.label }}</p>
+                    </div>
+                </div>
+                }
+                
+            </div>
+        </div>
+    </section>

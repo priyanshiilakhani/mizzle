@@ -1,1 +1,106 @@
-<p>pricing works!</p>
+<section>
+    <div class="container">
+        <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-14">
+            <div class="dark bg-dark p-6 rounded-md">
+                <div class="md:p-5">
+                    <h3 class="lg:text-4xl md:text-3xl text-2xl text-white mb-4">
+                        Pricing plan for this service
+                    </h3>
+                    <p class="mb-4 text-white/70">
+                        Our essential plan is self-service solution for businesses to handle website messaging
+                        and personalization
+                    </p>
+
+                    <!-- Tabs -->
+                    <nav class="flex gap-x-2 mb-4" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                        @for (plan of pricingData; track plan.duration; let i = $index) {
+                        <button type="button"
+                            class="py-2 px-3 text-default-600 hover:bg-primary hover:text-white rounded"
+                            [class.hs-tab-active:text-white]="true" [class.hs-tab-active:bg-primary]="true"
+                            [class.active]="i === 0" [attr.id]="'pills-' + plan.duration.toLowerCase() + '-tab'"
+                            [attr.data-hs-tab]="'#pills-' + plan.duration.toLowerCase()"
+                            [attr.aria-controls]="'pills-' + plan.duration.toLowerCase()" [attr.aria-selected]="i === 0"
+                            role="tab">
+                            {{ plan.duration }}
+                        </button>
+                        }
+                    </nav>
+                </div>
+
+                <div class="md:px-5 md:pb-5">
+                    @for (plan of pricingData; track plan.duration; let i = $index) {
+                    <div [attr.id]="'pills-' + plan.duration.toLowerCase()" role="tabpanel"
+                        [attr.aria-labelledby]="'pills-' + plan.duration.toLowerCase() + '-tab'"
+                        [class.hidden]="i !== 0">
+                        <div class="bg-default-100 dark border border-default-300 rounded p-4">
+                            <h6 class="mb-4 text-white text-xl">Quick look at all the features</h6>
+
+                            <!-- Features List -->
+                            <ul class="flex flex-col space-y-3 text-white/70">
+                                @for (feature of plan.features; track feature) {
+                                <li class="flex items-center gap-2">
+                                    <lucide-icon name="badge-check"
+                                        class="size-5 fill-primary text-light"></lucide-icon>
+                                    {{ feature }}
+                                </li>
+                                }
+                            </ul>
+                        </div>
+
+                        <!-- Price Section -->
+                        <div class="flex justify-between items-center mt-6">
+                            <div class="text-white">
+                                <span class="text-4xl font-bold text-white"> ${{ plan.price }} </span>
+                                / month
+                            </div>
+
+                            <a [routerLink]="[]"
+                                class="py-3 px-6 bg-white hover:bg-default-200 dark:hover:bg-default-800 text-black rounded-md mb-0">
+                                Get started
+                            </a>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+
+            <div class="lg:ms-30">
+                <h2 class="lg:text-[45px] md:text-4xl text-3xl mb-2 font-bold">
+                    Feedback for Service Enhancement
+                </h2>
+                <p class="text-xl mb-2">
+                    300+ Users rated us
+                    <span class="text-primary font-bold">4.85</span>
+                    out of 5.
+                </p>
+
+                <!-- Swiper -->
+                <div class="swiper mt-16">
+                    <swiper-container class="pb-14" space-between="30" pagination="true"
+                        pagination-el=".swiper-pagination" pagination-clickable="true">
+                        @for(item of testimonialData; track $index){
+                        <swiper-slide>
+                            <div class="flex flex-col items-start text-start">
+                                <img [src]="item.image" class="md:size-20 size-16 me-auto rounded-full mb-4"
+                                    alt="avatar" />
+                                <div class="flex text-start gap-1 mb-5 text-warning">
+                                    @for (star of [1,2,3,4]; track $index) {
+                                    <lucide-icon name="star" class="size-4 fill-warning"></lucide-icon>
+                                    }
+                                    <lucide-icon name="star-half" class="size-4 fill-warning"></lucide-icon>
+                                </div>
+                                <p class="md:text-2xl text-xl mb-4 text-default-800">
+                                    {{item.description}}
+                                </p>
+                                <div class="text-xl font-medium text-default-400 text-start">-{{item.name}}</div>
+                            </div>
+                        </swiper-slide>
+                        }
+                    </swiper-container>
+                    
+                    <div class="swiper-pagination swiper-pagination-primary mt-5 text-start!"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

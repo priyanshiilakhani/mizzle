@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'service-single-cta',
+  selector: 'customer-stories-cta',
   imports: [RouterLink],
   templateUrl: './cta.html',
   styles: ``,

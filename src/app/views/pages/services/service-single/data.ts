@@ -1,14 +1,14 @@
-const avatar11 = 'assets/images/avatar/11.jpg'
-const avatar8 = 'assets/images/avatar/08.jpg'
-const avatar5 = 'assets/images/avatar/05.jpg'
+const avatar11 = '/images/avatar/11.jpg';
+const avatar8 = '/images/avatar/08.jpg';
+const avatar5 = '/images/avatar/05.jpg';
 
 export const benefitsData = [
-  " Reach a global audience and expand your brand's presence",
+  "Reach a global audience and expand your brand's presence",
   'Real-time tracking and data-driven decision-making',
   'Improved Customer Engagement',
   'Drive conversions and boost revenue',
   'Create a loyal customer community',
-  'Protect customer data and privacy'
+  'Protect customer data and privacy',
 ];
 
 export type StepType = {
@@ -17,8 +17,7 @@ export type StepType = {
   description: string;
 };
 
-
-export const steps: StepType[] = [
+export const stepData: StepType[] = [
   {
     stepNumber: '01',
     title: 'Understanding Client Goals',
@@ -40,7 +39,7 @@ export const steps: StepType[] = [
     title: 'Adapting to Industry Changes',
     description: `Digital marketing agencies stay up-to-date with industry trends and algorithm changes.`,
   },
-]
+];
 
 export type pricingPlanType = {
   duration: string;
@@ -71,4 +70,28 @@ export const pricingData: pricingPlanType[] = [
       'AI powered product recommendation engine',
     ],
   },
-]
+];
+
+export type testimonialType = {
+  image: string;
+  name: string;
+  description: string;
+};
+
+export const testimonialData: testimonialType[] = [
+  {
+    image: avatar11,
+    name: 'Emma Watson',
+    description: `"Our passion for customer excellence is just one reason why we are the market leader. We've always worked very hard to give our customers the best experience."`,
+  },
+  {
+    image: avatar8,
+    name: 'Louis Ferguson',
+    description: `"Two before narrow not relied on how except moment myself Dejection assurance Mrs led certainly So gate at no only none open Betrayed."`,
+  },
+  {
+    image: avatar5,
+    name: 'Jacqueline Miller',
+    description: `"Our passion for customer excellence is just one reason why we are the market leader. We've always worked very hard to give our customers the best experience."`,
+  },
+];

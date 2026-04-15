@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { RouterLink } from "@angular/router";
 
 @Component({
-  selector: 'service-single-cta',
-  imports: [RouterLink],
+  selector: 'career-single-cta',
+  imports: [],
   templateUrl: './cta.html',
   styles: ``,
 })

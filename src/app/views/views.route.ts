@@ -18,18 +18,18 @@ export const VIEW_ROUTES: Route[] = [
         (mod) => mod.SERVICE_ROUTES
       ),
   },
-  // {
-  //   path: 'customer',
-  //   loadChildren: () =>
-  //     import('./pages/customer/customer.route').then(
-  //       (mod) => mod.CUSTOMER_ROUTES
-  //     ),
-  // },
-  // {
-  //   path: 'career',
-  //   loadChildren: () =>
-  //     import('./pages/career/career.route').then((mod) => mod.CAREER_ROUTES),
-  // },
+  {
+    path: 'customer',
+    loadChildren: () =>
+      import('./pages/customer/customer.route').then(
+        (mod) => mod.CUSTOMER_ROUTES
+      ),
+  },
+  {
+    path: 'career',
+    loadChildren: () =>
+      import('./pages/career/career.route').then((mod) => mod.CAREER_ROUTES),
+  },
   {
     path: 'contact',
     loadChildren: () =>

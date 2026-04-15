@@ -1,0 +1,56 @@
+ <section class="py-18">
+        <div class="container">
+            <div class="grid gap-6 lg:gap-10">
+                <!-- Large Review Card -->
+                <div class="w-full">
+                    <div class="bg-transparent">
+                        <div class="grid md:grid-cols-2 items-center gap-6 md:gap-12 lg:gap-20 relative">
+                            <!-- Image -->
+                            <div>
+                                <img src="/images/stories/05.jpg" class="rounded-md w-full" alt="story-image" />
+                            </div>
+
+                            <!-- Content -->
+                            <div class="space-y-4 md:p-0 p-6">
+                                <img src="/images/client/07.svg" class="h-7.5 mb-4" alt="client-logo" />
+
+                                <h4 class="font-semibold lg:text-3xl text-2xl mb-6">
+                                    <a routerLink="/customer/story-single" class="after:absolute after:inset-0 hover:text-primary transition-all">See why direct-to-consumer brands choose mizzle dor their email efforts</a>
+                                </h4>
+
+                                <p class="text-default-600 mb-6">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+                                <a routerLink="/customer/story-single" class="group-hover:text-primary-hover transition-all inline-flex items-center gap-2 text-primary font-medium after:absolute after:inset-0">
+                                    Read full story
+                                    <lucide-icon name="move-right" class="size-4 group-hover:translate-x-1 transition-all duration-300"></lucide-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 Small Review Cards -->
+                <div class="grid md:grid-cols-3 grid-cols-1 gap-6 md:mt-16">
+                   
+                    @for(item of reviewData; track $index){
+                      <div class="bg-transparent overflow-hidden group relative">
+                        <div class="overflow-hidden rounded-md mb-4">
+                            <img [src]="item.image" class="w-full" alt="story-image" />
+                        </div>
+
+                        <div class="my-5 space-y-3">
+                            <img [src]="item.clientImage" class="h-8" />
+                            <h6 class="font-semibold mb-4 text-xl">{{ item.title }}</h6>
+
+                            <a routerLink="/customer/story-single" class="group-hover:text-primary-hover transition-all inline-flex items-center gap-2 text-primary font-medium after:absolute after:inset-0">
+                                Read full story
+                                <lucide-icon name="move-right" class="size-4 group-hover:translate-x-1 transition-all duration-300"></lucide-icon>
+                            </a>
+                        </div>
+                    </div>
+                    }
+                    
+                </div>
+            </div>
+        </div>
+    </section>

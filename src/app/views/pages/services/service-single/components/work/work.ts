@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { stepData } from '../../data';
 
 @Component({
   selector: 'service-single-work',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
   styles: ``,
 })
   
-export class Work {}
+export class Work {
+  stepData = stepData;
+}

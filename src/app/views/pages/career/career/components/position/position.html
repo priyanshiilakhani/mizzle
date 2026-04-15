@@ -1,0 +1,155 @@
+<section class="lg:pb-28 pb-20">
+  <div class="container">
+    <div class="mb-14 text-center">
+      <h2 class="lg:text-[45px] md:text-4xl text-3xl mb-4">Open Position</h2>
+      <p class="md:w-2xl mx-auto">
+        Our friendly team members are always willing to help you understand your present technology
+        requirements and provide suggestions on your future needs.
+      </p>
+    </div>
+
+    <div class="lg:w-3/4 mx-auto">
+      <nav
+        class="flex flex-wrap justify-center items-center gap-x-1 mb-10"
+        aria-label="Tabs"
+        role="tablist"
+        aria-orientation="horizontal"
+      >
+        <span class="pe-2">Browse by:</span>
+        <button
+          type="button"
+          (click)="activeTab = 'pills-all'"
+          [class.active]="activeTab === 'pills-all'"
+          class="inline-block border border-transparent hs-tab-active:bg-default-100 hs-tab-active:border-default-200 text-default-600 hs-tab-active:text-default-800 font-semibold px-4 py-2 rounded transition-all duration-300 text-sm active"
+          id="pills-all-tab"
+          aria-selected="true"
+          data-hs-tab="#pills-all"
+          aria-controls="pills-all"
+          role="tab"
+        >
+          All jobs
+        </button>
+
+        <button
+          type="button"
+          (click)="activeTab = 'pills-development'"
+          [class.active]="activeTab === 'pills-development'"
+          class="inline-block border border-transparent hs-tab-active:bg-default-100 hs-tab-active:border-default-200 text-default-600 hs-tab-active:text-default-800 font-semibold px-4 py-2 rounded transition-all duration-300 text-sm"
+          id="pills-development-tab"
+          aria-selected="false"
+          data-hs-tab="#pills-development"
+          aria-controls="pills-development"
+          role="tab"
+        >
+          Development
+        </button>
+
+        <button
+          type="button"
+          (click)="activeTab = 'pills-hr'"
+          [class.active]="activeTab === 'pills-hr'"
+          class="inline-block border border-transparent hs-tab-active:bg-default-100 hs-tab-active:border-default-200 text-default-600 hs-tab-active:text-default-800 font-semibold px-4 py-2 rounded transition-all duration-300 text-sm"
+          id="pills-hr-tab"
+          aria-selected="true"
+          data-hs-tab="#pills-hr"
+          aria-controls="pills-hr"
+          role="tab"
+        >
+          HR
+        </button>
+
+        <button
+          type="button"
+           (click)="activeTab = 'pills-marketing'"
+          [class.active]="activeTab === 'pills-marketing'"
+          class="inline-block border border-transparent hs-tab-active:bg-default-100 hs-tab-active:border-default-200 text-default-600 hs-tab-active:text-default-800 font-semibold px-4 py-2 rounded transition-all duration-300 text-sm"
+          id="pills-marketing-tab"
+          aria-selected="false"
+          data-hs-tab="#pills-marketing"
+          aria-controls="pills-marketing"
+          role="tab"
+        >
+          Marketing
+        </button>
+
+        <button
+          type="button"
+          (click)="activeTab = 'pills-design'"
+          [class.active]="activeTab === 'pills-design'"
+          class="inline-block border border-transparent hs-tab-active:bg-default-100 hs-tab-active:border-default-200 text-default-600 hs-tab-active:text-default-800 font-semibold px-4 py-2 rounded transition-all duration-300 text-sm"
+          id="pills-design-tab"
+          aria-selected="false"
+          data-hs-tab="#pills-design"
+          aria-controls="pills-design"
+          role="tab"
+        >
+          Design
+        </button>
+      </nav>
+
+      <div>
+        @for (tab of positionData; track tab.id) {
+          @if (activeTab === tab.id) {
+            <div [id]="tab.id" role="tabpanel">
+              @if (tab.jobs.length > 0) {
+                @for (job of tab.jobs; track job.title) {
+                  <div
+                    class="flex flex-wrap md:justify-between items-center md:gap-0 gap-y-6 p-6 mb-4 bg-default-100 rounded group"
+                  >
+                    <div>
+                      <div class="bg-dark rounded text-white mb-4 text-xs py-1 px-2 inline-block">
+                        {{ job.category }}
+                      </div>
+
+                      <h5
+                        class="md:text-2xl text-xl group-hover:text-primary transition-all duration-300"
+                      >
+                        <a [routerLink]="job.link">{{ job.title }}</a>
+                      </h5>
+
+                      <div class="flex flex-wrap items-center md:gap-6 gap-4 mt-4">
+                        <span class="flex items-center gap-2">
+                          <lucide-icon name="map-pin" class="size-4"></lucide-icon>
+                          {{ job.location }}
+                        </span>
+
+                        <span class="flex items-center gap-2">
+                          <lucide-icon name="clock" class="size-4"></lucide-icon>
+                          {{ job.type }}
+                        </span>
+
+                        <span class="flex items-center gap-2">
+                          <lucide-icon name="briefcase-business" class="size-4"></lucide-icon>
+                          {{ job.salary }}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div>
+                      <a
+                        [routerLink]="[]"
+                        class="py-2 px-4 bg-primary hover:bg-primary-hover text-white rounded flex items-center gap-1 transition-all font-medium"
+                      >
+                        Apply now
+                        <lucide-icon name="arrow-right" class="size-4"></lucide-icon>
+                      </a>
+                    </div>
+                  </div>
+                }
+              } @else {
+                <div class="text-center p-6">
+                  <span class="text-primary flex justify-center">
+                    <lucide-icon name="circle-slash" class="size-16"></lucide-icon>
+                  </span>
+                  <h5 class="mt-6 text-2xl">
+                    {{ tab.emptyMessage }}
+                  </h5>
+                </div>
+              }
+            </div>
+          }
+        }
+      </div>
+    </div>
+  </div>
+</section>

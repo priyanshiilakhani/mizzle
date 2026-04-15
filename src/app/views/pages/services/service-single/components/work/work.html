@@ -1,65 +1,23 @@
 <section class="lg:py-28 md:py-20 py-16">
   <div class="container">
-    <!-- Title -->
     <div class="max-w-xl mx-auto text-center mb-4 md:mb-16">
       <h2 class="lg:text-[45px] md:text-4xl text-3xl font-bold">How its work?</h2>
     </div>
 
-    <!-- Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 lg:gap-16">
-      <!-- Item 1 -->
-      <div class="flex flex-col items-center text-center bg-transparent">
+       @for( item of stepData; track $index ){
+         <div class="flex flex-col items-center text-center bg-transparent">
         <div
           class="size-14 flex items-center justify-center bg-primary/10 text-primary rounded-md font-bold mb-4 text-xl"
         >
-          01
+          {{item.stepNumber}}
         </div>
-        <h6 class="text-xl font-bold mb-2">Understanding Client Goals</h6>
+        <h6 class="text-xl font-bold mb-2">{{item.title}}</h6>
         <p class="text-sm">
-          The process begins with a thorough consultation with the client to understand their
-          business goals.
+          {{item.description}}
         </p>
       </div>
-
-      <!-- Item 2 -->
-      <div class="flex flex-col items-center text-center bg-transparent">
-        <div
-          class="size-14 flex items-center justify-center bg-primary/10 text-primary rounded-md font-bold mb-4 text-xl"
-        >
-          02
-        </div>
-        <h6 class="text-xl font-bold mb-2">Market Research</h6>
-        <p class="text-sm">
-          They also analyze the client's current online presence and marketing efforts.
-        </p>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="flex flex-col items-center text-center bg-transparent">
-        <div
-          class="size-14 flex items-center justify-center bg-primary/10 text-primary rounded-md font-bold mb-4 text-xl"
-        >
-          03
-        </div>
-        <h6 class="text-xl font-bold mb-2">Search Engine Optimization (SEO)</h6>
-        <p class="text-sm">
-          For visibility, SEO strategies are employed to improve the client's website's search
-          engine rankings.
-        </p>
-      </div>
-
-      <!-- Item 4 -->
-      <div class="flex flex-col items-center text-center bg-transparent">
-        <div
-          class="size-14 flex items-center justify-center bg-primary/10 text-primary rounded-md font-bold mb-4 text-xl"
-        >
-          04
-        </div>
-        <h6 class="text-xl font-bold mb-2">Adapting to Industry Changes</h6>
-        <p class="text-sm">
-          Digital marketing agencies stay up-to-date with industry trends and algorithm changes.
-        </p>
-      </div>
+       }
     </div>
   </div>
 </section>

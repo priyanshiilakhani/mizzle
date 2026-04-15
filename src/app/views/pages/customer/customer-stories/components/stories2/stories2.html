@@ -1,0 +1,54 @@
+<section>
+  <div class="container">
+    <div class="lg:flex justify-center">
+      <div class="lg:w-10/12">
+        <!-- Swiper START -->
+        <div class="swiper mb-6">
+          <!-- Wrapper -->
+          <swiper-container
+            loop="true"
+            space-between="80"
+            autoplay-delay="4000"
+            autoplay-disable-on-interaction="false"
+            pagination="true"
+            pagination-el=".swiper-pagination"
+            pagination-clickable="true"
+            class="mb-12"
+          >
+            @for (item of storyData; track $index) {
+              <div class="swiper-slide text-center">
+                <div class="mb-6 flex justify-center">
+                  <img [src]="item.image" class="h-10" />
+                </div>
+
+                <q class="md:text-3xl text-2xl font-medium leading-10 text-default-800 block">{{
+                  item.description
+                }}</q>
+
+                <div class="flex justify-center items-center mt-6 mb-10">
+                  <img [src]="item.client.image" class="size-12 rounded-full" />
+                  <div class="ms-3 text-start">
+                    <h6 class="text-xl font-semibold">{{ item.client.name }}</h6>
+                    <p class="text-sm text-default-600">{{ item.client.role }}</p>
+                  </div>
+                </div>
+
+                <a
+                  routerLink="/customer/story-single"
+                  class="group hover:text-primary-hover transition-all inline-flex items-center gap-2 text-primary font-medium"
+                >
+                  Read full story
+                  <lucide-icon
+                    name="move-right"
+                    class="size-4 group-hover:translate-x-1 transition-all duration-300"
+                  ></lucide-icon>
+                </a>
+              </div>
+            }
+          </swiper-container>
+          <div class="swiper-pagination swiper-pagination-primary"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
