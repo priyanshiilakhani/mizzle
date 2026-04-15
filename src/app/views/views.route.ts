@@ -62,11 +62,11 @@ export const VIEW_ROUTES: Route[] = [
   //   loadChildren: () =>
   //     import('./portfolio/portfolio.route').then((mod) => mod.PORTFOLIO_ROUTE),
   // },
-  // {
-  //   path: 'auth',
-  //   loadChildren: () =>
-  //     import('./auth/auth.route').then((mod) => mod.AUTH_ROUTES),
-  // },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./auth/auth.route').then((mod) => mod.AUTH_ROUTES),
+  },
 
    {
     path: 'blog',
