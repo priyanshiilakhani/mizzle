@@ -5,82 +5,30 @@
             <div class="swiper h-full">
                 <swiper-container class="swiper-wrapper" pagination="true" pagination-el=".swiper-pagination" pagination-clickable="true" autoplay="true">
                     <!-- Slide 1 -->
+                    @for (slide of slideData; track $index) {
                     <swiper-slide>
-                        <div class="relative h-full bg-cover bg-left bg-no-repeat bg-[url('/images/auth/01.jpg')]">
+                        <div class="relative h-full bg-cover bg-left bg-no-repeat" [ngStyle]="{'background-image': 'url(' + slide.image + ')'}">
                             <div class="absolute inset-0 bg-dark/60"></div>
 
                             <div class="relative z-20 h-full p-16 flex flex-col justify-end">
-                                <h4 class="font-light text-white text-3xl mb-2">"With unwavering determination, they navigate the complexities of the industry, forging strategic partnerships and driving transformative change."</h4>
+                                <h4 class="font-light text-white text-3xl mb-2"> {{ slide.text }}</h4>
                                 <div class="flex items-start justify-between mt-10 text-white">
                                     <div>
-                                        <h5 class="text-2xl font-bold text-white">Emma Watson</h5>
-                                        <span class="text-white/80">Founder, catalog</span>
+                                        <h5 class="text-2xl font-bold text-white">{{ slide.name }}</h5>
+                                        <span class="text-white/80">{{ slide.role }}</span>
                                     </div>
 
                                     <div class="flex space-x-1">
+                                        @for (star of [1,2,3,4]; track $index) {
                                         <lucide-icon name="star" class="fill-white text-white size-4"></lucide-icon>
-                                        <lucide-icon name="star" class="fill-white text-white size-4"></lucide-icon>
-                                        <lucide-icon name="star" class="fill-white text-white size-4"></lucide-icon>
-                                        <lucide-icon name="star" class="fill-white text-white size-4"></lucide-icon>
+                                        }
                                         <lucide-icon name="star-half" class="fill-white text-white size-4"></lucide-icon>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </swiper-slide>
-
-                    <!-- Slide 2 -->
-                    <swiper-slide>
-                        <div class="relative h-full bg-cover bg-left bg-no-repeat  bg-[url('/images/auth/02.jpg')]">
-                            <div class="absolute inset-0 bg-dark/60"></div>
-
-                            <div class="relative z-20 h-full p-16 flex flex-col justify-end">
-                                <h4 class="font-light text-white text-3xl mb-2">
-                                    "An exceptional agency CEO is a visionary, constantly pushing the boundaries of creativity and pushing their team to new heights. They inspire with their passion and cultivate a culture of trust and respect."
-                                </h4>
-
-                                <div class="flex items-start justify-between mt-10 text-white">
-                                    <div>
-                                        <h5 class="text-2xl font-bold text-white">Carolyn Ortiz</h5>
-                                        <span class="text-white/80">CEO, mizzle</span>
-                                    </div>
-
-                                    <div class="flex space-x-1">
-                                        <lucide-icon name="star" class="fill-white text-white size-4"></lucide-icon>
-                                        <lucide-icon name="star" class="fill-white text-white size-4"></lucide-icon>
-                                        <lucide-icon name="star" class="fill-white text-white size-4"></lucide-icon>
-                                        <lucide-icon name="star" class="fill-white text-white size-4"></lucide-icon>
-                                        <lucide-icon name="star-half" class="fill-white text-white size-4"></lucide-icon>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </swiper-slide>
-
-                    <!-- Slide 3 -->
-                    <swiper-slide>
-                        <div class="relative h-full bg-cover bg-left bg-no-repeat bg-[url('/images/auth/03.jpg')]">
-                            <div class="absolute inset-0 bg-dark/60"></div>
-
-                            <div class="relative z-20 h-full p-16 flex flex-col justify-end">
-                                <h4 class="font-light text-white text-3xl mb-2">" Through collaboration and strategic direction, they steer the agency towards its goals, navigating the ever-evolving landscape with agility and grace."</h4>
-                                <div class="flex items-start justify-between mt-10 text-white">
-                                    <div>
-                                        <h5 class="text-2xl font-bold text-white">Dennis Barrett</h5>
-                                        <span class="text-white/80">Founder, catalog</span>
-                                    </div>
-
-                                    <div class="flex space-x-1">
-                                        <lucide-icon name="star" class="fill-white text-white size-4"></lucide-icon>
-                                        <lucide-icon name="star" class="fill-white text-white size-4"></lucide-icon>
-                                        <lucide-icon name="star" class="fill-white text-white size-4"></lucide-icon>
-                                        <lucide-icon name="star" class="fill-white text-white size-4"></lucide-icon>
-                                        <lucide-icon name="star-half" class="fill-white text-white size-4"></lucide-icon>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </swiper-slide>
+                    }
                 </swiper-container>
                 <div class="swiper-pagination swiper-pagination-line mb-3"></div>
             </div>
@@ -118,15 +66,23 @@
                     <!-- Form -->
                     <form (ngSubmit)="onSubmit()">
                         <div class="relative mb-6">
-                            <input type="email" id="email" name="email" placeholder="name@example.com" class="peer block w-full border border-default-200 rounded-md bg-body-bg px-4 py-3 text-default-900 placeholder-transparent focus:outline-none" [(ngModel)]="email" required />
-                            <label for="email" class="absolute start-3 top-2 text-default-600 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-default-600 peer-focus:-top-3 peer-focus:text-sm peer-focus:text-default-600 bg-body-bg px-1">
+                            <input type="email" id="email" name="email" placeholder=" " class="peer block w-full border border-default-200 rounded-md bg-body-bg px-4 py-3 text-default-900 focus:outline-none" [(ngModel)]="email" required />
+
+                            <label for="email" class="absolute start-3 -top-3 text-sm text-default-600 bg-body-bg px-1
+           transition-all
+           peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
+           peer-focus:-top-3 peer-focus:text-sm">
                                 Email address
                             </label>
                         </div>
 
                         <div class="relative mb-6">
-                            <input type="password" id="password" name="password" placeholder="password" class="peer block w-full border border-default-200 rounded-md bg-body-bg px-4 py-3 text-default-900 placeholder-transparent focus:outline-none" [(ngModel)]="password" />
-                            <label for="password" class="absolute start-3 top-2 text-default-600 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-default-600 peer-focus:-top-3 peer-focus:text-sm peer-focus:text-default-600 bg-body-bg px-1">
+                            <input type="password" id="password" name="password" placeholder=" " class="peer block w-full border border-default-200 rounded-md bg-body-bg px-4 py-3 text-default-900 focus:outline-none" [(ngModel)]="password" />
+
+                            <label for="password" class="absolute start-3 -top-3 text-sm text-default-600 bg-body-bg px-1
+           transition-all
+           peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
+           peer-focus:-top-3 peer-focus:text-sm">
                                 Password
                             </label>
                         </div>
@@ -142,7 +98,7 @@
                             </div>
 
                             <div>
-                                <a routerLink="/forgot-password" class="text-primary hover:text-primary-hover transition-all">Forgot password?</a>
+                                <a routerLink="/auth/forgot-password" class="text-primary hover:text-primary-hover transition-all">Forgot password?</a>
                             </div>
                         </div>
                         <button type="submit" class="w-full bg-dark hover:bg-dark-hover transition-all text-white rounded py-2 px-4">Login</button>
@@ -151,7 +107,7 @@
                     <div class="mt-6 text-center">
                         <span class="text-default-600">
                             Not registered yet?
-                            <a routerLink="/sign-up" class="text-primary hover:text-primary-hover transition-all">Create an account</a>
+                            <a routerLink="/auth/sign-up" class="text-primary hover:text-primary-hover transition-all">Create an account</a>
                         </span>
                     </div>
                 </div>
