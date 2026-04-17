@@ -1,0 +1,56 @@
+<section class="lg:py-30 md:py-20 py-16">
+        <div class="container">
+            <div class="md:w-7/12 mx-auto">
+                <h2 class="mb-10 lg:text-[45px] md:text-4xl text-3xl text-center">You have questions we have answers</h2>
+
+               <div class="hs-accordion-group">
+  @for (item of faqsData; track item.id; let i = $index) {
+    <div
+      class="hs-accordion mb-4"
+      [class.active]="item.isOpen"
+      [attr.id]="item.id"
+    >
+
+      <!-- Button -->
+      <button
+        class="hs-accordion-toggle inline-flex justify-between items-center gap-x-3 w-full rounded font-semibold text-start bg-default-100 text-default-800 py-4 ps-5 pe-8"
+        [attr.aria-expanded]="item.isOpen"
+        [attr.aria-controls]="'collapse-' + (i + 1)"
+      >
+        {{ item.question }}
+
+        <div>
+          <lucide-icon
+            name="plus"
+            class="hs-accordion-active:hidden block size-4 text-default-800"
+          ></lucide-icon>
+
+          <lucide-icon
+            name="minus"
+            class="hs-accordion-active:block hidden size-4 text-default-800"
+          ></lucide-icon>
+        </div>
+      </button>
+
+      <!-- Content -->
+      <div
+        [attr.id]="'collapse-' + (i + 1)"
+        class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300"
+        [class.hidden]="!item.isOpen"
+        role="region"
+        [attr.aria-labelledby]="item.id"
+      >
+        <div class="mt-4.5 px-4">
+          <p class="text-default-700">
+            {{ item.answer }}
+          </p>
+        </div>
+      </div>
+
+    </div>
+  }
+</div>
+
+            </div>
+        </div>
+    </section>

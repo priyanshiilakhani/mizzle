@@ -1,0 +1,106 @@
+<section class="lg:py-30 md:py-20 py-16">
+    <div class="container">
+        <div class="md:mb-14 mb-6 text-center">
+            <h2 class="lg:text-[45px] md:text-4xl text-3xl mb-6">Features included in every plan</h2>
+            <p class="lg:w-3xl mx-auto">Our passion for customer excellence is just one reason why we are the market
+                leader. We've always worked very hard to give our customers the best experience.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 grid-cols-1 md:gap-10 gap-6">
+            @for(item of featureData; track $index){
+            <div class="border border-default-200 rounded-md bg-default-50 p-5 text-center">
+                <div class="size-14 mx-auto flex justify-center items-center">
+                    <lucide-icon [name]="item.icon" class="size-7 text-primary"></lucide-icon>
+                </div>
+                <h6 class="text-xl mb-2">{{item.title}}</h6>
+                <p class="mb-4">{{item.description}}</p>
+            </div>
+            }
+        </div>
+
+        <!-- Table START -->
+        <div class="overflow-x-auto whitespace-nowrap mt-10">
+            <table class="w-full">
+                <thead>
+                    <tr>
+                        <th class="border-b py-4 px-2 border-default-200"></th>
+                        <th class="text-center py-4 px-2 border-b border-default-200">
+                            <div class="p-4">
+                                <span class="block text-default-800">Basic plan</span>
+                                <p class="mb-4 text-default-800">
+                                    <span class="lg:text-[45px] md:text-4xl text-3xl font-bold text-default-800"
+                                        data-monthly-price="$25" data-annual-price="$20">$25</span>
+                                    /month
+                                </p>
+                                <a [routerLink]="[]"
+                                    class="px-3.5 py-2 bg-dark hover:bg-dark-hover transition-all font-medium text-white text-xs rounded">Get
+                                    started</a>
+                            </div>
+                        </th>
+
+                        <th class="text-center py-4 px-2 border-b border-default-200">
+                            <div class="p-4">
+                                <span class="block text-default-800">Standard plan</span>
+                                <p class="mb-4 text-default-800">
+                                    <span class="lg:text-[45px] md:text-4xl text-3xl font-bold text-default-800"
+                                        data-monthly-price="$59" data-annual-price="$45">$59</span>
+                                    /month
+                                </p>
+                                <a [routerLink]="[]"
+                                    class="px-3.5 py-2 bg-dark hover:bg-dark-hover transition-all font-medium text-white text-xs rounded">Get
+                                    started</a>
+                            </div>
+                        </th>
+
+                        <th class="text-center py-4 px-2 border-b border-default-200">
+                            <div class="p-4">
+                                <span class="block text-default-800">Basic plan</span>
+                                <p class="mb-4 text-default-800">
+                                    <span class="lg:text-[45px] md:text-4xl text-3xl font-bold text-default-800"
+                                        data-monthly-price="$99" data-annual-price="$145">$99</span>
+                                    /month
+                                </p>
+                                <a [routerLink]="[]"
+                                    class="px-3.5 py-2 bg-dark hover:bg-dark-hover transition-all font-medium text-white text-xs rounded">Get
+                                    started</a>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody class="divide-y divide-default-200">
+                    @for (row of pricing2Data; track row.title) {
+                    <tr>
+                        <th class="py-4 px-2 text-start">
+                            <span class="lg:ps-6 text-default-800 font-medium">
+                                {{ row.title }}
+                            </span>
+                        </th>
+
+                        @for (value of row.values; track $index) {
+                        <td class="text-center" [class]="{
+                        'text-default-800': typeof value === 'string',
+                        'text-primary': typeof value !== 'string' && value.type === 'success',
+                        'text-danger': typeof value !== 'string' && value.type === 'danger'
+                        }">
+
+                            @if (typeof value === 'string') {
+                            {{ value }}
+                            }
+
+                            @else {
+                            <lucide-icon [name]="value.icon" class="size-5 mx-auto">
+                            </lucide-icon>
+                            }
+
+                        </td>
+                        }
+                    </tr>
+                    }
+                </tbody>
+
+
+            </table>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,42 @@
+<section>
+    <div class="container">
+        <div class="md:w-5/6 mx-auto">
+            <div class="hs-accordion-group">
+                @for (item of faqData; track item.id; let i = $index) {
+
+                <div class="hs-accordion mb-4" [class.active]="item.isActive" [id]="'heading-' + (i + 1)">
+
+                    <button
+                        class="hs-accordion-toggle hs-accordion-active:bg-zinc-800 hs-accordion-active:text-white inline-flex justify-between items-center gap-x-3 w-full rounded font-semibold text-start border border-default-200 text-default-800 py-4 ps-5 pe-8"
+                        aria-expanded="false" [attr.aria-controls]="'collapse-' + (i + 1)">
+
+                        {{ item.question }}
+
+                        <div>
+                            <lucide-icon name="plus" class="hs-accordion-active:hidden block size-4 text-default-800">
+                            </lucide-icon>
+
+                            <lucide-icon name="minus"
+                                class="hs-accordion-active:block hidden hs-accordion-active:text-white size-4 text-default-800">
+                            </lucide-icon>
+                        </div>
+                    </button>
+
+                    <div [id]="'collapse-' + (i + 1)"
+                        class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300"
+                        [class.hidden]="!item.isActive" role="region" [attr.aria-labelledby]="'heading-' + (i + 1)">
+
+                        <div class="mt-4.5 px-4">
+                            <p class="text-default-700">
+                                {{ item.answer }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                }
+            </div>
+
+        </div>
+    </div>
+</section>
