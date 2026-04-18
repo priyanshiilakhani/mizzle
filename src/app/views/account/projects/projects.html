@@ -1,0 +1,128 @@
+<section class="lg:py-28 py-18">
+    <div class="container">
+        <div class="grid lg:grid-cols-4 grid-cols-1 gap-4">
+            <div>
+                <app-account-sidebar />
+            </div>
+
+            <div class="lg:col-span-3 lg:ps-14">
+                <div class="flex justify-between items-center mb-14">
+                    <h1 class="lg:text-4xl md:text-3xl text-2xl">My projects</h1>
+                    <div class="lg:hidden flex items-center gap-2 text-start">
+                        <button type="button"
+                            class="flex items-center gap-2 py-2 px-4 bg-primary hover:bg-primary-hover text-white rounded font-medium w-full"
+                            aria-haspopup="dialog" aria-expanded="false" aria-controls="offcanvasSidebar"
+                            aria-label="Toggle navigation" data-hs-overlay="#offcanvasSidebar">
+                            <lucide-icon name="sliders-horizontal" class="size-4"></lucide-icon>
+                            Menu
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-12 md:grid-cols-6 grid-cols-1 items-center gap-4 mb-10">
+                    <div class="lg:col-span-5 md:col-span-6">
+                        <form class="relative">
+                            <input type="text" placeholder="Search"
+                                class="w-full border border-default-200 text-default-600 rounded py-2 px-4" />
+                            <lucide-icon name="search"
+                                class="size-5 absolute inset-y-0 end-3 top-1/2 -translate-y-1/2 text-default-400"></lucide-icon>
+                        </form>
+                    </div>
+
+                    <div class="lg:col-span-4 md:col-span-3 lg:ms-auto">
+                        <select class="w-full border border-default-200 text-default-800 rounded py-2 ps-4 pe-16">
+                            <option>Sort by</option>
+                            <option selected="">Published</option>
+                            <option>Free</option>
+                            <option>Newest</option>
+                            <option>Oldest</option>
+                        </select>
+                    </div>
+
+                    <div class="lg:col-span-3 md:col-span-3">
+                        <a [routerLink]="[]"
+                            class="px-4 py-2 bg-primary hover:bg-primary-hover flex items-center gap-2 rounded justify-center text-white transition-all">
+                            <lucide-icon name="plus" class="size-4.5"></lucide-icon>
+                            Add new project
+                        </a>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto whitespace-nowrap mt-10">
+                    <table class="w-full">
+                        <thead class="bg-dark text-white">
+                            <tr>
+                                <th class="py-4 px-2 text-start rounded-s-md">Image</th>
+                                <th class="py-4 px-2 text-start">Title</th>
+                                <th class="py-4 px-2 text-start">Status</th>
+                                <th class="py-4 px-2 text-start">Category</th>
+                                <th class="py-4 px-2 text-start rounded-e-md">Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="divide-y divide-default-200">
+
+                            @for (item of projectData; track item.id) {
+
+                            <tr class="hover:bg-default-50 text-default-800">
+
+                                <td class="py-4 px-2">
+                                    <img [src]="item.image" class="w-20 rounded" />
+                                </td>
+
+                                <td class="py-4 px-2 font-medium">
+                                    {{ item.title }}
+                                </td>
+
+                                <td class="py-4 px-2">
+                                    <div class="flex items-center gap-2">
+                                        
+                                     @if (item.status === 'Published') {
+                                        <lucide-icon name="circle" class="size-2.5 fill-primary text-primary"></lucide-icon>
+                                        } @else {
+                                        <lucide-icon name="circle" class="size-2.5 fill-danger text-danger"></lucide-icon>
+                                        }
+
+                                        {{ item.status }}
+
+                                    </div>
+                                </td>
+
+                                <td class="py-4 px-2">
+                                    {{ item.category }}
+                                </td>
+
+                                <td class="py-4 px-2">
+                                    <div class="flex items-center gap-2">
+
+                                        <button
+                                            class="w-10 h-9 bg-dark hover:bg-dark-hover flex justify-center items-center text-white rounded transition-all">
+                                            <lucide-icon name="square-pen" class="size-3.5"></lucide-icon>
+                                        </button>
+
+                                        <button
+                                            class="w-10 h-9 border border-default-200 bg-default-100 hover:bg-default-200 flex justify-center items-center text-default-600 rounded transition-all">
+                                            <lucide-icon name="power" class="size-3.5"></lucide-icon>
+                                        </button>
+
+                                        <button
+                                            class="w-10 h-9 bg-danger-hover hover:bg-danger flex justify-center items-center text-white rounded transition-all">
+                                            <lucide-icon name="trash-2" class="size-4"></lucide-icon>
+                                        </button>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+
+                            }
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer />

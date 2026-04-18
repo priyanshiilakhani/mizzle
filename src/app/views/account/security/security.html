@@ -1,0 +1,473 @@
+<section class="lg:py-28 py-18">
+  <div class="container">
+    <div class="grid lg:grid-cols-4 grid-cols-1 gap-4">
+      <div>
+        <app-account-sidebar />
+      </div>
+
+      <div class="lg:col-span-3 lg:ps-14">
+        <div class="flex justify-between items-center mb-14">
+          <h1 class="lg:text-4xl md:text-3xl text-2xl">Account security</h1>
+          <div class="lg:hidden flex items-center gap-2 text-start">
+            <button
+              type="button"
+              class="flex items-center gap-2 py-2 px-4 bg-primary hover:bg-primary-hover text-white rounded font-medium w-full"
+              aria-haspopup="dialog"
+              aria-expanded="false"
+              aria-controls="offcanvasSidebar"
+              aria-label="Toggle navigation"
+              data-hs-overlay="#offcanvasSidebar"
+            >
+              <lucide-icon name="sliders-horizontal" class="size-4"></lucide-icon>
+              Menu
+            </button>
+          </div>
+        </div>
+
+        <form class="space-y-6">
+          <div
+            class="bg-default-100 border border-default-200 rounded flex flex-wrap justify-between items-center gap-2 p-6"
+          >
+            <div>
+              <h6 class="text-xl mb-2">Activity Logs</h6>
+              <p>You can save your all activity logs including unusual activity detected.</p>
+            </div>
+
+            <label for="checkPrivacy1" class="relative inline-block w-11 h-6 cursor-pointer">
+              <input type="checkbox" id="checkPrivacy1" class="peer sr-only" checked />
+              <span
+                class="absolute inset-0 bg-default-300 rounded-full transition-colors duration-200 ease-in-out peer-checked:bg-primary peer-disabled:opacity-50 peer-disabled:pointer-events-none"
+              ></span>
+              <span
+                class="absolute top-1/2 start-0.5 -translate-y-1/2 size-5 bg-default-400 peer-checked:bg-white rounded-full shadow-xs transition-all duration-200 ease-in-out peer-checked:translate-x-full"
+              ></span>
+            </label>
+          </div>
+
+          <div
+            class="bg-default-100 border border-default-200 rounded flex flex-wrap justify-between items-center gap-2 p-6"
+          >
+            <div>
+              <h6 class="text-xl mb-2">Two factor authentication</h6>
+              <p class="lg:w-3xl md:w-xl text-sm">
+                Secure your account with 2 Step security. When it is activated you will need to
+                enter not only your password, but also a special code using app. You can receive
+                this code by in mobile app.
+              </p>
+            </div>
+
+            <label for="checkPrivacy2" class="relative inline-block w-11 h-6 cursor-pointer">
+              <input type="checkbox" id="checkPrivacy2" class="peer sr-only" checked />
+              <span
+                class="absolute inset-0 bg-default-300 rounded-full transition-colors duration-200 ease-in-out peer-checked:bg-primary peer-disabled:opacity-50 peer-disabled:pointer-events-none"
+              ></span>
+              <span
+                class="absolute top-1/2 start-0.5 -translate-y-1/2 size-5 bg-default-400 peer-checked:bg-white rounded-full shadow-xs transition-all duration-200 ease-in-out peer-checked:translate-x-full"
+              ></span>
+            </label>
+          </div>
+
+          <div class="bg-transparent py-5">
+            <!-- Header -->
+            <div class="pb-4 border-b border-default-200">
+              <h6 class="text-xl">Linked account</h6>
+            </div>
+
+            <!-- Body -->
+            <div class="mt-6 space-y-6">
+              <div
+                class="bg-primary/10 border border-primary rounded flex flex-wrap justify-between items-center relative p-6"
+              >
+                <div
+                  class="absolute size-6 bg-primary text-white flex justify-center items-center rounded-full -end-3 -top-3"
+                >
+                  <lucide-icon name="check" class="size-4"></lucide-icon>
+                </div>
+
+                <div class="flex flex-wrap itmes-center gap-4">
+                  <iconify-icon
+                    icon="tabler:brand-google-filled"
+                    class="md:size-14 size-10 text-primary"
+                    width="56"
+                  ></iconify-icon>
+                  <div>
+                    <h6 class="text-xl mb-1">Google</h6>
+                    <p class="text-sm">You are successfully connected to your Google account</p>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4 md:ms-auto md:mt-0 mt-2">
+                  <button
+                    class="py-1.5 px-3 bg-danger-hover hover:bg-danger font-medium text-white rounded text-sm transition-all"
+                  >
+                    Invoke
+                  </button>
+                  <a [routerLink]="[]" class="hover:text-primary transition-all font-medium text-sm"
+                    >Learn more</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="border border-default-200 rounded flex flex-wrap justify-between items-center relative p-6"
+              >
+                <div class="flex flex-wrap itmes-center gap-4">
+                  <lucide-icon
+                    name="linkedin"
+                    class="fill-sky-700 md:size-14 size-10 text-sky-700"
+                  ></lucide-icon>
+                  <div>
+                    <h6 class="text-xl mb-1">Linkedin</h6>
+                    <p class="text-sm">
+                      Connect with Linkedin account for a personalized experience
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-4 md:ms-auto md:mt-0 mt-2">
+                  <button
+                    class="py-1.5 px-3 hover:bg-dark-hover bg-dark text-white font-medium rounded text-sm transition-all"
+                  >
+                    Connect Linkedin
+                  </button>
+                  <a [routerLink]="[]" class="hover:text-primary transition-all font-medium text-sm"
+                    >Learn more</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="border border-default-200 rounded flex flex-wrap justify-between items-center relative p-6"
+              >
+                <div class="flex flex-wrap itmes-center gap-4">
+                  <lucide-icon
+                    name="facebook"
+                    class="fill-indigo-400 md:size-14 size-10 text-indigo-400"
+                  ></lucide-icon>
+                  <div>
+                    <h6 class="text-xl mb-1">Facebook</h6>
+                    <p class="text-sm">
+                      Connect with Facebook account for a personalized experience
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-4 md:ms-auto md:mt-0 mt-2">
+                  <button
+                    class="py-1.5 px-3 hover:bg-dark-hover bg-dark text-white font-medium rounded text-sm transition-all"
+                  >
+                    Connect Linkedin
+                  </button>
+                  <a [routerLink]="[]" class="hover:text-primary transition-all font-medium text-sm"
+                    >Learn more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div class="text-center md:my-10 my-6">
+          <lucide-icon name="ellipsis" class="size-4 mx-auto"></lucide-icon>
+        </div>
+
+        <div class="grid md:grid-cols-2 grid-cols-1 lg:gap-14 gap-7.5">
+          <form class="w-full">
+            <div class="rounded-xl bg-transparent">
+              <h6 class="text-xl border-b border-default-200 py-5">Social media profile</h6>
+
+              <div class="pt-5 space-y-6">
+                <!-- Facebook -->
+                <div>
+                  <label class="text-default-600 mb-2 flex items-center gap-2">
+                    <lucide-icon
+                      name="facebook"
+                      class="fill-indigo-400 text-indigo-400 size-4"
+                    ></lucide-icon>
+                    Enter Facebook username
+                  </label>
+                  <input
+                    type="text"
+                    value="JqMiller"
+                    class="w-full border border-default-200 text-default-800 rounded py-2 px-4"
+                    placeholder="Enter username"
+                  />
+                </div>
+
+                <!-- Twitter -->
+                <div>
+                  <label class="text-default-600 mb-2 flex items-center gap-2">
+                    <lucide-icon
+                      name="twitter"
+                      class="fill-sky-400 text-sky-400 size-4"
+                    ></lucide-icon>
+                    Enter twitter username
+                  </label>
+                  <input
+                    type="text"
+                    value="JqMiller"
+                    class="w-full border border-default-200 text-default-800 rounded py-2 px-4"
+                    placeholder="Enter username"
+                  />
+                </div>
+
+                <!-- Instagram -->
+                <div>
+                  <label class="text-default-600 mb-2 flex items-center gap-2">
+                    <lucide-icon name="instagram" class="text-pink-400 size-4"></lucide-icon>
+                    Enter instagram username
+                  </label>
+                  <input
+                    type="text"
+                    value="JqMiller"
+                    class="w-full border border-default-200 text-default-800 rounded py-2 px-4"
+                    placeholder="Enter username"
+                  />
+                </div>
+
+                <!-- YouTube -->
+                <div>
+                  <label class="text-default-600 mb-2 flex items-center gap-2">
+                    <lucide-icon name="youtube" class="text-danger size-4"></lucide-icon>
+                    Add your youtube profile URL
+                  </label>
+                  <input
+                    type="text"
+                    value="https://www.youtube.com/in/Mizzle-05620abc"
+                    class="w-full border border-default-200 text-default-800 rounded py-2 px-4"
+                    placeholder="Enter username"
+                  />
+                </div>
+              </div>
+
+              <div class="flex justify-end mt-6">
+                <button
+                  class="bg-primary hover:bg-primary-hover text-white px-4 py-2 rounded transition-all"
+                >
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <form class="w-full">
+            <div class="rounded-xl bg-transparent">
+              <div class="flex justify-between items-center border-b border-default-200 py-5">
+                <h6 class="text-xl">Devices</h6>
+                <button
+                  class="py-1.5 px-3 bg-danger/15 hover:bg-danger text-danger hover:text-white rounded transition-all text-sm"
+                >
+                  Sign out from all devices
+                </button>
+              </div>
+
+              <div class="py-5 space-y-6">
+                <div
+                  class="flex justify-between items-center pb-6 mb-6 border-b border-default-200"
+                >
+                  <div class="flex items-start gap-2">
+                    <span class="size-6 text-default-700 mt-1">
+                      <lucide-icon name="smartphone" class="size-6"></lucide-icon>
+                    </span>
+
+                    <div>
+                      <p class="text-default-800 font-semibold flex items-center gap-1">
+                        Iphone 12pro
+                        <span class="bg-primary text-white px-2 py-1 font-medium text-xs rounded"
+                          >Active now</span
+                        >
+                      </p>
+
+                      <ul class="flex items-center gap-4 list-disc list-inside text-sm">
+                        <li class="list-none">London, UK</li>
+                        <li>Oct 23 at 1:15PM</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="hs-dropdown [--placement:bottom-right] relative inline-flex">
+                    <button
+                      id="hs-dropdown-default"
+                      type="button"
+                      class="hs-dropdown-toggle flex items-center gap-2 text-default-800 hover:text-primary transition-all"
+                      aria-haspopup="menu"
+                      aria-expanded="false"
+                      aria-label="Dropdown"
+                    >
+                      <lucide-icon name="ellipsis-vertical" class="size-5"></lucide-icon>
+                    </button>
+
+                    <div
+                      class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-30 bg-body-bg shadow-xl rounded-md px-2.5 py-3 border border-default-200 z-10"
+                      role="menu"
+                      aria-orientation="vertical"
+                      aria-labelledby="hs-dropdown-default"
+                    >
+                      <div class="space-y-0.5">
+                        <a
+                          class="flex items-center gap-2 py-1.5 px-4 text-[15px] hover:bg-primary/10 font-medium hover:text-primary rounded group"
+                          [routerLink]="[]"
+                        >
+                          <lucide-icon
+                            name="square-pen"
+                            class="text-default-600 size-4 group-hover:text-primary"
+                          ></lucide-icon>
+                          Edit
+                        </a>
+
+                        <a
+                          class="flex items-center gap-2 py-1.5 px-4 text-[15px] hover:bg-primary/10 font-medium hover:text-primary rounded group"
+                          [routerLink]="[]"
+                        >
+                          <lucide-icon
+                            name="circle-minus"
+                            class="text-default-600 size-4 group-hover:text-primary"
+                          ></lucide-icon>
+                          Remove
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="flex justify-between items-center pb-6 mb-6 border-b border-default-200"
+                >
+                  <div class="flex items-start gap-2">
+                    <span class="size-6 text-default-700 mt-1">
+                      <lucide-icon name="smartphone" class="size-6"></lucide-icon>
+                    </span>
+
+                    <div>
+                      <p class="text-default-800 font-semibold">Iphone SE</p>
+                      <ul class="flex items-center gap-4 list-disc list-inside text-sm">
+                        <li class="list-none">London, UK</li>
+                        <li>Oct 13 at 4:15PM</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="hs-dropdown [--placement:bottom-right] relative inline-flex">
+                    <button
+                      id="hs-dropdown-default"
+                      type="button"
+                      class="hs-dropdown-toggle flex items-center gap-2 text-default-800 hover:text-primary transition-all"
+                      aria-haspopup="menu"
+                      aria-expanded="false"
+                      aria-label="Dropdown"
+                    >
+                      <lucide-icon name="ellipsis-vertical" class="size-5"></lucide-icon>
+                    </button>
+
+                    <div
+                      class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-30 bg-body-bg shadow-xl rounded-md px-2.5 py-3 border border-default-200 z-10"
+                      role="menu"
+                      aria-orientation="vertical"
+                      aria-labelledby="hs-dropdown-default"
+                    >
+                      <div class="space-y-0.5">
+                        <a
+                          class="flex items-center gap-2 py-1.5 px-4 text-[15px] hover:bg-primary/10 font-medium hover:text-primary rounded group"
+                          [routerLink]="[]"
+                        >
+                          <lucide-icon
+                            name="square-pen"
+                            class="text-default-600 size-4 group-hover:text-primary"
+                          ></lucide-icon>
+                          Edit
+                        </a>
+
+                        <a
+                          class="flex items-center gap-2 py-1.5 px-4 text-[15px] hover:bg-primary/10 font-medium hover:text-primary rounded group"
+                          [routerLink]="[]"
+                        >
+                          <lucide-icon
+                            name="circle-minus"
+                            class="text-default-600 size-4 group-hover:text-primary"
+                          ></lucide-icon>
+                          Remove
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="flex justify-between items-center pb-6 mb-6 border-b border-default-200"
+                >
+                  <div class="flex items-start gap-2">
+                    <span class="size-6 text-default-700 mt-1">
+                      <lucide-icon name="laptop" class="size-6"></lucide-icon>
+                    </span>
+
+                    <div>
+                      <p class="text-default-800 font-semibold">Macbook pro</p>
+                      <ul class="flex items-center gap-4 list-disc list-inside text-sm">
+                        <li class="list-none">California, USA</li>
+                        <li>Oct 20 at 5:15PM</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="hs-dropdown [--placement:bottom-right] relative inline-flex">
+                    <button
+                      id="hs-dropdown-default"
+                      type="button"
+                      class="hs-dropdown-toggle flex items-center gap-2 text-default-800 hover:text-primary transition-all"
+                      aria-haspopup="menu"
+                      aria-expanded="false"
+                      aria-label="Dropdown"
+                    >
+                      <lucide-icon name="ellipsis-vertical" class="size-5"></lucide-icon>
+                    </button>
+
+                    <div
+                      class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-30 bg-body-bg shadow-xl rounded-md px-2.5 py-3 border border-default-200 z-10"
+                      role="menu"
+                      aria-orientation="vertical"
+                      aria-labelledby="hs-dropdown-default"
+                    >
+                      <div class="space-y-0.5">
+                        <a
+                          class="flex items-center gap-2 py-1.5 px-4 text-[15px] hover:bg-primary/10 font-medium hover:text-primary rounded group"
+                          [routerLink]="[]"
+                        >
+                          <lucide-icon
+                            name="square-pen"
+                            class="text-default-600 size-4 group-hover:text-primary"
+                          ></lucide-icon>
+                          Edit
+                        </a>
+
+                        <a
+                          class="flex items-center gap-2 py-1.5 px-4 text-[15px] hover:bg-primary/10 font-medium hover:text-primary rounded group"
+                          [routerLink]="[]"
+                        >
+                          <lucide-icon
+                            name="circle-minus"
+                            class="text-default-600 size-4 group-hover:text-primary"
+                          ></lucide-icon>
+                          Remove
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-end">
+                <button
+                  class="bg-dark hover:bg-dark-hover text-white px-4 py-2 rounded transition-all"
+                >
+                  Need help?
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer />

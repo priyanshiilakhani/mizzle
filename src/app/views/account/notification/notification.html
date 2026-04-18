@@ -1,0 +1,117 @@
+<section class="lg:py-28 py-18">
+  <div class="container">
+    <div class="grid lg:grid-cols-4 grid-cols-1 gap-4">
+      <div>
+        <app-account-sidebar />
+      </div>
+
+      <div class="lg:col-span-3 lg:ps-14">
+        <div class="flex justify-between items-center mb-14">
+          <h1 class="lg:text-4xl md:text-3xl text-2xl">Notification</h1>
+          <div class="lg:hidden flex items-center gap-2 text-start">
+            <button
+              type="button"
+              class="flex items-center gap-2 py-2 px-4 bg-primary hover:bg-primary-hover text-white rounded font-medium w-full"
+              aria-haspopup="dialog"
+              aria-expanded="false"
+              aria-controls="offcanvasSidebar"
+              aria-label="Toggle navigation"
+              data-hs-overlay="#offcanvasSidebar"
+            >
+              <lucide-icon name="sliders-horizontal" class="size-4"></lucide-icon>
+              Menu
+            </button>
+          </div>
+        </div>
+
+        <form>
+          <div class="flex justify-between items-center border-b border-default-200 pb-6 mb-6">
+            <h6 class="text-xl">Email notification</h6>
+            <button
+              class="border border-default-200 text-default-800 font-medium hover:bg-default-200 transition-all text-sm rounded px-3 py-1.5"
+            >
+              Toggle all
+            </button>
+          </div>
+
+          @for (item of notificationData; track item.id) {
+            <div class="flex justify-between items-center mb-6">
+              <div>
+                <p class="font-semibold text-default-800">{{ item.title }}</p>
+                <small class="text-sm">{{ item.description }}</small>
+              </div>
+
+              <div>
+                <label [for]="item.id" class="relative inline-block w-11 h-6 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    class="peer sr-only"
+                    [id]="item.id"
+                    [(ngModel)]="item.checked"
+                    [ngModelOptions]="{ standalone: true }"
+                  />
+
+                  <span
+                    class="absolute inset-0 bg-default-200 rounded-full transition-colors duration-200 ease-in-out peer-checked:bg-primary peer-disabled:opacity-50 peer-disabled:pointer-events-none"
+                  >
+                  </span>
+
+                  <span
+                    class="absolute top-1/2 start-0.5 -translate-y-1/2 size-5 bg-default-400 peer-checked:bg-white rounded-full shadow-xs transition-all duration-200 ease-in-out peer-checked:translate-x-full"
+                  >
+                  </span>
+                </label>
+              </div>
+            </div>
+          }
+        </form>
+
+        <div class="text-center my-10">
+          <lucide-icon name="ellipsis" class="size-4 mx-auto"></lucide-icon>
+        </div>
+
+        <form>
+          <div class="flex justify-between items-center border-b border-default-200 pb-6 mb-6">
+            <h6 class="text-xl">General Permission</h6>
+            <button
+              class="border border-default-200 text-default-800 font-medium hover:bg-default-200 transition-all text-sm rounded px-3 py-1.5"
+            >
+              Toggle all
+            </button>
+          </div>
+
+          @for (item of generalData; track item.id) {
+            <div class="flex justify-between items-center mb-6">
+              <div>
+                <p class="font-semibold text-default-800">{{ item.title }}</p>
+                <small class="text-sm">{{ item.description }}</small>
+              </div>
+
+              <div>
+                <label [for]="item.id" class="relative inline-block w-11 h-6 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    class="peer sr-only"
+                    [id]="item.id"
+                    [name]="item.id"
+                    [(ngModel)]="item.checked"
+                  />
+
+                  <span
+                    class="absolute inset-0 bg-default-200 rounded-full transition-colors duration-200 ease-in-out peer-checked:bg-primary peer-disabled:opacity-50 peer-disabled:pointer-events-none">
+                  </span>
+
+                  <span
+                    class="absolute top-1/2 start-0.5 -translate-y-1/2 size-5 bg-default-400 peer-checked:bg-white rounded-full shadow-xs transition-all duration-200 ease-in-out peer-checked:translate-x-full">
+                  </span>
+                </label>
+              </div>
+            </div>
+          }
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer />

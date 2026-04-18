@@ -1,0 +1,195 @@
+<section class="lg:py-28 py-18">
+        <div class="container">
+            <div class="grid lg:grid-cols-4 grid-cols-1 gap-4">
+                <div>
+                    <app-account-sidebar />
+                </div>
+
+                <div class="lg:col-span-3 lg:ps-14">
+                    <div class="flex justify-between items-center mb-14">
+                        <h1 class="lg:text-4xl md:text-3xl text-2xl">My profile</h1>
+                        <div class="lg:hidden flex items-center gap-2 text-start">
+                            <button type="button" class="flex items-center gap-2 py-2 px-4 bg-primary hover:bg-primary-hover text-white rounded font-medium w-full" aria-haspopup="dialog" aria-expanded="false" aria-controls="offcanvasSidebar" aria-label="Toggle navigation" data-hs-overlay="#offcanvasSidebar">
+                                <lucide-icon name="sliders-horizontal" class="size-4"></lucide-icon>
+                                Menu
+                            </button>
+                        </div>
+                    </div>
+
+                    <form>
+                        <div class="bg-transparent pb-5">
+                            <!-- Header -->
+                            <div class="pb-4 border-b border-default-200">
+                                <h6 class="text-xl">Personal Information</h6>
+                            </div>
+
+                            <!-- Body -->
+                            <div class="mt-6">
+                                <div class="grid md:grid-cols-2 grid-cols-1 gap-6">
+                                    <!-- Profile photo -->
+                                    <div class="md:col-span-2">
+                                        <label class="block text-default-400 mb-2">Profile picture</label>
+                                        <div class="flex items-center gap-2">
+                                            <!-- image -->
+                                            <label class="relative cursor-pointer">
+                                                <span class="size-20.5 rounded-full overflow-hidden border-4 border-white shadow-xl block">
+                                                    <img src="/images/avatar/07.jpg" class="object-cover size-full" />
+                                                </span>
+
+                                                <!-- remove -->
+                                                <button type="button" class="absolute top-0 end-0 bg-danger size-5 rounded-full flex justify-center items-center">
+                                                    <lucide-icon name="x" class="text-white size-3"></lucide-icon>
+                                                </button>
+                                            </label>
+
+                                            <!-- upload -->
+                                            <label class="bg-dark hover:bg-dark-hover text-white px-3 py-1.5 text-sm rounded cursor-pointer transition-all">
+                                                Change
+                                                <input type="file" class="hidden" />
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Full name -->
+                                    <div class="md:col-span-2">
+                                        <label class="block text-default-600 mb-2">Full name</label>
+                                        <div class="flex">
+                                            <input type="text" class="w-full border border-default-200 text-default-800 rounded-s py-2 px-4" value="Jacqueline" placeholder="First name" />
+                                            <input type="text" class="w-full border border-default-200 text-default-800 rounded-e py-2 px-4" value="Miller" placeholder="Last name" />
+                                        </div>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div>
+                                        <label class="block text-default-600 mb-2">Email address</label>
+                                        <input type="email" class="w-full border border-default-200 text-default-800 rounded py-2 px-4" value="hello@gmail.com" placeholder="Enter your email id" />
+                                    </div>
+
+                                    <!-- Mobile -->
+                                    <div>
+                                        <label class="block text-default-600 mb-2">Mobile number</label>
+                                        <input type="text" class="w-full border border-default-200 text-default-800 rounded py-2 px-4" value="222 555 666" placeholder="Enter your mobile number" />
+                                    </div>
+
+                                    <!-- Nationality -->
+                                    <div>
+                                        <label class="block text-default-600 mb-2">Nationality</label>
+                                        <select class="w-full border border-default-200 text-default-800 rounded py-2 px-4">
+                                            <option value="">Select your country</option>
+                                            <option>USA</option>
+                                            <option selected>Paris</option>
+                                            <option>India</option>
+                                            <option>UK</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Gender -->
+                                    <div>
+                                        <label class="block text-default-600 mb-2">Select Gender</label>
+
+                                        <div class="flex w-full">
+                                            <label class="flex items-center border border-default-200 text-default-800 rounded-s py-2 px-4 gap-2">
+                                                <input type="radio" name="gender" checked class="size-4 border-0 bg-default-200! checked:bg-primary! focus:ring-primary" />
+                                                <span>Male</span>
+                                            </label>
+
+                                            <label class="flex items-center border border-default-200 text-default-800 py-2 px-4 gap-2">
+                                                <input type="radio" name="gender" class="size-4 border-0 bg-default-200! checked:bg-primary! focus:ring-primary" />
+                                                <span>Female</span>
+                                            </label>
+
+                                            <label class="flex items-center border border-default-200 text-default-800 rounded-e py-2 px-4 gap-2">
+                                                <input type="radio" name="gender" class="size-4 border-0 bg-default-200! checked:bg-primary! focus:ring-primary" />
+                                                <span>Other</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Address -->
+                                    <div class="md:col-span-2">
+                                        <label class="block text-default-600 mb-2">Address</label>
+                                        <textarea class="w-full border border-default-200 text-default-800 rounded py-2 px-4" rows="3">2119 N Division Ave, New Hampshire, York, United States</textarea>
+                                    </div>
+
+                                    <!-- Save -->
+                                    <div class="md:col-span-2 text-end">
+                                        <button class="bg-primary hover:bg-primary-hover text-white px-4 py-2 rounded transition-all">Save Changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="text-center my-10">
+                        <lucide-icon name="ellipsis" class="size-4 mx-auto"></lucide-icon>
+                    </div>
+
+                    <form>
+                        <div class="bg-transparent pb-5">
+                            <!-- Header -->
+                            <div class="pb-4 border-b border-default-200">
+                                <h6 class="text-xl">Update email</h6>
+                            </div>
+
+                            <!-- Body -->
+                            <div class="my-6">
+                                <p class="mb-6">
+                                    Your current email address is
+                                    <span class="text-primary">example@gmail.com</span>
+                                </p>
+                                <label class="block text-default-600 mb-2">Email address</label>
+                                <input type="email" class="w-full border border-default-200 text-default-800 rounded py-2 px-4" value="hello@gmail.com" placeholder="Enter your email id" />
+                            </div>
+
+                            <div class="text-end">
+                                <button class="bg-primary hover:bg-primary-hover text-white px-4 py-2 rounded transition-all">Save Changes</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="text-center my-10">
+                        <lucide-icon name="ellipsis" class="size-4 mx-auto"></lucide-icon>
+                    </div>
+
+                    <form>
+                        <div class="bg-transparent pb-5">
+                            <!-- Header -->
+                            <div class="pb-4 border-b border-default-200">
+                                <h6 class="text-xl">Update password</h6>
+                            </div>
+
+                            <!-- Body -->
+                            <div class="mt-6 space-y-6">
+                                <div>
+                                    <label class="block text-default-600 mb-2">Current password</label>
+                                    <input type="password" class="w-full border border-default-200 text-default-400 rounded py-2 px-4" value="hello@gmail.com" placeholder="Enter current password" />
+                                </div>
+
+                                <div>
+                                    <label class="block text-default-600 mb-2">Enter new password</label>
+                                    <div class="relative">
+                                        <input id="hs-toggle-password" type="password" class="w-full border border-default-200 text-default-800 rounded py-2 px-4" placeholder="Enter password" />
+                                        <button type="button" data-hs-toggle-password='{"target": "#hs-toggle-password"}' class="absolute top-3 end-6 z-20 px-3 cursor-pointer text-default-400 rounded-e-md focus:outline-hidden size-4">
+                                            <lucide-icon name="eye" class="size-4 hidden hs-password-active:block"></lucide-icon>
+                                            <lucide-icon name="eye-off" class="size-4 hs-password-active:hidden"></lucide-icon>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-default-600 mb-2">Confirm new password</label>
+                                    <input type="password" class="w-full border border-default-200 text-default-400 rounded py-2 px-4" placeholder="Enter new password" />
+                                </div>
+                            </div>
+
+                            <div class="text-end mt-6">
+                                <button class="bg-primary hover:bg-primary-hover text-white px-4 py-2 rounded transition-all">Change Password</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <app-footer />

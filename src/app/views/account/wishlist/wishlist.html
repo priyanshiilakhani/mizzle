@@ -1,0 +1,137 @@
+<section class="lg:py-28 py-18">
+  <div class="container">
+    <div class="grid lg:grid-cols-4 grid-cols-1 gap-4">
+      <div>
+        <app-account-sidebar />
+      </div>
+
+      <div class="lg:col-span-3 lg:ps-14">
+        <div class="flex justify-between items-center mb-14">
+          <h1 class="lg:text-4xl md:text-3xl text-2xl">Wishlist</h1>
+          <div class="lg:hidden flex items-center gap-2 text-start">
+            <button
+              type="button"
+              class="flex items-center gap-2 py-2 px-4 bg-primary hover:bg-primary-hover text-white rounded font-medium w-full"
+              aria-haspopup="dialog"
+              aria-expanded="false"
+              aria-controls="offcanvasSidebar"
+              aria-label="Toggle navigation"
+              data-hs-overlay="#offcanvasSidebar"
+            >
+              <lucide-icon name="sliders-horizontal" class="size-4"></lucide-icon>
+              Menu
+            </button>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center pb-4 border-b border-default-200">
+          <h6 class="text-xl">Recently added</h6>
+          <div>
+            <span>2 Items</span>
+          </div>
+        </div>
+
+        <div class="pt-10">
+          @for (item of wishlistData; track item.id) {
+            <div class="grid grid-cols-12 gap-7.5 md:items-center items-start">
+              <!-- Image -->
+              <div class="md:col-span-2 col-span-5">
+                <div class="bg-default-100 p-2 rounded">
+                  <img [src]="item.image" />
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="md:col-span-10 col-span-7">
+                <div
+                  class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 items-center md:gap-3 gap-4"
+                >
+                  <!-- Left -->
+                  <div class="lg:col-span-2 md:col-span-2">
+                    <h6 class="mb-1">
+                      <a [routerLink]="[]" class="hover:text-primary transition-all text-xl">
+                        {{ item.title }}
+                      </a>
+                    </h6>
+
+                    <small class="text-primary text-sm">
+                      {{ item.stockText }}
+                    </small>
+
+                    <ul
+                      class="text-sm flex md:flex-nowrap flex-wrap items-center md:gap-3 gap-1 mt-1"
+                    >
+                      @for (detail of item.details; track $index) {
+                        <li [ngClass]="{ 'list-disc list-inside': $index !== 0 }">
+                          {{ detail }}
+                        </li>
+                      }
+                    </ul>
+                  </div>
+
+                  <!-- Middle -->
+                  <div class="lg:col-span-1">
+                    <select
+                      class="w-full border border-default-200 text-default-800 rounded py-1 ps-2 pe-8 text-sm"
+                      aria-label="Default select example"
+                    >
+                      @for (qty of item.quantityOptions; track $index) {
+                        <option [value]="qty">
+                          {{ qty < 10 ? '0' + qty : qty }}
+                        </option>
+                      }
+                    </select>
+
+                    <div class="mt-2 md:flex flex-wrap justify-end gap-1">
+                      <a
+                        [routerLink]="[]"
+                        class="flex items-center gap-1 hover:text-primary transition-all text-sm"
+                      >
+                        <lucide-icon name="trash-2" class="size-3.5"></lucide-icon>
+                        Remove
+                      </a>
+
+                      <a
+                        [routerLink]="[]"
+                        class="flex items-center gap-1 hover:text-primary transition-all text-sm"
+                      >
+                        <lucide-icon name="heart" class="size-3.5"></lucide-icon>
+                        Save for later
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Right -->
+                  <div class="lg:col-span-1 md:ms-auto md:text-end">
+                    <h5 class="mb-2 text-2xl">
+                      {{ item.price }}
+                    </h5>
+
+                    <button
+                      class="py-1.5 px-3 bg-dark hover:bg-dark-hover text-white rounded flex items-center gap-1.5 text-sm transition-all font-medium"
+                    >
+                      <lucide-icon name="shopping-cart" class="size-4"></lucide-icon>
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-10 border-default-200" />
+          }
+        </div>
+
+        <div class="flex justify-end">
+          <button
+            class="py-2 px-4 border border-default-200 text-default-800 transition-all bg-default-100 hover:bg-default-200 rounded-md font-medium"
+          >
+            Continue shopping
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer />

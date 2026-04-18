@@ -1,0 +1,70 @@
+<div
+  id="offcanvasSidebar"
+  class="hs-overlay [--auto-close:lg] lg:static lg:block! lg:translate-x-0 lg:end-auto lg:bottom-0 lg:w-full w-xs hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform h-full fixed top-0 start-0 bottom-0 z-60"
+  role="dialog"
+  tabindex="-1"
+  aria-label="Sidebar"
+>
+  <div class="py-4 px-7.5 flex justify-between items-center bg-default-50 lg:hidden">
+    <a class="font-bold text-xl text-default-800">My profile</a>
+
+    <div class="lg:hidden">
+      <button type="button" class="text-default-600" data-hs-overlay="#offcanvasSidebar">
+        <lucide-icon name="x" class="size-5.5"></lucide-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="border border-default-200 rounded p-4 lg:h-auto h-full overflow-y-auto">
+    <div class="p-5 text-center border-b border-default-200">
+      <div class="relative mb-2">
+        <img src="/images/avatar/05.jpg" class="size-20.5 rounded-full mx-auto" />
+        <div class="hs-tooltip [--placement:top] inline-block absolute top-12 end-18">
+          <button
+            type="button"
+            class="hs-tooltip-toggle inline-flex justify-center items-center gap-2 rounded-full size-8 bg-dark hover:bg-dark-hover text-white transition-all"
+          >
+            <lucide-icon name="square-pen" class="size-3"></lucide-icon>
+            <span
+              class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-dark text-xs font-medium text-white rounded"
+              role="tooltip"
+            >
+              Edit Profile
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <h6 class="text-xl">Jacqueline Miller</h6>
+
+      <a [routerLink]="[]" class="hover:text-primary transition-all text-sm">hello@gmail.com</a>
+    </div>
+
+    <ul class="mt-6 space-y-1">
+      @for (item of sidebarData; track $index) {
+        <li>
+          @if (!item.isLogout) {
+            <a
+              [routerLink]="item.route"
+               routerLinkActive="!bg-primary/10 !text-primary !border-s-2 !border-primary"
+              [routerLinkActiveOptions]="{ exact: true }"
+              class="flex items-center gap-2 py-2 px-3 hover:bg-primary/10 font-medium rounded border-s-2 border-transparent hover:text-primary hover:border-primary transition-all"
+              [class]="item.class ? item.class : ''"
+            >
+              <lucide-icon [name]="item.icon" class="size-4"></lucide-icon>
+              {{ item.label }}
+            </a>
+          } @else {
+            <!-- Sign Out -->
+            <a
+              class="flex items-center gap-2 py-2 px-3 font-medium rounded border-s-2 border-transparent transition-all hover:bg-primary/10 hover:text-primary hover:border-primary text-danger cursor-pointer"
+            >
+              <lucide-icon [name]="item.icon" class="size-4"></lucide-icon>
+              {{ item.label }}
+            </a>
+          }
+        </li>
+      }
+    </ul>
+  </div>
+</div>
