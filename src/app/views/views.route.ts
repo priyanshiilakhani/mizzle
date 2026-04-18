@@ -57,11 +57,11 @@ export const VIEW_ROUTES: Route[] = [
         (mod) => mod.OTHER_PAGE_ROUTES
       ),
   },
-  // {
-  //   path: 'portfolio',
-  //   loadChildren: () =>
-  //     import('./portfolio/portfolio.route').then((mod) => mod.PORTFOLIO_ROUTE),
-  // },
+  {
+    path: 'portfolio',
+    loadChildren: () =>
+      import('./portfolio/portfolio.route').then((mod) => mod.PORTFOLIO_ROUTE),
+  },
   {
     path: 'auth',
     loadChildren: () =>
