@@ -9,7 +9,6 @@ import { menuItems } from '../../data';
   styles: ``,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-  
 export class MobileNav {
   menuItems = menuItems;
   constructor(public router: Router) {}
@@ -38,5 +37,37 @@ export class MobileNav {
     }
 
     return false;
+  }
+
+  closeMobileMenu() {
+    const el = document.getElementById('mobileMenuOffcanvas');
+    if (!el) return;
+
+    (window as any).HSOverlay?.close?.(el);
+
+    el.classList.add('-translate-y-full');
+    el.classList.remove('translate-y-0');
+
+    this.closeAllMobileAccordions(el);
+  }
+
+  private closeAllMobileAccordions(el: HTMLElement) {
+    const activeAccordions = el.querySelectorAll('.hs-accordion.active');
+    activeAccordions.forEach((accordion) => accordion.classList.remove('active'));
+
+    const accordionContents = el.querySelectorAll('.hs-accordion-content');
+    accordionContents.forEach((content) => {
+      content.classList.add('hidden');
+      content.classList.remove('block');
+      content.removeAttribute('style');
+      content.setAttribute('aria-hidden', 'true');
+    });
+
+    const accordionToggles = el.querySelectorAll('.hs-accordion-toggle');
+    accordionToggles.forEach((toggle) => {
+      if (toggle instanceof HTMLElement) {
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
   }
 }
