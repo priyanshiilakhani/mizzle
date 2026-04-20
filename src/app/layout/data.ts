@@ -1,3 +1,13 @@
+const list1 = '/images/portfolio/list/01.jpg';
+const list2 = '/images/portfolio/list/02.jpg';
+const slack = '/images/elements/slack.svg';
+const webflow = '/images/elements/webflow.svg';
+const mailchimp = '/images/elements/mailchimp.svg';
+const reddit = '/images/elements/reddit.svg';
+const blog2 = '/images/blog/4by4/02.jpg';
+const blog1 = '/images/blog/4by4/01.jpg';
+const blog3 = '/images/blog/4by4/03.jpg';
+
 export const menuItems = [
   {
     label: 'Demos',
@@ -11,7 +21,7 @@ export const menuItems = [
           { label: 'Design Agency', url: '/demos/agency/design', badge: 'New' },
           { label: 'SEO Agency', url: '/demos/agency/seo', badge: 'New' },
           { label: 'Product Landing', url: '/demos/product-landing' },
-          { label: '/demos/mobile-app', url: 'index-mobile-app-showcase.html' },
+          { label: 'Mobile App Showcase', url: '/demos/mobile-app' },
         ],
       },
       {
@@ -90,36 +100,36 @@ export const menuItems = [
       {
         label: 'Specialty Pages',
         children: [
-          { label: 'Help Center', url: 'help-center.html' },
-          { label: 'Help Center Detail', url: 'help-center-detail.html' },
-          { label: 'Pricing', url: 'pricing.html' },
-          { label: 'Faqs', url: 'faq.html' },
-          { label: 'Error 404', url: 'error-404.html' },
-          { label: 'Coming Soon', url: 'coming-soon.html' },
-          { label: 'Terms & Conditions', url: 'terms-and-condition.html' },
+          { label: 'Help Center', url: '/help/center' },
+          { label: 'Help Center Detail', url: '/help/center-detail' },
+          { label: 'Pricing', url: '/pricing' },
+          { label: 'Faqs', url: '/faq' },
+          { label: 'Error 404', url: '/error/404' },
+          { label: 'Coming Soon', url: '/coming-soon' },
+          { label: 'Terms & Conditions', url: '/terms-and-condition' },
         ],
       },
 
       {
         label: 'Authentication',
         children: [
-          { label: 'Sign Up', url: 'sign-up.html' },
-          { label: 'Sign In', url: 'sign-in.html' },
-          { label: 'Forgot Password', url: 'forgot-password.html' },
+          { label: 'Sign Up', url: '/auth/sign-up' },
+          { label: 'Sign In', url: '/auth/sign-in' },
+          { label: 'Forgot Password', url: '/auth/forgot-password' },
         ],
       },
 
       {
         label: 'Accounts',
         children: [
-          { label: 'Details', url: 'account-detail.html' },
-          { label: 'Security', url: 'account-security.html' },
-          { label: 'Notifications', url: 'account-notification.html' },
-          { label: 'My Projects', url: 'account-projects.html' },
-          { label: 'Payment Details', url: 'account-payment-details.html' },
-          { label: 'Order History', url: 'account-order.html' },
-          { label: 'Wishlist', url: 'account-wishlist.html' },
-          { label: 'Delete Profile', url: 'account-delete.html' },
+          { label: 'Details', url: '/account/detail' },
+          { label: 'Security', url: '/account/security' },
+          { label: 'Notifications', url: '/account/notification' },
+          { label: 'My Projects', url: '/account/projects' },
+          { label: 'Payment Details', url: '/account/payment-details' },
+          { label: 'Order History', url: '/account/order' },
+          { label: 'Wishlist', url: '/account/wishlist' },
+          { label: 'Delete Profile', url: '/account/delete' },
         ],
       },
     ],
@@ -131,23 +141,24 @@ export const menuItems = [
     featured: [
       {
         title: 'Ceremony Worthy of Time',
-        image: '/images/portfolio/list/01.jpg',
+        image: list1,
         desc: 'We help our customers better manage their web presence.',
-        url: 'portfolio-case-studies-v1.html',
+        url: '/portfolio/case-study/v1',
       },
       {
         title: 'Brushstrokes and Beyond',
-        image: '/images/portfolio/list/02.jpg',
+        image: list2,
         desc: 'We help our customers better manage their web presence.',
-        url: 'portfolio-case-studies-v2.html',
+        url: '/portfolio/case-study/v2',
       },
     ],
     urls: [
-      { label: 'Portfolio Masonry', url: 'portfolio-masonry.html' },
-      { label: 'Portfolio Showcase', url: 'portfolio-showcase.html' },
-      { label: 'Portfolio List', url: 'portfolio-list.html' },
-      { label: 'Portfolio Case Study v.1', url: 'portfolio-case-studies-v1.html' },
-      { label: 'Portfolio Case Study v.2', url: 'portfolio-case-studies-v2.html' },
+      { label: 'Portfolio Pages' },
+      { label: 'Portfolio Masonry', url: '/portfolio/masonry' },
+      { label: 'Portfolio Showcase', url: '/portfolio/showcase' },
+      { label: 'Portfolio List', url: '/portfolio/list' },
+      { label: 'Portfolio Case Study v.1', url: '/portfolio/case-study/v1' },
+      { label: 'Portfolio Case Study v.2', url: '/portfolio/case-study/v2' },
     ],
   },
 
@@ -192,10 +203,10 @@ export const menuItems = [
       {
         title: 'Integration',
         integrations: [
-          { name: 'Slack', image: '/images/elements/slack.svg' },
-          { name: 'Webflow', image: '/images/elements/webflow.svg' },
-          { name: 'Mailchimp', image: '/images/elements/mailchimp.svg' },
-          { name: 'Reddit', image: '/images/elements/reddit.svg' },
+          { name: 'Slack', image: slack },
+          { name: 'Webflow', image: webflow },
+          { name: 'Mailchimp', image: mailchimp },
+          { name: 'Reddit', image: reddit },
         ],
       },
 
@@ -204,18 +215,18 @@ export const menuItems = [
         blogs: [
           {
             title: '10 things you need to know about Mizzle',
-            image: '/images/blog/4by4/02.jpg',
-            url: 'blog-single-v1.html',
+            image: blog2,
+            url: '/blog/single/v1',
           },
           {
             title: 'The Power of Gratitude: Cultivating Joy and Abundance',
-            image: '/images/blog/4by4/01.jpg',
-            url: 'blog-single-v2.html',
+            image: blog1,
+            url: '/blog/single/v2',
           },
           {
             title: 'Effortless Web Development with Mizzle',
-            image: '/images/blog/4by4/03.jpg',
-            url: 'blog-single-v1.html',
+            image: blog3,
+            url: '/blog/single/v1',
           },
         ],
       },
@@ -224,12 +235,6 @@ export const menuItems = [
 
   {
     label: 'Contacts Us',
-    url: 'contact-v1.html',
-  },
-
-  {
-    label: 'Docs',
-    url: 'docs/index.html',
-    target: '_blank',
+    url: '/contact/v1',
   },
 ];
