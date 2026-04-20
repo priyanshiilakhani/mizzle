@@ -8,7 +8,52 @@ const blog2 = '/images/blog/4by4/02.jpg';
 const blog1 = '/images/blog/4by4/01.jpg';
 const blog3 = '/images/blog/4by4/03.jpg';
 
-export const menuItems = [
+export type MenuItemType = {
+  label: string;
+  url?: string;
+  type?: string;
+  badge?: string;
+  children?: MenuItemType[];
+  columns?: {
+    items: MenuItemType[];
+  }[];
+
+  footer?: {
+    title: string;
+    subtitle: string;
+    button: MenuItemType;
+  };
+  featured?: {
+    title: string;
+    image: string;
+    description: string;
+    url: string;
+  }[];
+
+  urls?: MenuItemType[];
+
+  sections?: {
+    title: string;
+    urls?: MenuItemType[];
+    cards?: {
+      title: string;
+      description: string;
+      icon: string;
+      badge?: string;
+    }[];
+    integrations?: {
+      name: string;
+      image: string;
+    }[];
+    blogs?: {
+      title: string;
+      image: string;
+      url: string;
+    }[];
+  }[];
+}
+
+export const menuItems :MenuItemType[] = [
   {
     label: 'Demos',
     type: 'mega',
@@ -42,7 +87,6 @@ export const menuItems = [
       button: { label: 'Get in touch', url: '/' },
     },
   },
-
   {
     label: 'Pages',
     type: 'dropdown',
@@ -134,7 +178,6 @@ export const menuItems = [
       },
     ],
   },
-
   {
     label: 'Portfolio',
     type: 'mega-portfolio',
@@ -142,13 +185,13 @@ export const menuItems = [
       {
         title: 'Ceremony Worthy of Time',
         image: list1,
-        desc: 'We help our customers better manage their web presence.',
+        description: 'We help our customers better manage their web presence.',
         url: '/portfolio/case-study/v1',
       },
       {
         title: 'Brushstrokes and Beyond',
         image: list2,
-        desc: 'We help our customers better manage their web presence.',
+        description: 'We help our customers better manage their web presence.',
         url: '/portfolio/case-study/v2',
       },
     ],
@@ -161,7 +204,6 @@ export const menuItems = [
       { label: 'Portfolio Case Study v.2', url: '/portfolio/case-study/v2' },
     ],
   },
-
   {
     label: 'Megamenu',
     type: 'mega-full',
@@ -177,24 +219,23 @@ export const menuItems = [
           { label: 'Social media marketing' },
         ],
       },
-
       {
         title: 'Company',
         cards: [
           {
             title: 'About us',
-            desc: 'Learn about our story, our mission.',
+            description: 'Learn about our story, our mission.',
             icon: 'tabler:packages',
           },
           {
             title: 'Career',
-            desc: "We're always looking for talented people.",
+            description: "We're always looking for talented people.",
             badge: '3 Jobs',
             icon: 'tabler:rocket',
           },
           {
             title: 'Customer stories',
-            desc: 'Learn how our customer are making big',
+            description: 'Learn how our customer are making big',
             icon: 'tabler:mood-happy',
           },
         ],

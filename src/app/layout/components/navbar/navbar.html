@@ -1,15 +1,10 @@
 <div id="navbar" class="lg:flex justify-center mx-auto gap-5.5 text-[15px] hidden">
     @for (menu of menuItems; track $index) {
-    @if (!menu.type) {
-    <a [routerLink]="menu.url" class="flex items-center py-2.5 text-default-800 hover:text-primary font-medium">
-        {{ menu.label }}
-    </a>
-    }
     @if (menu.type === 'mega') {
     <div class="hs-dropdown [--trigger:hover] relative inline-flex transition-all duration-300 [&:has(.hs-dropdown-menu_.active)_.hs-dropdown-toggle]:text-primary">
         <button type="button" class="hs-dropdown-toggle cursor-pointer text-default-800 flex items-center py-2.5 font-medium" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
             {{ menu.label }}
-            <iconify-icon icon="tabler:chevron-down" class="ps-5 size-4"></iconify-icon>
+            <iconify-icon icon="tabler:chevron-down" height="16" width="16" class="ps-5"></iconify-icon>
         </button>
 
         <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden" role="menu" aria-orientation="vertical">
@@ -108,7 +103,7 @@
                                 <h6 class="font-semibold mb-2">
                                     <a [routerLink]="[]" class="text-xl font-bold hover:text-primary transition">{{ f.title }}</a>
                                 </h6>
-                                <p class="mb-2 text-xs text-default-800">{{ f.desc }}</p>
+                                <p class="mb-2 text-xs text-default-800">{{ f.description }}</p>
                                 <a [routerLink]="f.url" class="inline-flex items-center gap-1 text-primary hover:text-primary-hover text-sm group">
                                     Learn more
                                     <lucide-icon name="arrow-right" class="size-4 group-hover:translate-x-0.5 transition-all"></lucide-icon>
@@ -116,8 +111,6 @@
                             </div>
                         </div>
                         }
-
-
                         <div class="border-s border-default-300 mx-2"></div>
                     </div>
                 </div>
@@ -125,7 +118,6 @@
                 <div class="lg:col-span-1 mt-4 lg:mt-0">
                     <ul class="space-y-1">
                         @for (link of menu.urls; track link.label) {
-                        <!-- <li class="text-sm tracking-wide font-semibold text-default-800 px-3 mb-2 mt-1">Portfolio Pages</li> -->
                         <li>
                             <a class="block text-sm font-semibold rounded-sm hover:text-primary hover:bg-primary/6 px-3 py-2.5 text-default-800" [routerLink]="link.url"> {{ link.label }}</a>
                         </li>
@@ -145,149 +137,81 @@
 
         <div class="hs-dropdown-menu p-6 border border-default-200 transition-[opacity,margin] rounded-lg duration hs-dropdown-open:opacity-100 opacity-0 xl:w-300 w-5xl mx-auto hidden bg-body-bg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full" role="menu" aria-orientation="vertical">
             <div class="grid grid-cols-4 items-start gap-7">
-                  @for (section of menu.sections; track section.title) {
-
+                @for (section of menu.sections; track section.title) {
                 <div>
+                    @if (section.urls) {
                     <ul>
-                        <li class="p-2 text-default-800 font-bold text-sm block mb-2">Useful links</li>
+                        <li class="p-2 text-default-800 font-bold text-sm block mb-2"> {{ section.title }}</li>
+                        @for (link of section.urls; track link.label) {
                         <li>
-                            <a href="#" class="block text-sm font-medium rounded-sm hover:text-primary hover:bg-primary/6 px-2 py-2.5 text-default-800">Market research</a>
+                            <a [routerLink]="[]" class="block text-sm font-medium rounded-sm hover:text-primary hover:bg-primary/6 px-2 py-2.5 text-default-800">{{ link.label }}</a>
                         </li>
-                        <li> <a class="block text-sm font-medium rounded-sm hover:text-primary hover:bg-primary/6 px-2.5 py-2.5 text-default-800" href="#">Advertising</a> </li>
-                        <li> <a class="block text-sm font-medium rounded-sm hover:text-primary hover:bg-primary/6 px-2.5 py-2.5 text-default-800" href="#">Consumer behavior</a> </li>
-                        <li> <a class="block text-sm font-medium rounded-sm hover:text-primary hover:bg-primary/6 px-2.5 py-2.5 text-default-800" href="#">Digital marketing</a> </li>
-                        <li> <a class="block text-sm font-medium rounded-sm hover:text-primary hover:bg-primary/6 px-2.5 py-2.5 text-default-800" href="#">Marketing ethics</a> </li>
-                        <li> <a class="block text-sm font-medium rounded-sm hover:text-primary hover:bg-primary/6 px-2.5 py-2.5 text-default-800" href="#">Social media marketing</a> </li>
+                        }
                     </ul>
-                </div>
-            }
-                <div>
-                    <span class="p-2 text-default-800 font-bold text-sm block ps-4 mb-2">Company</span>
+                    }
+                    @if (section.cards) {
+                    <span class="p-2 text-default-800 font-bold text-sm block ps-4 mb-2"> {{ section.title }}</span>
+                    @for (card of section.cards; track card.title) {
                     <div class="flex items-start hover:bg-light relative rounded-md text-wrap p-4">
                         <div class="size-10.5 flex items-center justify-center border border-default-200 rounded-md shrink-0">
-                            <i class="iconify tabler--packages size-5 text-default-700"></i>
+                            <iconify-icon [icon]="card.icon" class="text-default-700" height="20" width="20"></iconify-icon>
                         </div>
                         <div class="ms-3">
-                            <a class="text-sm font-bold text-default-800" href="#">About us</a>
-                            <p class="text-sm font-normal">Learn about our story, our mission.</p>
+                            <a class="text-sm font-bold text-default-800" [routerLink]="[]">{{ card.title }}</a>
+                            @if (card.badge) {
+                            <span class="py-0.5 px-2 bg-primary text-white rounded text-xs ms-1"> {{ card.badge }}</span>
+                            }
+                            <p class="text-sm font-normal">{{ card.description }}</p>
                         </div>
                     </div>
-
-                    <div class="flex items-start hover:bg-light relative rounded-md text-wrap p-4">
-                        <div class="size-10.5 flex items-center justify-center border border-default-200 rounded-md shrink-0">
-                            <i class="iconify tabler--rocket size-5 text-default-700"></i>
-                        </div>
-                        <div class="ms-3">
-                            <a class="text-sm font-bold text-default-800" href="#">Career</a>
-                            <span class="py-0.5 px-2 bg-primary text-white rounded text-xs ms-1">3 Jobs</span>
-                            <p class="text-sm font-normal">We're always looking for talented people.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start hover:bg-light relative rounded-md text-wrap p-4">
-                        <div class="size-10.5 flex items-center justify-center border border-default-200 rounded-md shrink-0">
-                            <i class="iconify tabler--mood-happy size-5 text-default-700"></i>
-                        </div>
-                        <div class="ms-3">
-                            <a class="text-sm font-bold text-default-800" href="#">Customer stories</a>
-                            <p class="text-sm font-normal">Learn how our customer are making big</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
+                    }
+                    }
+                    @if (section.integrations) {
                     <ul class="space-y-2">
-                        <li class="p-2 text-default-800 font-bold text-sm block mb-2">Integration</li>
+                        <li class="p-2 text-default-800 font-bold text-sm block mb-2">{{ section.title }}</li>
+                        @for (item of section.integrations; track item.name) {
                         <li>
                             <a href="#" class="flex items-center justify-between gap-2 py-2 px-4 rounded-lg transition-colors hover:bg-light w-full group">
                                 <div class="flex items-center gap-4">
-                                    <img src="/images/elements/slack.svg" alt="Slack" class="h-7.5" />
+                                    <img [src]="item.image" alt="Slack" class="h-7.5" />
 
                                     <span class="font-semibold text-default-800">
-                                        Slack
+                                        {{ item.name }}
                                     </span>
                                 </div>
 
-                                <i class="iconify tabler--arrow-right ms-auto text-default-500 group-hover:translate-x-0.5 transition-all group-hover:text-primary"></i>
+                                <iconify-icon icon="tabler:arrow-right" class="ms-auto text-default-500 group-hover:translate-x-0.5 transition-all group-hover:text-primary"></iconify-icon>
                             </a>
                         </li>
+                        }
 
                         <li>
-                            <a href="#" class="flex items-center justify-between gap-2 py-2 px-4 rounded-lg transition-colors hover:bg-light w-full group">
-                                <div class="flex items-center gap-4">
-                                    <img src="/images/elements/webflow.svg" class="h-7.5" />
-
-                                    <span class="font-semibold text-default-800">
-                                        Webflow
-                                    </span>
-                                </div>
-
-                                <i class="iconify tabler--arrow-right ms-auto text-default-500 group-hover:translate-x-0.5 transition-all group-hover:text-primary"></i>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="flex items-center justify-between gap-2 py-2 px-4 rounded-lg transition-colors hover:bg-light w-full group">
-                                <div class="flex items-center gap-4">
-                                    <img src="/images/elements/mailchimp.svg" class="h-7.5" />
-
-                                    <span class="font-semibold text-default-800">
-                                        Mailchimp
-                                    </span>
-                                </div>
-
-                                <i class="iconify tabler--arrow-right ms-auto text-default-500 group-hover:translate-x-0.5 transition-all group-hover:text-primary"></i>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="flex items-center justify-between gap-2 py-2 px-4 rounded-lg transition-colors hover:bg-light w-full group">
-                                <div class="flex items-center gap-4">
-                                    <img src="/images/elements/reddit.svg" class="h-7.5" />
-
-                                    <span class="font-semibold text-default-800">
-                                        Reddit
-                                    </span>
-                                </div>
-
-                                <i class="iconify tabler--arrow-right ms-auto text-default-500 group-hover:translate-x-0.5 transition-all group-hover:text-primary"></i>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="mt-2 py-2 px-4 bg-default-100 hover:bg-default-200 text-xs block rounded text-center text-default-800 transition-all">View all</a>
+                            <a [routerLink]="[]" class="mt-2 py-2 px-4 bg-default-100 hover:bg-default-200 text-xs block rounded text-center text-default-800 transition-all">View all</a>
                         </li>
                     </ul>
+                    }
+                    @if (section.blogs) {
+                    <span class="p-2 text-default-800 font-bold text-sm block ps-4 mb-2"> {{ section.title }}</span>
+                    @for (blog of section.blogs; track blog.title) {
+                    <div class="flex items-center gap-2 hover:bg-light relative rounded-md text-wrap py-1.5 px-4 group">
+                        <img [src]="blog.image" class="rounded-md size-14" alt="blog-img">
+                        <p class="text-wrap font-bold">
+                            <a [routerLink]="blog.url" class="text-default-800 font-semibold group-hover:text-primary transition-all">{{ blog.title }}</a>
+                        </p>
+                    </div>
+                    }
+
+                    }
                 </div>
-
-                <div class="space-y-4">
-                    <span class="p-2 text-default-800 font-bold text-sm block ps-4 mb-2">Recent blogs</span>
-                    <div class="flex items-center gap-2 hover:bg-light relative rounded-md text-wrap py-1.5 px-4 group">
-                        <img src="/images/blog/4by4/02.jpg" class="rounded-md size-14" alt="blog-img">
-                        <p class="text-wrap font-bold">
-                            <a href="blog-single-v1.html" class="text-default-800 font-semibold group-hover:text-primary transition-all">10 things you need to know about Mizzle</a>
-                        </p>
-                    </div>
-
-                    <div class="flex items-center gap-2 hover:bg-light relative rounded-md text-wrap py-1.5 px-4 group">
-                        <img src="/images/blog/4by4/01.jpg" class="rounded-md size-14" alt="blog-img">
-                        <p class="text-wrap font-bold">
-                            <a href="blog-single-v2.html" class="text-default-800 font-semibold group-hover:text-primary transition-all">The Power of Gratitude: Cultivating Joy and Abundance</a>
-                        </p>
-                    </div>
-
-                    <div class="flex items-center gap-2 hover:bg-light relative rounded-md text-wrap py-1.5 px-4 group">
-                        <img src="/images/blog/4by4/03.jpg" class="rounded-md size-14" alt="blog-img">
-                        <p class="text-wrap font-bold">
-                            <a href="blog-single-v1.html" class="text-default-800 font-semibold group-hover:text-primary transition-all">Effortless Web Development with Mizzle</a>
-                        </p>
-                    </div>
-                </div>
+                }
             </div>
         </div>
     </div>
     }
-    <!-- <a href="contact-v1.html" class="flex items-center py-2.5 text-default-800 hover:text-primary font-medium bg-transparent!">Contacts Us</a> -->
-
+    @if (!menu.type) {
+    <a [routerLink]="menu.url" class="flex items-center py-2.5 text-default-800 hover:text-primary font-medium bg-transparent!">
+        {{ menu.label }}
+    </a>
+    }
     }
 </div>

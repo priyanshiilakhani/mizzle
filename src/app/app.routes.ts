@@ -22,4 +22,9 @@ export const routes: Routes = [
       },
     ],
   },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./views/auth/auth.route').then((mod) => mod.AUTH_ROUTES),
+  },
 ];
