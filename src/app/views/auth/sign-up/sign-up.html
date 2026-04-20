@@ -98,15 +98,18 @@
                             <small class="text-red-500">Passwords do not match</small>
                             }
                         </div>
+                        <div class="mb-6">
+                            <div class="flex items-center gap-2">
+                                <input type="checkbox" formControlName="terms" class="size-4 checked:bg-primary! bg-default-100! rounded border border-default-200" id="checkbox-1" />
+                                <label for="checkbox-1">
+                                    I agree to all Terms & conditions and the privacy policy.
+                                </label>
+                            </div>
 
-                        <div class="flex items-center gap-2 mb-6">
-                            <input type="checkbox" formControlName="terms" class="size-4 checked:bg-primary! bg-default-100! rounded border border-default-200" id="checkbox-1" />
-                            <label for="checkbox-1">I agree to all Terms & conditions and the privacy policy.</label>
                             @if (registerForm.get('terms')?.touched && registerForm.get('terms')?.invalid) {
-                            <small class="text-red-500">You must accept terms</small>
+                            <small class="text-red-500 block mt-1">You must accept terms</small>
                             }
                         </div>
-
                         <button type="submit" (click)="onSubmit()" class="w-full bg-dark hover:bg-dark-hover transition-all text-white rounded py-2 px-4">Create an account</button>
                     </form>
 

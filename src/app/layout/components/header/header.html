@@ -1,0 +1,52 @@
+<header>
+    <div class="header-sticky navbar bg-transparent fixed transition-all top-0 inset-x-0 w-full z-60 duration-300 [.header-sticky-on]:bg-body-bg [.header-sticky-on]:dark:bg-[#121519] [.header-sticky-on]:border-b border-default-200" [class]="{ 'dark': theme === 'dark' }">
+        <div class="container py-3">
+            <div class="flex items-center justify-between">
+                <a routerLink="/" class="flex items-center">
+                    <img src="/images/logo.svg" class="h-9 block dark:hidden" />
+                    <img src="/images/logo-light.svg" class="h-9 hidden dark:block" />
+                </a>
+
+                <app-navbar />
+
+                <div class="flex justify-end items-center gap-2">
+
+                    <app-theme-toggler />
+
+                    <a routerLink="/auth/sign-up" class="py-1.5 px-3 bg-default-100 hover:bg-default-200 rounded text-default-800 flex items-center gap-1.5 font-medium text-sm transition-all">
+                        <i data-lucide="circle-user" class="size-4"></i>
+                        Sign up
+                    </a>
+
+                    <a [routerLink]="[]" class="py-1.5 px-3 bg-primary hover:bg-primary-hover rounded text-white transition-all text-sm font-medium md:block hidden">
+                        Buy now!
+                    </a>
+
+                    <div class="flex items-center lg:hidden">
+                        <button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="mobileMenuOffcanvas" data-hs-overlay="#mobileMenuOffcanvas" class="size-8 border border-default-200 rounded flex justify-center items-center">
+                            <iconify-icon icon="tabler:align-right" class="text-default-800 size-6"></iconify-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobileMenuOffcanvas" class="lg:hidden hs-overlay hs-overlay-open:translate-y-0 -translate-y-full fixed top-0 inset-x-0 overflow-hidden transition-all duration-300 transform h-85 z-80 bg-body-bg shadow-xl" role="dialog" tabindex="-1" aria-labelledby="mobileMenuOffcanvas-label">
+        <div class="h-16 flex items-center justify-between px-4 border-b border-default-200 sticky top-0">
+            <div class="text-lg font-bold">
+                <a routerLink="/" class="flex items-center gap-2">
+                    <img src="/images/logo.svg" class="h-9 block dark:hidden" />
+                    <img src="/images/logo-light.svg" class="h-9 hidden dark:block" />
+                </a>
+            </div>
+
+            <button type="button" class="bg-default-600/15 text-default-600 size-8 flex justify-center items-center rounded-full" aria-label="Close" data-hs-overlay="#mobileMenuOffcanvas">
+                <span class="sr-only">Close</span>
+                <iconify-icon icon="tabler:x" class="size-4"></iconify-icon>
+            </button>
+        </div>
+
+        <app-mobile-nav />
+    </div>
+</header>
