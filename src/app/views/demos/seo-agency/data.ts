@@ -68,7 +68,7 @@ export const caseStudiesData: CaseStudyType[] = [
     description: 'The most powerful software & app landing software marketing business.',
     tags: ['Branding', 'Packaging', 'Development'],
     image: listImg2,
-    url: '/portfolio/case-studies/v2',
+    url: '/portfolio/case-study/v2',
   },
   {
     company: {
@@ -78,7 +78,7 @@ export const caseStudiesData: CaseStudyType[] = [
     description: 'The most powerful software & app landing software marketing business.',
     tags: ['UI/UX design', 'Research'],
     image: listImg1,
-    url: '/portfolio/case-studies/v2',
+    url: '/portfolio/case-study/v2',
   },
   {
     company: {
@@ -88,7 +88,7 @@ export const caseStudiesData: CaseStudyType[] = [
     description: 'The most powerful software & app landing software marketing business.',
     tags: ['Branding', 'UI/UX design'],
     image: listImg3,
-    url: '/portfolio/case-studies/v2',
+    url: '/portfolio/case-study/v2',
   },
 ];
 

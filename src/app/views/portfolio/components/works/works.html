@@ -1,0 +1,43 @@
+<div class="swiper">
+    <swiper-container class="lg:mb-0 mb-14" loop="false" space-between="40" pagination="true"
+        pagination-el=".swiper-pagination" pagination-clickable="true" breakpoints='{
+                "576": { "slidesPerView": 1 },
+                "768": { "slidesPerView": 2 },
+                "992": { "slidesPerView": 3 }
+            }'>
+        @for (item of workData; track $index) {
+        <swiper-slide>
+            <div class="w-full">
+                <div class="relative group overflow-hidden bg-transparent">
+
+                    <div class="absolute top-0 start-0 z-10">
+                        <img [src]="item.logo" class="h-10 m-6" />
+                    </div>
+
+                    <div class="rounded-md overflow-hidden">
+                        <img [src]="item.image"
+                            class="size-full object-cover transition-transform duration-500 group-hover:scale-103"
+                            alt="portfolio-img" />
+                    </div>
+
+
+                    <div class="pt-5">
+                        <h5 class="lg:text-2xl text-xl">
+                            <a [routerLink]="item.link"
+                                class="text-default-900 hover:text-primary transition-all after:absolute after:inset-0">
+                                {{ item.title }}
+                            </a>
+                        </h5>
+
+                        <small class="text-sm text-default-600">
+                            {{ item.category }}
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </swiper-slide>
+        }
+    </swiper-container>
+
+    <div class="swiper-pagination swiper-pagination-primary relative"></div>
+</div>

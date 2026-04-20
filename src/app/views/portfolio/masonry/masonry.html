@@ -1,244 +1,137 @@
- <section class="py-30">
-        <div class="container">
-            <div class="bg-dark rounded-lg text-center relative overflow-hidden lg:py-12 py-10">
-                <!-- Left SVG decoration -->
-                <figure class="absolute top-0 -start-28">
-                    <svg width="424" height="405" viewBox="0 0 424 405" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <ellipse cx="212" cy="202.5" rx="212" ry="202.5" fill="url(#paint0_linear_153_3831)"></ellipse>
-                        <defs>
-                            <linearGradient id="paint0_linear_153_3831" x1="212" y1="0" x2="212" y2="405" gradientUnits="userSpaceOnUse">
-                                <stop offset="0.0569271" stop-color="#D9D9D9" stop-opacity="0"></stop>
-                                <stop offset="0.998202" stop-color="#D9D9D9" stop-opacity="0.5"></stop>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </figure>
+<section class="py-30">
+    <div class="container">
+        <div class="bg-dark rounded-lg text-center relative overflow-hidden lg:py-12 py-10">
+            <!-- Left SVG decoration -->
+            <figure class="absolute top-0 -start-28">
+                <svg width="424" height="405" viewBox="0 0 424 405" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="212" cy="202.5" rx="212" ry="202.5" fill="url(#paint0_linear_153_3831)"></ellipse>
+                    <defs>
+                        <linearGradient id="paint0_linear_153_3831" x1="212" y1="0" x2="212" y2="405"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.0569271" stop-color="#D9D9D9" stop-opacity="0"></stop>
+                            <stop offset="0.998202" stop-color="#D9D9D9" stop-opacity="0.5"></stop>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </figure>
 
-                <!-- Right SVG decoration -->
-                <figure class="absolute top-5 -end-30">
-                    <svg class="opacity-30" width="371" height="354" viewBox="0 0 371 354" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <ellipse cx="172.5" cy="176.5" rx="131.5" ry="125.5" fill="url(#paint0_linear_195_2)"></ellipse>
-                        <ellipse cx="185.5" cy="177" rx="185.5" ry="177" fill="url(#paint1_linear_195_2)"></ellipse>
-                        <defs>
-                            <linearGradient id="paint0_linear_195_2" x1="172.5" y1="51" x2="172.5" y2="302" gradientUnits="userSpaceOnUse">
-                                <stop offset="0.0569271" stop-color="#D9D9D9" stop-opacity="0.5"></stop>
-                                <stop offset="0.998202" stop-color="#D9D9D9" stop-opacity="0"></stop>
-                            </linearGradient>
-                            <linearGradient id="paint1_linear_195_2" x1="185.5" y1="0" x2="185.5" y2="354" gradientUnits="userSpaceOnUse">
-                                <stop offset="0.0569271" stop-color="#D9D9D9" stop-opacity="0.2"></stop>
-                                <stop offset="0.998202" stop-color="#D9D9D9" stop-opacity="0"></stop>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </figure>
+            <!-- Right SVG decoration -->
+            <figure class="absolute top-5 -end-30">
+                <svg class="opacity-30" width="371" height="354" viewBox="0 0 371 354" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="172.5" cy="176.5" rx="131.5" ry="125.5" fill="url(#paint0_linear_195_2)"></ellipse>
+                    <ellipse cx="185.5" cy="177" rx="185.5" ry="177" fill="url(#paint1_linear_195_2)"></ellipse>
+                    <defs>
+                        <linearGradient id="paint0_linear_195_2" x1="172.5" y1="51" x2="172.5" y2="302"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.0569271" stop-color="#D9D9D9" stop-opacity="0.5"></stop>
+                            <stop offset="0.998202" stop-color="#D9D9D9" stop-opacity="0"></stop>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_195_2" x1="185.5" y1="0" x2="185.5" y2="354"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.0569271" stop-color="#D9D9D9" stop-opacity="0.2"></stop>
+                            <stop offset="0.998202" stop-color="#D9D9D9" stop-opacity="0"></stop>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </figure>
 
-                <!-- Breadcrumb -->
-                <div class="flex justify-center relative z-10">
-                    <nav aria-label="breadcrumb">
-                        <ol class="flex space-x-2 text-white text-xs mb-2">
-                            <li>
-                                <a href="#" class="hover:text-white">Home</a>
-                            </li>
-                            <li class="text-primary list-disc list-inside">Portfolio Masonry</li>
-                        </ol>
-                    </nav>
-                </div>
-                <!-- Title -->
-                <h1 class="lg:text-[45px] md:text-4xl text-3xl text-white relative z-10">Portfolio Masonry</h1>
+            <!-- Breadcrumb -->
+            <div class="flex justify-center relative z-10">
+                <nav aria-label="breadcrumb">
+                    <ol class="flex space-x-2 text-white text-xs mb-2">
+                        <li>
+                            <a [routerLink]="[]" class="hover:text-white">Home</a>
+                        </li>
+                        <li class="text-primary list-disc list-inside">Portfolio Masonry</li>
+                    </ol>
+                </nav>
             </div>
-
-            <div class="masonry-filterable">
-                <div class="flex flex-wrap lg:justify-center justify-start items-center mt-14">
-                    <h6 class="text-xl lg:mb-0 mb-2">Browse by:</h6>
-
-                    <ul class="masonry-filters lg:w-3xl w-full gap-2 flex flex-wrap lg:justify-center">
-                        <li>
-                            <a class="py-2 px-4 text-sm rounded inline-flex text-default-600 transition-all font-medium hover:bg-primary/15 hover:text-primary [.active]:bg-primary [.active]:text-white active" href="#" data-group="all">All work</a>
-                        </li>
-
-                        <li>
-                            <a class="py-2 px-4 text-sm rounded inline-flex text-default-600 transition-all font-medium hover:bg-primary/15 hover:text-primary [.active]:bg-primary [.active]:text-white" href="#" data-group="marketing">Marketing</a>
-                        </li>
-
-                        <li>
-                            <a class="py-2 px-4 text-sm rounded inline-flex text-default-600 transition-all font-medium hover:bg-primary/15 hover:text-primary [.active]:bg-primary [.active]:text-white" href="#" data-group="design">Web design</a>
-                        </li>
-
-                        <li>
-                            <a class="py-2 px-4 text-sm rounded inline-flex text-default-600 transition-all font-medium hover:bg-primary/15 hover:text-primary [.active]:bg-primary [.active]:text-white" href="#" data-group="business">Development</a>
-                        </li>
-
-                        <li>
-                            <a class="py-2 px-4 text-sm rounded inline-flex text-default-600 transition-all font-medium hover:bg-primary/15 hover:text-primary [.active]:bg-primary [.active]:text-white" href="#" data-group="brand">Brand design</a>
-                        </li>
-
-                        <li>
-                            <a class="py-2 px-4 text-sm rounded inline-flex text-default-600 transition-all font-medium hover:bg-primary/15 hover:text-primary [.active]:bg-primary [.active]:text-white" href="#" data-group="ui">UI/UX design</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="masonry-grid mt-8" data-columns="3">
-                    <article class="masonry-grid-item flex lg:w-1/3 md:w-1/2 w-full p-3" data-groups='["marketing","business","brand"]'>
-                        <div class="relative overflow-hidden rounded-md group">
-                            <!-- Image -->
-                            <img src="/images/portfolio/masonry/01.jpg" alt="portfolio-img" class="size-full object-cover transition duration-300" />
-
-                            <!-- Overlay -->
-                            <div class="absolute inset-0 bg-linear-to-b from-transparent to-black/90 flex flex-col justify-end p-5 opacity-0 group-hover:opacity-100 transition">
-                                <div class="group-hover:-translate-y-3 transition-all duration-500">
-                                    <h6 class="text-white font-semibold">
-                                        <a routerLink="portfolio/case-studies/v1" class="text-xl text-white font-bold after:absolute after:inset-0">Dynamic Workflows Website</a>
-                                    </h6>
-                                    <small class="text-white text-sm">UI/UX design</small>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="masonry-grid-item flex lg:w-1/3 md:w-1/2 w-full p-3" data-groups='["brand","ui"]'>
-                        <div class="relative overflow-hidden rounded-md group">
-                            <!-- Image -->
-                            <img src="/images/portfolio/masonry/04.jpg" alt="portfolio-img" class="size-full object-cover transition duration-300" />
-
-                            <!-- Overlay -->
-                            <div class="absolute inset-0 bg-linear-to-b from-transparent to-black/90 flex flex-col justify-end p-5 opacity-0 group-hover:opacity-100 transition">
-                                <div class="group-hover:-translate-y-3 transition-all duration-500">
-                                    <h6 class="text-white font-semibold">
-                                        <a href="portfolio-case-studies-v2.html" class="text-xl text-white font-bold after:absolute after:inset-0">ElevateTech Redesign</a>
-                                    </h6>
-                                    <small class="text-white text-sm">Brand design</small>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="masonry-grid-item flex lg:w-1/3 md:w-1/2 w-full p-3" data-groups='["ui"]'>
-                        <div class="relative overflow-hidden rounded-md group">
-                            <!-- Image -->
-                            <img src="/images/portfolio/masonry/09.jpg" alt="portfolio-img" class="size-full object-cover transition duration-300" />
-
-                            <!-- Overlay -->
-                            <div class="absolute inset-0 bg-linear-to-b from-transparent to-black/90 flex flex-col justify-end p-5 opacity-0 group-hover:opacity-100 transition">
-                                <div class="group-hover:-translate-y-3 transition-all duration-500">
-                                    <h6 class="text-white font-semibold">
-                                        <a routerLink="portfolio/case-studies/v1" class="text-xl text-white font-bold after:absolute after:inset-0">UI/UX Enhancement for SnapMediae</a>
-                                    </h6>
-                                    <small class="text-white text-sm">UI/UX design</small>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="masonry-grid-item flex lg:w-1/3 md:w-1/2 w-full p-3" data-groups='["marketing","design"]'>
-                        <div class="relative overflow-hidden rounded-md group">
-                            <!-- Image -->
-                            <img src="/images/portfolio/masonry/05.jpg" alt="portfolio-img" class="size-full object-cover transition duration-300" />
-
-                            <!-- Overlay -->
-                            <div class="absolute inset-0 bg-linear-to-b from-transparent to-black/90 flex flex-col justify-end p-5 opacity-0 group-hover:opacity-100 transition">
-                                <div class="group-hover:-translate-y-3 transition-all duration-500">
-                                    <h6 class="text-white font-semibold">
-                                        <a href="portfolio-case-studies-v2.html" class="text-xl text-white font-bold after:absolute after:inset-0">Sustainability Initiative</a>
-                                    </h6>
-                                    <small class="text-white text-sm">Business dev</small>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="masonry-grid-item flex lg:w-1/3 md:w-1/2 w-full p-3" data-groups='["design","business","brand"]'>
-                        <div class="relative overflow-hidden rounded-md group">
-                            <!-- Image -->
-                            <img src="/images/portfolio/masonry/02.jpg" alt="portfolio-img" class="size-full object-cover transition duration-300" />
-
-                            <!-- Overlay -->
-                            <div class="absolute inset-0 bg-linear-to-b from-transparent to-black/90 flex flex-col justify-end p-5 opacity-0 group-hover:opacity-100 transition">
-                                <div class="group-hover:-translate-y-3 transition-all duration-500">
-                                    <h6 class="text-white font-semibold">
-                                        <a href="portfolio-case-studies-v2.html" class="text-xl text-white font-bold after:absolute after:inset-0">User-Centric Redesign</a>
-                                    </h6>
-                                    <small class="text-white text-sm">Web design</small>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="masonry-grid-item flex lg:w-1/3 md:w-1/2 w-full p-3" data-groups='["design","business","brand"]'>
-                        <div class="relative overflow-hidden rounded-md group">
-                            <!-- Image -->
-                            <img src="/images/portfolio/masonry/07.jpg" alt="portfolio-img" class="size-full object-cover transition duration-300" />
-
-                            <!-- Overlay -->
-                            <div class="absolute inset-0 bg-linear-to-b from-transparent to-black/90 flex flex-col justify-end p-5 opacity-0 group-hover:opacity-100 transition">
-                                <div class="group-hover:-translate-y-3 transition-all duration-500">
-                                    <h6 class="text-white font-semibold">
-                                        <a routerLink="portfolio/case-studies/v1" class="text-xl text-white font-bold after:absolute after:inset-0">Website Optimization for TechWave</a>
-                                    </h6>
-                                    <small class="text-white text-sm">Web design</small>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="masonry-grid-item flex lg:w-1/3 md:w-1/2 w-full p-3" data-groups='["design","business"]'>
-                        <div class="relative overflow-hidden rounded-md group">
-                            <!-- Image -->
-                            <img src="/images/portfolio/masonry/06.jpg" alt="portfolio-img" class="size-full object-cover transition duration-300" />
-
-                            <!-- Overlay -->
-                            <div class="absolute inset-0 bg-linear-to-b from-transparent to-black/90 flex flex-col justify-end p-5 opacity-0 group-hover:opacity-100 transition">
-                                <div class="group-hover:-translate-y-3 transition-all duration-500">
-                                    <h6 class="text-white font-semibold">
-                                        <a routerLink="portfolio/case-studies/v1" class="text-xl text-white font-bold after:absolute after:inset-0">E-commerce Expansion</a>
-                                    </h6>
-                                    <small class="text-white text-sm">Digital Marketing</small>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="masonry-grid-item flex lg:w-1/3 md:w-1/2 w-full p-3" data-groups='["design","business"]'>
-                        <div class="relative overflow-hidden rounded-md group">
-                            <!-- Image -->
-                            <img src="/images/portfolio/masonry/08.jpg" alt="portfolio-img" class="size-full object-cover transition duration-300" />
-
-                            <!-- Overlay -->
-                            <div class="absolute inset-0 bg-linear-to-b from-transparent to-black/90 flex flex-col justify-end p-5 opacity-0 group-hover:opacity-100 transition">
-                                <div class="group-hover:-translate-y-3 transition-all duration-500">
-                                    <h6 class="text-white font-semibold">
-                                        <a routerLink="portfolio/case-studies/v1" class="text-xl text-white font-bold after:absolute after:inset-0">A Triumph of Software</a>
-                                    </h6>
-                                    <small class="text-white text-sm">Digital Marketing</small>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="masonry-grid-item flex lg:w-1/3 md:w-1/2 w-full p-3" data-groups='["design","ui"]'>
-                        <div class="relative overflow-hidden rounded-md group">
-                            <!-- Image -->
-                            <img src="/images/portfolio/masonry/03.jpg" alt="portfolio-img" class="size-full object-cover transition duration-300" />
-
-                            <!-- Overlay -->
-                            <div class="absolute inset-0 bg-linear-to-b from-transparent to-black/90 flex flex-col justify-end p-5 opacity-0 group-hover:opacity-100 transition">
-                                <div class="group-hover:-translate-y-3 transition-all duration-500">
-                                    <h6 class="text-white font-semibold">
-                                        <a routerLink="portfolio/case-studies/v1" class="text-xl text-white font-bold after:absolute after:inset-0">Social Media Engagement</a>
-                                    </h6>
-                                    <small class="text-white text-sm">UI/UX design</small>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-
-            <div class="flex justify-center lg:mt-16 mt-10">
-                <button class="py-3 px-6 border border-default-300 hover:bg-default-300 transition-all text-default-600 flex items-center gap-2 rounded-md font-medium">
-                    <lucide-icon name="loader" class="size-5"></lucide-icon>
-                    Load more work
-                </button>
-            </div>
+            <!-- Title -->
+            <h1 class="lg:text-[45px] md:text-4xl text-3xl text-white relative z-10">Portfolio Masonry</h1>
         </div>
-    </section>
+
+        <div class="masonry-filterable">
+            <div class="flex flex-wrap lg:justify-center justify-start items-center mt-14">
+                <h6 class="text-xl lg:mb-0 mb-2">Browse by:</h6>
+
+                <ul class="masonry-filters lg:w-3xl w-full gap-2 flex flex-wrap lg:justify-center">
+                    <li>
+                        <a class="py-2 px-4 text-sm rounded inline-flex text-default-600 transition-all font-medium hover:bg-primary/15 hover:text-primary [.active]:bg-primary cursor-pointer [.active]:text-white active"
+                            (click)="filterItems('*')" [ngClass]="{ active: activeFilter === '*' }">All work</a>
+                    </li>
+
+                    <li>
+                        <a class="py-2 px-4 text-sm rounded inline-flex text-default-600 transition-all font-medium hover:bg-primary/15 hover:text-primary [.active]:bg-primary cursor-pointer [.active]:text-white"
+                            (click)="filterItems('.marketing')"
+                            [ngClass]="{ active: activeFilter === '.marketing' }">Marketing</a>
+                    </li>
+
+                    <li>
+                        <a class="py-2 px-4 text-sm rounded inline-flex text-default-600 transition-all font-medium hover:bg-primary/15 hover:text-primary [.active]:bg-primary cursor-pointer [.active]:text-white"
+                            (click)="filterItems('.design')" [ngClass]="{ active: activeFilter === '.design' }">Web
+                            design</a>
+                    </li>
+
+                    <li>
+                        <a class="py-2 px-4 text-sm rounded inline-flex text-default-600 transition-all font-medium hover:bg-primary/15 hover:text-primary [.active]:bg-primary cursor-pointer [.active]:text-white"
+                            (click)="filterItems('.business')"
+                            [ngClass]="{ active: activeFilter === '.business' }">Development</a>
+                    </li>
+
+                    <li>
+                        <a class="py-2 px-4 text-sm rounded inline-flex text-default-600 transition-all font-medium hover:bg-primary/15 hover:text-primary [.active]:bg-primary cursor-pointer [.active]:text-white"
+                            (click)="filterItems('.brand')" [ngClass]="{ active: activeFilter === '.brand' }">Brand
+                            design</a>
+                    </li>
+
+                    <li>
+                        <a class="py-2 px-4 text-sm rounded inline-flex text-default-600 transition-all font-medium hover:bg-primary/15 hover:text-primary [.active]:bg-primary cursor-pointer [.active]:text-white"
+                            (click)="filterItems('.ui')" [ngClass]="{ active: activeFilter === '.ui' }">UI/UX design</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="masonry-grid mt-8" data-columns="3" appIsotope>
+
+                @for (item of portfolioData; track $index) {
+                <article class="masonry-grid-item flex lg:w-1/3 md:w-1/2 w-full p-3" [ngClass]="item.groups">
+                    <div class="relative overflow-hidden rounded-md group">
+
+                        <!-- Image -->
+                        <img [src]="item.image" alt="portfolio-img"
+                            class="size-full object-cover transition duration-300" />
+
+                        <!-- Overlay -->
+                        <div
+                            class="absolute inset-0 bg-linear-to-b from-transparent to-black/90 flex flex-col justify-end p-5 opacity-0 group-hover:opacity-100 transition">
+                            <div class="group-hover:-translate-y-3 transition-all duration-500">
+                                <h6 class="text-white font-semibold">
+                                    <a routerLink="/portfolio/case-study/v1"
+                                        class="text-xl text-white font-bold after:absolute after:inset-0 cursor-pointer">
+                                        {{ item.title }}
+                                    </a>
+                                </h6>
+
+                                <small class="text-white text-sm">
+                                    {{ item.category }}
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                }
+
+            </div>
+
+        </div>
+
+        <div class="flex justify-center lg:mt-16 mt-10">
+            <button
+                class="py-3 px-6 border border-default-300 hover:bg-default-300 transition-all text-default-600 flex items-center gap-2 rounded-md font-medium">
+                <lucide-icon name="loader" class="size-5"></lucide-icon>
+                Load more work
+            </button>
+        </div>
+    </div>
+</section>

@@ -64,32 +64,32 @@ export const projectData: ProjectType[] = [
   {
     image: img1,
     title: 'Sustainability Initiative',
-    link: '/portfolio/case-studies/v2',
+    link: '/portfolio/case-study/v2',
   },
   {
     image: img6,
     title: 'Digital Delight',
-    link: '/portfolio/case-studies/v2',
+    link: '/portfolio/case-study/v2',
   },
   {
     image: img4,
     title: 'Mobile Magic',
-    link: '/portfolio/case-studies/v2',
+    link: '/portfolio/case-study/v2',
   },
   {
     image: img3,
     title: 'Social Media Brilliance',
-    link: '/portfolio/case-studies/v2',
+    link: '/portfolio/case-study/v2',
   },
   {
     image: img5,
     title: 'Motion Marvels',
-    link: '/portfolio/case-studies/v2',
+    link: '/portfolio/case-study/v2',
   },
   {
     image: img2,
     title: 'Innovation Unleashed',
-    link: '/portfolio/case-studies/v2',
+    link: '/portfolio/case-study/v2',
   },
 ];
 

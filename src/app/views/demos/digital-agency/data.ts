@@ -74,13 +74,13 @@ export const projectData: ProjectType[] = [
     name: 'Website optimization for techWave',
     category: 'Graphic design',
     image: project1,
-    url: '/portfolio/case-studies/v2',
+    url: '/portfolio/case-study/v2',
   },
   {
     name: 'Transforming ideas into reality',
     category: 'UI/UX design',
     image: project2,
-    url: '/portfolio/case-studies/v2',
+    url: '/portfolio/case-study/v2',
   },
 ];
 

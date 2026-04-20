@@ -15,6 +15,7 @@ import { Footer } from "@app/components/footer/footer";
   templateUrl: './seo-agency.html',
   styles: ``,
 })
+  
 export class SeoAgency {
 
 }

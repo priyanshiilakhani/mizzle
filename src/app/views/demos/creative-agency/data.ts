@@ -40,35 +40,35 @@ export const projectData: RecentProjectType[] = [
     category: 'UI/UX design',
     categoryClass: 'marketing business brand',
     image: portfolioImg1,
-    url: '/portfolio/case-studies/v1',
+    url: '/portfolio/case-study/v1',
   },
   {
     name: 'ElevateTech Redesign',
     category: 'Brand design',
     categoryClass: 'brand ui',
     image: portfolioImg4,
-    url: '/portfolio/case-studies/v1',
+    url: '/portfolio/case-study/v1',
   },
   {
     name: 'User-Centric Redesign',
     category: 'Web design',
     categoryClass: 'business design brand',
     image: portfolioImg2,
-    url: '/portfolio/case-studies/v1',
+    url: '/portfolio/case-study/v1',
   },
   {
     name: 'E-commerce Expansion',
     category: 'Digital Marketing',
     categoryClass: 'business design',
     image: portfolioImg6,
-    url: '/portfolio/case-studies/v1',
+    url: '/portfolio/case-study/v1',
   },
   {
     name: 'Sustainability Initiative',
     category: 'Business dev',
     categoryClass: 'design marketing',
     image: portfolioImg5,
-    url: '/portfolio/case-studies/v1',
+    url: '/portfolio/case-study/v1',
   },
 
   {
@@ -76,7 +76,7 @@ export const projectData: RecentProjectType[] = [
     category: 'UI/UX design',
     categoryClass: 'ui',
     image: portfolioImg3,
-    url: '/portfolio/case-studies/v1',
+    url: '/portfolio/case-study/v1',
   },
 ];
 

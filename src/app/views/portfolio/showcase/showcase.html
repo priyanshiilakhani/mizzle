@@ -1,1 +1,257 @@
-<p>showcase works!</p>
+<section class="py-34">
+    <div class="container">
+        <div class="mb-10">
+            <nav aria-label="breadcrumb" class="mb-2">
+                <ol class="flex space-x-2 text-default-600 text-sm mb-2">
+                    <li>
+                        <a [routerLink]="[]" class="hover:text-primary transition-all">Home</a>
+                    </li>
+
+                    <li class="text-primary list-disc list-inside">Portfolio Masonry</li>
+                </ol>
+            </nav>
+            <h1 class="text-[45px]">Portfolio Showcase</h1>
+        </div>
+
+        <div class="grid grid-cols-2 gap-14">
+            <div class="w-full">
+                <div class="relative group overflow-hidden bg-transparent">
+                    <!-- Logo (top-left) -->
+                    <div class="absolute top-0 start-0 z-10">
+                        <img src="/images/client/client-white/03.svg" class="h-10 m-6" />
+                    </div>
+
+                    <!-- Image wrapper -->
+                    <div class="rounded-md overflow-hidden">
+                        <img src="/images/portfolio/showcase/03.jpg"
+                            class="size-full object-cover transition-transform duration-500 group-hover:scale-103"
+                            alt="portfolio-img" />
+                    </div>
+
+                    <!-- Text info -->
+                    <div class="pt-5">
+                        <h5 class="text-2xl">
+                            <a routerLink="/portfolio/case-study/v2"
+                                class="text-default-900 hover:text-primary transition-all after:absolute after:inset-0">UI/UX
+                                Enhancement for SnapMedia</a>
+                        </h5>
+                        <small class="text-sm text-default-600">UI/UX design</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full">
+                <div class="relative group overflow-hidden bg-transparent">
+                    <!-- Logo (top-left) -->
+                    <div class="absolute top-0 start-0 z-10">
+                        <img src="/images/client/client-white/04.svg" class="h-10 m-6" />
+                    </div>
+
+                    <!-- Image wrapper -->
+                    <div class="rounded-md overflow-hidden">
+                        <img src="/images/portfolio/showcase/02.jpg"
+                            class="size-full object-cover transition-transform duration-500 group-hover:scale-103"
+                            alt="portfolio-img" />
+                    </div>
+
+                    <!-- Text info -->
+                    <div class="pt-5">
+                        <h5 class="text-2xl">
+                            <a routerLink="/portfolio/case-study/v2"
+                                class="text-default-900 hover:text-primary transition-all after:absolute after:inset-0">Website
+                                Optimization for TechWave</a>
+                        </h5>
+                        <small class="text-sm text-default-600">Web design</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-2 w-full">
+                <div class="relative group overflow-hidden bg-transparent">
+                    <!-- Logo (top-left) -->
+                    <div class="absolute top-0 start-0 z-10">
+                        <img src="/images/client/client-white/02.svg" class="h-10 m-6" />
+                    </div>
+
+                    <!-- Image wrapper -->
+                    <div class="rounded-md overflow-hidden">
+                        <img src="/images/portfolio/showcase/01.jpg"
+                            class="size-full object-cover transition-transform duration-500 group-hover:scale-103"
+                            alt="portfolio-img" />
+                    </div>
+
+                    <!-- Text info -->
+                    <div class="pt-5">
+                        <h5 class="text-2xl">
+                            <a routerLink="/portfolio/case-study/v2"
+                                class="text-default-900 hover:text-primary transition-all after:absolute after:inset-0">Chasing
+                                Dreams and Creating Art</a>
+                        </h5>
+                        <small class="text-sm text-default-600">Branding</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full">
+                <div class="relative group overflow-hidden bg-transparent">
+                    <!-- Logo (top-left) -->
+                    <div class="absolute top-0 start-0 z-10">
+                        <img src="/images/client/client-white/01.svg" class="h-10 m-6" />
+                    </div>
+
+                    <!-- Image wrapper -->
+                    <div class="rounded-md overflow-hidden">
+                        <img src="/images/portfolio/showcase/05.jpg"
+                            class="size-full object-cover transition-transform duration-500 group-hover:scale-103"
+                            alt="portfolio-img" />
+                    </div>
+
+                    <!-- Text info -->
+                    <div class="pt-5">
+                        <h5 class="text-2xl">
+                            <a routerLink="/portfolio/case-study/v2"
+                                class="text-default-900 hover:text-primary transition-all after:absolute after:inset-0">The
+                                Art of Storytelling</a>
+                        </h5>
+                        <small class="text-sm text-default-600">Graphics design</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full">
+                <div class="relative group overflow-hidden bg-transparent">
+                    <!-- Logo (top-left) -->
+                    <div class="absolute top-0 start-0 z-10">
+                        <img src="/images/client/client-white/05.svg" class="h-10 m-6" />
+                    </div>
+
+                    <!-- Image wrapper -->
+                    <div class="rounded-md overflow-hidden">
+                        <img src="/images/portfolio/showcase/04.jpg"
+                            class="size-full object-cover transition-transform duration-500 group-hover:scale-103"
+                            alt="portfolio-img" />
+                    </div>
+
+                    <!-- Text info -->
+                    <div class="pt-5">
+                        <h5 class="text-2xl">
+                            <a routerLink="/portfolio/case-study/v2"
+                                class="text-default-900 hover:text-primary transition-all after:absolute after:inset-0">Transforming
+                                Ideas into Reality</a>
+                        </h5>
+                        <small class="text-sm text-default-600">Marketing</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-16">
+            <ul class="flex justify-between items-center">
+                <li>
+                    <a [routerLink]="[]" class="bg-default-50 flex items-center gap-1 py-3 px-4 rounded">
+                        <lucide-icon name="arrow-big-left" class="fill-default-600"></lucide-icon>
+                        Prev
+                    </a>
+                </li>
+
+                <li>
+                    <ul class="flex justify-between gap-1.5 items-center">
+                        <li>
+                            <a [routerLink]="[]" class="bg-primary text-white gap-1 py-3 px-4 rounded">1</a>
+                        </li>
+
+                        <li>
+                            <a [routerLink]="[]"
+                                class="bg-default-100 text-default-700 hover:bg-primary hover:text-white gap-1 py-3 px-4 rounded transition-all">2</a>
+                        </li>
+
+                        <li>
+                            <a [routerLink]="[]"
+                                class="bg-default-100 text-default-700 hover:bg-primary hover:text-white gap-1 py-3 px-4 rounded transition-all">3</a>
+                        </li>
+
+                        <li>
+                            <a [routerLink]="[]"
+                                class="bg-default-100 text-default-700 hover:bg-primary hover:text-white gap-1 py-3 px-4 rounded transition-all">..</a>
+                        </li>
+
+                        <li>
+                            <a [routerLink]="[]"
+                                class="bg-default-100 text-default-700 hover:bg-primary hover:text-white gap-1 py-3 px-4 rounded transition-all">22</a>
+                        </li>
+
+                        <li>
+                            <a [routerLink]="[]"
+                                class="bg-default-100 text-default-700 hover:bg-primary hover:text-white gap-1 py-3 px-4 rounded transition-all">23</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a [routerLink]="[]"
+                        class="bg-default-50 text-default-700 hover:bg-primary hover:text-white group flex items-center gap-1 py-3 px-4 rounded transition-all">
+                        Next
+                        <lucide-icon name="arrow-big-right"
+                            class="fill-default-700 group-hover:fill-white transition-all"></lucide-icon>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="relative z-20 py-0 -mb-16">
+    <div class="container relative">
+        <div class="relative overflow-hidden bg-primary rounded p-10">
+            <!-- SVG decoration -->
+            <figure class="absolute top-0 -start-30">
+                <!-- Keep your SVG as is -->
+                <svg width="371" height="354" viewBox="0 0 371 354" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="172.5" cy="176.5" rx="131.5" ry="125.5" fill="url(#paint0_linear_195_2)"></ellipse>
+                    <ellipse cx="185.5" cy="177" rx="185.5" ry="177" fill="url(#paint1_linear_195_2)"></ellipse>
+                    <defs>
+                        <linearGradient id="paint0_linear_195_2" x1="172.5" y1="51" x2="172.5" y2="302"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.0569271" stop-color="#D9D9D9" stop-opacity="0.5"></stop>
+                            <stop offset="0.998202" stop-color="#D9D9D9" stop-opacity="0"></stop>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_195_2" x1="185.5" y1="0" x2="185.5" y2="354"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.0569271" stop-color="#D9D9D9" stop-opacity="0.2"></stop>
+                            <stop offset="0.998202" stop-color="#D9D9D9" stop-opacity="0"></stop>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </figure>
+
+            <!-- Image decoration -->
+            <div class="absolute end-0 bottom-0 sm:me-5">
+                <img src="/images/elements/cta-vector.svg" class="h-50" alt="vector-img" />
+            </div>
+
+            <div class="relative grid place-items-center">
+                <div class="lg:w-7/12 text-center mx-auto">
+                    <h2 class="text-[45px] text-white mb-6">Let's Work Together</h2>
+                    <p class="text-white mb-6">I'll take the time to understand your vision and goals, and work with you
+                        to develop a customized plan to help you succeed.</p>
+
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-2">
+                        <a routerLink="/contact/v1"
+                            class="bg-dark hover:bg-dark-hover text-white px-4 py-2 rounded inline-flex items-center gap-2 font-medium transition-all">
+                            <lucide-icon name="mail" class="size-4"></lucide-icon>
+                            Email us
+                        </a>
+
+                        <a routerLink="/contact/v2"
+                            class="bg-dark hover:bg-dark-hover text-white px-4 py-2 rounded inline-flex items-center gap-2 font-medium transition-all">
+                            <lucide-icon name="phone" class="size-4"></lucide-icon>
+                            Contact us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-footer />
