@@ -103,3 +103,5 @@ File: Style CSS File
 @import "./_swiper.css";
 @import "./_plyr.css";
 @import "./_mockup.css";
+
+@import '../framework-custom.css';

@@ -1,39 +1,46 @@
+import { CommonModule } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { register } from 'swiper/element/bundle';
-register();
-// type SlideType = {
-//   image: string;
-//   text: string;
-//   name: string;
-//   role: string;
-//   rating: number;
-// };
+import { LucideAngularModule } from 'lucide-angular';
+import { RouterLink } from '@angular/router';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AuthSwiper } from "../auth-swiper/auth-swiper";
+
 @Component({
   selector: 'app-sign-up',
-  imports: [],
+  imports: [CommonModule, LucideAngularModule, RouterLink, ReactiveFormsModule, AuthSwiper],
   templateUrl: './sign-up.html',
   styles: ``,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class SignUp {
-  // slideData: SlideType[] = [
-  //   {
-  //     image: '/images/auth/01.jpg',
-  //     text: `"With unwavering determination, they navigate the complexities of the industry, forging strategic partnerships and driving transformative change."`,
-  //     name: 'Emma Watson',
-  //     role: 'Founder, catalog',
-  //   },
-  //   {
-  //     image: '/images/auth/02.jpg',
-  //     text: `"An exceptional agency CEO is a visionary, constantly pushing the boundaries of creativity and pushing their team to new heights. They inspire with their passion and cultivate a culture of trust and respect."`,
-  //     name: 'Carolyn Ortiz',
-  //     role: 'CEO, mizzle',
-  //   },
-  //   {
-  //     image: '/images/auth/03.jpg',
-  //     text: `"Through collaboration and strategic direction, they steer the agency towards its goals, navigating the ever-evolving landscape with agility and grace."`,
-  //     name: 'Dennis Barrett',
-  //     role: 'Founder, catalog',
-  //   },
-  // ];
+ registerForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.registerForm = this.fb.group(
+      {
+        email: ['', [Validators.required, Validators.email]],
+        password: ['', Validators.required],
+        confirmPassword: ['', Validators.required],
+        terms: [false, Validators.requiredTrue],
+      },
+      {
+        validators: this.passwordMatchValidator,
+      }
+    );
+  }
+
+  passwordMatchValidator(form: FormGroup) {
+    const password = form.get('password')?.value;
+    const confirm = form.get('confirmPassword')?.value;
+    return password === confirm ? null : { mismatch: true };
+  }
+
+  onSubmit() {
+    if (this.registerForm.valid) {
+      console.log(this.registerForm.value);
+    } else {
+      this.registerForm.markAllAsTouched();
+    }
+  }
+
 }

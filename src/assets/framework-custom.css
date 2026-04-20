@@ -1,0 +1,10 @@
+
+.ng-otp-input-wrapper input {
+  width: 68px !important; 
+  }
+
+@media (min-width: 768px) {
+  .ng-otp-input-wrapper input {
+    width: 131px !important; 
+  }
+}

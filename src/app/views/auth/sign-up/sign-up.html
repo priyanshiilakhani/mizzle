@@ -2,96 +2,14 @@
     <div class="grid lg:grid-cols-12 grid-cols-1 items-center">
         <!-- Left -->
         <div class="hidden lg:block lg:col-span-7 h-screen">
-            <div class="swiper h-full">
-                <swiper-container class="swiper-wrapper" pagination="true" pagination-el=".swiper-pagination" pagination-clickable="true" autoplay="true">
-
-                    <!-- Slide 1 -->
-                    <swiper-slide>
-                        <div class="relative h-full bg-cover bg-left bg-no-repeat bg-[url('/images/auth/01.jpg')]">
-                            <div class="absolute inset-0 bg-dark/60"></div>
-
-                            <div class="relative z-20 h-full p-16 flex flex-col justify-end">
-                                <h4 class="font-light text-white text-3xl mb-2">"With unwavering determination, they navigate the complexities of the industry, forging strategic partnerships and driving transformative change."</h4>
-                                <div class="flex items-start justify-between mt-10 text-white">
-                                    <div>
-                                        <h5 class="text-2xl font-bold text-white">Emma Watson</h5>
-                                        <span class="text-white/80">Founder, catalog</span>
-                                    </div>
-
-                                    <div class="flex space-x-1">
-                                        <i data-lucide="star" class="fill-white text-white size-4"></i>
-                                        <i data-lucide="star" class="fill-white text-white size-4"></i>
-                                        <i data-lucide="star" class="fill-white text-white size-4"></i>
-                                        <i data-lucide="star" class="fill-white text-white size-4"></i>
-                                        <i data-lucide="star-half" class="fill-white text-white size-4"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </swiper-slide>
-
-                    <!-- Slide 2 -->
-                    <swiper-slide>
-                        <div class="relative h-full bg-cover bg-left bg-no-repeat bg-[url('/images/auth/02.jpg')]">
-                            <div class="absolute inset-0 bg-dark/60"></div>
-
-                            <div class="relative z-20 h-full p-16 flex flex-col justify-end">
-                                <h4 class="font-light text-white text-3xl mb-2">
-                                    "An exceptional agency CEO is a visionary, constantly pushing the boundaries of creativity and pushing their team to new heights. They inspire with their passion and cultivate a culture of trust and respect."
-                                </h4>
-
-                                <div class="flex items-start justify-between mt-10 text-white">
-                                    <div>
-                                        <h5 class="text-2xl font-bold text-white">Carolyn Ortiz</h5>
-                                        <span class="text-white/80">CEO, mizzle</span>
-                                    </div>
-
-                                    <div class="flex space-x-1">
-                                        <i data-lucide="star" class="fill-white text-white size-4"></i>
-                                        <i data-lucide="star" class="fill-white text-white size-4"></i>
-                                        <i data-lucide="star" class="fill-white text-white size-4"></i>
-                                        <i data-lucide="star" class="fill-white text-white size-4"></i>
-                                        <i data-lucide="star-half" class="fill-white text-white size-4"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </swiper-slide>
-
-                    <!-- Slide 3 -->
-                    <swiper-slide>
-                        <div class="relative h-full bg-cover bg-left bg-no-repeat bg-[url('/images/auth/03.jpg')]">
-                            <div class="absolute inset-0 bg-dark/60"></div>
-
-                            <div class="relative z-20 h-full p-16 flex flex-col justify-end">
-                                <h4 class="font-light text-white text-3xl mb-2">" Through collaboration and strategic direction, they steer the agency towards its goals, navigating the ever-evolving landscape with agility and grace."</h4>
-                                <div class="flex items-start justify-between mt-10 text-white">
-                                    <div>
-                                        <h5 class="text-2xl font-bold text-white">Dennis Barrett</h5>
-                                        <span class="text-white/80">Founder, catalog</span>
-                                    </div>
-
-                                    <div class="flex space-x-1">
-                                        <i data-lucide="star" class="fill-white text-white size-4"></i>
-                                        <i data-lucide="star" class="fill-white text-white size-4"></i>
-                                        <i data-lucide="star" class="fill-white text-white size-4"></i>
-                                        <i data-lucide="star" class="fill-white text-white size-4"></i>
-                                        <i data-lucide="star-half" class="fill-white text-white size-4"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </swiper-slide>
-                </swiper-container>
-                <div class="swiper-pagination swiper-pagination-line mb-3"></div>
-            </div>
+            <app-auth-swiper />
         </div>
 
         <!-- Right -->
         <div class="lg:col-span-5 relative">
             <div class="w-full md:flex justify-center my-10">
                 <div class="md:px-0 px-4 md:w-3/4 lg:w-10/12">
-                    <a href="index.html">
+                    <a routerLink="/">
                         <img src="/images/logo-icon.svg" class="size-12.5 mb-6" alt="logo" />
                     </a>
 
@@ -111,13 +29,13 @@
 
                     <!-- Social buttons -->
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-10">
-                        <a href="#" class="flex items-center gap-2 justify-center font-medium border border-default-200 bg-default-100 px-4 py-2 rounded text-center">
-                            <i class="iconify tabler--brand-google-filled size-4"></i>
+                        <a [routerLink]="[]" class="flex items-center gap-2 justify-center font-medium border border-default-200 bg-default-100 px-4 py-2 rounded text-center">
+                            <iconify-icon icon="tabler:brand-google-filled" class="size-4"></iconify-icon>
                             Signup with Google
                         </a>
 
-                        <a href="#" class="flex items-center gap-2 justify-center font-medium border border-default-200 bg-default-100 px-4 py-2 rounded text-center">
-                            <i class="iconify tabler--brand-facebook-filled size-4"></i>
+                        <a [routerLink]="[]" class="flex items-center gap-2 justify-center font-medium border border-default-200 bg-default-100 px-4 py-2 rounded text-center">
+                            <iconify-icon icon="tabler:brand-facebook-filled" class="size-4"></iconify-icon>
                             Signup with Facebook
                         </a>
                     </div>
@@ -128,32 +46,39 @@
                     </div>
 
                     <!-- Form -->
-                    <form>
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                         <div class="relative mb-6">
-                            <input type="email" id="email" placeholder="name@example.com" class="peer block w-full border border-default-200 rounded-md bg-body-bg px-4 py-3 text-default-900 placeholder-transparent focus:shadow-lg focus:outline-none" />
-                            <label for="email" class="absolute start-3 top-2 text-default-600 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-default-600 peer-focus:-top-3 peer-focus:text-sm peer-focus:text-default-600 bg-body-bg px-1">
+                            <input type="email" formControlName="email" id="email" placeholder="name@example.com" class="peer block w-full border border-default-200 rounded-md bg-body-bg px-4 py-3 text-default-900 placeholder-transparent focus:shadow-lg focus:outline-none" />
+                            <label for="email" class="absolute start-3 -top-3 text-sm text-default-600 bg-body-bg px-1
+           transition-all
+           peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
+           peer-focus:-top-3 peer-focus:text-sm">
                                 Email address
                             </label>
+                            @if (registerForm.get('email')?.touched && registerForm.get('email')?.invalid) {
+                            <small class="text-red-500">Invalid email</small>
+                            }
                         </div>
 
                         <div class="relative flex mb-2">
                             <div class="flex-1">
-                                <input type="password" id="psw-input" class="peer block w-full border border-default-200 rounded-md bg-body-bg px-4 py-3 text-default-900 placeholder-transparent focus:shadow-lg focus:outline-none" placeholder="Enter password" />
-                                <label for="psw-input" class="absolute start-3 top-2 text-default-600 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-default-600 peer-focus:-top-3 peer-focus:text-sm peer-focus:text-default-600 bg-body-bg px-1">
+                                <input type="password" formControlName="password" id="psw-input" class="peer block w-full border border-default-200 rounded-md bg-body-bg px-4 py-3 text-default-900 placeholder-transparent focus:shadow-lg focus:outline-none" placeholder="Enter password" />
+                                <label for="psw-input" class="absolute start-3 -top-3 text-sm text-default-600 bg-body-bg px-1
+           transition-all
+           peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
+           peer-focus:-top-3 peer-focus:text-sm">
                                     Password
                                 </label>
                                 <div id="pswmeter" data-hs-strong-password='{"target": "#psw-input","hints": "#pswmeter-message", "stripClasses": "hs-strong-password:opacity-100 hs-strong-password-accepted:bg-primary h-2 flex-auto rounded-full bg-primary opacity-50 mx-1" }' class="flex mt-2 rounded overflow-hidden"></div>
                             </div>
                         </div>
 
-
-
                         <!-- Password Hints -->
                         <div id="pswmeter-message" class="mb-4 flex justify-between">
                             <div class="text-start" data-hs-strong-password-hints-weakness-text='["Write your password...","Easy peasy!","That is a simple one"]'>Write your password...</div>
                             <div class="hs-tooltip [--trigger:click] [--placement:left] inline-block">
                                 <button type="button" class="hs-tooltip-toggle">
-                                    <i data-lucide="info" class="size-4"></i>
+                                    <lucide-icon name="info" class="size-4"></lucide-icon>
                                     <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 w-50 transition-opacity inline-block absolute invisible z-10 p-4 bg-body-bg border border-default-200 text-sm text-start text-default-600 rounded-md" role="tooltip">
                                         Include at least one uppercase, one lowercase, one special character, one number and 8 characters long.
                                     </span>
@@ -162,22 +87,32 @@
                         </div>
 
                         <div class="relative mb-6">
-                            <input type="password" id="confirmPassword" placeholder="" class="peer block w-full border border-default-200 rounded-md bg-body-bg px-4 py-3 text-default-900 placeholder-transparent focus:outline-none" />
-                            <label for="confirmPassword" class="absolute start-3 top-2 text-default-600 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-default-600 peer-focus:-top-3 peer-focus:text-sm peer-focus:text-default-600 bg-body-bg px-1">
+                            <input type="password" formControlName="confirmPassword" id="confirmPassword" placeholder="" class="peer block w-full border border-default-200 rounded-md bg-body-bg px-4 py-3 text-default-900 placeholder-transparent focus:outline-none" />
+                            <label for="confirmPassword" class="absolute start-3 -top-3 text-sm text-default-600 bg-body-bg px-1
+           transition-all
+           peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
+           peer-focus:-top-3 peer-focus:text-sm">
                                 Confirm Password
                             </label>
+                            @if (registerForm.hasError('mismatch') && registerForm.get('confirmPassword')?.touched) {
+                            <small class="text-red-500">Passwords do not match</small>
+                            }
                         </div>
 
                         <div class="flex items-center gap-2 mb-6">
-                            <input type="checkbox" class="size-4 checked:bg-primary! bg-default-100! rounded border border-default-200" id="checkbox-1" />
+                            <input type="checkbox" formControlName="terms" class="size-4 checked:bg-primary! bg-default-100! rounded border border-default-200" id="checkbox-1" />
                             <label for="checkbox-1">I agree to all Terms & conditions and the privacy policy.</label>
+                            @if (registerForm.get('terms')?.touched && registerForm.get('terms')?.invalid) {
+                            <small class="text-red-500">You must accept terms</small>
+                            }
                         </div>
-                        <button type="button" class="w-full bg-dark hover:bg-dark-hover transition-all text-white rounded py-2 px-4">Create an account</button>
+
+                        <button type="submit" (click)="onSubmit()" class="w-full bg-dark hover:bg-dark-hover transition-all text-white rounded py-2 px-4">Create an account</button>
                     </form>
 
                     <div class="mt-6 text-center">
                         <span class="text-default-600">
-                            Already have an account? <a href="sign-in.html" class="text-primary hover:text-primary-hover transition-all">Sign in here</a>
+                            Already have an account? <a routerLink="/auth/sign-in" class="text-primary hover:text-primary-hover transition-all">Sign in here</a>
                         </span>
                     </div>
                 </div>
