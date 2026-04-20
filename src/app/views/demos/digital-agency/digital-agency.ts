@@ -17,6 +17,7 @@ import { Blogs } from "./components/blogs/blogs";
   templateUrl: './digital-agency.html',
   styles: ``,
 })
+  
 export class DigitalAgency {
 
 }
