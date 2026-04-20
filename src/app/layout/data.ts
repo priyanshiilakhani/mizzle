@@ -136,8 +136,8 @@ export const menuItems :MenuItemType[] = [
         children: [
           { label: 'Blog Grid', url: '/blog/grid' },
           { label: 'Blog List Sidebar', url: '/blog/list-sidebar' },
-          { label: 'Blog Single v.1', url: '/blog/single-v1' },
-          { label: 'Blog Single v.2', url: '/blog/single-v2' },
+          { label: 'Blog Single v.1', url: '/blog/single/v1' },
+          { label: 'Blog Single v.2', url: '/blog/single/v2' },
         ],
       },
 
@@ -145,12 +145,12 @@ export const menuItems :MenuItemType[] = [
         label: 'Specialty Pages',
         children: [
           { label: 'Help Center', url: '/help/center' },
-          { label: 'Help Center Detail', url: '/help/center-detail' },
+          { label: 'Help Center Detail', url: '/help/detail' },
           { label: 'Pricing', url: '/pricing' },
           { label: 'Faqs', url: '/faq' },
           { label: 'Error 404', url: '/error/404' },
           { label: 'Coming Soon', url: '/coming-soon' },
-          { label: 'Terms & Conditions', url: '/terms-and-condition' },
+          { label: 'Terms & Conditions', url: '/terms-conditions' },
         ],
       },
 

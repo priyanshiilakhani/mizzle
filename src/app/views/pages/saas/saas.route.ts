@@ -13,7 +13,7 @@ export const SAAS_ROUTES: Route[] = [
   {
     path: 'feature-single',
     component: FeatureSingle,
-    data: { title: 'SaaS Feature Single' },
+    data: { title: 'SaaS Feature Single' ,headerDark: true },
   },
   {
     path: 'integrations',

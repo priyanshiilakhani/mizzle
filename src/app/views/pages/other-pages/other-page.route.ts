@@ -15,7 +15,7 @@ export const OTHER_PAGE_ROUTES: Route[] = [
   {
     path: 'pricing',
     component: Pricing,
-    data: { title: 'Pricing' },
+    data: { title: 'Pricing',headerDark: true  },
   },
   {
     path: 'faq',

@@ -1,16 +1,25 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { menuItems } from '../../data';
-import { RouterLink } from "@angular/router";
-import { LucideAngularModule } from "lucide-angular";
+import { menuItems, MenuItemType } from '../../data';
+import { RouterLink, Router } from '@angular/router';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-navbar',
   imports: [RouterLink, LucideAngularModule],
   templateUrl: './navbar.html',
   styles: ``,
-  schemas:[CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-  
 export class Navbar {
   menuItems = menuItems;
+  constructor(private router: Router) {}
+  isChildActive(item: MenuItemType): boolean {
+    if (item.url && this.router.url === item.url) return true;
+    if (!item.children) return false;
+    return item.children.some((child: MenuItemType) => this.isChildActive(child));
+  }
+
+  isActive(item: MenuItemType): boolean {
+    return this.router.url === item.url;
+  }
 }
