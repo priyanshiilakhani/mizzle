@@ -1,5 +1,3 @@
-type CurrencyType = '₹' | '$' | '€'
-
 export const currentYear = new Date().getFullYear()
 
 export const credits = {
@@ -8,4 +6,3 @@ export const credits = {
   buyLink: '',
 }
 
-export const basePath: string = '/'
