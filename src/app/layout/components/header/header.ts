@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener } from '@angular/core';
 import { Navbar } from '../navbar/navbar';
 import { ThemeToggler } from '../theme-toggler/theme-toggler';
 import { MobileNav } from '../mobile-nav/mobile-nav';
@@ -12,8 +12,13 @@ import { LucideAngularModule } from "lucide-angular";
   styles: ``,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-  
 export class Header {
   theme: string = 'light';
 
+  isSticky = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isSticky = window.scrollY > 50; 
+  }
 }
