@@ -125,7 +125,7 @@ export const testimonialData: TestimonialType[] = [
   },
   {
     comment:
-      "The best Bootstrap theme we've ever used - it's easy to customize and comes with all the features we need.",
+      "The best Template we've ever used - it's easy to customize and comes with all the features we need.",
     user: {
       avatar: avatar5,
       company: {
@@ -151,7 +151,7 @@ export type BlogType = {
 
 export const blogData: BlogType[] = [
   {
-    title: 'Mastering Responsive Web Design with Bootstrap',
+    title: 'Mastering Responsive Web Design with TailwindCSS',
     publishedBy: {
       firstName: 'Jacqueline',
       lastName: 'Miller',
@@ -160,7 +160,7 @@ export const blogData: BlogType[] = [
     url: '/blog/single/v1',
   },
   {
-    title: 'Bootstrap Mastery: Designing Stunning Websites',
+    title: 'TailwindCSS Mastery: Designing Stunning Websites',
     publishedBy: {
       firstName: 'Dennis',
       lastName: 'Barrett',
@@ -169,7 +169,7 @@ export const blogData: BlogType[] = [
     url: '/blog/single/v1',
   },
   {
-    title: 'Interactive Web Design with Bootstrap and ' + credits.name,
+    title: 'Interactive Web Design with TailwindCSS and ' + credits.name,
     publishedBy: {
       firstName: 'Carolyn',
       lastName: 'Ortiz',
@@ -187,7 +187,7 @@ export const blogData: BlogType[] = [
     url: '/blog/single/v1',
   },
   {
-    title: 'Sleek and Responsive - Designing with Bootstrap and Mizzle',
+    title: 'Sleek and Responsive - Designing with TailwindCSS and Mizzle',
     publishedBy: {
       firstName: 'Carolyn',
       lastName: 'Ortiz',

@@ -16,38 +16,31 @@
             </div>
 
             <div class="md:col-span-2">
-                    <swiper-container  
-                    space-between="30" 
-                    loop="false" 
-                    navigation="true" 
-                    navigation-next-el="#swiper-button-next" 
-                    navigation-prev-el="#swiper-button-prev" 
-                    autoplay="true" 
-                    breakpoints='{
+                <swiper-container  space-between="30" loop="false" navigation="true" navigation-next-el="#swiper-button-next" navigation-prev-el="#swiper-button-prev" autoplay="true" breakpoints='{
                             "576": {"slidesPerView": 2}, 
                             "768": {"slidesPerView": 2}, 
                             "992": {"slidesPerView": 3}
                     }'>
-                        @for (product of productData; track $index) {
-                        <swiper-slide class="text-center">
-                            <img [src]="product.image" class="lg:w-46 md:w-30 w-44 mx-auto" alt="product-img" />
-                            <div class="mt-4">
-                                <h6 class="text-xl font-bold mb-4 hover:text-primary transition-all">
-                                    <a [routerLink]="[]">{{ product.name }}</a>
-                                </h6>
+                    @for (product of productData; track $index) {
+                    <swiper-slide class="text-center py-4">
+                        <img [src]="product.image" class="lg:w-46 md:w-30 w-44 mx-auto" alt="product-img" />
+                        <div class="mt-4">
+                            <h6 class="text-xl font-bold mb-4 hover:text-primary transition-all">
+                                <a [routerLink]="[]">{{ product.name }}</a>
+                            </h6>
 
-                                <div class="mb-6" [class]="product.oldPrice ? 'flex items-center justify-center gap-1' : 'text-center'">
-                                    <h6 class="text-xl font-normal">${{ product.price }}</h6>
-                                    @if (product.oldPrice) {
-                                    <span>${{ product.oldPrice }}</span>
-                                    }
-                                </div>
-
-                                <a [routerLink]="[]" class="px-3.5 py-2 bg-primary text-white text-sm font-medium rounded hover:bg-primary-hover transition-all">Buy now</a>
+                            <div class="mb-6" [class]="product.oldPrice ? 'flex items-center justify-center gap-1' : 'text-center'">
+                                <h6 class="text-xl font-normal">${{ product.price }}</h6>
+                                @if (product.oldPrice) {
+                                <span>${{ product.oldPrice }}</span>
+                                }
                             </div>
-                        </swiper-slide>
-                        }
-                    </swiper-container>
+
+                            <a [routerLink]="[]" class="px-3.5 py-2 bg-primary text-white text-sm font-medium rounded hover:bg-primary-hover transition-all">Buy now</a>
+                        </div>
+                    </swiper-slide>
+                    }
+                </swiper-container>
             </div>
         </div>
     </div>
