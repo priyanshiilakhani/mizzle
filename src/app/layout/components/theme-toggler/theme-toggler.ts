@@ -1,3 +1,4 @@
+import { Theme, ThemeService } from '@/app/services/theme.service';
 import { Component } from '@angular/core';
 import { LucideAngularModule } from "lucide-angular";
 
@@ -8,9 +9,14 @@ import { LucideAngularModule } from "lucide-angular";
   styles: ``,
 })
 export class ThemeToggler {
-  theme: string = 'light';
+  currentTheme: Theme = 'system';
+
+  constructor(private themeService: ThemeService) {
+    this.currentTheme = this.themeService.getTheme();
+  }
 
   toggleTheme() {
-    this.theme = this.theme === 'dark' ? 'light' : 'dark';
+    this.themeService.toggleTheme();
+    this.currentTheme = this.themeService.getTheme();
   }
 }

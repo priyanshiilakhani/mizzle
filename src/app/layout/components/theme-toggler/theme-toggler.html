@@ -1,12 +1,32 @@
-<button id="light-dark-mode" type="button" class="size-8 flex items-center justify-center rounded-full transition-[scale,background] text-default-800 hover:bg-default-200" (click)="toggleTheme()">
-    <!-- Light (moon) -->
-    <lucide-icon name="moon" class="absolute text-default-800 size-4.5 transition-all duration-200 scale-0 rotate-90 light:scale-100 light:rotate-0"></lucide-icon>
+<button 
+  id="light-dark-mode"
+  type="button"
+  class="relative size-8 flex items-center justify-center rounded-full transition-[scale,background] text-default-800 hover:bg-default-200"
+  (click)="toggleTheme()"
+>
 
-    <!-- Dark (sun) -->
-    <lucide-icon name="sun" class="absolute text-default-800 size-4.5 transition-all duration-200 scale-0 rotate-90 dark:scale-100 dark:rotate-0">
+  <!-- SYSTEM -->
+  @if (currentTheme === 'system') {
+    <lucide-icon 
+      name="monitor-cog"
+      class="absolute text-default-800 size-4.5 transition-all duration-200 scale-100 rotate-0">
     </lucide-icon>
+  }
 
-    <!-- System (monitor) -->
-    <lucide-icon name="monitor-cog" class="absolute text-default-800 size-4.5 transition-all duration-200 scale-100 rotate-0 light:scale-0 dark:scale-0">
+  <!-- LIGHT -->
+  @if (currentTheme === 'light') {
+    <lucide-icon 
+      name="moon"
+      class="absolute text-default-800 size-4.5 transition-all duration-200 scale-100 rotate-0">
     </lucide-icon>
+  }
+
+  <!-- DARK -->
+  @if (currentTheme === 'dark') {
+    <lucide-icon 
+      name="sun"
+      class="absolute text-default-800 size-4.5 transition-all duration-200 scale-100 rotate-0">
+    </lucide-icon>
+  }
+
 </button>
