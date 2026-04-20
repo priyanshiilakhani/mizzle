@@ -7,11 +7,10 @@ import { List } from "./components/list/list";
 import { Video } from "./components/video/video";
 import { TestimonialCard } from "./components/testimonial-card/testimonial-card";
 import { Product } from "./components/product/product";
-import { Footer } from "@app/components/footer/footer";
 
 @Component({
   selector: 'app-landing-product',
-  imports: [Hero, TechnicalDetail, Feature, Features2, List, Video, TestimonialCard, Product, Footer],
+  imports: [Hero, TechnicalDetail, Feature, Features2, List, Video, TestimonialCard, Product],
   templateUrl: './landing-product.html',
   styles: ``,
 })

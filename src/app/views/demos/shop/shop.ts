@@ -6,11 +6,10 @@ import { ShopFeatures } from "./components/shop-features/shop-features";
 import { LatestCollections } from "./components/latest-collections/latest-collections";
 import { ProductBox } from "./components/product-box/product-box";
 import { BrandCollection } from "./components/brand-collection/brand-collection";
-import { Footer } from "@app/components/footer/footer";
 
 @Component({
   selector: 'app-shop',
-  imports: [Hero, FeaturedCategory, TrendingProducts, ShopFeatures, LatestCollections, ProductBox, BrandCollection, Footer],
+  imports: [Hero, FeaturedCategory, TrendingProducts, ShopFeatures, LatestCollections, ProductBox, BrandCollection],
   templateUrl: './shop.html',
   styles: ``,
 })

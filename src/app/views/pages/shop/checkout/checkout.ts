@@ -4,14 +4,14 @@ import { PersonalInfo } from "./components/personal-info/personal-info";
 import { PaymentOption } from "./components/payment-option/payment-option";
 import { PromoCode } from "./components/promo-code/promo-code";
 import { Detail } from "./components/detail/detail";
-import { Footer } from "@app/components/footer/footer";
 
 @Component({
   selector: 'app-checkout',
-  imports: [Breadcrumb, PersonalInfo, PaymentOption, PromoCode, Detail, Footer],
+  imports: [Breadcrumb, PersonalInfo, PaymentOption, PromoCode, Detail],
   templateUrl: './checkout.html',
   styles: ``,
 })
+  
 export class Checkout {
 
 }

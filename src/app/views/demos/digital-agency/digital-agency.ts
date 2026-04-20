@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Footer } from "@app/components/footer/footer";
 import { Hero } from "./components/hero/hero";
 import { About } from "./components/about/about";
 import { Services } from "./components/services/services";
@@ -14,7 +13,7 @@ import { Blogs } from "./components/blogs/blogs";
 
 @Component({
   selector: 'app-digital-agency',
-  imports: [Footer, Hero, About, Services, DigitalJourney, Steps, TourVideo, Projects, Statistics, Testimonials, Cta, Blogs],
+  imports: [Hero, About, Services, DigitalJourney, Steps, TourVideo, Projects, Statistics, Testimonials, Cta, Blogs],
   templateUrl: './digital-agency.html',
   styles: ``,
 })

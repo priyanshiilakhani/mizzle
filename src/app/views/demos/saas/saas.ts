@@ -6,11 +6,10 @@ import { Work } from "./components/work/work";
 import { Performance } from "./components/performance/performance";
 import { Pricing } from "./components/pricing/pricing";
 import { Blog } from "./components/blog/blog";
-import { Footer } from "@app/components/footer/footer";
 
 @Component({
   selector: 'app-saas',
-  imports: [Hero, Feature, About, Work, Performance, Pricing, Blog, Footer],
+  imports: [Hero, Feature, About, Work, Performance, Pricing, Blog],
   templateUrl: './saas.html',
   styles: ``,
 })

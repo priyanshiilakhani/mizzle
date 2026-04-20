@@ -5,14 +5,14 @@ import { Counter } from "./components/counter/counter";
 import { Work } from "./components/work/work";
 import { Cta } from "./components/cta/cta";
 import { Team } from "./components/team/team";
-import { Footer } from "@app/components/footer/footer";
 
 @Component({
   selector: 'app-about-v1',
-  imports: [Banner, Video, Counter, Work, Cta, Team, Footer],
+  imports: [Banner, Video, Counter, Work, Cta, Team],
   templateUrl: './about-v1.html',
   styles: ``,
 })
+  
 export class AboutV1 {
 
 }

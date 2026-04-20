@@ -4,11 +4,10 @@ import { Banner } from "./components/banner/banner";
 import { Counter } from "./components/counter/counter";
 import { Work } from "./components/work/work";
 import { Cta } from "./components/cta/cta";
-import { Footer } from "@app/components/footer/footer";
 
 @Component({
   selector: 'app-career',
-  imports: [Position, Banner, Counter, Work, Cta, Footer],
+  imports: [Position, Banner, Counter, Work, Cta],
   templateUrl: './career.html',
   styles: ``,
 })

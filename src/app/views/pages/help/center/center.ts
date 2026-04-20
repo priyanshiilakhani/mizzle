@@ -3,14 +3,14 @@ import { Hero } from "./components/hero/hero";
 import { Topic } from "./components/topic/topic";
 import { Faqs } from "./components/faqs/faqs";
 import { SupportLink } from "./components/support-link/support-link";
-import { Footer } from "@app/components/footer/footer";
 
 @Component({
   selector: 'app-center',
-  imports: [Hero, Topic, Faqs, SupportLink, Footer],
+  imports: [Hero, Topic, Faqs, SupportLink],
   templateUrl: './center.html',
   styles: ``,
 })
+  
 export class Center {
 
 }

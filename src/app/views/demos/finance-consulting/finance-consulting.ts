@@ -7,12 +7,11 @@ import { Work } from "./components/work/work";
 import { Clients } from "./components/clients/clients";
 import { Cta } from "./components/cta/cta";
 import { Contact } from "./components/contact/contact";
-import { Footer } from "@app/components/footer/footer";
 
 
 @Component({
   selector: 'app-finance-consulting',
-  imports: [Hero, Rating, Service, About, Work, Clients, Cta, Contact, Footer],
+  imports: [Hero, Rating, Service, About, Work, Clients, Cta, Contact],
   templateUrl: './finance-consulting.html',
   styles: ``,
 })

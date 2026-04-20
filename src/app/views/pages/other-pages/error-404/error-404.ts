@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { Footer } from "@app/components/footer/footer";
 
 @Component({
   selector: 'app-error-404',
-  imports: [Footer],
+  imports: [],
   templateUrl: './error-404.html',
   styles: ``,
 })

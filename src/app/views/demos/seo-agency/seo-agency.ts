@@ -7,11 +7,10 @@ import { CaseStudies } from "./components/case-studies/case-studies";
 import { Approches } from "./components/approches/approches";
 import { Team } from "./components/team/team";
 import { Cta } from "./components/cta/cta";
-import { Footer } from "@app/components/footer/footer";
 
 @Component({
   selector: 'app-seo-agency',
-  imports: [Hero, Services, About, Testimonial, CaseStudies, Approches, Team, Cta, Footer],
+  imports: [Hero, Services, About, Testimonial, CaseStudies, Approches, Team, Cta],
   templateUrl: './seo-agency.html',
   styles: ``,
 })

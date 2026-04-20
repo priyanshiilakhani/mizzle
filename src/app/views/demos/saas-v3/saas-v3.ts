@@ -6,11 +6,10 @@ import { Integration } from "./components/integration/integration";
 import { Pricing } from "./components/pricing/pricing";
 import { Testimonials } from "./components/testimonials/testimonials";
 import { Cta } from "./components/cta/cta";
-import { Footer } from "@app/components/footer/footer";
 
 @Component({
   selector: 'app-saas-v3',
-  imports: [Hero, Feature, Statistics, Integration, Pricing, Testimonials, Cta, Footer],
+  imports: [Hero, Feature, Statistics, Integration, Pricing, Testimonials, Cta],
   templateUrl: './saas-v3.html',
   styles: ``,
 })

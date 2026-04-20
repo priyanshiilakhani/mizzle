@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Footer } from "@app/components/footer/footer";
 import { Hero } from "./components/hero/hero";
 import { TourVideo } from "./components/tour-video/tour-video";
 import { Features } from "./components/features/features";
@@ -10,10 +9,11 @@ import { Blogs } from "./components/blogs/blogs";
 
 @Component({
   selector: 'app-saas-v4',
-  imports: [Footer, Hero, TourVideo, Features, TabFeature, Integrations, Testimonials, Blogs],
+  imports: [Hero, TourVideo, Features, TabFeature, Integrations, Testimonials, Blogs],
   templateUrl: './saas-v4.html',
   styles: ``,
 })
+  
 export class SaasV4 {
 
 }

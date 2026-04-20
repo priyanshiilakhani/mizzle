@@ -5,14 +5,14 @@ import { Benefits } from "./components/benefits/benefits";
 import { Work } from "./components/work/work";
 import { Pricing } from "./components/pricing/pricing";
 import { Cta } from "./components/cta/cta";
-import { Footer } from "@app/components/footer/footer";
 
 @Component({
   selector: 'app-service-single',
-  imports: [Hero, Video, Benefits, Work, Pricing, Cta, Footer],
+  imports: [Hero, Video, Benefits, Work, Pricing, Cta],
   templateUrl: './service-single.html',
   styles: ``,
 })
+  
 export class ServiceSingle {
 
 }

@@ -3,11 +3,10 @@ import { Hero } from "./components/hero/hero";
 import { Feature } from "./components/feature/feature";
 import { Faqs } from "./components/faqs/faqs";
 import { Cta } from "./components/cta/cta";
-import { Footer } from "@app/components/footer/footer";
 
 @Component({
   selector: 'app-servicev2',
-  imports: [Hero, Feature, Faqs, Cta, Footer],
+  imports: [Hero, Feature, Faqs, Cta],
   templateUrl: './servicev2.html',
   styles: ``,
 })
