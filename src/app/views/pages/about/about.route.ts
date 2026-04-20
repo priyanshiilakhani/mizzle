@@ -7,7 +7,7 @@ export const ABOUT_ROUTES: Route[] = [
   {
     path: 'v1',
     component: AboutV1,
-    data: { title: 'About v.1' },
+    data: { title: 'About v.1',headerDark: true  },
   },
   {
     path: 'v2',

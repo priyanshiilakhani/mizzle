@@ -1,7 +1,6 @@
 <header>
-    <div class="header-sticky navbar bg-transparent fixed transition-all top-0 inset-x-0 w-full z-60 duration-300 [.header-sticky-on]:bg-body-bg [.header-sticky-on]:dark:bg-[#121519] [.header-sticky-on]:border-b border-default-200" [class]="{ 'dark': theme === 'dark' }" [class]="{
-    'header-sticky-on': isSticky
-  }">
+    <div class="header-sticky navbar bg-transparent fixed transition-all top-0 inset-x-0 w-full z-60 duration-300 [.header-sticky-on]:bg-body-bg [.header-sticky-on]:dark:bg-[#121519] [.header-sticky-on]:border-b border-default-200" 
+    [class]="{'header-sticky-on': isSticky}"  [class]="{ 'dark': isDarkHeader }">
         <div class="container py-3">
             <div class="flex items-center justify-between">
                 <a routerLink="/" class="flex items-center">

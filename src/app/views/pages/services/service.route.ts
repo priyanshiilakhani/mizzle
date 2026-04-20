@@ -7,7 +7,7 @@ export const SERVICE_ROUTES: Route[] = [
   {
     path: 'v1',
     component: Servicev1,
-    data: { title: 'Services v.1' },
+    data: { title: 'Services v.1', headerDark: true },
   },
   {
     path: 'v2',
@@ -17,6 +17,6 @@ export const SERVICE_ROUTES: Route[] = [
   {
     path: 'single',
     component: ServiceSingle,
-    data: { title: 'Service Single' },
+    data: { title: 'Service Single', headerDark: true },
   },
 ];
