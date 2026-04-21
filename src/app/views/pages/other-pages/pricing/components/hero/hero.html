@@ -102,14 +102,14 @@
     <div class="container -mt-44">
         <!-- Swiper Container -->
         <div class="swiper">
-            <swiper-container class="items-center lg:mb-0 mb-14 pt-10" space-between="30" pagination="true"
+            <swiper-container class="items-center lg:mb-0 mb-14 pt-7" space-between="30" pagination="true"
                 pagination-el=".swiper-pagination" [breakpoints]="{
                     '576': { slidesPerView: 1 },
                     '768': { slidesPerView: 2 },
                     '992': { slidesPerView: 3 },
                 }">
                 @for(item of pricingData;track $index) {
-                <swiper-slide [class.relative]="item.highlight" class="self-center">
+                <swiper-slide [class.relative]="item.highlight" class="self-center py-3">
                     <div class="shadow border rounded-md" [class]="item.highlight 
                      ? 'border-primary/30 bg-primary/15 relative' 
                      : 'border-default-200 bg-body-bg'">
