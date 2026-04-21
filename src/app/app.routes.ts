@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { Layout } from './layout/layout';
+import { ComingSoon } from './views/pages/other-pages/coming-soon/coming-soon';
 
 export const routes: Routes = [
   {
@@ -26,5 +27,10 @@ export const routes: Routes = [
     path: 'auth',
     loadChildren: () =>
       import('./views/auth/auth.route').then((mod) => mod.AUTH_ROUTES),
+  },
+  {
+      path: 'coming-soon',
+      component: ComingSoon,
+      data: { title: 'Comming Soon' },
   },
 ];

@@ -148,7 +148,7 @@ export const menuItems :MenuItemType[] = [
           { label: 'Help Center Detail', url: '/help/detail' },
           { label: 'Pricing', url: '/pricing' },
           { label: 'Faqs', url: '/faq' },
-          { label: 'Error 404', url: '/error/404' },
+          { label: 'Error 404', url: '/error-404' },
           { label: 'Coming Soon', url: '/coming-soon' },
           { label: 'Terms & Conditions', url: '/terms-conditions' },
         ],

@@ -2,9 +2,11 @@ export type GridType = {
   name: string;
   role: string;
   image: string;
+  className?: string;
   socials: {
     icon: string;
     bgClass: string;
+    className?: string;
   }[];
 };
 
@@ -28,21 +30,25 @@ export const gridData: GridType[] = [
       {
         icon: 'facebook',
         bgClass: 'bg-indigo-500',
+        className: 'fill-white',
       },
     ],
   },
   {
     name: 'Jacqueline Miller',
     role: 'Human Resource',
+    className: 'flex items-center gap-2.5',
     image: '/images/team/03.jpg',
     socials: [
       {
         icon: 'twitter',
-        bgClass: 'bg-sky-500',
+        bgClass: 'bg-sky-500 mb-0',
+        className: 'fill-white',
       },
       {
         icon: 'linkedin',
         bgClass: 'bg-info',
+        className: 'fill-white',
       },
     ],
   },
@@ -50,10 +56,12 @@ export const gridData: GridType[] = [
     name: 'Louis Ferguson',
     role: 'Web Developer',
     image: '/images/team/04.jpg',
+    className: 'flex items-center gap-2.5',
     socials: [
       {
         icon: 'facebook',
-        bgClass: 'bg-blue-600',
+        bgClass: 'bg-blue-600 mb-0',
+        className: 'fill-white',
       },
       {
         icon: 'instagram',
@@ -76,10 +84,12 @@ export const gridData: GridType[] = [
     name: 'Lori Stevens',
     role: 'Graphic designer',
     image: '/images/team/06.jpg',
+    className: 'flex items-center gap-2.5',
     socials: [
       {
         icon: 'facebook',
-        bgClass: 'bg-blue-600',
+        bgClass: 'bg-blue-600 mb-0',
+        className: 'fill-white',
       },
       {
         icon: 'instagram',
@@ -95,6 +105,7 @@ export const gridData: GridType[] = [
       {
         icon: 'twitter',
         bgClass: 'bg-sky-500',
+        className: 'fill-white',
       },
     ],
   },
@@ -102,14 +113,16 @@ export const gridData: GridType[] = [
     name: 'Amanda Reed',
     role: 'Content writer',
     image: '/images/team/08.jpg',
+    className: 'flex items-center gap-2.5',
     socials: [
       {
         icon: 'instagram',
-        bgClass: 'bg-linear-to-tr from-purple-600 to-orange-500',
+        bgClass: 'bg-linear-to-tr from-purple-600 to-orange-500 mb-0',
       },
       {
         icon: 'twitter',
         bgClass: 'bg-sky-500',
+        className: 'fill-white',
       },
     ],
   },
