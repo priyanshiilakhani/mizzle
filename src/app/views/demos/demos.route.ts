@@ -68,7 +68,7 @@ export const DEMO_ROUTE: Routes = [
   {
     path: 'saas/v4',
     component: SaasV4,
-    data: { title: 'SaaS v.2' },
+    data: { title: 'SaaS v.4' },
   },
   {
     path: 'saas/v5',
