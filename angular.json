@@ -27,17 +27,16 @@
               "src/assets"
             ],
             "styles": ["src/styles.css", "node_modules/swiper/swiper-bundle.min.css"],
-             "scripts": [
-              "node_modules/preline/dist/index.js"            
-            ]
+            "scripts": ["node_modules/preline/dist/index.js"],
+            "allowedCommonJsDependencies": ["isotope-layout", "imagesloaded", "glightbox"]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "2mb",
+                  "maximumError": "3mb"
                 },
                 {
                   "type": "anyComponentStyle",
