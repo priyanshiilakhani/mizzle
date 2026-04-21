@@ -1,3 +1,4 @@
+<div class="flex flex-col gap-1 overflow-y-auto max-h-70">
     <div class="hs-accordion-group divide-y divide-default-200">
 
         @for (menu of menuItems; track $index) {
@@ -5,8 +6,7 @@
         <!-- ================= Demos (mega) ================= -->
         @if (menu.type === 'mega') {
         <div class="hs-accordion">
-            <button
-                class="hs-accordion-toggle text-default-800 w-full flex items-center justify-between gap-2 py-2.5 px-5 font-semibold"  [class.text-primary]="isMenuActive(menu)">
+            <button class="hs-accordion-toggle text-default-800 w-full flex items-center justify-between gap-2 py-2.5 px-5 font-semibold" [class.text-primary]="isMenuActive(menu)">
                 <span>{{ menu.label }}</span>
                 <iconify-icon icon="tabler:chevron-down" class="size-4"></iconify-icon>
             </button>
@@ -19,9 +19,7 @@
                         <ul class="flex flex-col gap-1">
                             @for (item of col.items; track $index) {
                             <li class="group">
-                                <a [routerLink]="item.url"
-                                  (click)="closeMobileMenu()"  
-                                    class="block text-sm font-semibold rounded-sm hover:text-primary hover:bg-primary/6 px-3 py-2.5 text-default-800">
+                                <a [routerLink]="item.url" (click)="closeMobileMenu()" class="block text-sm font-semibold rounded-sm hover:text-primary hover:bg-primary/6 px-3 py-2.5 text-default-800">
 
                                     {{ item.label }}
 
@@ -45,8 +43,7 @@
                                     <h6 class="text-xl">{{ menu.footer.title }}</h6>
                                     <small>{{ menu.footer.subtitle }}</small>
                                 </div>
-                                <a [routerLink]="menu.footer.button.url" 
-                                    class="py-1.5 px-3 bg-primary text-white rounded text-xs">
+                                <a [routerLink]="menu.footer.button.url" class="py-1.5 px-3 bg-primary text-white rounded text-xs">
                                     {{ menu.footer.button.label }}
                                 </a>
                             </div>
@@ -61,32 +58,27 @@
         <!-- ================= Pages (dropdown nested) ================= -->
         @if (menu.type === 'dropdown') {
         <div class="hs-accordion">
-            <button
-                class="hs-accordion-toggle text-default-800 w-full flex items-center justify-between gap-2 py-2.5 px-5 font-semibold">
+            <button class="hs-accordion-toggle text-default-800 w-full flex items-center justify-between gap-2 py-2.5 px-5 font-semibold">
                 {{ menu.label }}
                 <iconify-icon icon="tabler:chevron-down" class="size-4"></iconify-icon>
             </button>
 
             <div class="hs-accordion-content hidden px-5 py-2">
-                <div
-                    class="hs-accordion-group border border-default-200 origin-center bg-body-bg rounded-md p-3 w-full flex flex-col gap-1">
+                <div class="hs-accordion-group border border-default-200 origin-center bg-body-bg rounded-md p-3 w-full flex flex-col gap-1">
 
                     @for (child of menu.children; track $index) {
 
                     <!-- Nested accordion -->
                     @if (child.children) {
                     <div class="hs-accordion">
-                        <button
-                            class="hs-accordion-toggle text-sm font-semibold rounded-sm hover:text-primary hover:bg-primary/6 px-3 py-2.5 text-default-800 w-full flex items-center justify-between gap-2">
+                        <button class="hs-accordion-toggle text-sm font-semibold rounded-sm hover:text-primary hover:bg-primary/6 px-3 py-2.5 text-default-800 w-full flex items-center justify-between gap-2">
                             {{ child.label }}
                             <iconify-icon icon="tabler:chevron-down" class="size-4"></iconify-icon>
                         </button>
 
-                        <div
-                            class="hs-accordion-content hidden w-full overflow-hidden transition-[height] border border-default-200 origin-center bg-body-bg rounded-md p-3">
+                        <div class="hs-accordion-content hidden w-full overflow-hidden transition-[height] border border-default-200 origin-center bg-body-bg rounded-md p-3">
                             @for (sub of child.children; track $index) {
-                            <a (click)="closeMobileMenu()" [routerLink]="sub.url" 
-                                class="block text-sm font-semibold rounded-sm hover:text-primary hover:bg-primary/6 px-3 py-2.5 text-default-800">
+                            <a (click)="closeMobileMenu()" [routerLink]="sub.url" class="block text-sm font-semibold rounded-sm hover:text-primary hover:bg-primary/6 px-3 py-2.5 text-default-800">
 
                                 {{ sub.label }}
 
@@ -103,8 +95,7 @@
 
                     <!-- Direct link -->
                     @if (!child.children) {
-                    <a [routerLink]="child.url" (click)="closeMobileMenu()"
-                        class="block text-sm font-semibold rounded-sm hover:text-primary hover:bg-primary/6 px-3 py-2.5 text-default-800">
+                    <a [routerLink]="child.url" (click)="closeMobileMenu()" class="block text-sm font-semibold rounded-sm hover:text-primary hover:bg-primary/6 px-3 py-2.5 text-default-800">
                         {{ child.label }}
                     </a>
                     }
@@ -119,8 +110,7 @@
         <!-- ================= Portfolio ================= -->
         @if (menu.type === 'mega-portfolio') {
         <div class="hs-accordion">
-            <button
-                class="hs-accordion-toggle text-default-800 w-full flex items-center justify-between gap-2 py-2.5 px-5 font-semibold">
+            <button class="hs-accordion-toggle text-default-800 w-full flex items-center justify-between gap-2 py-2.5 px-5 font-semibold">
                 {{ menu.label }}
                 <iconify-icon icon="tabler:chevron-down"></iconify-icon>
             </button>
@@ -132,8 +122,7 @@
                         @for (item of menu.urls; track $index) {
                         @if (item.url) {
                         <li>
-                            <a [routerLink]="item.url"   (click)="closeMobileMenu()" 
-                                class="block text-sm font-semibold rounded-sm hover:text-primary hover:bg-primary/6 px-3 py-2.5 text-default-800">
+                            <a [routerLink]="item.url" (click)="closeMobileMenu()" class="block text-sm font-semibold rounded-sm hover:text-primary hover:bg-primary/6 px-3 py-2.5 text-default-800">
                                 {{ item.label }}
                             </a>
                         </li>
@@ -149,8 +138,7 @@
         <!-- ================= Mega Full ================= -->
         @if (menu.type === 'mega-full') {
         <div class="hs-accordion">
-            <button
-                class="hs-accordion-toggle text-default-800 w-full flex items-center justify-between gap-2 py-2.5 px-5 font-semibold">
+            <button class="hs-accordion-toggle text-default-800 w-full flex items-center justify-between gap-2 py-2.5 px-5 font-semibold">
                 {{ menu.label }}
                 <iconify-icon icon="tabler:chevron-down"></iconify-icon>
             </button>
@@ -167,8 +155,7 @@
                             <li class="p-2 text-default-800 font-bold text-sm block mb-2">{{ section.title }}</li>
                             @for (u of section.urls; track $index) {
                             <li>
-                                <a [routerLink]="[]"
-                                    class="block text-sm font-medium rounded-sm hover:text-primary hover:bg-primary/6 px-2 py-2.5 text-default-500">
+                                <a [routerLink]="[]" class="block text-sm font-medium rounded-sm hover:text-primary hover:bg-primary/6 px-2 py-2.5 text-default-500">
                                     {{ u.label }}
                                 </a>
                             </li>
@@ -185,10 +172,8 @@
 
                         @for (card of section.cards; track $index) {
                         <div class="flex items-start hover:bg-light relative rounded-md text-wrap p-4">
-                            <div
-                                class="size-10.5 flex items-center justify-center border border-default-200 rounded-md shrink-0">
-                                <iconify-icon [icon]="card.icon" width="20" height="20"
-                                    class=" text-default-700"></iconify-icon>
+                            <div class="size-10.5 flex items-center justify-center border border-default-200 rounded-md shrink-0">
+                                <iconify-icon [icon]="card.icon" width="20" height="20" class=" text-default-700"></iconify-icon>
                             </div>
                             <div class="ms-3">
                                 <a class="text-sm font-bold text-default-800">{{ card.title }}</a>
@@ -211,20 +196,17 @@
                             <li class="p-2 text-default-800 font-bold text-sm block mb-2">{{ section.title }}</li>
                             @for (i of section.integrations; track $index) {
                             <li>
-                                <a [routerLink]="[]"
-                                    class="flex items-center justify-between gap-2 py-2 px-4 rounded-lg transition-colors hover:bg-light w-full group">
+                                <a [routerLink]="[]" class="flex items-center justify-between gap-2 py-2 px-4 rounded-lg transition-colors hover:bg-light w-full group">
                                     <div class="flex items-center gap-4">
                                         <img [src]="i.image" class="h-7.5" />
                                         <span class="font-semibold text-default-800">{{ i.name }}</span>
                                     </div>
-                                    <iconify-icon icon="tabler:arrow-right"
-                                        class="ms-auto text-default-500 group-hover:translate-x-0.5 transition-all group-hover:text-primary"></iconify-icon>
+                                    <iconify-icon icon="tabler:arrow-right" class="ms-auto text-default-500 group-hover:translate-x-0.5 transition-all group-hover:text-primary"></iconify-icon>
                                 </a>
                             </li>
                             }
                             <li>
-                                <a [routerLink]="[]"
-                                    class="mt-2 py-2 px-4 bg-default-100 hover:bg-default-200 text-xs block rounded text-center text-default-800 transition-all">View
+                                <a [routerLink]="[]" class="mt-2 py-2 px-4 bg-default-100 hover:bg-default-200 text-xs block rounded text-center text-default-800 transition-all">View
                                     all</a>
                             </li>
                         </ul>
@@ -237,12 +219,10 @@
                         <span class="p-2 text-default-800 font-bold text-sm block ps-4 mb-2">{{ section.title
                             }}</span>
                         @for (b of section.blogs; track $index) {
-                        <div
-                            class="flex items-center gap-2 hover:bg-light relative rounded-md text-wrap py-1.5 px-4 group">
+                        <div class="flex items-center gap-2 hover:bg-light relative rounded-md text-wrap py-1.5 px-4 group">
                             <img [src]="b.image" class="size-14 rounded-md" />
                             <p class="text-wrap font-bold">
-                                <a [routerLink]="b.url"
-                                    class="text-default-800 font-semibold group-hover:text-primary transition-all">
+                                <a [routerLink]="b.url" class="text-default-800 font-semibold group-hover:text-primary transition-all">
                                     {{ b.title }}
                                 </a>
                             </p>
@@ -261,8 +241,7 @@
         <!-- ================= Simple Link ================= -->
         @if (!menu.type) {
         <div>
-            <a [routerLink]="menu.url" (click)="closeMobileMenu()"
-                class="flex items-center py-2.5 px-5 text-default-800 hover:text-primary font-medium">
+            <a [routerLink]="menu.url" (click)="closeMobileMenu()" class="flex items-center py-2.5 px-5 text-default-800 hover:text-primary font-medium">
                 {{ menu.label }}
             </a>
         </div>
@@ -271,3 +250,4 @@
         }
 
     </div>
+</div>
