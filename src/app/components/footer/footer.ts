@@ -12,6 +12,7 @@ import { LucideAngularModule } from "lucide-angular";
   styles: ``,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
+  
 export class Footer {
   quickLink = quickLinks;
   communityList = communityLinks;

@@ -1,26 +1,26 @@
 import { credits } from '@/app/common/constants';
 
-const client1 = '/images/client/01.svg';
-const client2 = '/images/client/02.svg';
-const client3 = '/images/client/03.svg';
-const client4 = '/images/client/04.svg';
-const client6 = '/images/client/06.svg';
+const client1 = 'assets/images/client/01.svg';
+const client2 = 'assets/images/client/02.svg';
+const client3 = 'assets/images/client/03.svg';
+const client4 = 'assets/images/client/04.svg';
+const client6 = 'assets/images/client/06.svg';
 
-const portfolioImg1 = '/images/portfolio/masonry/01.jpg';
-const portfolioImg2 = '/images/portfolio/masonry/02.jpg';
-const portfolioImg3 = '/images/portfolio/masonry/03.jpg';
-const portfolioImg4 = '/images/portfolio/masonry/04.jpg';
-const portfolioImg5 = '/images/portfolio/masonry/05.jpg';
-const portfolioImg6 = '/images/portfolio/masonry/06.jpg';
+const portfolioImg1 = 'assets/images/portfolio/masonry/01.jpg';
+const portfolioImg2 = 'assets/images/portfolio/masonry/02.jpg';
+const portfolioImg3 = 'assets/images/portfolio/masonry/03.jpg';
+const portfolioImg4 = 'assets/images/portfolio/masonry/04.jpg';
+const portfolioImg5 = 'assets/images/portfolio/masonry/05.jpg';
+const portfolioImg6 = 'assets/images/portfolio/masonry/06.jpg';
 
-const avatar5 = '/images/avatar/05.jpg';
-const avatar7 = '/images/avatar/07.jpg';
+const avatar5 = 'assets/images/avatar/05.jpg';
+const avatar7 = 'assets/images/avatar/07.jpg';
 
-const blogImg1 = '/images/blog/4by3/01.jpg';
-const blogImg2 = '/images/blog/4by3/02.jpg';
-const blogImg3 = '/images/blog/4by3/03.jpg';
-const blogImg4 = '/images/blog/4by3/04.jpg';
-const blogImg5 = '/images/blog/4by3/05.jpg';
+const blogImg1 = 'assets/images/blog/4by3/01.jpg';
+const blogImg2 = 'assets/images/blog/4by3/02.jpg';
+const blogImg3 = 'assets/images/blog/4by3/03.jpg';
+const blogImg4 = 'assets/images/blog/4by3/04.jpg';
+const blogImg5 = 'assets/images/blog/4by3/05.jpg';
 
 export const clientsData: string[] = [
  client1,client2,client3,client4

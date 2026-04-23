@@ -1,4 +1,4 @@
-const dropbox = '/assets/images/elements/dropbox.svg';
+const dropbox = 'assets/images/elements/dropbox.svg';
 const github = 'assets/images/elements/github.svg';
 const reddit = 'assets/images/elements/reddit.svg';
 

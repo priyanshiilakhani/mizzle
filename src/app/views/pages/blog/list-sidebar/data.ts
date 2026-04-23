@@ -1,13 +1,13 @@
-const blog1 = '/images/blog/4by4/01.jpg';
-const blog2 = '/images/blog/4by4/02.jpg';
-const blog3 = '/images/blog/4by4/03.jpg';
-const blog4 = '/images/blog/4by4/04.jpg';
-const blog5 = '/images/blog/4by4/05.jpg';
-const blog6 = '/images/blog/4by4/06.jpg';
-const blog7 = '/images/blog/4by4/07.jpg';
-const blog8 = '/images/blog/4by4/08.jpg';
-const blog9 = '/images/blog/4by4/09.jpg';
-const blog10 = '/images/blog/4by4/10.jpg';
+const blog1 = 'assets/images/blog/4by4/01.jpg';
+const blog2 = 'assets/images/blog/4by4/02.jpg';
+const blog3 = 'assets/images/blog/4by4/03.jpg';
+const blog4 = 'assets/images/blog/4by4/04.jpg';
+const blog5 = 'assets/images/blog/4by4/05.jpg';
+const blog6 = 'assets/images/blog/4by4/06.jpg';
+const blog7 = 'assets/images/blog/4by4/07.jpg';
+const blog8 = 'assets/images/blog/4by4/08.jpg';
+const blog9 = 'assets/images/blog/4by4/09.jpg';
+const blog10 = 'assets/images/blog/4by4/10.jpg';
 
 export type CategorySlideType = {
   image: string;

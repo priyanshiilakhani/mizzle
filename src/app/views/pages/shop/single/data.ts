@@ -1,17 +1,17 @@
-const review1 = '/images/shop/review/01.jpg';
-const review2 = '/images/shop/review/02.jpg';
-const review6 = '/images/shop/review/06.jpg';
-const review5 = '/images/shop/review/05.jpg';
-const review3 = '/images/shop/review/03.jpg';
-const review4 = '/images/shop/review/04.jpg';
+const review1 = 'assets/images/shop/review/01.jpg';
+const review2 = 'assets/images/shop/review/02.jpg';
+const review6 = 'assets/images/shop/review/06.jpg';
+const review5 = 'assets/images/shop/review/05.jpg';
+const review3 = 'assets/images/shop/review/03.jpg';
+const review4 = 'assets/images/shop/review/04.jpg';
 
 const avatar1 = 'assets/images/avatar/01.jpg';
 const avatar2 = 'assets/images/avatar/02.jpg';
 
-const shop2 ='/images/shop/02.png'
-const shop3 ='/images/shop/03.png'
-const shop4 ='/images/shop/04.png'
-const shop1 ='/images/shop/01.png'
+const shop2 ='assets/images/shop/02.png'
+const shop3 ='assets/images/shop/03.png'
+const shop4 ='assets/images/shop/04.png'
+const shop1 ='assets/images/shop/01.png'
 
 
 export const imageData: string[] = [review6, review2, review1, review5];

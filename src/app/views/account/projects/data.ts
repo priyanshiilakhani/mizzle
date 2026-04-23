@@ -10,7 +10,7 @@ export type ProjectType = {
 export const projectData: ProjectType[] = [
   {
     id: 1,
-    image: '/images/portfolio/showcase/02.jpg',
+    image: 'assets/images/portfolio/showcase/02.jpg',
     title: 'Website Optimization for TechWave',
     status: 'Published',
     statusColor: 'primary',
@@ -18,7 +18,7 @@ export const projectData: ProjectType[] = [
   },
   {
     id: 2,
-    image: '/images/portfolio/showcase/04.jpg',
+    image: 'assets/images/portfolio/showcase/04.jpg',
     title: 'Transforming Ideas into Reality',
     status: 'Published',
     statusColor: 'primary',
@@ -26,7 +26,7 @@ export const projectData: ProjectType[] = [
   },
   {
     id: 3,
-    image: '/images/portfolio/showcase/03.jpg',
+    image: 'assets/images/portfolio/showcase/03.jpg',
     title: 'The Art of Storytelling',
     status: 'Private',
     statusColor: 'danger',
@@ -34,7 +34,7 @@ export const projectData: ProjectType[] = [
   },
   {
     id: 4,
-    image: '/images/portfolio/showcase/05.jpg',
+    image: 'assets/images/portfolio/showcase/05.jpg',
     title: 'UI/UX Enhancement for SnapMedia',
     status: 'Published',
     statusColor: 'primary',

@@ -3,7 +3,7 @@ export const cartItemData = [
   {
     id: 1,
     name: 'Round neck cotton t-shirt',
-    image: '/images/shop/02.png',
+    image: 'assets/images/shop/02.png',
     price: 103,
     attributes: [
       'Gender: Male',
@@ -14,7 +14,7 @@ export const cartItemData = [
   {
     id: 2,
     name: 'The ultimate smartphone for modern lifestyles',
-    image: '/images/shop/05.png',
+    image: 'assets/images/shop/05.png',
     price: 250,
     attributes: [
       'Color: Purple'
@@ -23,7 +23,7 @@ export const cartItemData = [
   {
     id: 3,
     name: 'Mizz dunk low shoes',
-    image: '/images/shop/08.png',
+    image: 'assets/images/shop/08.png',
     price: 120,
     attributes: [
       'Color: Purple'

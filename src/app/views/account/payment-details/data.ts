@@ -11,7 +11,7 @@ export type PaymentType = {
 export const paymentData: PaymentType[] = [
   {
     id: 1,
-    image: '/images/elements/mastercard.svg',
+    image: 'assets/images/elements/mastercard.svg',
     cardName: 'MasterCard',
     number: '•••• 1569',
     type: 'Checking',
@@ -20,7 +20,7 @@ export const paymentData: PaymentType[] = [
   },
   {
     id: 2,
-    image: '/images/elements/visa.svg',
+    image: 'assets/images/elements/visa.svg',
     cardName: 'VisaCard',
     number: '•••• 5620',
     type: 'Checking',
@@ -44,7 +44,7 @@ export const transitionData: TransitionType[] = [
   {
     id: 1,
     orderId: '#23458',
-    cardImage: '/images/elements/mastercard.svg',
+    cardImage: 'assets/images/elements/mastercard.svg',
     cardNumber: '****4568',
     status: 'Pending',
     statusClass: 'bg-warning/15 text-warning',
@@ -54,7 +54,7 @@ export const transitionData: TransitionType[] = [
   {
     id: 2,
     orderId: '#23458',
-    cardImage: '/images/elements/mastercard.svg',
+    cardImage: 'assets/images/elements/mastercard.svg',
     cardNumber: '****4568',
     status: 'Cancel',
     statusClass: 'bg-danger/15 text-danger',
@@ -64,7 +64,7 @@ export const transitionData: TransitionType[] = [
   {
     id: 3,
     orderId: '#3158',
-    cardImage: '/images/elements/visa.svg',
+    cardImage: 'assets/images/elements/visa.svg',
     cardNumber: '****5620',
     status: 'paid',
     statusClass: 'bg-primary/15 text-primary',

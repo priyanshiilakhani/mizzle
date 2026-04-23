@@ -1,11 +1,11 @@
-const about01 = '/images/about/01.jpg';
-const about02 = '/images/about/02.jpg';
-const about12 = '/images/about/12.jpg';
-const about04 = '/images/about/04.jpg';
-const about14 = '/images/about/14.jpg';
-const about16 = '/images/about/16.jpg';
-const about08 = '/images/about/08.jpg';
-const about03 = '/images/about/03.jpg';
+const about01 = 'assets/images/about/01.jpg';
+const about02 = 'assets/images/about/02.jpg';
+const about12 = 'assets/images/about/12.jpg';
+const about04 = 'assets/images/about/04.jpg';
+const about14 = 'assets/images/about/14.jpg';
+const about16 = 'assets/images/about/16.jpg';
+const about08 = 'assets/images/about/08.jpg';
+const about03 = 'assets/images/about/03.jpg';
 
 export const sliderData = [about01, about02, about12, about04, about14, about01, about16, about08, about03];
 

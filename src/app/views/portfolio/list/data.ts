@@ -1,11 +1,11 @@
-const portfolio1 = '/images/portfolio/list/01.jpg'
-const portfolio2 = '/images/portfolio/list/02.jpg'
-const portfolio3 = '/images/portfolio/list/03.jpg'
-const portfolio4 = '/images/portfolio/list/04.jpg'
-const client04 = '/images/client/04.svg'
-const client02 = '/images/client/02.svg'
-const client01 = '/images/client/01.svg'
-const client05 = '/images/client/05.svg'
+const portfolio1 = 'assets/images/portfolio/list/01.jpg'
+const portfolio2 = 'assets/images/portfolio/list/02.jpg'
+const portfolio3 = 'assets/images/portfolio/list/03.jpg'
+const portfolio4 = 'assets/images/portfolio/list/04.jpg'
+const client04 = 'assets/images/client/04.svg'
+const client02 = 'assets/images/client/02.svg'
+const client01 = 'assets/images/client/01.svg'
+const client05 = 'assets/images/client/05.svg'
 
 export type PortfolioListType = {
   image: string;

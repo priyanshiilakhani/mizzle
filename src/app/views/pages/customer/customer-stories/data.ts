@@ -1,14 +1,14 @@
-const stories1 = '/images/stories/01.jpg';
-const stories3 = '/images/stories/03.jpg';
-const stories4 = '/images/stories/04.jpg';
-const client2 = '/images/client/02.svg';
-const client3 = '/images/client/03.svg';
-const client4 = '/images/client/04.svg';
-const client5 = '/images/client/05.svg';
-const client6 = '/images/client/06.svg';
-const avatar3 = '/images/avatar/03.jpg';
-const avatar5 = '/images/avatar/05.jpg';
-const avatar7 = '/images/avatar/07.jpg';
+const stories1 = 'assets/images/stories/01.jpg';
+const stories3 = 'assets/images/stories/03.jpg';
+const stories4 = 'assets/images/stories/04.jpg';
+const client2 = 'assets/images/client/02.svg';
+const client3 = 'assets/images/client/03.svg';
+const client4 = 'assets/images/client/04.svg';
+const client5 = 'assets/images/client/05.svg';
+const client6 = 'assets/images/client/06.svg';
+const avatar3 = 'assets/images/avatar/03.jpg';
+const avatar5 = 'assets/images/avatar/05.jpg';
+const avatar7 = 'assets/images/avatar/07.jpg';
 
 export type reviewType = {
   image: string;

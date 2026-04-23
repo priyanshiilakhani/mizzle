@@ -1,12 +1,12 @@
-const avatar1 = '/images/avatar/01.jpg';
-const avatar2 = '/images/avatar/02.jpg';
-const avatar3 = '/images/avatar/03.jpg';
-const avatar4 = '/images/avatar/04.jpg';
-const avatar5 = '/images/avatar/05.jpg';
-const avatar7 = '/images/avatar/07.jpg';
-const avatar8 = '/images/avatar/08.jpg';
-const avatar10 = '/images/avatar/10.jpg';
-const avatar11 = '/images/avatar/11.jpg';
+const avatar1 = 'assets/images/avatar/01.jpg';
+const avatar2 = 'assets/images/avatar/02.jpg';
+const avatar3 = 'assets/images/avatar/03.jpg';
+const avatar4 = 'assets/images/avatar/04.jpg';
+const avatar5 = 'assets/images/avatar/05.jpg';
+const avatar7 = 'assets/images/avatar/07.jpg';
+const avatar8 = 'assets/images/avatar/08.jpg';
+const avatar10 = 'assets/images/avatar/10.jpg';
+const avatar11 = 'assets/images/avatar/11.jpg';
 
 export type StatType = {
   value: number;

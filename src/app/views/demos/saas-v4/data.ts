@@ -1,32 +1,32 @@
-const client1 = '/images/client/01.svg';
-const client2 = '/images/client/02.svg';
-const client3 = '/images/client/03.svg';
-const client4 = '/images/client/04.svg';
-const client5 = '/images/client/05.svg';
-const client6 = '/images/client/06.svg';
-const client7 = '/images/client/07.svg';
+const client1 = 'assets/images/client/01.svg';
+const client2 = 'assets/images/client/02.svg';
+const client3 = 'assets/images/client/03.svg';
+const client4 = 'assets/images/client/04.svg';
+const client5 = 'assets/images/client/05.svg';
+const client6 = 'assets/images/client/06.svg';
+const client7 = 'assets/images/client/07.svg';
 
-const decoration4 = '/images/elements/saas-decoration/decoration-4.png';
-const decoration2 = '/images/elements/saas-decoration/decoration-2.png';
-const decoration3 = '/images/elements/saas-decoration/decoration-3.png';
+const decoration4 = 'assets/images/elements/saas-decoration/decoration-4.png';
+const decoration2 = 'assets/images/elements/saas-decoration/decoration-2.png';
+const decoration3 = 'assets/images/elements/saas-decoration/decoration-3.png';
 
-const github = '/images/elements/github.svg';
-const googleDrive = '/images/elements/google-drive.svg';
-const mailchimp = '/images/elements/mailchimp.svg';
-const reddit = '/images/elements/reddit.svg';
-const shopify = '/images/elements/shopify.svg';
-const slack = '/images/elements/slack.svg';
-const webflow = '/images/elements/webflow.svg';
-const dropbox = '/images/elements/dropbox.svg';
+const github = 'assets/images/elements/github.svg';
+const googleDrive = 'assets/images/elements/google-drive.svg';
+const mailchimp = 'assets/images/elements/mailchimp.svg';
+const reddit = 'assets/images/elements/reddit.svg';
+const shopify = 'assets/images/elements/shopify.svg';
+const slack = 'assets/images/elements/slack.svg';
+const webflow = 'assets/images/elements/webflow.svg';
+const dropbox = 'assets/images/elements/dropbox.svg';
 
-const blog3 = '/images/blog/4by3/03.jpg';
-const blog1 = '/images/blog/4by3/01.jpg';
-const blog7 = '/images/blog/4by3/07.jpg';
+const blog3 = 'assets/images/blog/4by3/03.jpg';
+const blog1 = 'assets/images/blog/4by3/01.jpg';
+const blog7 = 'assets/images/blog/4by3/07.jpg';
 
-const team1 = '/images/team/01.jpg';
-const team7 = '/images/team/07.jpg';
-const team6 = '/images/team/06.jpg';
-const team8 = '/images/team/08.jpg';
+const team1 = 'assets/images/team/01.jpg';
+const team7 = 'assets/images/team/07.jpg';
+const team6 = 'assets/images/team/06.jpg';
+const team8 = 'assets/images/team/08.jpg';
 
 export const clientimage: string[] = [
   client1,

@@ -1,20 +1,20 @@
-const serviceImg1 = '/images/services/4by3/01.jpg';
-const serviceImg2 = '/images/services/4by3/02.jpg';
-const serviceImg3 = '/images/services/4by3/03.jpg';
-const serviceImg4 = '/images/services/4by3/04.jpg';
-const serviceImg5 = '/images/services/4by3/05.jpg';
-const serviceImg6 = '/images/services/4by3/06.jpg';
+const serviceImg1 = 'assets/images/services/4by3/01.jpg';
+const serviceImg2 = 'assets/images/services/4by3/02.jpg';
+const serviceImg3 = 'assets/images/services/4by3/03.jpg';
+const serviceImg4 = 'assets/images/services/4by3/04.jpg';
+const serviceImg5 = 'assets/images/services/4by3/05.jpg';
+const serviceImg6 = 'assets/images/services/4by3/06.jpg';
 
-const project1 = '/images/portfolio/list/02.jpg';
-const project2 = '/images/portfolio/list/03.jpg';
+const project1 = 'assets/images/portfolio/list/02.jpg';
+const project2 = 'assets/images/portfolio/list/03.jpg';
 
-const avatar2 = '/images/avatar/02.jpg';
-const avatar4 = '/images/avatar/04.jpg';
-const avatar9 = '/images/avatar/09.jpg';
+const avatar2 = 'assets/images/avatar/02.jpg';
+const avatar4 = 'assets/images/avatar/04.jpg';
+const avatar9 = 'assets/images/avatar/09.jpg';
 
-const blogImg3 = '/images/blog/4by3/03.jpg';
-const blogImg7 = '/images/blog/4by3/07.jpg';
-const blogImg8 = '/images/blog/4by3/08.jpg';
+const blogImg3 = 'assets/images/blog/4by3/03.jpg';
+const blogImg7 = 'assets/images/blog/4by3/07.jpg';
+const blogImg8 = 'assets/images/blog/4by3/08.jpg';
 
 export type ServiceType = {
   image?: string;

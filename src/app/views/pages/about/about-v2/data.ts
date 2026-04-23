@@ -1,15 +1,15 @@
-const avatar1 = '/images/avatar/01.jpg';
-const avatar2 = '/images/avatar/02.jpg';
-const avatar3 = '/images/avatar/03.jpg';
-const avatar4 = '/images/avatar/04.jpg';
-const avatar5 = '/images/avatar/05.jpg';
-const avatar6 = '/images/avatar/06.jpg';
-const avatar7 = '/images/avatar/07.jpg';
-const avatar8 = '/images/avatar/08.jpg';
-const avatar10 = '/images/avatar/10.jpg';
+const avatar1 = 'assets/images/avatar/01.jpg';
+const avatar2 = 'assets/images/avatar/02.jpg';
+const avatar3 = 'assets/images/avatar/03.jpg';
+const avatar4 = 'assets/images/avatar/04.jpg';
+const avatar5 = 'assets/images/avatar/05.jpg';
+const avatar6 = 'assets/images/avatar/06.jpg';
+const avatar7 = 'assets/images/avatar/07.jpg';
+const avatar8 = 'assets/images/avatar/08.jpg';
+const avatar10 = 'assets/images/avatar/10.jpg';
 
-const usFlag = '/images/flags/us.svg';
-const inFlag = '/images/flags/in.svg';
+const usFlag = 'assets/images/flags/us.svg';
+const inFlag = 'assets/images/flags/in.svg';
 
 export const avatarData: string[] = [avatar1, avatar2, avatar3, avatar8, avatar7, avatar5];
 

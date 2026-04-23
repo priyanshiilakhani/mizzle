@@ -11,7 +11,7 @@ export type  WishlistType = {
 export const wishlistData: WishlistType[] = [
   {
     id: 1,
-    image: '/images/shop/02.png',
+    image: 'assets/images/shop/02.png',
     title: 'Round neck cotton t-shirt',
     stockText: 'In Stock',
     details: ['Gender: Male', 'Color: Midblue', 'Size: XL, L, M, S'],
@@ -20,7 +20,7 @@ export const wishlistData: WishlistType[] = [
   },
   {
     id: 2,
-    image: '/images/shop/01.png',
+    image: 'assets/images/shop/01.png',
     title: 'Woman skincare drops',
     stockText: 'Available in 5 days',
     details: ['Gender: Female', 'Size: 100ml'],

@@ -1,8 +1,8 @@
-const blogImg1 = '/images/blog/4by3/01.jpg';
-const blogImg2 = '/images/blog/4by3/02.jpg';
-const blogImg3 = '/images/blog/4by3/03.jpg';
-const blogImg4 = '/images/blog/4by3/04.jpg';
-const blogImg5 = '/images/blog/4by3/05.jpg';
+const blogImg1 = 'assets/images/blog/4by3/01.jpg';
+const blogImg2 = 'assets/images/blog/4by3/02.jpg';
+const blogImg3 = 'assets/images/blog/4by3/03.jpg';
+const blogImg4 = 'assets/images/blog/4by3/04.jpg';
+const blogImg5 = 'assets/images/blog/4by3/05.jpg';
 
 export const popularTagData: string[] = [
   'blog',

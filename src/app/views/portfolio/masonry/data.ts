@@ -1,12 +1,12 @@
-const masonry01 = '/images/portfolio/masonry/01.jpg'
-const masonry02 = '/images/portfolio/masonry/02.jpg';
-const masonry03 = '/images/portfolio/masonry/03.jpg';
-const masonry04 = '/images/portfolio/masonry/04.jpg'
-const masonry05 = '/images/portfolio/masonry/05.jpg'
-const masonry06 = '/images/portfolio/masonry/06.jpg';
-const masonry07 = '/images/portfolio/masonry/07.jpg';
-const masonry08 = '/images/portfolio/masonry/08.jpg';
-const masonry09 = '/images/portfolio/masonry/09.jpg'
+const masonry01 = 'assets/images/portfolio/masonry/01.jpg'
+const masonry02 = 'assets/images/portfolio/masonry/02.jpg';
+const masonry03 = 'assets/images/portfolio/masonry/03.jpg';
+const masonry04 = 'assets/images/portfolio/masonry/04.jpg'
+const masonry05 = 'assets/images/portfolio/masonry/05.jpg'
+const masonry06 = 'assets/images/portfolio/masonry/06.jpg';
+const masonry07 = 'assets/images/portfolio/masonry/07.jpg';
+const masonry08 = 'assets/images/portfolio/masonry/08.jpg';
+const masonry09 = 'assets/images/portfolio/masonry/09.jpg'
 
 
 export type PortfolioType = {

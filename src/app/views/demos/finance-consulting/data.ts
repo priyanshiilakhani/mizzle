@@ -1,8 +1,8 @@
-const Client1 = '/images/client/01.svg'
-const Client2 = '/images/client/02.svg';
-const Client3 = '/images/client/03.svg';
-const Client4 = '/images/client/04.svg';
-const Client5 = '/images/client/05.svg';
+const Client1 = 'assets/images/client/01.svg'
+const Client2 = 'assets/images/client/02.svg';
+const Client3 = 'assets/images/client/03.svg';
+const Client4 = 'assets/images/client/04.svg';
+const Client5 = 'assets/images/client/05.svg';
 
 export interface ServiceType {
   title: string;

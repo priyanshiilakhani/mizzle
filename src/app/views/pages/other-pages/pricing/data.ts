@@ -1,9 +1,9 @@
-const client05 = '/images/client/05.svg';
-const ciient04 = '/images/client/04.svg';
-const client01 = '/images/client/01.svg';
-const client02 = '/images/client/02.svg';
-const client03 = '/images/client/03.svg';
-const client06 = '/images/client/06.svg';
+const client05 = 'assets/images/client/05.svg';
+const ciient04 = 'assets/images/client/04.svg';
+const client01 = 'assets/images/client/01.svg';
+const client02 = 'assets/images/client/02.svg';
+const client03 = 'assets/images/client/03.svg';
+const client06 = 'assets/images/client/06.svg';
 
 export type PricingFeature = {
   text: string;

@@ -3,9 +3,9 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
 import { register } from 'swiper/element/bundle';
 register();
-const auth1 = '/images/auth/01.jpg';
-const auth2 = '/images/auth/02.jpg';
-const auth3 = '/images/auth/03.jpg';
+const auth1 = 'assets/images/auth/01.jpg';
+const auth2 = 'assets/images/auth/02.jpg';
+const auth3 = 'assets/images/auth/03.jpg';
 
 type SlideType = {
   image: string;

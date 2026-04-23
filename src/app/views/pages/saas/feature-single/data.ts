@@ -1,14 +1,14 @@
-const client5 = '/images/client/05.svg';
-const client1 = '/images/client/01.svg';
-const client2 = '/images/client/02.svg';
-const client3 = '/images/client/03.svg';
-const client4 = '/images/client/04.svg';
-const client6 = '/images/client/06.svg';
-const client7 = '/images/client/07.svg';
+const client5 = 'assets/images/client/05.svg';
+const client1 = 'assets/images/client/01.svg';
+const client2 = 'assets/images/client/02.svg';
+const client3 = 'assets/images/client/03.svg';
+const client4 = 'assets/images/client/04.svg';
+const client6 = 'assets/images/client/06.svg';
+const client7 = 'assets/images/client/07.svg';
 
-const saas10 = '/images/elements/saas-decoration/10.png';
-const saas11 = '/images/elements/saas-decoration/11.png';
-const saas12 = '/images/elements/saas-decoration/12.png';
+const saas10 = 'assets/images/elements/saas-decoration/10.png';
+const saas11 = 'assets/images/elements/saas-decoration/11.png';
+const saas12 = 'assets/images/elements/saas-decoration/12.png';
 
 export const clientData: string[] = [client5, client1, client2, client3, client4, client6, client7];
 

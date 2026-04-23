@@ -1,9 +1,9 @@
-const client03 = '/images/client/client-white/03.svg';
-const client04 = '/images/client/client-white/04.svg';
-const client01 = '/images/client/client-white/01.svg';
-const portfolio03 = '/images/portfolio/showcase/03.jpg';
-const portfolio02 = '/images/portfolio/showcase/02.jpg';
-const portfolio05 = '/images/portfolio/showcase/05.jpg';
+const client03 = 'assets/images/client/client-white/03.svg';
+const client04 = 'assets/images/client/client-white/04.svg';
+const client01 = 'assets/images/client/client-white/01.svg';
+const portfolio03 = 'assets/images/portfolio/showcase/03.jpg';
+const portfolio02 = 'assets/images/portfolio/showcase/02.jpg';
+const portfolio05 = 'assets/images/portfolio/showcase/05.jpg';
 
 export type WorkType = {
   logo: string;

@@ -1,12 +1,12 @@
-const list1 = '/images/portfolio/list/01.jpg';
-const list2 = '/images/portfolio/list/02.jpg';
-const slack = '/images/elements/slack.svg';
-const webflow = '/images/elements/webflow.svg';
-const mailchimp = '/images/elements/mailchimp.svg';
-const reddit = '/images/elements/reddit.svg';
-const blog2 = '/images/blog/4by4/02.jpg';
-const blog1 = '/images/blog/4by4/01.jpg';
-const blog3 = '/images/blog/4by4/03.jpg';
+const list1 = 'assets/images/portfolio/list/01.jpg';
+const list2 = 'assets/images/portfolio/list/02.jpg';
+const slack = 'assets/images/elements/slack.svg';
+const webflow = 'assets/images/elements/webflow.svg';
+const mailchimp = 'assets/images/elements/mailchimp.svg';
+const reddit = 'assets/images/elements/reddit.svg';
+const blog2 = 'assets/images/blog/4by4/02.jpg';
+const blog1 = 'assets/images/blog/4by4/01.jpg';
+const blog3 = 'assets/images/blog/4by4/03.jpg';
 
 export type MenuItemType = {
   label: string;

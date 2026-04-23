@@ -1,12 +1,12 @@
-const shop2 = '/images/shop/02.png';
-const shop8 = '/images/shop/08.png';
-const shop1 = '/images/shop/01.png';
-const shop4 = '/images/shop/04.png';
-const shop6 = '/images/shop/06.png';
-const shop9 = '/images/shop/09.png';
-const shop3 = '/images/shop/03.png';
-const shop7 = '/images/shop/07.png';
-const shopbg5 = '/images/shop/bg/05.jpg';
+const shop2 = 'assets/images/shop/02.png';
+const shop8 = 'assets/images/shop/08.png';
+const shop1 = 'assets/images/shop/01.png';
+const shop4 = 'assets/images/shop/04.png';
+const shop6 = 'assets/images/shop/06.png';
+const shop9 = 'assets/images/shop/09.png';
+const shop3 = 'assets/images/shop/03.png';
+const shop7 = 'assets/images/shop/07.png';
+const shopbg5 = 'assets/images/shop/bg/05.jpg';
 
 export type CategoryType = { id: string; name: string; count: number };
 

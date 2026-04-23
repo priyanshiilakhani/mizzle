@@ -1,6 +1,6 @@
-const product3 = '/images/products/03.png'
-const product4 = '/images/products/04.png'
-const product5 = '/images/products/05.png'
+const product3 = 'assets/images/products/03.png'
+const product4 = 'assets/images/products/04.png'
+const product5 = 'assets/images/products/05.png'
 
 
 export type TechnicalType = {

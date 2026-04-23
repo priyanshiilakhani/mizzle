@@ -1,19 +1,19 @@
-const webDesign = '/images/services/icons/web-design.svg';
-const brandDesign = '/images/services/icons/brand-design.svg';
-const graphicDesign = '/images/services/icons/graphic-design.svg';
-const socialMedia = '/images/services/icons/social-media.svg';
-const motionGraphics = '/images/services/icons/motion-graphics.svg';
-const img1 = '/images/portfolio/3by4/01.jpg';
-const img2 = '/images/portfolio/3by4/02.jpg';
-const img3 = '/images/portfolio/3by4/03.jpg';
-const img4 = '/images/portfolio/3by4/04.jpg';
-const img5 = '/images/portfolio/3by4/05.jpg';
-const img6 = '/images/portfolio/3by4/06.jpg';
-const avatar4 = '/images/avatar/04.jpg';
-const avatar9 = '/images/avatar/09.jpg';
-const avatar11 = '/images/avatar/11.jpg';
-const blogImg1 = '/images/blog/4by3/01.jpg';
-const blogImg2 = '/images/blog/4by3/02.jpg';
+const webDesign = 'assets/images/services/icons/web-design.svg';
+const brandDesign = 'assets/images/services/icons/brand-design.svg';
+const graphicDesign = 'assets/images/services/icons/graphic-design.svg';
+const socialMedia = 'assets/images/services/icons/social-media.svg';
+const motionGraphics = 'assets/images/services/icons/motion-graphics.svg';
+const img1 = 'assets/images/portfolio/3by4/01.jpg';
+const img2 = 'assets/images/portfolio/3by4/02.jpg';
+const img3 = 'assets/images/portfolio/3by4/03.jpg';
+const img4 = 'assets/images/portfolio/3by4/04.jpg';
+const img5 = 'assets/images/portfolio/3by4/05.jpg';
+const img6 = 'assets/images/portfolio/3by4/06.jpg';
+const avatar4 = 'assets/images/avatar/04.jpg';
+const avatar9 = 'assets/images/avatar/09.jpg';
+const avatar11 = 'assets/images/avatar/11.jpg';
+const blogImg1 = 'assets/images/blog/4by3/01.jpg';
+const blogImg2 = 'assets/images/blog/4by3/02.jpg';
 
 export type ServicesType = {
   image: string;

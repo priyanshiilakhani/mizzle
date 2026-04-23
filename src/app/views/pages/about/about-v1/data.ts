@@ -1,14 +1,14 @@
-const Client1 = '/images/client/01.svg';
-const Client2 = '/images/client/02.svg';
-const Client3 = '/images/client/03.svg';
-const Client4 = '/images/client/04.svg';
-const Client5 = '/images/client/05.svg';
-const Client6 = '/images/client/06.svg';
-const Avatar4 = '/images/avatar/04.jpg';
-const Avatar11 = '/images/avatar/11.jpg';
-const Avatar6 = '/images/avatar/06.jpg';
-const Avatar5 = '/images/avatar/05.jpg';
-const Avatar10 = '/images/avatar/10.jpg';
+const Client1 = 'assets/images/client/01.svg';
+const Client2 = 'assets/images/client/02.svg';
+const Client3 = 'assets/images/client/03.svg';
+const Client4 = 'assets/images/client/04.svg';
+const Client5 = 'assets/images/client/05.svg';
+const Client6 = 'assets/images/client/06.svg';
+const Avatar4 = 'assets/images/avatar/04.jpg';
+const Avatar11 = 'assets/images/avatar/11.jpg';
+const Avatar6 = 'assets/images/avatar/06.jpg';
+const Avatar5 = 'assets/images/avatar/05.jpg';
+const Avatar10 = 'assets/images/avatar/10.jpg';
 
 
 export const bannerData = [

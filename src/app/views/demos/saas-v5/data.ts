@@ -1,10 +1,10 @@
-const client1 = '/images/client/01.svg';
-const client2 = '/images/client/02.svg';
-const client3 = '/images/client/03.svg';
-const client4 = '/images/client/04.svg';
-const client5 = '/images/client/05.svg';
-const client6 = '/images/client/06.svg';
-const client7 = '/images/client/07.svg';
+const client1 = 'assets/images/client/01.svg';
+const client2 = 'assets/images/client/02.svg';
+const client3 = 'assets/images/client/03.svg';
+const client4 = 'assets/images/client/04.svg';
+const client5 = 'assets/images/client/05.svg';
+const client6 = 'assets/images/client/06.svg';
+const client7 = 'assets/images/client/07.svg';
 
 export const clientData: string[] = [
   client3,
@@ -40,7 +40,7 @@ export const blogData: BlogType[] = [
   {
     type: 'blog',
     category: 'Technology',
-    image: '/images/blog/4by3/01.jpg',
+    image: 'assets/images/blog/4by3/01.jpg',
     title: '10 things you need to know about Mizzle',
     author: 'By Bryan Knight',
   },
@@ -53,14 +53,14 @@ export const blogData: BlogType[] = [
   {
     type: 'blog',
     category: 'Marketing',
-    image: '/images/blog/4by3/06.jpg',
+    image: 'assets/images/blog/4by3/06.jpg',
     title: '5 investment doubts you should clarify',
     author: 'by Amanda Reed',
   },
   {
     type: 'blog',
     category: 'Technology',
-    image: '/images/blog/4by3/07.jpg',
+    image: 'assets/images/blog/4by3/07.jpg',
     title: '10 things you need to know about Mizzle',
     author: 'By Bryan Knight',
   },

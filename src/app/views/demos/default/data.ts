@@ -1,12 +1,12 @@
-const client1Img = '/images/client/01.svg';
-const client2Img = '/images/client/02.svg';
-const client3Img = '/images/client/03.svg';
-const client4Img = '/images/client/04.svg';
-const client5Img = '/images/client/05.svg';
-const avatar1 = '/images/avatar/01.jpg';
-const avatar2 = '/images/avatar/02.jpg';
-const avatar3 = '/images/avatar/03.jpg';
-const avatar5 = '/images/avatar/05.jpg';
+const client1Img = 'assets/images/client/01.svg';
+const client2Img = 'assets/images/client/02.svg';
+const client3Img = 'assets/images/client/03.svg';
+const client4Img = 'assets/images/client/04.svg';
+const client5Img = 'assets/images/client/05.svg';
+const avatar1 = 'assets/images/avatar/01.jpg';
+const avatar2 = 'assets/images/avatar/02.jpg';
+const avatar3 = 'assets/images/avatar/03.jpg';
+const avatar5 = 'assets/images/avatar/05.jpg';
 
 export const clientData: string[] = [
   client1Img,

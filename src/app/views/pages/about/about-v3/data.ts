@@ -1,10 +1,10 @@
-const client1 = '/images/client/01.svg';
-const client2 = '/images/client/02.svg';
-const client3 = '/images/client/03.svg';
-const client4 = '/images/client/04.svg';
-const client5 = '/images/client/05.svg';
-const client6 = '/images/client/06.svg';
-const client7 = '/images/client/07.svg';
+const client1 = 'assets/images/client/01.svg';
+const client2 = 'assets/images/client/02.svg';
+const client3 = 'assets/images/client/03.svg';
+const client4 = 'assets/images/client/04.svg';
+const client5 = 'assets/images/client/05.svg';
+const client6 = 'assets/images/client/06.svg';
+const client7 = 'assets/images/client/07.svg';
 
 export const clientData: string[] = [
   client3,
@@ -91,32 +91,32 @@ export type TeamType = {
 
 export const teamData: TeamType[] = [
   {
-    image: '/images/team/4by4/01.jpg',
+    image: 'assets/images/team/4by4/01.jpg',
     name: 'Emma Watson',
     role: 'Founder',
   },
   {
-    image: '/images/team/4by4/02.jpg',
+    image: 'assets/images/team/4by4/02.jpg',
     name: 'Allen Smith',
     role: 'UI/UX designer',
   },
   {
-    image: '/images/team/4by4/03.jpg',
+    image: 'assets/images/team/4by4/03.jpg',
     name: 'Jacqueline Miller',
     role: 'Human Resource',
   },
   {
-    image: '/images/team/4by4/04.jpg',
+    image: 'assets/images/team/4by4/04.jpg',
     name: 'Frances Guerrero',
     role: 'Software Developer',
   },
   {
-    image: '/images/team/4by4/05.jpg',
+    image: 'assets/images/team/4by4/05.jpg',
     name: 'Samuel Bishop',
     role: 'Product designer',
   },
   {
-    image: '/images/team/4by4/06.jpg',
+    image: 'assets/images/team/4by4/06.jpg',
     name: 'Amanda Reed',
     role: 'Content writer',
   },
@@ -138,7 +138,7 @@ export const testimonialData: TestimonialType[] = [
     text: "The best Template we've ever used - it's easy to customize and comes with all the features we need. Resolving breakfast am or perfectly.",
     name: 'Amanda Reed',
     role: 'Content writer',
-    image: '/images/avatar/05.jpg',
+    image: 'assets/images/avatar/05.jpg',
   },
   {
     id: 2,
@@ -146,7 +146,7 @@ export const testimonialData: TestimonialType[] = [
     text: 'Mizzle is the perfect theme for businesses that want to create a stylish and functional website.',
     name: 'Dennis Barrett',
     role: 'CEO and Manager of Mizzle',
-    image: '/images/avatar/04.jpg',
+    image: 'assets/images/avatar/04.jpg',
   },
   {
     id: 3,
@@ -154,6 +154,6 @@ export const testimonialData: TestimonialType[] = [
     text: 'StackBros helped us create a stunning website that reflects our brand perfectly.',
     name: 'Samuel Bishop',
     role: 'Manager of Mizzle',
-    image: '/images/avatar/01.jpg',
+    image: 'assets/images/avatar/01.jpg',
   },
 ];

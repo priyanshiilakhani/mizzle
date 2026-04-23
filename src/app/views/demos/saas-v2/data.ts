@@ -1,24 +1,24 @@
-const mailchimp = '/images/elements/mailchimp.svg';
-const slack = '/images/elements/slack.svg';
-const webflow = '/images/elements/webflow.svg';
-const shopify = '/images/elements/shopify.svg';
-const reddit = '/images/elements/reddit.svg';
-const microsoft = '/images/elements/microsoft.svg';
-const bootstrap = '/images/elements/bootstrap.svg';
-const dropbox = '/images/elements/dropbox.svg';
-const gicon = '/images/elements/gicon.svg';
-const github = '/images/elements/github.svg';
-const googleDrive = '/images/elements/google-drive.svg';
+const mailchimp = 'assets/images/elements/mailchimp.svg';
+const slack = 'assets/images/elements/slack.svg';
+const webflow = 'assets/images/elements/webflow.svg';
+const shopify = 'assets/images/elements/shopify.svg';
+const reddit = 'assets/images/elements/reddit.svg';
+const microsoft = 'assets/images/elements/microsoft.svg';
+const bootstrap = 'assets/images/elements/bootstrap.svg';
+const dropbox = 'assets/images/elements/dropbox.svg';
+const gicon = 'assets/images/elements/gicon.svg';
+const github = 'assets/images/elements/github.svg';
+const googleDrive = 'assets/images/elements/google-drive.svg';
 
-const client1 = '/images/client/01.svg';
-const client2 = '/images/client/02.svg';
-const client3 = '/images/client/03.svg';
-const client4 = '/images/client/04.svg';
-const client5 = '/images/client/05.svg';
-const client7 = '/images/client/07.svg';
+const client1 = 'assets/images/client/01.svg';
+const client2 = 'assets/images/client/02.svg';
+const client3 = 'assets/images/client/03.svg';
+const client4 = 'assets/images/client/04.svg';
+const client5 = 'assets/images/client/05.svg';
+const client7 = 'assets/images/client/07.svg';
 
-const team3 ='/images/team/03.jpg'
-const team2 ='/images/team/02.jpg'
+const team3 ='assets/images/team/03.jpg'
+const team2 ='assets/images/team/02.jpg'
 
 export const integrations: string[] = [
   mailchimp,

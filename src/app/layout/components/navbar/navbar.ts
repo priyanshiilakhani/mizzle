@@ -10,6 +10,7 @@ import { LucideAngularModule } from 'lucide-angular';
   styles: ``,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
+  
 export class Navbar {
   menuItems = menuItems;
   constructor(private router: Router) {}

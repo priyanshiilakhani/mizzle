@@ -1,6 +1,6 @@
-const avatar11 = '/images/avatar/11.jpg';
-const avatar8 = '/images/avatar/08.jpg';
-const avatar5 = '/images/avatar/05.jpg';
+const avatar11 = 'assets/images/avatar/11.jpg';
+const avatar8 = 'assets/images/avatar/08.jpg';
+const avatar5 = 'assets/images/avatar/05.jpg';
 
 export const benefitsData = [
   "Reach a global audience and expand your brand's presence",

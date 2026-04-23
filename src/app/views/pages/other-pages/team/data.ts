@@ -14,7 +14,7 @@ export const gridData: GridType[] = [
   {
     name: 'Emma Watson',
     role: 'Founder',
-    image: '/images/team/01.jpg',
+    image: 'assets/images/team/01.jpg',
     socials: [
       {
         icon: 'instagram',
@@ -25,7 +25,7 @@ export const gridData: GridType[] = [
   {
     name: 'Allen Smith',
     role: 'UI/UX designer',
-    image: '/images/team/02.jpg',
+    image: 'assets/images/team/02.jpg',
     socials: [
       {
         icon: 'facebook',
@@ -38,7 +38,7 @@ export const gridData: GridType[] = [
     name: 'Jacqueline Miller',
     role: 'Human Resource',
     className: 'flex items-center gap-2.5',
-    image: '/images/team/03.jpg',
+    image: 'assets/images/team/03.jpg',
     socials: [
       {
         icon: 'twitter',
@@ -55,7 +55,7 @@ export const gridData: GridType[] = [
   {
     name: 'Louis Ferguson',
     role: 'Web Developer',
-    image: '/images/team/04.jpg',
+    image: 'assets/images/team/04.jpg',
     className: 'flex items-center gap-2.5',
     socials: [
       {
@@ -72,7 +72,7 @@ export const gridData: GridType[] = [
   {
     name: 'Frances Guerrero',
     role: 'Software Developer',
-    image: '/images/team/05.jpg',
+    image: 'assets/images/team/05.jpg',
     socials: [
       {
         icon: 'instagram',
@@ -83,7 +83,7 @@ export const gridData: GridType[] = [
   {
     name: 'Lori Stevens',
     role: 'Graphic designer',
-    image: '/images/team/06.jpg',
+    image: 'assets/images/team/06.jpg',
     className: 'flex items-center gap-2.5',
     socials: [
       {
@@ -100,7 +100,7 @@ export const gridData: GridType[] = [
   {
     name: 'Samuel Bishop',
     role: 'Product designer',
-    image: '/images/team/07.jpg',
+    image: 'assets/images/team/07.jpg',
     socials: [
       {
         icon: 'twitter',
@@ -112,7 +112,7 @@ export const gridData: GridType[] = [
   {
     name: 'Amanda Reed',
     role: 'Content writer',
-    image: '/images/team/08.jpg',
+    image: 'assets/images/team/08.jpg',
     className: 'flex items-center gap-2.5',
     socials: [
       {

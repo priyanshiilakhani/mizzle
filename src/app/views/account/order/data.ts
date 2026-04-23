@@ -20,7 +20,7 @@ export type OrderType = {
 export const orderData: OrderType[] = [
   {
     id: 1,
-    image: '/images/shop/02.png',
+    image: 'assets/images/shop/02.png',
     orderNo: '#458795',
     title: 'Round neck cotton t-shirt',
     size: 'L',
@@ -33,7 +33,7 @@ export const orderData: OrderType[] = [
   },
   {
     id: 2,
-    image: '/images/shop/03.png',
+    image: 'assets/images/shop/03.png',
     orderNo: '#548762',
     title: 'Men baseball cap',
     size: 'S',
@@ -46,7 +46,7 @@ export const orderData: OrderType[] = [
   },
   {
     id: 3,
-    image: '/images/shop/01.png',
+    image: 'assets/images/shop/01.png',
     orderNo: '#248795',
     title: 'Woman skincare drops',
     size: 'S',

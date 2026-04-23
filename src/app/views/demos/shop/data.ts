@@ -1,23 +1,23 @@
-const shop2 = '/images/shop/02.png';
-const shop3 = '/images/shop/03.png';
-const shop4 = '/images/shop/04.png';
-const shop1 = '/images/shop/01.png';
-const shop5 = '/images/shop/05.png';
-const shop6 = '/images/shop/06.png';
+const shop2 = 'assets/images/shop/02.png';
+const shop3 = 'assets/images/shop/03.png';
+const shop4 = 'assets/images/shop/04.png';
+const shop1 = 'assets/images/shop/01.png';
+const shop5 = 'assets/images/shop/05.png';
+const shop6 = 'assets/images/shop/06.png';
 
-const shop8 = '/images/shop/08.png';
-const shop9 = '/images/shop/09.png';
-const shop7 = '/images/shop/07.png';
-const shop10 = '/images/shop/10.png';
+const shop8 = 'assets/images/shop/08.png';
+const shop9 = 'assets/images/shop/09.png';
+const shop7 = 'assets/images/shop/07.png';
+const shop10 = 'assets/images/shop/10.png';
 
-const client1 = '/images/client/01.svg';
-const client2 = '/images/client/02.svg';
-const client3 = '/images/client/03.svg';
-const client4 = '/images/client/04.svg';
-const client5 = '/images/client/05.svg';
-const client6 = '/images/client/06.svg';
-const client7 = '/images/client/07.svg';
-const client8 = '/images/client/08.svg';
+const client1 = 'assets/images/client/01.svg';
+const client2 = 'assets/images/client/02.svg';
+const client3 = 'assets/images/client/03.svg';
+const client4 = 'assets/images/client/04.svg';
+const client5 = 'assets/images/client/05.svg';
+const client6 = 'assets/images/client/06.svg';
+const client7 = 'assets/images/client/07.svg';
+const client8 = 'assets/images/client/08.svg';
 
 export type ProductType = {
   title: string;

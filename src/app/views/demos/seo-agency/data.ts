@@ -1,17 +1,17 @@
-const listImg1 = '/images/portfolio/list/01.jpg';
-const listImg2 = '/images/portfolio/list/02.jpg';
-const listImg3 = '/images/portfolio/list/03.jpg';
+const listImg1 = 'assets/images/portfolio/list/01.jpg';
+const listImg2 = 'assets/images/portfolio/list/02.jpg';
+const listImg3 = 'assets/images/portfolio/list/03.jpg';
 
-const client2 = '/images/client/client-white/02.svg';
-const client3 = '/images/client/client-white/03.svg';
-const client4 = '/images/client/client-white/04.svg';
+const client2 = 'assets/images/client/client-white/02.svg';
+const client3 = 'assets/images/client/client-white/03.svg';
+const client4 = 'assets/images/client/client-white/04.svg';
 
-const avatar4 = '/images/avatar/04.jpg';
-const avatar5 = '/images/avatar/05.jpg';
-const avatar6 = '/images/avatar/06.jpg';
-const avatar9 = '/images/avatar/09.jpg';
-const avatar10 = '/images/avatar/10.jpg';
-const avatar11 = '/images/avatar/11.jpg';
+const avatar4 = 'assets/images/avatar/04.jpg';
+const avatar5 = 'assets/images/avatar/05.jpg';
+const avatar6 = 'assets/images/avatar/06.jpg';
+const avatar9 = 'assets/images/avatar/09.jpg';
+const avatar10 = 'assets/images/avatar/10.jpg';
+const avatar11 = 'assets/images/avatar/11.jpg';
 
 export type TestimonialType = {
   user: { firstName: string; lastName: string; role: string };

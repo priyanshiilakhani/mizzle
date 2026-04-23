@@ -1,17 +1,17 @@
-const blog1 = '/images/blog/01.jpg';
-const blog2 = '/images/blog/02.jpg';
-const blog3 = '/images/blog/03.jpg';
+const blog1 = 'assets/images/blog/01.jpg';
+const blog2 = 'assets/images/blog/02.jpg';
+const blog3 = 'assets/images/blog/03.jpg';
 
-const blogImg1 = '/images/blog/4by3/01.jpg';
-const blogImg2 = '/images/blog/4by3/02.jpg';
-const blogImg3 = '/images/blog/4by3/03.jpg';
-const blogImg4 = '/images/blog/4by3/04.jpg';
-const blogImg5 = '/images/blog/4by3/05.jpg';
-const blogImg6 = '/images/blog/4by3/06.jpg';
-const blogImg7 = '/images/blog/4by3/07.jpg';
+const blogImg1 = 'assets/images/blog/4by3/01.jpg';
+const blogImg2 = 'assets/images/blog/4by3/02.jpg';
+const blogImg3 = 'assets/images/blog/4by3/03.jpg';
+const blogImg4 = 'assets/images/blog/4by3/04.jpg';
+const blogImg5 = 'assets/images/blog/4by3/05.jpg';
+const blogImg6 = 'assets/images/blog/4by3/06.jpg';
+const blogImg7 = 'assets/images/blog/4by3/07.jpg';
 
-const avatar4 = '/images/avatar/04.jpg';
-const pattern = '/images/elements/pattern.svg';
+const avatar4 = 'assets/images/avatar/04.jpg';
+const pattern = 'assets/images/elements/pattern.svg';
 
 export type BlogSlideType = {
   category: string;

@@ -1,7 +1,7 @@
-const stories1 = '/images/stories/01.jpg';
-const stories3 = '/images/stories/03.jpg';
-const client2 = '/images/client/02.svg';
-const client3 = '/images/client/03.svg';
+const stories1 = 'assets/images/stories/01.jpg';
+const stories3 = 'assets/images/stories/03.jpg';
+const client2 = 'assets/images/client/02.svg';
+const client3 = 'assets/images/client/03.svg';
 
 export type storiesType = {
   image: string;
